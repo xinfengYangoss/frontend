@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home Assistant</title>
+    <title>CHENGVIN</title>
     <%= renderTemplate("_header.html.template") %>
     <%= renderTemplate("_style_base.html.template") %>
     <style>
@@ -39,15 +39,19 @@
       }
 
       .header img {
-        height: 56px;
-        width: 56px;
+        display: block;
+        width: min(280px, 72vw);
+        height: auto;
       }
     </style>
   </head>
   <body>
     <div class="content">
       <div class="header">
-        <img src="/static/icons/favicon-192x192.png" alt="Home Assistant" />
+        <img
+          src="/static/images/chengvin/chengvin-wordmark.png"
+          alt="CHENGVIN"
+        />
       </div>
       <ha-authorize></ha-authorize>
     </div>

@@ -169,8 +169,7 @@ class HaSidebar extends SubscribeMixin(ScrollableFadeMixin(LitElement)) {
   @property({ attribute: "always-expand", type: Boolean })
   public alwaysExpand = false;
 
-  @property({ attribute: "sidebar-title" }) public sidebarTitle =
-    "Home Assistant";
+  @property({ attribute: "sidebar-title" }) public sidebarTitle = "CHENGVIN";
 
   @state() private _notifications?: PersistentNotification[];
 

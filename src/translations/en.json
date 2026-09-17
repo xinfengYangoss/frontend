@@ -11605,7 +11605,7 @@
         "abort_intro": "Login aborted",
         "store_token": "Keep me logged in",
         "help": "Help",
-        "welcome_home": "Welcome home!",
+        "welcome_home": "Welcome to CHENGVIN!",
         "just_checking": "Just checking",
         "who_is_logging_in": "Who is logging in?",
         "other_options": "Other login options",
@@ -11705,7 +11705,8 @@
               }
             }
           }
-        }
+        },
+        "language": "Language"
       },
       "page-demo": {
         "cards": {
@@ -11772,13 +11773,13 @@
         }
       },
       "page-onboarding": {
-        "intro": "Are you ready to awaken your home, reclaim your privacy and join a worldwide community of tinkerers?",
+        "intro": "Create a secure, connected, and convenient smart home with CHENGVIN.",
         "back": "Back",
         "next": "Next",
         "finish": "Finish",
         "help": "Help",
         "welcome": {
-          "header": "Welcome!",
+          "header": "Welcome to CHENGVIN!",
           "start": "Create my smart home",
           "or_restore": "Or restore",
           "vision": "Read our vision",
@@ -11980,7 +11981,8 @@
             "title": "How to restore?",
             "upload_description": "Upload and restore a Home Assistant backup to this system"
           }
-        }
+        },
+        "language": "Language"
       },
       "custom": {
         "external_panel": {

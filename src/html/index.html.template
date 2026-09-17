@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home Assistant</title>
+    <title>CHENGVIN</title>
     <% if (useCacheRecovery) { %><%= renderTemplate("_bootstrap_recovery.html.template") %><% } %>
     <%= renderTemplate("_header.html.template") %>
     <link rel="mask-icon" href="/static/icons/mask-icon.svg" color="#18bcf2" />
@@ -12,10 +12,10 @@
     <meta name="apple-itunes-app" content="app-id=1099568401" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Home Assistant">
+    <meta name="apple-mobile-web-app-title" content="CHENGVIN">
     <meta name="msapplication-config" content="/static/icons/browserconfig.xml" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="application-name" content="Home Assistant">
+    <meta name="application-name" content="CHENGVIN">
     <meta name="referrer" content="same-origin" />
     <meta name="theme-color" content="{{ theme_color }}" />
     <meta name="color-scheme" content="dark light" />
@@ -67,8 +67,8 @@
         animation: launch-lockup-in var(--ha-animation-duration-normal, 250ms) ease-out both;
       }
       #ha-launch-screen .ha-logo {
-        width: 96px;
-        height: 96px;
+        width: min(360px, 78vw);
+        height: auto;
       }
       #ha-launch-screen .ha-launch-screen-spacer-top {
         flex: 1;
@@ -79,7 +79,7 @@
         flex: 1;
         padding-top: 16px;
       }
-      .ohf-logo {
+      .company-name {
         margin: max(var(--safe-area-inset-bottom, 0px), 48px) 0;
         display: flex;
         flex-direction: column;
@@ -87,18 +87,9 @@
         gap: 4px;
         opacity: .66;
       }
-      .ohf-logo span {
+      .company-name span {
         font-size: 12px;
-        line-height: 12px;
-        text-transform: uppercase;
-      }
-      .ohf-logo picture {
-        display: flex;
-      }
-      .ohf-logo img {
-        width: 237px;
-        aspect-ratio: 237 / 24;
-        height: auto;
+        line-height: 18px;
       }
       @media (prefers-color-scheme: dark) {
         html {
@@ -119,7 +110,7 @@
         body #ha-launch-screen .ha-launch-screen-spacer-bottom {
           padding-top: 16px;
         }
-        .ohf-logo {
+        .company-name {
           margin-block: 24px;
         }
       }
@@ -129,15 +120,11 @@
     <div id="ha-launch-screen">
       <div class="ha-launch-screen-spacer-top"></div>
       <div class="ha-lockup">
-        <img class="ha-logo" src="/static/images/home-assistant-logo-loading.svg" alt="Home Assistant">
+        <img class="ha-logo" src="/static/images/chengvin/chengvin-wordmark.png" alt="CHENGVIN">
       </div>
       <div id="ha-launch-screen-info-box" class="ha-launch-screen-spacer-bottom"></div>
-      <div class="ohf-logo">
-        <span id="ha-launch-screen-attribution">A project from the</span>
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="/static/images/open-home-foundation-on-dark.svg">
-          <img src="/static/images/open-home-foundation-on-light.svg" alt="Open Home Foundation" width="237" height="24">
-        </picture>
+      <div class="company-name">
+        <span id="ha-launch-screen-attribution">福建星启航信息科技有限公司</span>
       </div>
     </div>
     <home-assistant></home-assistant>

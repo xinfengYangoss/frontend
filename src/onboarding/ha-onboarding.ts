@@ -141,7 +141,9 @@ class HaOnboarding extends litLocalizeLiteMixin(HassElement) {
       <div class="footer">
         <ha-language-picker
           .value=${this.language}
-          .label=${""}
+          .label=${this.localize("ui.panel.page-onboarding.language")}
+          .languages=${["zh-Hans", "en"]}
+          button-style
           native-name
           @value-changed=${this._languageChanged}
         ></ha-language-picker>

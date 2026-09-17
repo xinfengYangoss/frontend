@@ -14,6 +14,7 @@ import "./fetch-nightly-translations.js";
 
 const inFrontendDir = "translations/frontend";
 const inBackendDir = "translations/backend";
+const localFrontendDir = join(paths.translations_src, "local");
 const workDir = "build/translations";
 const outDir = join(workDir, "output");
 const EN_SRC = join(paths.translations_src, "en.json");
@@ -189,6 +190,7 @@ const createTranslations = async () => {
   // each locale, then fragmentizes and flattens the data for final output.
   const translationFiles = await glob([
     `${inFrontendDir}/!(en).json`,
+    `${localFrontendDir}/*.json`,
     ...(env.isProdBuild() ? [] : [`${workDir}/${TEST_LOCALE}.json`]),
   ]);
   const hashStream = new Transform({
@@ -245,7 +247,9 @@ const createTranslations = async () => {
     .pipe(new PassThrough({ objectMode: true }));
   masterStream.pipe(hashStream, { end: false });
   const mergesFinished = [finished(masterStream)];
-  for (const translationFile of translationFiles) {
+  for (const translationFile of new Map(
+    translationFiles.map((file) => [basename(file), file])
+  ).values()) {
     const locale = basename(translationFile, ".json");
     const subtags = locale.split("-");
     const mergeFiles = [];
@@ -254,7 +258,10 @@ const createTranslations = async () => {
       if (lang === TEST_LOCALE) {
         mergeFiles.push(`${workDir}/${TEST_LOCALE}.json`);
       } else if (lang !== "en") {
-        mergeFiles.push(`${inFrontendDir}/${lang}.json`);
+        mergeFiles.push(
+          `${localFrontendDir}/${lang}.json`,
+          `${inFrontendDir}/${lang}.json`
+        );
         if (mergeBackend) {
           mergeFiles.push(`${inBackendDir}/${lang}.json`);
         }

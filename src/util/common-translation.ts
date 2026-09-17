@@ -97,7 +97,7 @@ export async function getUserLocale(
 }
 
 /**
- * Get browser specific language
+ * Get the saved language, or the default language for this installation
  */
 export function getLocalLanguage() {
   let language: string | undefined;
@@ -113,6 +113,9 @@ export function getLocalLanguage() {
     } catch (_err: any) {
       // Ignore parsing error.
     }
+  }
+  if (translationMetadata.translations["zh-Hans"]?.hash) {
+    return "zh-Hans";
   }
   if (navigator.languages) {
     for (const locale of navigator.languages) {

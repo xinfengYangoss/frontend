@@ -16,7 +16,7 @@ export const litLocalizeLiteMixin = <T extends Constructor<LitElement>>(
     // Initialized to empty will prevent undefined errors if called before connected to DOM.
     @property({ attribute: false }) public localize: LocalizeFunc = empty;
 
-    // Use browser language setup before login.
+    // Use the saved preference or installation default before login.
     @property() public language: string = getLocalLanguage();
 
     @property() public translationFragment?: string;

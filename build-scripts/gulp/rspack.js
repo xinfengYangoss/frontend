@@ -153,7 +153,10 @@ gulp.task("rspack-watch-app", () => {
       : createAppConfig({ isProdBuild: false, latestBuild: true })
   ).watch({ poll: isWsl }, doneHandler());
   gulp.watch(
-    path.join(paths.translations_src, "en.json"),
+    [
+      path.join(paths.translations_src, "en.json"),
+      path.join(paths.translations_src, "local", "*.json"),
+    ],
     gulp.series("build-translations", "copy-translations-app")
   );
 });
@@ -266,7 +269,10 @@ gulp.task("rspack-watch-landing-page", () => {
   ).watch({ poll: isWsl }, doneHandler());
 
   gulp.watch(
-    path.join(paths.translations_src, "en.json"),
+    [
+      path.join(paths.translations_src, "en.json"),
+      path.join(paths.translations_src, "local", "*.json"),
+    ],
     gulp.series(
       "build-landing-page-translations",
       "copy-translations-landing-page"

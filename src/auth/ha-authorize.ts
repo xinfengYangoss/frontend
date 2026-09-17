@@ -13,6 +13,7 @@ import type { AuthProvider, AuthUrlSearchParams } from "../data/auth";
 import { fetchAuthProviders } from "../data/auth";
 import { litLocalizeLiteMixin } from "../mixins/lit-localize-lite-mixin";
 import { provideLiteI18nMixin } from "../mixins/provide-lite-i18n-mixin";
+import type { ValueChangedEvent } from "../types";
 import { registerServiceWorker } from "../util/register-service-worker";
 import "./ha-auth-flow";
 
@@ -133,6 +134,11 @@ export class HaAuthorize extends provideLiteI18nMixin(
         .space-between {
           justify-content: space-between;
         }
+        .language-switcher {
+          display: flex;
+          justify-content: flex-end;
+          margin-block-end: var(--ha-space-2);
+        }
         .footer {
           padding-top: 8px;
           display: flex;
@@ -175,6 +181,16 @@ export class HaAuthorize extends provideLiteI18nMixin(
           : nothing
       }
 
+      <div class="language-switcher">
+        <ha-language-picker
+          .value=${this.language}
+          .label=${this.localize("ui.panel.page-authorize.language")}
+          .languages=${["zh-Hans", "en"]}
+          button-style
+          native-name
+          @value-changed=${this._languageChanged}
+        ></ha-language-picker>
+      </div>
       <div class="card-content">
         ${
           !this._authProvider
@@ -202,13 +218,6 @@ export class HaAuthorize extends provideLiteI18nMixin(
         }
       </div>
       <div class="footer">
-        <ha-language-picker
-          .value=${this.language}
-          .label=${""}
-          button-style
-          native-name
-          @value-changed=${this._languageChanged}
-        ></ha-language-picker>
         <ha-button
           appearance="plain"
           variant="neutral"
@@ -332,7 +341,7 @@ export class HaAuthorize extends provideLiteI18nMixin(
     this._authProvider = ev.detail;
   }
 
-  private _languageChanged(ev: CustomEvent) {
+  private _languageChanged(ev: ValueChangedEvent<string>) {
     const language = ev.detail.value;
     this.language = language;
 
