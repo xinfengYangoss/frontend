@@ -1,13 +1,4 @@
-import {
-  mdiBug,
-  mdiFileDocument,
-  mdiHandsPray,
-  mdiHelp,
-  mdiKeyboard,
-  mdiNewspaperVariant,
-  mdiOpenInNew,
-  mdiTshirtCrew,
-} from "@mdi/js";
+import { mdiKeyboard } from "@mdi/js";
 import type { CSSResultGroup, TemplateResult, PropertyValues } from "lit";
 import { LitElement, css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -25,63 +16,11 @@ import { subscribeSystemHealthInfo } from "../../../data/system_health";
 import { showShortcutsDialog } from "../../../dialogs/shortcuts/show-shortcuts-dialog";
 import "../../../layouts/hass-subpage";
 import { panelIsReady } from "../../../layouts/panel-ready";
-import { mdiHomeAssistant } from "../../../resources/home-assistant-logo-svg";
 import { haStyle } from "../../../resources/styles";
 import type { HomeAssistant, Route } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 
 const JS_TYPE = __BUILD__;
 const JS_VERSION = __VERSION__;
-
-const PAGES = [
-  {
-    name: "change_log",
-    path: "/latest-release-notes/",
-    iconPath: mdiNewspaperVariant,
-    iconColor: "#4A5963",
-  },
-  {
-    name: "thanks",
-    path: "/developers/credits/",
-    iconPath: mdiHandsPray,
-    iconColor: "#3B808E",
-  },
-  {
-    name: "merch",
-    path: "/merch",
-    iconPath: mdiTshirtCrew,
-    iconColor: "#C65326",
-  },
-  {
-    name: "feature",
-    path: "/feature-requests",
-    iconPath: mdiHomeAssistant,
-    iconColor: "#0D47A1",
-  },
-  {
-    name: "bug",
-    path: "/issues",
-    iconPath: mdiBug,
-    iconColor: "#F1C447",
-  },
-  {
-    name: "help",
-    path: "/community",
-    iconPath: mdiHelp,
-    iconColor: "#B1345C",
-  },
-  {
-    name: "license",
-    path: "/developers/license/",
-    iconPath: mdiFileDocument,
-    iconColor: "#518C43",
-  },
-] as const satisfies readonly {
-  name: string;
-  path: string;
-  iconPath: string;
-  iconColor: string;
-}[];
 
 @customElement("ha-config-info")
 class HaConfigInfo extends LitElement {
@@ -104,8 +43,6 @@ class HaConfigInfo extends LitElement {
     const customUiList: { name: string; url: string; version: string }[] =
       (window as any).CUSTOM_UI_LIST || [];
 
-    const isDark = this.hass.themes?.darkMode || false;
-
     return html`
       <hass-subpage
         .hass=${this.hass}
@@ -115,19 +52,13 @@ class HaConfigInfo extends LitElement {
       >
         <div class="content">
           <ha-card outlined class="header">
-            <a
-              href=${documentationUrl(this.hass, "")}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ha-logo-svg
-                title=${this.hass.localize(
-                  "ui.panel.config.info.home_assistant_logo"
-                )}
-              >
-              </ha-logo-svg>
-            </a>
-            <p>Home Assistant</p>
+            <ha-logo-svg
+              title=${this.hass.localize("ui.panel.config.info.home_assistant_logo")}
+            ></ha-logo-svg>
+            <p>${this.hass.localize("ui.panel.config.info.product_name")}</p>
+            <p class="company">
+              ${this.hass.localize("ui.panel.config.info.company_name")}
+            </p>
             <ul class="versions">
               <li>
                 <span class="version-label"
@@ -135,7 +66,9 @@ class HaConfigInfo extends LitElement {
                     "ui.panel.config.info.installation_method"
                   )}</span
                 >
-                <span class="version">${this._installationMethod || "…"}</span>
+                <span class="version"
+                  >${this._installationMethod?.replaceAll("Home Assistant", "CHENGVIN") || "…"}</span
+                >
               </li>
               <li>
                 <span class="version-label">Core</span>
@@ -191,19 +124,6 @@ class HaConfigInfo extends LitElement {
               }
             </ul>
           </ha-card>
-          <ha-card outlined class="ohf ${isDark ? "dark" : ""}">
-            <div>
-              ${this.hass.localize("ui.panel.config.info.proud_part_of")}
-            </div>
-            <a
-              href="https://www.openhomefoundation.org"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src="/static/icons/ohf.svg" alt="Open Home Foundation" />
-            </a>
-          </ha-card>
-
           <ha-card outlined class="pages">
             <ha-list-base>
               <ha-list-item-button @click=${this._showShortcuts}>
@@ -218,30 +138,6 @@ class HaConfigInfo extends LitElement {
                   >${this.hass.localize("ui.panel.config.info.shortcuts")}</span
                 >
               </ha-list-item-button>
-
-              ${PAGES.map(
-                (page) => html`
-                  <ha-list-item-button
-                    .href=${documentationUrl(this.hass, page.path)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div
-                      slot="start"
-                      class="icon-background"
-                      style=${`background-color: ${page.iconColor};`}
-                    >
-                      <ha-svg-icon .path=${page.iconPath}></ha-svg-icon>
-                    </div>
-                    <span slot="headline">
-                      ${this.hass.localize(
-                        `ui.panel.config.info.items.${page.name}`
-                      )}
-                    </span>
-                    <ha-svg-icon slot="end" .path=${mdiOpenInNew}></ha-svg-icon>
-                  </ha-list-item-button>
-                `
-              )}
             </ha-list-base>
             ${
               customUiList.length
@@ -345,21 +241,13 @@ class HaConfigInfo extends LitElement {
           font-weight: var(--ha-font-weight-normal);
           line-height: var(--ha-line-height-condensed);
           text-align: center;
-          margin: 24px;
+          margin: 24px 24px 8px 24px;
         }
 
-        .ohf {
-          text-align: center;
-          padding-bottom: 5px;
-        }
-
-        .ohf img {
-          width: 100%;
-          max-width: 250px;
-        }
-
-        .ohf.dark img {
-          color-scheme: dark;
+        .header p.company {
+          font-size: var(--ha-font-size-m);
+          color: var(--secondary-text-color);
+          margin: 0 24px 24px 24px;
         }
 
         .versions {

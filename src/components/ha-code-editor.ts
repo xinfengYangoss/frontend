@@ -44,13 +44,11 @@ import type {
 } from "../resources/jinja_ha_completions";
 import type { HomeAssistant } from "../types";
 import { showToast } from "../util/toast";
-import { documentationUrl } from "../util/documentation-url";
 import {
   internationalizationContext,
   registriesContext,
   statesContext,
   labelsContext,
-  configContext,
   formattersContext,
 } from "../data/context";
 import type { LabelRegistryEntry } from "../data/label/label_registry";
@@ -135,10 +133,6 @@ export class HaCodeEditor extends ReactiveElement {
   @state() private _canRedo = false;
 
   @state() private _canCopy = false;
-
-  @state()
-  @consume({ context: configContext, subscribe: true })
-  private _config?: ContextType<typeof configContext>;
 
   @state()
   @consume({ context: internationalizationContext, subscribe: true })
@@ -431,7 +425,7 @@ export class HaCodeEditor extends ReactiveElement {
           this._loadedCodeMirror!.haJinjaHoverSource(
             view,
             pos,
-            this._config ? documentationUrl(this._config, "") : undefined,
+            undefined,
             this._hassArgHoverContext()
           ),
         { hoverTime: 300 }

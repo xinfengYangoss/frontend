@@ -59,7 +59,6 @@ import { showOptionsFlowDialog } from "../../../dialogs/config-flow/show-dialog-
 import { showSubConfigFlowDialog } from "../../../dialogs/config-flow/show-dialog-sub-config-flow";
 import { haStyle } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { fileDownload } from "../../../util/file_download";
 import { showToast } from "../../../util/toast";
 import {
@@ -618,19 +617,7 @@ export class HaConfigEntryRow extends LitElement {
           "ui.panel.config.integrations.config_entry.application_credentials.delete_detail"
         )}
         <br />
-        <br />
-        <a
-          href=${documentationUrl(
-            this.hass,
-            "/integrations/application_credentials/"
-          )}
-          target="_blank"
-          rel="noreferrer"
-        >
-          ${this.hass.localize(
-            "ui.panel.config.integrations.config_entry.application_credentials.learn_more"
-          )}
-        </a>`,
+        <br /> `,
       destructive: true,
       confirmText: this.hass.localize("ui.common.remove"),
       dismissText: this.hass.localize(

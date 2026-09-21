@@ -7,7 +7,6 @@ import { showConfirmationDialog } from "../../dialogs/generic/show-dialog-box";
 import { showMatterAddDeviceDialog } from "../../panels/config/integrations/integration-panels/matter/show-dialog-add-matter-device";
 import { showZWaveJSAddNodeDialog } from "../../panels/config/integrations/integration-panels/zwave_js/add-node/show-dialog-zwave_js-add-node";
 import type { HomeAssistant } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 import { isComponentLoaded } from "../config/is_component_loaded";
 import { navigate } from "../navigate";
 
@@ -55,14 +54,9 @@ export const protocolIntegrationPicked = async (
           {
             integration: "Z-Wave",
             brand: options?.brand || options?.domain || "Z-Wave",
-            supported_hardware_link: html`<a
-              href=${documentationUrl(hass, "/docs/z-wave/controllers")}
-              target="_blank"
-              rel="noreferrer"
-              >${hass.localize(
-                "ui.panel.config.integrations.config_flow.supported_hardware"
-              )}</a
-            >`,
+            supported_hardware_link: html`${hass.localize(
+              "ui.panel.config.integrations.config_flow.supported_hardware"
+            )}`,
           }
         ),
         confirmText: hass.localize(
@@ -104,17 +98,9 @@ export const protocolIntegrationPicked = async (
           {
             integration: "Zigbee",
             brand: options?.brand || options?.domain || "Zigbee",
-            supported_hardware_link: html`<a
-              href=${documentationUrl(
-                hass,
-                "/integrations/zha/#known-working-zigbee-radio-modules"
-              )}
-              target="_blank"
-              rel="noreferrer"
-              >${hass.localize(
-                "ui.panel.config.integrations.config_flow.supported_hardware"
-              )}</a
-            >`,
+            supported_hardware_link: html`${hass.localize(
+              "ui.panel.config.integrations.config_flow.supported_hardware"
+            )}`,
           }
         ),
         confirmText: hass.localize(
@@ -153,14 +139,9 @@ export const protocolIntegrationPicked = async (
           {
             integration: "Matter",
             brand: options?.brand || options?.domain || "Matter",
-            supported_hardware_link: html`<a
-              href=${documentationUrl(hass, "/integrations/matter")}
-              target="_blank"
-              rel="noreferrer"
-              >${hass.localize(
-                "ui.panel.config.integrations.config_flow.supported_hardware"
-              )}</a
-            >`,
+            supported_hardware_link: html`${hass.localize(
+              "ui.panel.config.integrations.config_flow.supported_hardware"
+            )}`,
           }
         ),
         confirmText: hass.localize(

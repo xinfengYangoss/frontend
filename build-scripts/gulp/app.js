@@ -19,7 +19,7 @@ gulp.task(
       process.env.NODE_ENV = "development";
     },
     createWorkflowLockTask("develop-app"),
-    "clean",
+    "clean-app-dev",
     gulp.parallel(
       "gen-service-worker-app-dev",
       "gen-icons-json",

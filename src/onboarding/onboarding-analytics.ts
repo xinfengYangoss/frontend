@@ -1,4 +1,3 @@
-import { mdiOpenInNew } from "@mdi/js";
 import type { CSSResultGroup, PropertyValues, TemplateResult } from "lit";
 import { css, html, LitElement } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -16,7 +15,6 @@ import {
 } from "../data/analytics";
 import { onboardAnalyticsStep } from "../data/onboarding";
 import type { HomeAssistant } from "../types";
-import { documentationUrl } from "../util/documentation-url";
 import { onBoardingStyles } from "./styles";
 
 @customElement("onboarding-analytics")
@@ -39,16 +37,7 @@ class OnboardingAnalytics extends LitElement {
     return html`
       <h1>${this._localize("ui.panel.page-onboarding.analytics.header")}</h1>
       <p>${this._localize("ui.panel.page-onboarding.analytics.intro")}</p>
-      <p>
-        <a
-          href=${documentationUrl(this.hass, "/integrations/analytics/")}
-          target="_blank"
-          rel="noreferrer"
-        >
-          ${this._localize("ui.panel.page-onboarding.analytics.learn_more")}
-          <ha-svg-icon .path=${mdiOpenInNew}></ha-svg-icon>
-        </a>
-      </p>
+
       ${
         this._analyticsDetails
           ? html`

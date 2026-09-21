@@ -1,4 +1,3 @@
-import { mdiHelpCircleOutline } from "@mdi/js";
 import type { CSSResultGroup } from "lit";
 import { LitElement, css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -15,7 +14,6 @@ import type { HassDialog } from "../../../dialogs/make-dialog-manager";
 import { DirtyStateProviderMixin } from "../../../mixins/dirty-state-provider-mixin";
 import { haStyleDialog } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { expandLovelaceConfigStrategies } from "../strategies/get-strategy";
 import type { SaveDialogParams } from "./show-save-config-dialog";
 
@@ -80,15 +78,7 @@ export class HuiSaveConfig
         .preventScrimClose=${this.isDirtyState}
         @closed=${this._dialogClosed}
       >
-          <ha-icon-button
-            .path=${mdiHelpCircleOutline}
-            .label=${this.hass!.localize("ui.common.help")}
-            .href=${documentationUrl(this.hass!, "/lovelace/")}
-            title=${this.hass!.localize("ui.panel.lovelace.menu.help")}
-            target="_blank"
-            rel="noreferrer"
-            slot="headerActionItems"
-          ></ha-icon-button>
+
         </a>
         <div>
           <p>

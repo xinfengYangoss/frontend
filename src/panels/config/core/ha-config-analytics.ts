@@ -28,7 +28,6 @@ import {
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { fileDownload } from "../../../util/file_download";
 
 @customElement("ha-config-analytics")
@@ -59,20 +58,12 @@ class ConfigAnalytics extends SubscribeMixin(LitElement) {
         outlined
         .header=${
           this.hass.localize("ui.panel.config.analytics.header") ||
-          "Home Assistant analytics"
+          "CHENGVIN analytics"
         }
       >
         <div class="card-content">
           ${error ? html`<div class="error">${error}</div>` : nothing}
-          <p>
-            ${this.hass.localize("ui.panel.config.analytics.intro")}
-            <a
-              href=${documentationUrl(this.hass, "/integrations/analytics/")}
-              target="_blank"
-              rel="noreferrer"
-              >${this.hass.localize("ui.panel.config.analytics.learn_more")}</a
-            >.
-          </p>
+          <p>${this.hass.localize("ui.panel.config.analytics.intro")} .</p>
           <ha-analytics
             translation_key_panel="config"
             @analytics-preferences-changed=${this._preferencesChanged}
@@ -93,14 +84,9 @@ class ConfigAnalytics extends SubscribeMixin(LitElement) {
                   ${this.hass.localize(
                     "ui.panel.config.analytics.preferences.snapshots.info",
                     {
-                      data_use_statement: html`<a
-                        href="https://www.openhomefoundation.org/device-database-data-use-statement"
-                        target="_blank"
-                        rel="noreferrer"
-                        >${this.hass.localize(
-                          "ui.panel.config.analytics.preferences.snapshots.data_use_statement"
-                        )}</a
-                      >`,
+                      data_use_statement: html`${this.hass.localize(
+                        "ui.panel.config.analytics.preferences.snapshots.data_use_statement"
+                      )}`,
                     }
                   )}
                 </p>

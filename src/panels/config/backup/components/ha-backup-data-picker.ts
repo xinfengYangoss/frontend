@@ -261,7 +261,7 @@ export class HaBackupDataPicker extends LitElement {
                   ?disabled=${this.requiredItems.length > 0}
                 >
                   <ha-backup-formfield-label
-                    label="Home Assistant"
+                    label="CHENGVIN"
                     .iconPath=${mdiHomeAssistant}
                   >
                   </ha-backup-formfield-label>

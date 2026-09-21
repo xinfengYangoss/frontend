@@ -20,7 +20,6 @@ import { getLanguageScores, listAgents } from "../../data/conversation";
 import { listSTTEngines } from "../../data/stt";
 import { listTTSEngines, listTTSVoices } from "../../data/tts";
 import type { HomeAssistant, ValueChangedEvent } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 import { AssistantSetupStyles } from "./styles";
 import { STEP } from "./voice-assistant-setup-dialog";
 
@@ -136,17 +135,6 @@ export class HaVoiceAssistantSetupStepPipeline extends LitElement {
           .languages=${this.languages}
           @value-changed=${this._languageChanged}
         ></ha-language-picker>
-
-        <a
-          href=${documentationUrl(
-            this.hass,
-            "/voice_control/contribute-voice/"
-          )}
-          >${this.hass.localize(
-            "ui.panel.config.voice_assistants.satellite_wizard.pipeline.unsupported_language.contribute",
-            { language }
-          )}</a
-        >
       </div>`;
     }
 
@@ -343,12 +331,12 @@ export class HaVoiceAssistantSetupStepPipeline extends LitElement {
           return false;
         }
 
-        let pipelineName = "Home Assistant Cloud";
+        let pipelineName = "CHENGVIN Cloud";
         let i = 1;
         while (
           pipelines.pipelines.find((pipeline) => pipeline.name === pipelineName)
         ) {
-          pipelineName = `Home Assistant Cloud ${i}`;
+          pipelineName = `CHENGVIN Cloud ${i}`;
           i++;
         }
 

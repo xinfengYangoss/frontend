@@ -1,4 +1,3 @@
-import { mdiOpenInNew } from "@mdi/js";
 import type { CSSResultGroup } from "lit";
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, state } from "lit/decorators";
@@ -7,7 +6,6 @@ import "../../../../components/ha-dialog-footer";
 import { showConfirmationDialog } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyle, haStyleDialog } from "../../../../resources/styles";
 import type { HomeAssistant } from "../../../../types";
-import { documentationUrl } from "../../../../util/documentation-url";
 import type { WebhookDialogParams } from "./show-dialog-manage-cloudhook";
 
 import "../../../../components/ha-button";
@@ -42,13 +40,6 @@ export class DialogManageCloudhook extends LitElement {
       return nothing;
     }
     const { webhook, cloudhook } = this._params;
-    const docsUrl =
-      webhook.domain === "automation"
-        ? documentationUrl(
-            this.hass!,
-            "/docs/automation/trigger/#webhook-trigger"
-          )
-        : documentationUrl(this.hass!, `/integrations/${webhook.domain}/`);
     return html`
       <ha-dialog
         .open=${this._open}
@@ -88,18 +79,6 @@ export class DialogManageCloudhook extends LitElement {
         </div>
 
         <ha-dialog-footer slot="footer">
-          <ha-button
-            slot="secondaryAction"
-            href=${docsUrl}
-            target="_blank"
-            rel="noreferrer"
-            appearance="plain"
-          >
-            ${this.hass!.localize(
-              "ui.panel.config.cloud.dialog_cloudhook.view_documentation"
-            )}
-            <ha-svg-icon slot="end" .path=${mdiOpenInNew}></ha-svg-icon>
-          </ha-button>
           <ha-button slot="primaryAction" @click=${this.closeDialog}>
             ${this.hass!.localize(
               "ui.panel.config.cloud.dialog_cloudhook.close"

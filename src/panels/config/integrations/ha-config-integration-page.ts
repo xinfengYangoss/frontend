@@ -74,7 +74,6 @@ import { multiTermSearch } from "../../../resources/fuseMultiTerm";
 import { haStyle } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
 import { brandsUrl } from "../../../util/brands-url";
-import { documentationUrl } from "../../../util/documentation-url";
 import { fileDownload } from "../../../util/file_download";
 import "./ha-config-entry-row";
 import type { HaConfigEntryRow } from "./ha-config-entry-row";
@@ -373,7 +372,7 @@ class HaConfigIntegrationPage extends SubscribeMixin(LitElement) {
     );
 
     const documentationLink = this._manifest?.is_built_in
-      ? documentationUrl(this.hass, `/integrations/${this._manifest.domain}`)
+      ? undefined
       : this._manifest?.documentation;
 
     return html`
@@ -528,20 +527,6 @@ class HaConfigIntegrationPage extends SubscribeMixin(LitElement) {
                           }`}
                         >
                           <ha-svg-icon path=${mdiPackageVariant}></ha-svg-icon>
-                          <a
-                            href=${documentationUrl(
-                              this.hass,
-                              `/docs/quality_scale/#-custom`
-                            )}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                          >
-                            ${this.hass.localize(
-                              this._manifest.overwrites_built_in
-                                ? "ui.panel.config.integrations.config_entry.custom_overwrites_core"
-                                : "ui.panel.config.integrations.config_entry.custom_integration"
-                            )}
-                          </a>
                         </div>`
                       : nothing
                   }
@@ -574,35 +559,7 @@ class HaConfigIntegrationPage extends SubscribeMixin(LitElement) {
                     this._manifest?.is_built_in &&
                     this._manifest.quality_scale &&
                     this._manifest.quality_scale in QUALITY_SCALE_MAP
-                      ? html`
-                          <div class="integration-info">
-                            <a
-                              href=${documentationUrl(
-                                this.hass,
-                                `/docs/quality_scale/#-${this._manifest.quality_scale}`
-                              )}
-                              rel="noopener noreferrer"
-                              target="_blank"
-                            >
-                              <ha-svg-icon
-                                class=${`quality-scale ${this._manifest.quality_scale}-quality`}
-                                .path=${
-                                  QUALITY_SCALE_MAP[
-                                    this._manifest.quality_scale
-                                  ].icon
-                                }
-                              ></ha-svg-icon>
-                              ${this.hass.localize(
-                                QUALITY_SCALE_MAP[this._manifest.quality_scale]
-                                  .translationKey
-                              )}
-                              <ha-svg-icon
-                                class="open-external"
-                                .path=${mdiOpenInNew}
-                              ></ha-svg-icon>
-                            </a>
-                          </div>
-                        `
+                      ? html` <div class="integration-info"></div> `
                       : nothing
                   }
                 </div>

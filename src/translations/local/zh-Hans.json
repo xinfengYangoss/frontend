@@ -27,7 +27,7 @@
             "actions": "动作"
           }
         },
-        "header": "配置 Home Assistant",
+        "header": "配置 CHENGVIN",
         "dashboard": {
           "devices": {
             "main": "设备与服务",
@@ -39,11 +39,11 @@
           },
           "backup": {
             "main": "备份",
-            "secondary": "创建 Home Assistant 配置的备份"
+            "secondary": "创建 CHENGVIN 配置的备份"
           },
           "apps": {
             "main": "应用",
-            "secondary": "与 Home Assistant 同时运行附加应用程序"
+            "secondary": "与 CHENGVIN 同时运行附加应用程序"
           },
           "dashboards": {
             "main": "仪表盘",
@@ -74,7 +74,7 @@
             "secondary": "管理家里的区域和户外的地点"
           },
           "companion": {
-            "main": "Companion 应用",
+            "main": "CHENGVIN 应用",
             "secondary": "传感器、小组件、通知等"
           },
           "system": {
@@ -86,7 +86,7 @@
             "secondary": "检查并调试您的系统"
           },
           "about": {
-            "main": "关于 Home Assistant",
+            "main": "关于 CHENGVIN",
             "secondary": "版本和更多信息"
           },
           "cloud": {
@@ -135,6 +135,10 @@
           "insteon": {
             "main": "Insteon",
             "secondary": "双网状家庭自动化"
+          },
+          "modbus": {
+            "main": "Modbus",
+            "secondary": "通过串口或网络链路共享的工业设备"
           }
         },
         "common": {
@@ -163,8 +167,8 @@
         },
         "updates": {
           "caption": "更新",
-          "description": "管理 Home Assistant 、应用和设备的更新",
-          "group_system": "Home Assistant",
+          "description": "管理 CHENGVIN 、应用和设备的更新",
+          "group_system": "CHENGVIN",
           "group_apps": "应用",
           "update_all": "全部更新",
           "no_updates": "没有可用的更新",
@@ -191,7 +195,7 @@
         },
         "repairs": {
           "caption": "修复",
-          "description": "查找并修复 Home Assistant 实例的问题",
+          "description": "查找并修复 CHENGVIN 实例的问题",
           "title": "{count} 个{count, plural,\n  one {修复}\n  other {修复}\n}",
           "no_repairs": "目前没有待定的修复",
           "more_repairs": "显示全部修复",
@@ -238,7 +242,7 @@
         },
         "ai_task": {
           "header": "AI 建议",
-          "description": "Home Assistant 可以使用生成式 AI 来帮助您完成任务。在 Home Assistant 中查找带有{button}图标的按钮即可获取建议。选择一个 AI 任务实体即可使用此功能。",
+          "description": "CHENGVIN 可以使用生成式 AI 来帮助您完成任务。在 CHENGVIN 中查找带有{button}图标的按钮即可获取建议。选择一个 AI 任务实体即可使用此功能。",
           "gen_data_header": "数据生成任务",
           "gen_data_description": "建议自动化名称。",
           "gen_image_header": "图像生成任务",
@@ -250,9 +254,9 @@
           "error_loading": "应用加载出错",
           "info": {
             "what_is_an_app": "什么是应用 ？",
-            "what_is_an_app_description": "应用与 Home Assistant 并行运行，并提供网络监控、代码编辑器、数据库管理等额外功能。",
+            "what_is_an_app_description": "应用与 CHENGVIN 并行运行，并提供网络监控、代码编辑器、数据库管理等额外功能。",
             "why_not_available": "为什么你会看到这个页面而不是应用商店 ？",
-            "installation_hint": "应用需要 Home Assistant 操作系统。请参阅文档了解更多安装方法。",
+            "installation_hint": "应用需要 CHENGVIN 操作系统。请参阅文档了解更多安装方法。",
             "learn_more": "了解更多",
             "dismiss": "不要再次显示"
           },
@@ -347,7 +351,7 @@
             "option": {
               "boot": {
                 "title": "开机启动",
-                "description": "Home Assistant 启动时自动启动此应用。"
+                "description": "CHENGVIN 启动时自动启动此应用。"
               },
               "watchdog": {
                 "title": "自动恢复",
@@ -382,7 +386,7 @@
                 "rating": "评级",
                 "host": "主机",
                 "hardware": "硬件访问",
-                "core": "Home Assistant",
+                "core": "CHENGVIN",
                 "docker": "Docker",
                 "host_pid": "主机 PID",
                 "apparmor": "AppArmor",
@@ -414,12 +418,12 @@
                 "description": "此应用拥有对硬件的完全访问权限。"
               },
               "homeassistant_api": {
-                "title": "Home Assistant API",
-                "description": "此应用可以访问 Home Assistant API 。"
+                "title": "CHENGVIN API",
+                "description": "此应用可以访问 CHENGVIN API 。"
               },
               "hassio_api": {
-                "title": "Supervisor API",
-                "description": "此应用可以访问 Supervisor API 。"
+                "title": "主管 API",
+                "description": "此应用可以访问主管 API。"
               },
               "docker_api": {
                 "title": "Docker API",
@@ -580,7 +584,7 @@
           },
           "picker": {
             "header": "区域",
-            "introduction": "区域用于组织设备所在的位置。此信息可被用于 Home Assistant 的各个地方，帮助您组织界面、权限以及与其它系统的集成。",
+            "introduction": "区域用于组织设备所在的位置。此信息可被用于 CHENGVIN 的各个地方，帮助您组织界面、权限以及与其它系统的集成。",
             "introduction2": "要将设备置入某个区域，请使用下面的链接转到集成页面，然后点击一个已配置的集成以进入设备卡片。",
             "integrations_page": "集成页面",
             "no_areas": "您还没有建立区域。",
@@ -637,7 +641,7 @@
         "backup": {
           "caption": "备份",
           "description": "上次备份于 {relative_time}",
-          "description_no_backup": "管理备份或将 Home Assistant 还原到以前的状态",
+          "description_no_backup": "管理备份或将 CHENGVIN 还原到以前的状态",
           "create_backup": "创建备份",
           "creating_backup": "当前正在创建备份",
           "download_backup": "下载备份",
@@ -670,7 +674,7 @@
           "dialogs": {
             "local_backup_location": {
               "title": "更改默认本地备份位置",
-              "description": "更改 Home Assistant 实例上存储本地备份的默认位置。",
+              "description": "更改 CHENGVIN 实例上存储本地备份的默认位置。",
               "note": "例如当你在自动化里使用 Supervisor 动作创建备份时，会将备份保存至此目录。",
               "options": {
                 "default_backup_mount": {
@@ -695,7 +699,7 @@
               "supports_tar": "支持 .tar 文件",
               "unsupported": {
                 "title": "不支持的文件格式",
-                "text": "请选择 Home Assistant 备份文件 (.tar)"
+                "text": "请选择 CHENGVIN 备份文件 (.tar)"
               }
             },
             "generate": {
@@ -709,8 +713,8 @@
                   "custom": "自定义"
                 },
                 "ha_cloud_alert": {
-                  "title": "Home Assistant Cloud 无法同步",
-                  "description": "添加要同步此备份到 Home Assistant Cloud 的 Home Assistant 设置数据。"
+                  "title": "CHENGVIN 云 无法同步",
+                  "description": "添加要同步此备份到 CHENGVIN 云 的 CHENGVIN 设置数据。"
                 }
               },
               "data": {
@@ -746,7 +750,7 @@
                 "input_label": "加密密钥"
               },
               "progress": {
-                "restarting": "重启 Home Assistant",
+                "restarting": "重启 CHENGVIN",
                 "restoring": "正在还原备份"
               },
               "actions": {
@@ -771,7 +775,7 @@
               },
               "schedule": {
                 "title": "自动备份",
-                "description": "让 Home Assistant 负责您的备份，方法是创建计划备份并移除旧备份。"
+                "description": "让 CHENGVIN 负责您的备份，方法是创建计划备份并移除旧备份。"
               },
               "data": {
                 "title": "备份数据",
@@ -779,7 +783,7 @@
               },
               "locations": {
                 "title": "位置",
-                "description": "自动备份时，Home Assistant 会上传到这些位置。您可以使用所有位置进行手动备份。"
+                "description": "自动备份时，CHENGVIN 会上传到这些位置。您可以使用所有位置进行手动备份。"
               },
               "save_and_create": "保存并创建备份"
             },
@@ -834,7 +838,7 @@
           },
           "agents": {
             "cloud_agent_description": "注意：无论您的保留设置如何，它都仅存储最近的备份，最大大小为 5 GB 。",
-            "cloud_agent_no_subcription": "您当前没有有效的 Home Assistant Cloud 订阅。",
+            "cloud_agent_no_subcription": "您当前没有有效的 CHENGVIN 云 订阅。",
             "network_mount_agent_description": "网络存储",
             "unavailable_agents": "位置不可用",
             "no_agents": "未配置位置",
@@ -845,7 +849,7 @@
             "retention_days": "保留 {count} {count, plural,\n one {天}\n other {天}\n}"
           },
           "data": {
-            "ha_settings": "Home Assistant 设置",
+            "ha_settings": "CHENGVIN 设置",
             "ha_settings_description": "还原系统所需的最低限度。",
             "ha_settings_included_description": "还原系统所需的最低限度。它始终包含在自动备份数据中。",
             "history": "历史",
@@ -882,9 +886,9 @@
             "time": "时间",
             "custom_time": "自定义时间",
             "custom_time_label": "备份于",
-            "custom_time_description": "最佳时间是 Home Assistant 完成数据库清理之后。此操作在 {time} 完成。",
+            "custom_time_description": "最佳时间是 CHENGVIN 完成数据库清理之后。此操作在 {time} 完成。",
             "schedule_description": "您想多久创建一次备份。",
-            "schedule_time_description": "何时启动备份创建进程。默认情况下，Home Assistant 会在 {time_range_start} 和 {time_range_end} 之间选择最佳时间。",
+            "schedule_time_description": "何时启动备份创建进程。默认情况下，CHENGVIN 会在 {time_range_start} 和 {time_range_end} 之间选择最佳时间。",
             "tip": "您可以使用 {backup_create} 动作创建自己的自定义备份自动化",
             "schedule_options": {
               "never": "永不",
@@ -934,8 +938,8 @@
             "set_encryption_key_action": "设置"
           },
           "emergency_kit_file": {
-            "title": "Home Assistant 备份应急套件",
-            "description": "此应急工具包包含您的备份加密密钥。您需要此密钥才能还原您的 Home Assistant 备份。",
+            "title": "CHENGVIN 备份应急套件",
+            "description": "此应急工具包包含您的备份加密密钥。您需要此密钥才能还原您的 CHENGVIN 备份。",
             "date": "日期：",
             "instance": "实例：",
             "url": "网址：",
@@ -972,7 +976,7 @@
                   "docker_config": "正在备份 Docker 配置",
                   "finishing_file": "正在完成备份文件",
                   "folders": "正在备份文件夹",
-                  "home_assistant": "正在备份 Home Assistant",
+                  "home_assistant": "正在备份 CHENGVIN",
                   "upload_to_agents": "正在上传至位置",
                   "cleaning_up": "清理"
                 },
@@ -983,12 +987,12 @@
                   "app_repositories": "正在还原应用存储库",
                   "apps": "正在还原应用",
                   "await_app_restarts": "正在等待应用重启",
-                  "await_home_assistant_restart": "正在等待 Home Assistant 重启",
-                  "check_home_assistant": "正在检查 Home Assistant",
+                  "await_home_assistant_restart": "正在等待 CHENGVIN 重启",
+                  "check_home_assistant": "正在检查 CHENGVIN",
                   "docker_config": "正在还原 Docker 配置",
                   "download_from_agent": "正在从位置下载",
                   "folders": "正在还原文件夹",
-                  "home_assistant": "正在还原 Home Assistant",
+                  "home_assistant": "正在还原 CHENGVIN",
                   "remove_delta_addons": "正在移除增量应用",
                   "remove_delta_apps": "正在移除增量应用"
                 },
@@ -998,7 +1002,7 @@
                 }
               },
               "segments": {
-                "home_assistant": "Home Assistant",
+                "home_assistant": "CHENGVIN",
                 "apps": "应用",
                 "media": "媒体",
                 "upload": "正在上传备份",
@@ -1055,7 +1059,7 @@
               "schedule_optimized_daily": "每天",
               "schedule_optimized_days": "每{days}",
               "schedule_never": "没有安排自动备份",
-              "data": "包含的 Home Assistant 数据",
+              "data": "包含的 CHENGVIN 数据",
               "data_settings_history": "设置和历史记录",
               "data_settings_only": "仅限设置",
               "apps": "已包含的应用",
@@ -1107,7 +1111,7 @@
             },
             "schedule": {
               "title": "备用周期",
-              "description": "让 Home Assistant 负责您的备份，方法是创建计划备份并移除旧备份。",
+              "description": "让 CHENGVIN 负责您的备份，方法是创建计划备份并移除旧备份。",
               "error_load": "加载 Supervisor 更新配置时出错：{error}",
               "error_save": "保存 Supervisor 更新配置时出错：{error}"
             },
@@ -1179,7 +1183,7 @@
             "error": "无法获取位置详情",
             "configuration": {
               "title": "配置",
-              "cloud_description": "Home Assistant 云备份仅存储一个备份。最旧的备份将会被删除。"
+              "cloud_description": "CHENGVIN 云备份仅存储一个备份。最旧的备份将会被删除。"
             },
             "encryption": {
               "title": "加密",
@@ -1187,7 +1191,7 @@
               "location_encrypted": "在此位置的备份将被加密",
               "location_unencrypted": "在此位置进行的备份将不加密",
               "location_encrypted_description": "通过使用加密密钥加密备份，您的数据是私密且安全的。",
-              "location_encrypted_cloud_description": "Home Assistant Cloud 是注重隐私的云。这就是为什么它只接受加密备份，并且我们不存储您的加密密钥。",
+              "location_encrypted_cloud_description": "CHENGVIN 云 是注重隐私的云。这就是为什么它只接受加密备份，并且我们不存储您的加密密钥。",
               "location_encrypted_cloud_learn_more": "了解更多信息",
               "location_unencrypted_description": "请确保您的备份的私密性和安全性。",
               "encryption_turn_on": "开启",
@@ -1228,14 +1232,14 @@
             "tag_id": "联动标签标识符",
             "tag_id_placeholder": "留空则自动生成",
             "use_custom_id": "使用自定义标签标识符",
-            "custom_id_warning": "标签标识符会写入到物理标签，之后无法更改。随机 UUID 通常更安全，因为标识符与标签的实际功能无关。您可以随时重命名标签，并在另一个 Home Assistant 实例中将同一个物理标签用于完全不同的用途，而无需担心标识符会承载不再适用的含义。",
+            "custom_id_warning": "标签标识符会写入到物理标签，之后无法更改。随机 UUID 通常更安全，因为标识符与标签的实际功能无关。您可以随时重命名标签，并在另一个 CHENGVIN 实例中将同一个物理标签用于完全不同的用途，而无需担心标识符会承载不再适用的含义。",
             "delete": "删除",
             "update": "更新",
             "create": "创建",
             "create_and_write": "创建并写入",
             "required_error_msg": "此字段为必填项",
             "usage": "联动标签可以在被扫描时触发自动化。您可以使用 NFC 标签、二维码或各种其它类型的联动标签。请使用我们的 {companion_link} 将此联动标签写入可编程 NFC 标签，或复制和打印下方的二维码。",
-            "companion_apps": "Companion 应用"
+            "companion_apps": "CHENGVIN 应用"
           }
         },
         "tools": {
@@ -1243,7 +1247,7 @@
             "assist": {
               "tab": "语音助手",
               "title": "语句解析器",
-              "description": "输入语句并查看 Home Assistant 将如何解析它们。每一行作为一个单独的语句进行处理。解析出的意图不会在您的实例上执行。",
+              "description": "输入语句并查看 CHENGVIN 将如何解析它们。每一行作为一个单独的语句进行处理。解析出的意图不会在您的实例上执行。",
               "parse_sentences": "解析语句",
               "sentences": "语句",
               "download_results": "下载结果",
@@ -1303,7 +1307,7 @@
             },
             "actions": {
               "title": "动作",
-              "description": "动作工具可让您执行 Home Assistant 中任何可用的动作。",
+              "description": "动作工具可让您执行 CHENGVIN 中任何可用的动作。",
               "call_service": "执行动作",
               "response": "响应",
               "column_parameter": "参数",
@@ -1336,7 +1340,7 @@
             },
             "states": {
               "title": "状态",
-              "description1": "设置实体在 Home Assistant 中的当前状态表现形式。",
+              "description1": "设置实体在 CHENGVIN 中的当前状态表现形式。",
               "description2": "如果实体属于某个设备，则不会与此设备进行实际通信。",
               "entity": "实体",
               "state": "状态",
@@ -1356,8 +1360,8 @@
             },
             "templates": {
               "title": "模板",
-              "description": "模板允许您根据 Home Assistant 数据生成动态内容，例如列出哪些灯亮着的通知，或者根据几个其他实体计算出的传感器值。",
-              "engine_info": "Home Assistant 使用 Jinja 模板引擎，并扩展了用于操作实体、区域、设备等的功能。在下方编辑器中编写模板，其结果会随着状态的改变而实时更新。",
+              "description": "模板允许您根据 CHENGVIN 数据生成动态内容，例如列出哪些灯亮着的通知，或者根据几个其他实体计算出的传感器值。",
+              "engine_info": "CHENGVIN 使用 Jinja 模板引擎，并扩展了用于操作实体、区域、设备等的功能。在下方编辑器中编写模板，其结果会随着状态的改变而实时更新。",
               "learn_more": "了解更多",
               "about": "关于模板",
               "editor": "模板编辑器",
@@ -1494,9 +1498,9 @@
               "section": {
                 "validation": {
                   "heading": "检查并重启",
-                  "introduction": "重启前会自动对配置进行基本验证。基本验证可确保 YAML 配置中不存在会阻止 Home Assistant 或任何集成启动的错误。也可以仅执行基本验证检查而不进行重启。",
+                  "introduction": "重启前会自动对配置进行基本验证。基本验证可确保 YAML 配置中不存在会阻止 CHENGVIN 或任何集成启动的错误。也可以仅执行基本验证检查而不进行重启。",
                   "check_config": "检查配置",
-                  "valid": "配置不会阻止 Home Assistant 启动！",
+                  "valid": "配置不会阻止 CHENGVIN 启动！",
                   "invalid": "配置无效！",
                   "warnings": "配置警告",
                   "errors": "配置错误"
@@ -1504,7 +1508,7 @@
                 "reloading": {
                   "all": "所有 YAML 配置",
                   "heading": "YAML 配置重新加载中",
-                  "introduction": "Home Assistant 的某些组件无需重启即可重新加载。选择以下任一选项，将卸载其当前的 YAML 配置并加载新的配置。",
+                  "introduction": "CHENGVIN 的某些组件无需重启即可重新加载。选择以下任一选项，将卸载其当前的 YAML 配置并加载新的配置。",
                   "reload": "{domain}",
                   "core": "位置和自定义",
                   "group": "群组、群组实体以及通知服务",
@@ -1541,11 +1545,11 @@
                   "themes": "主题"
                 },
                 "server_management": {
-                  "heading": "Home Assistant",
+                  "heading": "CHENGVIN",
                   "restart": "重启",
                   "stop": "停止",
-                  "confirm_stop": "您确定要停止 Home Assistant 吗？",
-                  "restart_error": "重新启动 Home Assistant 失败"
+                  "confirm_stop": "您确定要停止 CHENGVIN 吗？",
+                  "restart_error": "重新启动 CHENGVIN 失败"
                 }
               }
             }
@@ -1575,7 +1579,7 @@
           "delete_integration": "您确定要移除此集成吗 ？由此集成提供的实体将一并删除。",
           "grid": {
             "title": "电力公司",
-            "sub": "配置从电网消耗的电量，以及自发电用户返还给电力公司的电量，以便 Home Assistant 可以监测您的全屋能耗。",
+            "sub": "配置从电网消耗的电量，以及自发电用户返还给电力公司的电量，以便 CHENGVIN 可以监测您的全屋能耗。",
             "learn_more": "进一步了解如何开始使用",
             "grid_connections": "电网连接",
             "add_connection": "添加电网连接",
@@ -1593,7 +1597,7 @@
               "energy_to_helper": "选取测量电网输出的传感器（单位为 {unit} 之一） 。",
               "display_name": "显示名称",
               "import_cost": "成本跟踪",
-              "import_cost_para": "选择 Home Assistant 如何跟踪输入能源的成本。",
+              "import_cost_para": "选择 CHENGVIN 如何跟踪输入能源的成本。",
               "no_cost_tracking": "不追踪成本",
               "cost_stat": "使用可跟踪总成本的实体",
               "cost_stat_label": "总成本实体",
@@ -1622,7 +1626,7 @@
               "power_helper": "选取测量电网功率的传感器（单位为 {unit} 之一） 。",
               "power_from": "电网输入功率",
               "power_to": "输出电网功率",
-              "helper_sensor_note": "Home Assistant 将为此选项创建一个辅助传感器实体。",
+              "helper_sensor_note": "CHENGVIN 将为此选项创建一个辅助传感器实体。",
               "helper_sensor_in_use": "当前正在使用辅助传感器 {entity}"
             },
             "flow_dialog": {
@@ -1639,7 +1643,7 @@
           },
           "solar": {
             "title": "太阳能电池板",
-            "sub": "让 Home Assistant 监控您的太阳能板，并向您展示其性能。",
+            "sub": "让 CHENGVIN 监控您的太阳能板，并向您展示其性能。",
             "learn_more": "进一步了解如何开始使用",
             "solar_production": "光伏发电量",
             "edit_solar_production": "编辑光伏发电数据",
@@ -1691,13 +1695,13 @@
               "type_two_sensors": "双向",
               "power_from": "放电",
               "power_to": "充电",
-              "helper_sensor_note": "Home Assistant 将为此选项创建一个辅助传感器实体。",
+              "helper_sensor_note": "CHENGVIN 将为此选项创建一个辅助传感器实体。",
               "helper_sensor_in_use": "当前正在使用辅助传感器 {entity}"
             }
           },
           "gas": {
             "title": "燃气消耗",
-            "sub": "让 Home Assistant 监控您的燃气用量。",
+            "sub": "让 CHENGVIN 监控您的燃气用量。",
             "learn_more": "进一步了解如何开始使用",
             "gas_consumption": "耗气量",
             "edit_gas_source": "编辑燃气数据",
@@ -1709,7 +1713,7 @@
               "entity_para": "选择测量耗气量的传感器，单位为 {unit} 之一。",
               "note_para": "注意：不能同时添加表示燃气用量的传感器和表示消耗燃气能量的传感器。",
               "display_name": "显示名称",
-              "cost_para": "选择 Home Assistant 如何监测消耗燃气的费用。",
+              "cost_para": "选择 CHENGVIN 如何监测消耗燃气的费用。",
               "no_cost": "不跟踪成本",
               "cost_stat": "使用可跟踪总成本的实体",
               "cost_stat_input": "总成本实体",
@@ -1727,7 +1731,7 @@
           },
           "water": {
             "title": "自来水消耗",
-            "sub": "让 Home Assistant 监控您家的用水量。",
+            "sub": "让 CHENGVIN 监控您家的用水量。",
             "learn_more": "进一步了解如何开始使用",
             "water_consumption": "自来水消耗",
             "edit_water_source": "编辑自来水数据",
@@ -1737,7 +1741,7 @@
               "header": "配置耗水量",
               "paragraph": "用水量就是流入您家的水量。",
               "entity_para": "选择测量用水量的传感器，单位为 {unit} 之一。",
-              "cost_para": "选择 Home Assistant 如何监测消耗自来水的费用。",
+              "cost_para": "选择 CHENGVIN 如何监测消耗自来水的费用。",
               "display_name": "显示名称",
               "no_cost": "不跟踪成本",
               "cost_stat": "使用可跟踪总成本的实体",
@@ -1754,7 +1758,7 @@
           },
           "device_consumption": {
             "title": "单个电气设备",
-            "sub": "通过跟踪单个设备的能耗，Home Assistant 可以将能耗细化到每个设备。",
+            "sub": "通过跟踪单个设备的能耗，CHENGVIN 可以将能耗细化到每个设备。",
             "learn_more": "进一步了解如何开始使用",
             "add_stat": "选择要监测能耗的实体",
             "selected_stat": "能耗监测:",
@@ -1773,7 +1777,7 @@
           },
           "device_consumption_water": {
             "title": "各个用水设备",
-            "sub": "通过追踪各个设备的用水量，Home Assistant 可以按设备细分您的用水量。",
+            "sub": "通过追踪各个设备的用水量，CHENGVIN 可以按设备细分您的用水量。",
             "learn_more": "更多入门信息",
             "devices": "设备",
             "add_device": "添加设备",
@@ -1873,18 +1877,18 @@
           }
         },
         "url": {
-          "caption": "Home Assistant 网址",
-          "description": "当其它设备需要从 Home Assistant 获取数据（例如播放文字转语音或托管媒体）时，配置 Home Assistant 应共享给这些设备的网站地址。",
+          "caption": "CHENGVIN 网址",
+          "description": "当其它设备需要从 CHENGVIN 获取数据（例如播放文字转语音或托管媒体）时，配置 CHENGVIN 应共享给这些设备的网站地址。",
           "internal_url_label": "本地网络",
           "external_url_label": "互联网",
-          "external_use_ha_cloud": "使用 Home Assistant Cloud",
-          "manage_ha_cloud": "管理 Home Assistant Cloud",
-          "external_get_ha_cloud": "如果您正在寻找一种无论身在何处都能快速安全地连接到 Home Assistant 的方式，请立即开始试用 Home Assistant Cloud。您的每次购买行为都是在支持 Home Assistant 的开发。",
-          "ha_cloud_remote_not_enabled": "Home Assistant Cloud 远程连接当前未启用。",
+          "external_use_ha_cloud": "使用 CHENGVIN 云",
+          "manage_ha_cloud": "管理 CHENGVIN 云",
+          "external_get_ha_cloud": "如果您正在寻找一种无论身在何处都能快速安全地连接到 CHENGVIN 的方式，请立即开始试用 CHENGVIN 云。您的每次购买行为都是在支持 CHENGVIN 的开发。",
+          "ha_cloud_remote_not_enabled": "CHENGVIN 云 远程连接当前未启用。",
           "enable_remote": "启用",
           "internal_url_automatic": "自动",
           "internal_url_https_error_title": "本地网络网址无效",
-          "internal_url_https_error_description": "您已经为 Home Assistant 配置了 SSL 证书。因此本地网络地址的域名需要在此证书的域名范围内。",
+          "internal_url_https_error_description": "您已经为 CHENGVIN 配置了 SSL 证书。因此本地网络地址的域名需要在此证书的域名范围内。",
           "internal_url_automatic_description": "使用配置的网络设置",
           "internal_url_placeholder": "{protocol}://192.168.1.100{port}",
           "external_url_placeholder": "{protocol}://example.duckdns.org{port}",
@@ -1913,19 +1917,21 @@
           "documentation": "文档",
           "configure": "配置",
           "documentation_description": "查找关于您的设备的更多信息",
-          "restart_homeassistant": "重启 Home Assistant",
+          "restart_homeassistant": "重启 CHENGVIN",
           "loading_system_data": "正在加载处理器和内存信息..."
         },
         "info": {
           "caption": "关于",
           "installation_method": "安装方式",
-          "external_app_version": "Companion 应用",
+          "external_app_version": "CHENGVIN 应用",
           "copy_menu": "复制菜单",
           "copy_raw": "原始文本",
           "copy_github": "用于 GitHub",
           "description": "版本号、已加载的集成和各类文档的链接",
-          "home_assistant_logo": "Home Assistant 图标",
-          "developed_by": "由一群了不起的人开发。",
+          "product_name": "CHENGVIN",
+          "company_name": "福建星启航信息科技有限公司",
+          "home_assistant_logo": "CHENGVIN 图标",
+          "developed_by": "由福建星启航信息科技有限公司开发。",
           "license": "根据 Apache 2.0 许可发布",
           "source": "源：",
           "server": "服务器",
@@ -1987,10 +1993,10 @@
           "download_logs": "下载日志",
           "log_file_disabled_title": "日志文件已禁用",
           "log_file_disabled": {
-            "environment": "由于设置了 HA_DISABLE_LOG_FILE，Home Assistant 未写入日志文件。原始日志查看和日志下载功能不可用。"
+            "environment": "由于设置了 HA_DISABLE_LOG_FILE，CHENGVIN 未写入日志文件。原始日志查看和日志下载功能不可用。"
           },
           "log_file_disabled_debug_download": {
-            "environment": "调试日志记录已禁用，但由于设置了 HA_DISABLE_LOG_FILE 且 Home Assistant 未写入日志文件，因此未下载日志文件。"
+            "environment": "调试日志记录已禁用，但由于设置了 HA_DISABLE_LOG_FILE 且 CHENGVIN 未写入日志文件，因此未下载日志文件。"
           },
           "scroll_down_button": "新日志 - 点击可滚动",
           "provider_not_found": "未找到日志提供方",
@@ -2092,7 +2098,7 @@
               "set_default": "设为默认",
               "remove_default": "取消默认",
               "set_default_confirm_title": "设置为默认仪表盘 ？",
-              "set_default_confirm_text": "此仪表盘将在用户打开 Home Assistant 时显示。",
+              "set_default_confirm_text": "此仪表盘将在用户打开 CHENGVIN 时显示。",
               "set_default_confirm_note": "已在个人资料中选择特定仪表盘的用户不会受到影响。他们必须将其设置回“自动（使用系统设置）”才能使用此仪表盘。",
               "set_default_admin_only_title": "无法设置为默认",
               "set_default_admin_only_text": "此仪表盘设置为仅限管理员使用。在将其设置为默认之前，请取消此限制。"
@@ -2232,7 +2238,7 @@
               "features": {
                 "assistants": {
                   "title": "Google Assistant 和 Amazon Alexa",
-                  "text": "通过任何支持 Google Assistant 或 Alexa 的设备控制所有 Home Assistant 设备。"
+                  "text": "通过任何支持 Google Assistant 或 Alexa 的设备控制所有 CHENGVIN 设备。"
                 },
                 "speech": {
                   "title": "优质的语音体验",
@@ -2240,7 +2246,7 @@
                 },
                 "remote_access": {
                   "title": "远程访问",
-                  "text": "在支持 Home Assistant 开发的同时，安全地远程访问您的系统。"
+                  "text": "在支持 CHENGVIN 开发的同时，安全地远程访问您的系统。"
                 }
               },
               "and_more": "了解更多信息",
@@ -2336,8 +2342,8 @@
             "check": {
               "title": "您好 ！",
               "secondary": "在接下来的几个步骤中，我们将个性化您的语音助手。",
-              "failed_title": "语音助手无法连接到 Home Assistant",
-              "failed_secondary": "要播放音频，语音助手设备必须连接到 Home Assistant 才能获取文件。我们的测试表明该设备无法连接到 Home Assistant 服务器。",
+              "failed_title": "语音助手无法连接到 CHENGVIN",
+              "failed_secondary": "要播放音频，语音助手设备必须连接到 CHENGVIN 才能获取文件。我们的测试表明该设备无法连接到 CHENGVIN 服务器。",
               "help": "帮我",
               "retry": "重试"
             },
@@ -2375,8 +2381,8 @@
               },
               "options": {
                 "cloud": {
-                  "label": "Home Assistant Cloud",
-                  "description": "将语音处理卸载到快速的私有云。提供有最高的准确度和最广泛的语言支持。Home Assistant Cloud 是一项包含语音处理的订阅服务。"
+                  "label": "CHENGVIN 云",
+                  "description": "将语音处理卸载到快速的私有云。提供有最高的准确度和最广泛的语言支持。CHENGVIN 云 是一项包含语音处理的订阅服务。"
                 },
                 "focused_local": {
                   "label": "重点本地处理",
@@ -2396,7 +2402,7 @@
               }
             },
             "cloud": {
-              "title": "Home Assistant Cloud 的强大功能"
+              "title": "CHENGVIN 云 的强大功能"
             },
             "local": {
               "title": "安装应用",
@@ -2481,7 +2487,7 @@
               "disable": "禁用"
             },
             "empty_header": "开始自动化",
-            "empty_text_1": "自动化使 Home Assistant 能够自动响应在您的家中和周围发生的事情。",
+            "empty_text_1": "自动化使 CHENGVIN 能够自动响应在您的家中和周围发生的事情。",
             "empty_text_2": "自动化就是“当‘触发条件’被触发时，就执行‘动作’”的行为。这种行为可以通过“环境条件”加以限制。例如：“当太阳落山时，如果 {user} 在家，则打开灯光”。",
             "migrate_automation": "迁移自动化 ？",
             "migrate_automation_description": "您可以迁移此自动化，以便可以在用户界面中编辑它。迁移并保存后，您必须从配置中手动删除旧自动化。是否要迁移此自动化 ？"
@@ -2497,7 +2503,7 @@
               "author": "作者：{author}",
               "local": "由您创建",
               "community": "由社区提供",
-              "homeassistant": "由 Home Assistant 提供"
+              "homeassistant": "由 CHENGVIN 提供"
             },
             "discover_blueprint_tip": "发现更多社区蓝图"
           },
@@ -2724,7 +2730,7 @@
                   "context_user_picked": "用户触发事件",
                   "context_user_pick": "选择用户",
                   "description": {
-                    "picker": "当接收到事件时触发（事件是 Home Assistant 中使用的构建块）。",
+                    "picker": "当接收到事件时触发（事件是 CHENGVIN 中使用的构建块）。",
                     "full": "当“{eventTypes}”事件被触发时"
                   }
                 },
@@ -2759,14 +2765,14 @@
                   }
                 },
                 "homeassistant": {
-                  "label": "Home Assistant",
+                  "label": "CHENGVIN",
                   "event": "事件：",
                   "start": "启动",
                   "shutdown": "关闭",
                   "description": {
-                    "picker": "当 Home Assistant 启动或关闭时触发。",
-                    "started": "当 Home Assistant 启动后",
-                    "shutdown": "当 Home Assistant 关闭时"
+                    "picker": "当 CHENGVIN 启动或关闭时触发。",
+                    "started": "当 CHENGVIN 启动后",
+                    "shutdown": "当 CHENGVIN 关闭时"
                   }
                 },
                 "mqtt": {
@@ -2849,7 +2855,7 @@
                 "tag": {
                   "label": "标签",
                   "description": {
-                    "picker": "当扫描某个标签时（标签通常由 Companion 应用程序创建）触发。",
+                    "picker": "当扫描某个标签时（标签通常由 CHENGVIN 应用程序创建）触发。",
                     "full": "当扫描到某个标签时",
                     "known_tag": "扫描标签“{tag_name}”时"
                   }
@@ -2915,7 +2921,7 @@
                   "webhook_id_helper": "请将此标识符视同密码：保密并使其难以推测。",
                   "webhook_settings": "Webhook 设置",
                   "description": {
-                    "picker": "当 Home Assistant 接收到对 webhook 端点的网络请求时触发。",
+                    "picker": "当 CHENGVIN 接收到对 webhook 端点的网络请求时触发。",
                     "full": "当收到某个 Webhook 有效载荷时"
                   }
                 },
@@ -2938,7 +2944,9 @@
                     "full": "当 {count} 个{count, plural,\n  one {触发条件}\n other {触发条件}\n} 有任一触发时"
                   }
                 }
-              }
+              },
+              "trigger_index_tooltip": "此触发器的位置，用于在“由触发器触发”条件中引用它",
+              "trigger_index_aria_label": "触发器 {number}"
             },
             "conditions": {
               "name": "环境条件",
@@ -3062,7 +3070,8 @@
                   "description": {
                     "picker": "测试某个实体（或属性）是否处于特定状态。",
                     "is": "{hasAttribute, select, \n true {{attribute}} \n other {状态}\n} 为 {states}{hasDuration, select, \n true { 已持续 {duration}} \n other {}\n}"
-                  }
+                  },
+                  "for_unavailable_with_attribute": "按属性匹配时不可用。"
                 },
                 "sun": {
                   "label": "日出日落",
@@ -3117,8 +3126,16 @@
                   "id": "触发条件",
                   "description": {
                     "picker": "测试自动化是否由特定触发器触发。",
-                    "full": "当由 {id} 触发时"
-                  }
+                    "full": "当由 {id} 触发时",
+                    "summary": "若由以下触发器触发"
+                  },
+                  "no_triggers_selected": "未选择触发器。",
+                  "missing_trigger": "缺少触发器",
+                  "missing_triggers": "此条件引用的触发器已不存在。取消勾选即可清除。",
+                  "duplicate_ids": "部分触发器共用同一个触发器 ID。请避免重复使用同一 ID 来分组；改为在此选择多个触发器。",
+                  "duplicate_ids_fix": "修复",
+                  "assign_unique_ids_title": "分配唯一的触发器 ID？",
+                  "assign_unique_ids_description": "每个共用 ID 的触发器都会获得唯一 ID，使用它的条件也会同步更新。直接使用 trigger.id 的模板或动作可能需要手动修改。"
                 },
                 "zone": {
                   "label": "地点",
@@ -3254,7 +3271,7 @@
                   "event": "事件类型",
                   "event_data": "事件数据",
                   "description": {
-                    "picker": "手动触发事件（事件是 Home Assistant 中使用的构建块）。",
+                    "picker": "手动触发事件（事件是 CHENGVIN 中使用的构建块）。",
                     "full": "手动触发事件“{name}”",
                     "template": "基于一个模板"
                   }
@@ -3419,7 +3436,13 @@
             },
             "paste_toast_message": "粘贴自剪贴板的自动化",
             "paste_invalid_yaml": "粘贴的值不是有效的 YAML",
-            "paste_invalid_config": "粘贴的自动化无法在可视化编辑器中编辑"
+            "paste_invalid_config": "粘贴的自动化无法在可视化编辑器中编辑",
+            "row_options": {
+              "for": "持续 {duration}",
+              "offset_before": "提前 {offset}",
+              "offset_after": "延后 {offset}",
+              "timeout": "超时 {duration}"
+            }
           },
           "trace": {
             "refresh": "刷新",
@@ -3562,7 +3585,7 @@
             "override_description": "导入它将覆盖现有的蓝图。如果更新的蓝图不兼容，可能会破坏您的自动化。自动化将必须手动调整。",
             "error_no_url": "请输入蓝图地址。",
             "source_warning_title": "检查此蓝图来源",
-            "source_warning_description": "此蓝图并非来自 GitHub 或 Home Assistant 官方网站。仅当您信任此来源时才继续。",
+            "source_warning_description": "此蓝图并非来自 GitHub 或 CHENGVIN 官方网站。仅当您信任此来源时才继续。",
             "unsupported_blueprint": "此蓝图不受支持",
             "file_name": "蓝图路径"
           }
@@ -3609,7 +3632,7 @@
               "author": "作者：{author}",
               "local": "由您创建",
               "community": "由社区提供",
-              "homeassistant": "由 Home Assistant 提供"
+              "homeassistant": "由 CHENGVIN 提供"
             },
             "discover_blueprint_tip": "发现更多社区蓝图"
           },
@@ -3773,23 +3796,23 @@
           "description_features": "离家时也可控制家居，还可接入 Alexa 和 Google Assistant",
           "login": {
             "title": "云登录",
-            "landing_title": "Home Assistant Cloud",
+            "landing_title": "CHENGVIN 云",
             "hero_title": "居家工具，支持 Open Home",
-            "hero_lead": "轻松、安全、私密地获得更多 Home Assistant 功能，以及为其开发提供资金的最简单方法。",
+            "hero_lead": "轻松、安全、私密地获得更多 CHENGVIN 功能，以及为其开发提供资金的最简单方法。",
             "trial_note": "免费试用一个月。无需提前提供支付信息。",
-            "partner_note": "该服务由我们的合作伙伴 {nabu_casa_link} 运营，该公司由 Home Assistant 的创始团队创立。",
+            "partner_note": "该服务由我们的合作伙伴 {nabu_casa_link} 运营，该公司由 CHENGVIN 的创始团队创立。",
             "feature_remote_title": "随时随地访问",
-            "feature_remote_body": "即使身处异地，也能安全私密地访问您的 Home Assistant。无需路由器配置、端口转发或复杂的 VPN 设置。",
+            "feature_remote_body": "即使身处异地，也能安全私密地访问您的 CHENGVIN。无需路由器配置、端口转发或复杂的 VPN 设置。",
             "feature_backup_title": "备份已妥善保存",
-            "feature_backup_body": "您最新的 Home Assistant 备份已自动存储在某个安全位置，且仅可通过您的私钥访问，只需点击一下即可恢复整个系统。",
+            "feature_backup_body": "您最新的 CHENGVIN 备份已自动存储在某个安全位置，且仅可通过您的私钥访问，只需点击一下即可恢复整个系统。",
             "feature_voice_control_title": "轻松上手 Alexa 和 Google Home",
-            "feature_voice_control_body": "轻松过渡到 Home Assistant，使用您的 Google 和 Alexa 音箱控制所有设备。几分钟内即可完成设置，无需数小时。",
+            "feature_voice_control_body": "轻松过渡到 CHENGVIN，使用您的 Google 和 Alexa 音箱控制所有设备。几分钟内即可完成设置，无需数小时。",
             "feature_voice_quality_title": "快速、准确的语音控制",
-            "feature_voice_quality_body": "为您的 Home Assistant 驱动的私人语音助手提供更多语言支持和更高的识别准确率。",
+            "feature_voice_quality_body": "为您的 CHENGVIN 驱动的私人语音助手提供更多语言支持和更高的识别准确率。",
             "feature_companion_title": "安全应用连接",
-            "feature_companion_body": "您移动设备上的 Home Assistant 应用会与家中建立安全连接，并对您的位置和传感器数据进行加密。",
-            "feature_support_title": "支持 Home Assistant",
-            "feature_support_body": "您的订阅将直接为 Open Home 基金会提供资金支持，确保 Home Assistant 保持独立，且不受广告或数据采集的影响。",
+            "feature_companion_body": "您移动设备上的 CHENGVIN 应用会与家中建立安全连接，并对您的位置和传感器数据进行加密。",
+            "feature_support_title": "支持 CHENGVIN",
+            "feature_support_body": "您的订阅将直接为 Open Home 基金会提供资金支持，确保 CHENGVIN 保持独立，且不受广告或数据采集的影响。",
             "sign_in": "登录",
             "sign_in_lead": "登录您的 Nabu Casa 账户。",
             "email": "电子邮箱",
@@ -3818,7 +3841,7 @@
           },
           "register": {
             "headline": "开始免费试用",
-            "information": "创建一个账户，开始 Home Assistant Cloud 的一个月免费试用。无需提供付款信息。",
+            "information": "创建一个账户，开始 CHENGVIN 云 的一个月免费试用。无需提供付款信息。",
             "terms_notice": "创建账户即表示您同意我们的条款 {terms} 和 {privacy_policy} 。",
             "link_terms_conditions": "条款和条件",
             "link_privacy_policy": "隐私政策",
@@ -3842,7 +3865,7 @@
           "account": {
             "thank_you_title": "谢谢！",
             "getting_renewal_date": "获取续订日期…",
-            "funding_note": "每笔云订阅收入都将用于支持 Open Home Foundation ，以此支付全职开发人员的薪资，并确保 Home Assistant 项目的独立性。不涉及私募股权、不投放广告，也没有数据采集。",
+            "funding_note": "每笔云订阅收入都将用于支持 Open Home Foundation ，以此支付全职开发人员的薪资，并确保 CHENGVIN 项目的独立性。不涉及私募股权、不投放广告，也没有数据采集。",
             "email": "电子邮件",
             "show_email": "显示电子邮件",
             "hide_email": "隐藏电子邮件",
@@ -3863,12 +3886,12 @@
               "canceled_text": "您的订阅已取消。您将能够继续使用云端功能，直至 {date}。",
               "resubscribe": "重新订阅",
               "features_title": "云功能",
-              "features_intro": "尽享 Home Assistant 的卓越功能，同时助力其持续开发。随时随地安全访问您的家，添加语音助手，进行异地备份等等。由 Home Assistant 团队打造。",
+              "features_intro": "尽享 CHENGVIN 的卓越功能，同时助力其持续开发。随时随地安全访问您的家，添加语音助手，进行异地备份等等。由 CHENGVIN 团队打造。",
               "feature_remote": "远程访问",
               "feature_backups": "云备份",
               "feature_voice": "语音",
               "feature_voice_sub": "文本转语音和语音转文本",
-              "feature_companion": "Companion 应用",
+              "feature_companion": "CHENGVIN 应用",
               "feature_companion_sub": "位置与传感器",
               "feature_alexa_google": "Alexa 和 Google",
               "alexa_google_both": "Alexa 与 Google 已连接",
@@ -3888,34 +3911,34 @@
               "last_backup": "上次备份 {relative}"
             },
             "onboarding": {
-              "ready_title": "Home Assistant Cloud 已就绪",
-              "ready_text": "订阅后，您将解锁一系列功能，让 Home Assistant 变得更强大、更私密、更互联。现在即可设置，或随时回来操作。",
+              "ready_title": "CHENGVIN 云 已就绪",
+              "ready_text": "订阅后，您将解锁一系列功能，让 CHENGVIN 变得更强大、更私密、更互联。现在即可设置，或随时回来操作。",
               "start_setup": "开始设置",
               "review_later": "稍后查看",
               "chip_remote": "远程访问",
               "chip_backups": "云备份",
               "chip_voice": "语音助手",
               "chip_streaming": "更流畅的流媒体播放",
-              "dialog_title": "充分利用 Home Assistant Cloud",
-              "dialog_intro": "Home Assistant Cloud 可以做很多事情。您可以随时按照自己的节奏进行设置，并且随时可以回到这里。",
+              "dialog_title": "充分利用 CHENGVIN 云",
+              "dialog_intro": "CHENGVIN 云 可以做很多事情。您可以随时按照自己的节奏进行设置，并且随时可以回到这里。",
               "done": "完成",
               "turn_on": "开启",
               "turn_off": "关闭",
               "remote_title": "远程访问",
               "remote_helper": "无论身在何处，都能与家保持联系",
-              "remote_body": "无需端口转发或VPN，即可从任何设备安全地访问您的Home Assistant。",
+              "remote_body": "无需端口转发或VPN，即可从任何设备安全地访问您的CHENGVIN。",
               "backup_title": "云备份",
               "backup_helper": "备份的异地副本",
               "backup_none_body": "您尚未设置备份。请先创建一个备份，然后再回来将加密副本存储到云端。",
               "backup_set_up": "设置备份",
               "backup_body": "请保留一份经过加密的最新备份副本，并将其存放在异地，以便在首次启动时随时进行恢复。",
               "voice_title": "语音助手",
-              "voice_helper": "Alexa、Google 和 Home Assistant 语音助手",
-              "voice_body": "用您自己的方式与家对话。Home Assistant Cloud 提供快速、私密的语音助手功能，开箱即用，您还可以添加 Amazon Alexa 或 Google Assistant。",
+              "voice_helper": "Alexa、Google 和 CHENGVIN 语音助手",
+              "voice_body": "用您自己的方式与家对话。CHENGVIN 云 提供快速、私密的语音助手功能，开箱即用，您还可以添加 Amazon Alexa 或 Google Assistant。",
               "streaming_title": "更流畅的流媒体播放",
               "streaming_helper": "更快、更可靠的摄像头画面",
               "streaming_body": "通过安全连接，使摄像头画面和 Music Assistant 播放更快、更可靠。",
-              "ha_cloud_title": "Home Assistant Cloud",
+              "ha_cloud_title": "CHENGVIN 云",
               "ha_cloud_sub": "为语言助手提供快速、自然的文本转语音和语音转文本功能",
               "included": "已包含",
               "learn_more": "了解更多",
@@ -3925,7 +3948,7 @@
               "alexa_name": "Amazon Alexa",
               "alexa_tagline": "使用 Echo 设备进行语音控制",
               "alexa_bullet1": "通过语音控制 Echo 设备",
-              "alexa_bullet2": "在 Alexa 例程中使用 Home Assistant",
+              "alexa_bullet2": "在 Alexa 例程中使用 CHENGVIN",
               "google_name": "Google Assistant",
               "google_tagline": "通过 Nest 设备释放双手，轻松控制",
               "google_bullet1": "通过语音控制 Nest 音箱上的设备",
@@ -3934,7 +3957,7 @@
             "backup": {
               "title": "云备份",
               "card_title": "关于云备份",
-              "cloud_info": "您可以选择将加密的 Home Assistant 备份存储在 Home Assistant Cloud 上。此服务已包含在您的订阅中，无需额外付费。",
+              "cloud_info": "您可以选择将加密的 CHENGVIN 备份存储在 CHENGVIN 云 上。此服务已包含在您的订阅中，无需额外付费。",
               "cloud_info_one_backup": "每个加密备份都会存储在云端。当创建新的备份时，旧版本会自动被删除。",
               "cloud_info_size_limit": "最大备份大小为 5 GB。如果备份超过此限制，您将收到通知。",
               "cloud_info_encrypted": "存储在云端中的备份始终处于加密状态。加密密钥包含在应急包中。",
@@ -3950,12 +3973,12 @@
               "next_backup": "下次备份 {relative_time}",
               "no_next_backup": "未安排自动备份",
               "setup_card_title": "设置云备份",
-              "setup_info": "您尚未设置云端自动备份。请配置自动备份以确保您的 Home Assistant 安全无虞。"
+              "setup_info": "您尚未设置云端自动备份。请配置自动备份以确保您的 CHENGVIN 安全无虞。"
             },
             "companion": {
-              "title": "Companion 应用",
+              "title": "CHENGVIN 应用",
               "connected_title": "离家时保持连接",
-              "connected_intro": "借助 Home Assistant Cloud，即使您不在家，Home Assistant 应用也会持续与您的家庭设备保持连接，因此无论您身在何处，自动化功能所依赖的数据都能保持最新。",
+              "connected_intro": "借助 CHENGVIN 云，即使您不在家，CHENGVIN 应用也会持续与您的家庭设备保持连接，因此无论您身在何处，自动化功能所依赖的数据都能保持最新。",
               "bullet_sensors": "即使您不在家，也能获得最新的传感器和位置信息。",
               "bullet_presence": "像“我刚离开家”这样的状态自动化功能会在您外出时继续运行。",
               "bullet_alerts": "依赖手机的提醒，比如“电量不足”，仍会准时弹出。",
@@ -3963,7 +3986,7 @@
               "bullet_push": "推送通知是另一回事。它们由苹果和谷歌发送，即使没有此连接，也能送达您的手机。",
               "learn_more": "了解更多",
               "webhook_title": "自动 webhook",
-              "webhook_info_one": "在设置 Home Assistant 应用时，它会自动注册一个 webhook。如果您订阅了云服务，该 webhook 就会变成一个 cloudhook，即托管在 Home Assistant Cloud 上的一个唯一的私有 URL。",
+              "webhook_info_one": "在设置 CHENGVIN 应用时，它会自动注册一个 webhook。如果您订阅了云服务，该 webhook 就会变成一个 cloudhook，即托管在 CHENGVIN 云 上的一个唯一的私有 URL。",
               "webhook_info_two": "您的手机可以使用它从任何地方向服务器发送位置和传感器更新，无需打开端口或暴露您的实例。您可以在 Webhooks 下看到它；无需自行管理。"
             },
             "download_support_package": "下载支持包",
@@ -3981,7 +4004,7 @@
             "sign_out": "退出",
             "sign_out_confirm": "您确定要退出登录吗？",
             "integrations": "集成",
-            "integrations_introduction": "Home Assistant Cloud 集成可让您连接云中的服务，而不必在互联网上公开 Home Assistant 实例。",
+            "integrations_introduction": "CHENGVIN 云 集成可让您连接云中的服务，而不必在互联网上公开 CHENGVIN 实例。",
             "integrations_introduction2": "浏览网站以查找",
             "integrations_link_all_features": "所有可用功能",
             "tip_moved_voice_assistants": "在寻找 Google Assistant 和 Amazon Alexa 设置？它们已经移动到新的语音助手页面。",
@@ -3991,7 +4014,7 @@
             "fetching_subscription": "正在获取订阅信息…",
             "assist": {
               "card_title": "语音助手",
-              "description": "语音助手允许您使用自然语言控制 Home Assistant。它基于开放的语音平台构建，并依托我们社区提供的知识。",
+              "description": "语音助手允许您使用自然语言控制 CHENGVIN。它基于开放的语音平台构建，并依托我们社区提供的知识。",
               "link_learn_more": "了解更多",
               "configure": "配置"
             },
@@ -4033,7 +4056,7 @@
               "cerificate_loading": "您的证书正在加载。",
               "cerificate_loaded": "您的证书已加载，等待验证。",
               "cerificate_error": "生成证书时出错，请检查日志。",
-              "info": "Home Assistant Cloud 可在您离家时提供安全的远程访问。有关远程访问和这些设置的更多信息，请访问我们的安全文档。",
+              "info": "CHENGVIN 云 可在您离家时提供安全的远程访问。有关远程访问和这些设置的更多信息，请访问我们的安全文档。",
               "info_instance_will_be_available": "您的实例将在您的 Nabu Casa 网址上可用。",
               "link_learn_how_it_works": "了解其工作原理",
               "security_options": "安全选项",
@@ -4055,11 +4078,11 @@
             },
             "alexa": {
               "title": "Alexa",
-              "info": "借助于 Home Assistant Cloud 的 Alexa 集成，您将能够通过任何支持 Alexa 的设备来控制所有 Home Assistant 设备。",
-              "enable_ha_skill": "为 Alexa 启用 Home Assistant 技能",
+              "info": "借助于 CHENGVIN 云 的 Alexa 集成，您将能够通过任何支持 Alexa 的设备来控制所有 CHENGVIN 设备。",
+              "enable_ha_skill": "为 Alexa 启用 CHENGVIN 技能",
               "config_documentation": "配置文档",
               "enable_state_reporting": "启用状态报告",
-              "info_state_reporting": "如果启用状态报告，则 Home Assistant 会将已公开实体的所有状态变化发送给 Amazon。这样您就可以在 Alexa 应用中始终看到最新状态，并使用状态变化来创建例程。",
+              "info_state_reporting": "如果启用状态报告，则 CHENGVIN 会将已公开实体的所有状态变化发送给 Amazon。这样您就可以在 Alexa 应用中始终看到最新状态，并使用状态变化来创建例程。",
               "state_reporting_error": "无法{enable_disable}报告状态。",
               "show_entities": "显示实体",
               "exposed_entities": "{number} {number, plural,\n  one {个实体}\n  other {个实体}\n} 已公开",
@@ -4067,19 +4090,19 @@
               "enable": "启用",
               "disable": "禁用",
               "not_configured_title": "继续设置 Alexa",
-              "not_configured_text": "在使用 Alexa 之前，需要在 Alexa 应用程序中激活 Alexa 的 Home Assistant 技能。",
+              "not_configured_text": "在使用 Alexa 之前，需要在 Alexa 应用程序中激活 Alexa 的 CHENGVIN 技能。",
               "link_learn_how_it_works": "了解其工作原理",
               "expose_new_entities": "公开新实体",
               "expose_new_entities_info": "新实体是否应自动向 Alexa 公开？支持公开的设备不会被归类为安全设备。"
             },
             "google": {
               "title": "Google Assistant",
-              "info": "通过 Home Assistant Cloud 的 Google Assistant 集成，您将可以通过任何启用了 Google Assistant 的设备来控制所有 Home Assistant 设备。",
+              "info": "通过 CHENGVIN 云 的 Google Assistant 集成，您将可以通过任何启用了 Google Assistant 的设备来控制所有 CHENGVIN 设备。",
               "http_use_ssl_warning_title": "本地通信不可用",
-              "http_use_ssl_warning_text": "Google 设备将无法与 Home Assistant 本地通信，因为您为 HTTP 集成配置了 SSL 证书。",
+              "http_use_ssl_warning_text": "Google 设备将无法与 CHENGVIN 本地通信，因为您为 HTTP 集成配置了 SSL 证书。",
               "config_documentation": "配置文档",
               "enable_state_reporting": "启用状态报告",
-              "info_state_reporting": "如果启用状态报告，则 Home Assistant 会将已公开实体的所有状态变化发送给 Google。这样可以让语音命令响应更快，还能让您始终能在 Google 应用中看到最新状态。",
+              "info_state_reporting": "如果启用状态报告，则 CHENGVIN 会将已公开实体的所有状态变化发送给 Google。这样可以让语音命令响应更快，还能让您始终能在 Google 应用中看到最新状态。",
               "security_devices": "安全设备",
               "enter_pin_info": "请输入一个 PIN 码以和安全设备交互。安全设备就是门、车库开门器和锁之类的物品。通过 Google Assistant 与此类设备互动时，会要求您说出或输入此 PIN 码。",
               "devices_pin": "安全设备 PIN 码",
@@ -4089,14 +4112,14 @@
               "manual_config": "通过用户界面编辑可公开实体的功能已禁用，因为您在 configuration.yaml 中已配置了实体过滤器。",
               "enter_pin_error": "无法存储 PIN ：",
               "not_configured_title": "继续设置 Google Assistant",
-              "not_configured_text": "要开始使用 Google Assistant，请在智能手机上的 Google Home 应用中添加 “Nabu Casa 的 Home Assistant Cloud” 服务。",
+              "not_configured_text": "要开始使用 Google Assistant，请在智能手机上的 Google Home 应用中添加 “Nabu Casa 的 CHENGVIN 云” 服务。",
               "link_learn_how_it_works": "了解其工作原理",
               "expose_new_entities": "公开新实体",
               "expose_new_entities_info": "新实体是否应自动向 Google Assistant 公开？支持公开的设备不会被归类为安全设备。"
             },
             "webhooks": {
               "title": "Webhook",
-              "info": "任何配置为由 Webhook 触发的自动化，都可以被赋予可公开访问的网址，以便您可以从任何地方将数据发送回 Home Assistant ，而无需将您的实例公开在互联网上。",
+              "info": "任何配置为由 Webhook 触发的自动化，都可以被赋予可公开访问的网址，以便您可以从任何地方将数据发送回 CHENGVIN ，而无需将您的实例公开在互联网上。",
               "no_hooks_yet": "您还没有 webhook。您可以配置一个",
               "no_hooks_yet_link_integration": "基于 Webhook 的集成",
               "no_hooks_yet2": "或创建一个",
@@ -4105,11 +4128,11 @@
               "loading": "加载中…",
               "manage": "管理",
               "disable_hook_error_msg": "无法禁用 Webhook：",
-              "companion_title": "Companion 应用的 webhook",
-              "companion_info": "Home Assistant 应用会为您连接的每台设备自动创建此项。通过您的云订阅服务，它们将变为 cloudhook，这样您的手机就能从任何地方向家庭网络发送位置和传感器更新。",
+              "companion_title": "CHENGVIN 应用的 webhook",
+              "companion_info": "CHENGVIN 应用会为您连接的每台设备自动创建此项。通过您的云订阅服务，它们将变为 cloudhook，这样您的手机就能从任何地方向家庭网络发送位置和传感器更新。",
               "about_title": "你可以用 webhook 做什么",
-              "about_info": "允许外部服务向 Home Assistant 发送数据以触发自动化。每个服务都有其专属的隐藏 URL，且不开放任何端口。",
-              "example_camera": "Netatmo 摄像头检测到动作后，Home Assistant 会立即做出反应。该集成会自动设置自己的 webhook。",
+              "about_info": "允许外部服务向 CHENGVIN 发送数据以触发自动化。每个服务都有其专属的隐藏 URL，且不开放任何端口。",
+              "example_camera": "Netatmo 摄像头检测到动作后，CHENGVIN 会立即做出反应。该集成会自动设置自己的 webhook。",
               "example_location": "像 OwnTracks 这样的定位应用会报告您已到家，并运行您的到家自动化流程。",
               "example_ifttt": "IFTTT 小程序或 Node-RED 流程可触发场景或设备。",
               "example_nfc": "轻触 NFC 标签或运行手机快捷指令会触发一项自动化流程。",
@@ -4126,9 +4149,9 @@
             "close": "关闭"
           },
           "dialog_already_connected": {
-            "heading": "已链接到其它 Home Assistant 的账户",
-            "description": "我们注意到另一个实例目前已连接到您的 Home Assistant 云账户。您的 Home Assistant 云账户一次只能登录一个 Home Assistant 实例。如果您在此处登录，另一个实例及其云服务将断开连接，您需要亲自到场才能重新连接。Nabu Casa 支持人员无法远程重新连接已断开连接的 Home Assistant 实例。",
-            "other_home_assistant": "其它 Home Assistant",
+            "heading": "已链接到其它 CHENGVIN 的账户",
+            "description": "我们注意到另一个实例目前已连接到您的 CHENGVIN 云账户。您的 CHENGVIN 云账户一次只能登录一个 CHENGVIN 实例。如果您在此处登录，另一个实例及其云服务将断开连接，您需要亲自到场才能重新连接。Nabu Casa 支持人员无法远程重新连接已断开连接的 CHENGVIN 实例。",
+            "other_home_assistant": "其它 CHENGVIN",
             "instance_name": "实例名称",
             "instance_version": "实例版本",
             "ip_address": "IP 地址",
@@ -4138,7 +4161,7 @@
               "hide": "隐藏 IP 地址"
             },
             "info_backups": {
-              "title": "Home Assistant Cloud 备份",
+              "title": "CHENGVIN 云 备份",
               "description": "如果继续，您的云备份可能会被覆盖。我们强烈建议您在继续之前从您的 Nabu Casa 账户页面下载当前备份。"
             },
             "close": "关闭",
@@ -4316,7 +4339,7 @@
           "esphome": {
             "show_encryption_key": "显示加密密钥",
             "encryption_key_title": "ESPHome 加密密钥",
-            "encryption_key_description": "这是您的 ESPHome 设备的加密密钥。请妥善保管，因为在 Home Assistant 实例之间迁移设备时可能需要用到它。"
+            "encryption_key_description": "这是您的 ESPHome 设备的加密密钥。请妥善保管，因为在 CHENGVIN 实例之间迁移设备时可能需要用到它。"
           }
         },
         "entities": {
@@ -4324,8 +4347,8 @@
           "description": "管理已知实体",
           "picker": {
             "header": "实体",
-            "introduction": "Home Assistant 会在注册表中保存其见过的每个可唯一识别的实体。每个实体都会被分配一个只保留给它使用的实体标识符。",
-            "introduction2": "使用实体注册表可重写名称、更改实体标识符或者从 Home Assistant 移除实体。",
+            "introduction": "CHENGVIN 会在注册表中保存其见过的每个可唯一识别的实体。每个实体都会被分配一个只保留给它使用的实体标识符。",
+            "introduction2": "使用实体注册表可重写名称、更改实体标识符或者从 CHENGVIN 移除实体。",
             "search": "搜索到 {number} {number, plural,\n  one {个实体}\n  other {个实体}\n}",
             "unnamed_entity": "未命名实体",
             "filtering_by_config_entry": "按配置条目过滤",
@@ -4355,12 +4378,12 @@
             "enable_selected": {
               "button": "启用所选项",
               "confirm_title": "您想要启用 {number} {number, plural,\n  one {个实体}\n  other {个实体}\n}吗?",
-              "confirm_text": "如果它们正在被禁用，这将使它们在 Home Assistant 重新可用。"
+              "confirm_text": "如果它们正在被禁用，这将使它们在 CHENGVIN 重新可用。"
             },
             "disable_selected": {
               "button": "禁用所选项",
               "confirm_title": "您想要禁用 {number} {number, plural,\n  one {个实体}\n  other {个实体}\n}吗?",
-              "confirm_text": "已禁用的实体将不会被添加到 Home Assistant。"
+              "confirm_text": "已禁用的实体将不会被添加到 CHENGVIN。"
             },
             "restore_entity_id_selected": {
               "button": "重新创建选定实体的标识符",
@@ -4372,7 +4395,7 @@
               "button": "删除所选项",
               "confirm_title": "删除所选的实体？",
               "confirm_text": "您确定要删除这些实体吗？\n\n如果您的仪表盘和自动化中包含这些实体，请从这些仪表盘和自动化中也移除它们。",
-              "confirm_partly_text": "在所选的 {selected} 个实体中只有 {deletable} 个可被删除。其余的实体需要集成先停止提供它们，有时还需要重新启动 Home Assistant。您确定要删除可删除的实体吗？\n\n如果您的仪表盘和自动化中包含这些实体，请从这些仪表盘和自动化中也删除它们。"
+              "confirm_partly_text": "在所选的 {selected} 个实体中只有 {deletable} 个可被删除。其余的实体需要集成先停止提供它们，有时还需要重新启动 CHENGVIN。您确定要删除可删除的实体吗？\n\n如果您的仪表盘和自动化中包含这些实体，请从这些仪表盘和自动化中也删除它们。"
             },
             "hide_selected": {
               "button": "隐藏所选项",
@@ -4389,7 +4412,7 @@
         },
         "person": {
           "caption": "人员",
-          "introduction": "管理 Home Assistant 识别的人员并控制他们的访问权限。",
+          "introduction": "管理 CHENGVIN 识别的人员并控制他们的访问权限。",
           "note_about_persons_configured_in_yaml": "通过 configuration.yaml 配置的人员不能在用户界面中编辑。",
           "learn_more": "详细了解人员",
           "no_persons_created_yet": "您尚未添加任何人员。",
@@ -4453,7 +4476,7 @@
             "create": "创建",
             "update": "更新"
           },
-          "core_location_dialog": "Home Assistant 位置"
+          "core_location_dialog": "CHENGVIN 位置"
         },
         "integrations": {
           "caption": "集成",
@@ -4476,7 +4499,7 @@
           "no_ignored_integrations": "无被忽略的集成",
           "note_about_integrations": "没有与您的搜索相匹配的集成，您想要设置的集成可能还无法通过用户界面进行设置。",
           "note_about_website_reference": "更多信息可访问",
-          "home_assistant_website": "Home Assistant 网站",
+          "home_assistant_website": "CHENGVIN 网站",
           "configure": "配置",
           "reconfigure": "重新配置",
           "none": "尚未配置任何集成",
@@ -4569,11 +4592,11 @@
             "enable_debug_logging": "启用调试日志",
             "reconfigure": "重新配置",
             "reload": "重新加载",
-            "restart_confirm": "重启 Home Assistant 以完成此集成的删除",
+            "restart_confirm": "重启 CHENGVIN 以完成此集成的删除",
             "reload_confirm": "集成已重新加载",
-            "reload_restart_confirm": "重启 Home Assistant 完成此集成的重新加载",
-            "disable_restart_confirm": "重启 Home Assistant 完成此集成的禁用",
-            "enable_restart_confirm": "重启 Home Assistant 完成此集成的启用",
+            "reload_restart_confirm": "重启 CHENGVIN 完成此集成的重新加载",
+            "disable_restart_confirm": "重启 CHENGVIN 完成此集成的禁用",
+            "enable_restart_confirm": "重启 CHENGVIN 完成此集成的启用",
             "disable_confirm_title": "禁用“{title}”？",
             "disable_confirm_text": "其设备和实体将被禁用。",
             "disable_error": "启用或禁用集成失败",
@@ -4638,7 +4661,7 @@
             "yaml_only_title": "此设备无法通过用户界面添加",
             "yaml_only": "您可以将此集成添加到 configuration.yaml 配置文件中来添加它。有关详细信息，请参阅文档。",
             "open_documentation": "打开文档",
-            "no_config_flow": "此集成不支持通过用户界面进行配置。如果您是从 Home Assistant 网站点击链接前来，请确保您运行的是最新版本的 Home Assistant。",
+            "no_config_flow": "此集成不支持通过用户界面进行配置。如果您是从 CHENGVIN 网站点击链接前来，请确保您运行的是最新版本的 CHENGVIN。",
             "not_all_required_fields": "请填写所有必填字段",
             "error_saving_device": "更新设备时出错：{error}",
             "error_saving_entity": "更新实体时出错：{error}",
@@ -4654,7 +4677,7 @@
             },
             "error": "错误",
             "could_not_load": "无法加载配置向导",
-            "not_loaded": "集成未能加载，请尝试重启 Home Assistant。",
+            "not_loaded": "集成未能加载，请尝试重启 CHENGVIN。",
             "supported_brand_flow": "“{supported_brand}”设备由“{flow_domain_name}”提供支持。您想要继续吗？",
             "missing_zwave_zigbee_title": "“{integration}”未设置",
             "missing_zwave_zigbee": "要添加“{brand}”的设备，需要拥有{supported_hardware_link}并设置好“{integration}”集成。如果您已经拥有相关硬件，可继续设置“{integration}”。",
@@ -4668,7 +4691,7 @@
         },
         "users": {
           "caption": "用户",
-          "description": "管理 Home Assistant 用户账户",
+          "description": "管理 CHENGVIN 用户账户",
           "users_privileges_note": "用户组功能正在开发中。该功能使普通用户无法通过 UI 进行管理操作。我们正在审计所有管理 API，确保其仅限管理员访问。",
           "is_not_active": "已禁用",
           "is_system": "系统用户",
@@ -4733,7 +4756,8 @@
             "new_username": "新用户名",
             "change": "更改",
             "username_changed": "用户名已成功更改。",
-            "failed": "更改用户名失败"
+            "failed": "更改用户名失败",
+            "no_credentials": "未找到 CHENGVIN 登录凭据。"
           }
         },
         "application_credentials": {
@@ -4741,7 +4765,7 @@
           "description": "管理集成使用的 OAuth 应用程序凭据",
           "editor": {
             "caption": "添加应用程序凭据",
-            "description": "OAuth 用于授予 Home Assistant 对其它网站上信息的安全委托访问权限，而无需泄露您的个人凭据。",
+            "description": "OAuth 用于授予 CHENGVIN 对其它网站上信息的安全委托访问权限，而无需泄露您的个人凭据。",
             "missing_credentials": "设置“{integration}”需要配置应用程序凭据。",
             "missing_credentials_domain_link": "查看“{integration}”文档",
             "view_documentation": "查看应用程序凭据文档",
@@ -4919,7 +4943,8 @@
             "vid": "供应商编号",
             "pid": "产品编号",
             "bcd_device": "设备修订"
-          }
+          },
+          "used_by_modbus": "已被 Modbus 使用"
         },
         "dhcp": {
           "title": "DHCP 自动发现",
@@ -4945,16 +4970,16 @@
           "add_dataset_label": "操作数据集 TLV",
           "add_dataset_button": "添加数据集",
           "confirm_reset_border_router": "重置边界路由器？",
-          "confirm_reset_border_router_text": "Home Assistant 将创建一个新的 Thread 网络。当前加入此 Home Assistant Thread 网络的任何设备都需要重新加入。",
+          "confirm_reset_border_router_text": "CHENGVIN 将创建一个新的 Thread 网络。当前加入此 CHENGVIN Thread 网络的任何设备都需要重新加入。",
           "confirm_set_dataset_border_router": "重新配置边界路由器？",
-          "confirm_set_dataset_border_router_text": "Home Assistant 将加入现有的 Thread 网络。当前加入此 Home Assistant Thread 网络的任何设备都需要重新加入。",
+          "confirm_set_dataset_border_router_text": "CHENGVIN 将加入现有的 Thread 网络。当前加入此 CHENGVIN Thread 网络的任何设备都需要重新加入。",
           "otbr_config_failed": "配置边界路由器失败",
           "confirm_delete_dataset": "删除“{name}”数据集？",
-          "confirm_delete_dataset_text": "此网络将从 Home Assistant 中删除。",
+          "confirm_delete_dataset_text": "此网络将从 CHENGVIN 中删除。",
           "no_border_routers": "未找到边界路由器",
           "no_preferred_router": "未定义首选边界路由器",
           "border_routers": "{count} 个边界 {count, plural,\n  one {路由器}\n  other {路由器}\n}",
-          "managed_by_home_assistant": "由 Home Assistant 管理",
+          "managed_by_home_assistant": "由 CHENGVIN 管理",
           "operational_dataset": "操作数据集",
           "change_channel": "更改信道",
           "change_channel_initiated_title": "信道变更进行中",
@@ -4964,11 +4989,11 @@
           "change_channel_multiprotocol_enabled_title": "Thread 适配器已启用多协议",
           "change_channel_multiprotocol_enabled_text": "要在 Thread 适配器启用多协议时更改信道，请使用硬件设置菜单。",
           "change_channel_range": "信道必须在 11 到 26 范围内",
-          "change_channel_text": "启动 Home Assistant Thread 网络的信道更改时应谨慎执行。某些 Thread 设备可能无法自动迁移到新的信道，如果新信道拥塞，您的 Thread 设备可能会间歇性无法使用。某些设备可能需要手动重新加入您的 Thread 网络，然后才能再次显示在 Home Assistant 中。此操作无法撤消（不会执行另一次信道更改）。",
+          "change_channel_text": "启动 CHENGVIN Thread 网络的信道更改时应谨慎执行。某些 Thread 设备可能无法自动迁移到新的信道，如果新信道拥塞，您的 Thread 设备可能会间歇性无法使用。某些设备可能需要手动重新加入您的 Thread 网络，然后才能再次显示在 CHENGVIN 中。此操作无法撤消（不会执行另一次信道更改）。",
           "thread_network_info": "Thread 网络信息",
           "thread_network_delete_credentials": "删除 Thread 网络凭据",
-          "thread_network_send_credentials_ha": "将凭据发送至 Home Assistant",
-          "thread_network_send_credentials_ha_description": "将手机上的 Thread 网络凭据导入到 Home Assistant 。如果您已经通过其他平台（例如 Apple Home 或 Google Home）设置了 Thread 网络，请使用此方法。",
+          "thread_network_send_credentials_ha": "将凭据发送至 CHENGVIN",
+          "thread_network_send_credentials_ha_description": "将手机上的 Thread 网络凭据导入到 CHENGVIN 。如果您已经通过其他平台（例如 Apple Home 或 Google Home）设置了 Thread 网络，请使用此方法。",
           "thread_network_send_credentials_phone": "将凭据发送至手机",
           "thread_network_send_credentials_phone_description": "将您的 Thread 网络凭据共享给您的手机，使其能够直接将新的 Thread 设备连接到您的网络。",
           "thread_network_make_preferred": "设定首选网络"
@@ -5045,7 +5070,7 @@
             "light_transitioning_flag_description": "在光线变化过程中，保持亮度条在选定级别，防止亮度突然跳动",
             "consider_unavailable_mains_description": "当市电供电设备停止响应时，需要等待多久才能将其显示为不可用",
             "consider_unavailable_battery_description": "当电池供电设备停止响应时，需要等待多久才能将其显示为不可用",
-            "enable_mains_startup_polling_description": "在 Home Assistant 启动时获取市电供电设备的当前状态",
+            "enable_mains_startup_polling_description": "在 CHENGVIN 启动时获取市电供电设备的当前状态",
             "channel_label": "信道",
             "radio_type": "广播类型",
             "serial_port": "串口",
@@ -5346,7 +5371,7 @@
           "hard_reset_controller": {
             "NotStarted": {
               "title": "将适配器重置为出厂设置",
-              "body": "如果您决定继续操作，您的适配器将恢复出厂设置。这样一来，适配器将忘记所有与其配对的设备，并且将从 Home Assistant 中移除该网络的所有 Z-Wave 设备。如果重置后仍有任何设备与适配器配对，则这些设备必须先进行排除过程才能重新配对。您要继续吗 ？"
+              "body": "如果您决定继续操作，您的适配器将恢复出厂设置。这样一来，适配器将忘记所有与其配对的设备，并且将从 CHENGVIN 中移除该网络的所有 Z-Wave 设备。如果重置后仍有任何设备与适配器配对，则这些设备必须先进行排除过程才能重新配对。您要继续吗 ？"
             },
             "InProgress": {
               "title": "正在重置适配器",
@@ -5540,7 +5565,7 @@
               "device_name": "名称",
               "device_area": "区域",
               "choose_network_type": "选择网络类型",
-              "long_range_description": "直接连接到 Home Assistant 可扩大覆盖范围，无需 Mesh 网络。",
+              "long_range_description": "直接连接到 CHENGVIN 可扩大覆盖范围，无需 Mesh 网络。",
               "mesh_label": "Mesh 网络",
               "mesh_description": "设备相互传递信号，增强覆盖范围和可靠性。",
               "add_device": "添加设备",
@@ -5584,7 +5609,7 @@
             "not_included": "未包含",
             "confirm_unprovision_title": "确定要移除设备吗 ？",
             "confirm_unprovision_text": "将从您的 Z-Wave 网络中永久移除该设备。",
-            "confirm_unprovision_text_included": "将从 Home Assistant 和您的 Z-Wave 网络中永久移除该设备。",
+            "confirm_unprovision_text_included": "将从 CHENGVIN 和您的 Z-Wave 网络中永久移除该设备。",
             "active": "活动"
           },
           "security_classes": {
@@ -5612,7 +5637,7 @@
             "title": "移除设备",
             "introduction": "根据设备的状态，有两种方法可以从 Z-Wave 网络中移除设备。如果设备正在运行，您可以按照设备附带的说明将其置于排除模式来移除。如果设备不可用，您可以将其从网络中强制移除。",
             "exclusion_intro": "当设备被卡在另一个网络中，必须先将其排除，然后才能再次将其包含在内时，该功能非常有用。",
-            "failed_node_intro": "{name}无法连接到您的 Z-Wave 网络。Home Assistant 可以为您强制移除设备。移除后，您可能需要将设备恢复出厂设置。",
+            "failed_node_intro": "{name}无法连接到您的 Z-Wave 网络。CHENGVIN 可以为您强制移除设备。移除后，您可能需要将设备恢复出厂设置。",
             "menu_exclude_device": "移除正在工作的设备",
             "menu_remove_device": "强制移除不可用设备",
             "start_exclusion": "开始移除",
@@ -5672,8 +5697,8 @@
           },
           "update_firmware": {
             "title": "更新设备固件",
-            "warning": "警告：若您未正确按照制造商的指引更新固件，设备可能变砖。Home Assistant 和 Z-Wave JS 团队不对更新固件导致的任何设备损坏负责，也不会对变砖的设备提供协助。您确定要继续吗？",
-            "warning_controller": "警告：如果您使用的固件文件不正确，或者在固件更新完成之前尝试停止更新，固件更新可能会导致适配器变砖。Home Assistant 和 Z-Wave JS 团队对因固件更新导致的适配器损坏不承担任何责任，如果您的适配器变砖，我们将无法为您提供帮助。您还想继续吗 ？",
+            "warning": "警告：若您未正确按照制造商的指引更新固件，设备可能变砖。CHENGVIN 和 Z-Wave JS 团队不对更新固件导致的任何设备损坏负责，也不会对变砖的设备提供协助。您确定要继续吗？",
+            "warning_controller": "警告：如果您使用的固件文件不正确，或者在固件更新完成之前尝试停止更新，固件更新可能会导致适配器变砖。CHENGVIN 和 Z-Wave JS 团队对因固件更新导致的适配器损坏不承担任何责任，如果您的适配器变砖，我们将无法为您提供帮助。您还想继续吗 ？",
             "introduction": "选择用于更新“{device}”的固件文件。",
             "introduction_controller": "选择用于更新“{device}”的固件文件。请注意，一旦开始固件更新，必须等待更新完成。",
             "firmware_target_intro": "选择此更新固件的目标。（0 为 Z-Wave 芯片，≥1 为可能存在的其它芯片）",
@@ -5736,7 +5761,10 @@
             "status": "状态",
             "version": "版本",
             "data_rate": "数据速率",
-            "area": "区域"
+            "area": "区域",
+            "neighbor": "彼此在范围内",
+            "toggle_neighbors": "切换邻居连接。加载邻居数据时会暂时关闭 Z-Wave 适配器。",
+            "neighbors_error": "无法加载邻居连接"
           },
           "node_status": {
             "0": "未知",
@@ -5843,7 +5871,7 @@
             "entity_count": "{count, plural,\n  one {# 个实体}\n  other {# 个实体}\n}",
             "options_title": "选项",
             "options_description": "添加设备和网络设置",
-            "mobile_app_commisioning": "用 Companion 应用添加",
+            "mobile_app_commisioning": "用 CHENGVIN 应用添加",
             "mobile_app_commisioning_description": "扫描设备安装码即可添加设备",
             "mobile_app_commisioning_action": "开始",
             "commission_device": "手动添加",
@@ -5884,7 +5912,8 @@
                 "input_label": "数据集",
                 "confirm": "设置 Thread"
               }
-            }
+            },
+            "devices_offline": "{count} 台离线"
           },
           "visualization": {
             "header": "网络可视化",
@@ -5989,7 +6018,7 @@
           },
           "open_commissioning_window": {
             "title": "共享设备",
-            "description": "要继续，请选择{startCommissioning} 。然后，Home Assistant 会将您的设备置于调试模式，允许其与另一个 Matter 控制器配对。",
+            "description": "要继续，请选择{startCommissioning} 。然后，CHENGVIN 会将您的设备置于调试模式，允许其与另一个 Matter 控制器配对。",
             "prevent_misuse_description": "注意：请勿按下设备上的物理设置按钮，因为这会重置它。",
             "start_commissioning": "共享设备",
             "in_progress": "正在与设备通信。可能需要一些时间。",
@@ -6107,12 +6136,12 @@
           "join_chat": "聊天",
           "join_blog": "博客",
           "join_newsletter": "时事通讯",
-          "media_storage": "可以在“{storage}”面板中向 Home Assistant 添加网络存储。"
+          "media_storage": "可以在“{storage}”面板中向 CHENGVIN 添加网络存储。"
         },
         "analytics": {
           "caption": "分析",
-          "header": "Home Assistant",
-          "description": "了解如何共享数据来改进 Home Assistant",
+          "header": "CHENGVIN",
+          "description": "了解如何共享数据来改进 CHENGVIN",
           "preferences": {
             "base": {
               "title": "基础分析",
@@ -6120,7 +6149,7 @@
             },
             "usage": {
               "title": "使用情况",
-              "description": "您使用 Home Assistant 的详细信息"
+              "description": "您使用 CHENGVIN 的详细信息"
             },
             "statistics": {
               "title": "统计数据",
@@ -6144,7 +6173,7 @@
           },
           "need_base_enabled": "需要启用“基础分析数据”才能使用此选项",
           "learn_more": "了解我们如何处理您的数据",
-          "intro": "共享匿名的信息，让 Home Assistant 变得更好，并帮助我们与厂商沟通，增加本地控制和注重隐私的功能。",
+          "intro": "共享匿名的信息，让 CHENGVIN 变得更好，并帮助我们与厂商沟通，增加本地控制和注重隐私的功能。",
           "download_device_info": "预览设备分析"
         },
         "ai_tasks": {
@@ -6165,13 +6194,29 @@
               "area": "客厅",
               "device": "恒温器",
               "entity": "温度",
-              "floor": "底层"
+              "floor": "底层",
+              "thermostat": {
+                "name": "恒温器",
+                "floor": "一楼",
+                "area": "客厅",
+                "device": "恒温器",
+                "entity": "温度"
+              },
+              "power_strip": {
+                "name": "插线板",
+                "floor": "二楼",
+                "area": "办公室",
+                "parent_device": "插线板",
+                "device": "插座 1",
+                "entity": "电源"
+              }
             },
             "editor": {
               "label": "格式",
               "add": "添加",
               "search": "搜索部件"
-            }
+            },
+            "unused_part": "{name}（未用于格式）"
           }
         },
         "labs": {
@@ -6179,9 +6224,9 @@
           "custom_integration": "自定义集成",
           "description": "预览新功能",
           "description_enabled": "已启用预览功能",
-          "intro_title": "Home Assistant Labs",
+          "intro_title": "CHENGVIN 实验室",
           "intro_subtitle": "预览即将推出的功能",
-          "intro_description": "Home Assistant Labs 让您可以预览我们正在积极开发的新功能。这些功能稳定且功能齐全，但可能尚未包含我们设想的全部功能。我们仍在根据您的反馈不断改进设计和方案。",
+          "intro_description": "CHENGVIN 实验室 让您可以预览我们正在积极开发的新功能。这些功能稳定且功能齐全，但可能尚未包含我们设想的全部功能。我们仍在根据您的反馈不断改进设计和方案。",
           "intro_warning": "预览功能可能会在未来的版本中发生改变，或者被其他解决方案取代。",
           "empty": {
             "title": "暂无预览功能",
@@ -6202,15 +6247,15 @@
           "disable_failed": "禁用预览功能失败：{error}",
           "progress": {
             "creating_backup": "创建备份",
-            "backing_up_before_enabling": "在启用 Home Assistant Labs 预览功能之前，Home Assistant 正在进行备份。",
-            "backing_up_before_disabling": "在禁用 Home Assistant Labs 预览功能之前，Home Assistant 正在进行备份。"
+            "backing_up_before_enabling": "在启用 CHENGVIN 实验室 预览功能之前，CHENGVIN 正在进行备份。",
+            "backing_up_before_disabling": "在禁用 CHENGVIN 实验室 预览功能之前，CHENGVIN 正在进行备份。"
           },
           "create_backup": {
             "automatic": "启用前自动备份",
             "automatic_description_last": "上次自动备份 {relative_time} 。",
             "automatic_description_none": "尚无自动备份。",
             "manual": "启用前创建手动备份",
-            "manual_description": "包含 Home Assistant 设置和历史记录。"
+            "manual_description": "包含 CHENGVIN 设置和历史记录。"
           }
         },
         "network": {
@@ -6251,38 +6296,38 @@
           },
           "discovery": {
             "title": "网络发现",
-            "description": "探索 Home Assistant 可以在网络上看到哪些数据。",
+            "description": "探索 CHENGVIN 可以在网络上看到哪些数据。",
             "dhcp": "DHCP 浏览器",
             "dhcp_info": "显示使用 DHCP 、ARP+PTR 查找和基于路由器的设备跟踪器等方法检测到的设备。",
             "ssdp": "SSDP 浏览器",
             "ssdp_info": "显示使用 SSDP/UPnP 发现的设备。",
             "zeroconf": "Zeroconf 浏览器",
-            "zeroconf_info": "显示使用 mDNS 发现的服务。不包括 Home Assistant 未知的服务。"
+            "zeroconf_info": "显示使用 mDNS 发现的服务。不包括 CHENGVIN 未知的服务。"
           },
           "http": {
             "caption": "HTTP 服务器",
-            "description": "配置 Home Assistant 的 Web 界面服务方式。保存后，Home Assistant 将重启。",
+            "description": "配置 CHENGVIN 的 Web 界面服务方式。保存后，CHENGVIN 将重启。",
             "save": "保存",
             "save_no_changes": "未更改，无需重启。",
             "save_error": "无法保存 HTTP 配置。",
-            "port_warning": "诸如 Home Assistant 移动应用之类的客户端将失去连接，直到您在它们的设置中更新网址为止。如果确认 Home Assistant 在新端口上无法访问，则 5 分钟后将自动回滚更改。",
-            "server_host_warning": "留空则监听所有接口。如果设置了特定地址，则只能通过这些地址访问 Home Assistant——如果仅将其绑定到其他设备无法访问的地址（例如 localhost），则这些设备将无法访问 Home Assistant 。",
+            "port_warning": "诸如 CHENGVIN 移动应用之类的客户端将失去连接，直到您在它们的设置中更新网址为止。如果确认 CHENGVIN 在新端口上无法访问，则 5 分钟后将自动回滚更改。",
+            "server_host_warning": "留空则监听所有接口。如果设置了特定地址，则只能通过这些地址访问 CHENGVIN——如果仅将其绑定到其他设备无法访问的地址（例如 localhost），则这些设备将无法访问 CHENGVIN 。",
             "invalid_host": "请输入有效的 IP 地址或主机名。",
             "invalid_network": "请输入有效的 IP 地址或网络。",
             "invalid_port": "请输入介于 1 到 65535 之间的端口号。",
             "invalid_login_attempts_threshold": "请输入介于 -1 到 1000 之间的数字。",
-            "running_default": "无法应用您保存的 HTTP 配置，因此 Home Assistant 正在使用内置的默认配置运行。",
-            "reverted_not_confirmed": "未及时确认上次的 HTTP 配置更改，已回滚。Home Assistant 目前运行在之前的配置上。",
-            "reverted_failed": "未能应用上次的 HTTP 配置更改，已回滚。Home Assistant 目前运行在之前的配置上。原因：{error}",
+            "running_default": "无法应用您保存的 HTTP 配置，因此 CHENGVIN 正在使用内置的默认配置运行。",
+            "reverted_not_confirmed": "未及时确认上次的 HTTP 配置更改，已回滚。CHENGVIN 目前运行在之前的配置上。",
+            "reverted_failed": "未能应用上次的 HTTP 配置更改，已回滚。CHENGVIN 目前运行在之前的配置上。原因：{error}",
             "reverted_action": "审查更改",
             "save_confirm": {
               "title": "需要重启",
-              "text": "保存后，Home Assistant 将重新启动以应用新的 HTTP 设置。",
+              "text": "保存后，CHENGVIN 将重新启动以应用新的 HTTP 设置。",
               "confirm": "保存并重启"
             },
             "restart_address": {
-              "title": "Home Assistant 正在重启",
-              "text": "地址已更改。Home Assistant 重启后，您可以通过以下地址访问它：",
+              "title": "CHENGVIN 正在重启",
+              "text": "地址已更改。CHENGVIN 重启后，您可以通过以下地址访问它：",
               "note": "根据您的网络设置，此设备可能无法访问此地址。"
             },
             "ssl_profile_modern": "现代",
@@ -6308,11 +6353,11 @@
               "login_attempts_threshold": "被封禁前的登录尝试次数"
             },
             "helpers": {
-              "server_port": "Home Assistant 监听的端口。默认端口为 {port} 。",
+              "server_port": "CHENGVIN 监听的端口。默认端口为 {port} 。",
               "server_host": "要绑定的 IP 地址或主机名。留空表示监听所有接口。",
               "ssl_certificate": "TLS 证书的绝对路径（例如 /ssl/fullchain.pem）。",
               "ssl_key": "TLS 私钥的绝对路径（例如 /ssl/privkey.pem）。",
-              "ssl_peer_certificate": "Home Assistant 用于建立安全连接所需的客户端证书的绝对路径。",
+              "ssl_peer_certificate": "CHENGVIN 用于建立安全连接所需的客户端证书的绝对路径。",
               "ssl_profile": "Mozilla SSL配置文件。仅当集成出现SSL握手问题时才使用“中级”配置。",
               "cors_allowed_origins": "可能发起跨源请求的源。请包含协议，例如  https://example.com 。",
               "use_x_forwarded_for": "信任反向代理后面的 X-Forwarded-For 头。需要使用下方的受信任代理列表。",
@@ -6347,7 +6392,7 @@
             "media": "媒体",
             "share": "共享",
             "backup": "备份",
-            "homeassistant": "Home Assistant",
+            "homeassistant": "CHENGVIN",
             "ssl": "SSL"
           },
           "lifetime": "寿命",
@@ -6357,7 +6402,7 @@
           "change_chart_type": "更改图表类型",
           "datadisk": {
             "title": "迁移数据磁盘",
-            "description": "您正在使用“{current_path}”作为数据磁盘。迁移数据磁盘大约需要 {time} 分钟，设备将重新启动。在此期间，Home Assistant 将无法访问。迁移过程中请勿切断电源！",
+            "description": "您正在使用“{current_path}”作为数据磁盘。迁移数据磁盘大约需要 {time} 分钟，设备将重新启动。在此期间，CHENGVIN 将无法访问。迁移过程中请勿切断电源！",
             "extra_information": "容量：{size}，序列号：{serial}",
             "select_device": "选择新的数据磁盘",
             "no_devices_title": "未找到合适的存储设备",
@@ -6378,7 +6423,7 @@
             "not_supported": {
               "title": "此操作系统不支持网络存储",
               "supervised": "此主机不支持网络存储",
-              "os": "要使用网络存储，需要运行 Home Assistant 操作系统 {version} 以上版本",
+              "os": "要使用网络存储，需要运行 CHENGVIN 操作系统 {version} 以上版本",
               "navigate_to_updates": "前往更新"
             },
             "mount_usage": {
@@ -6457,13 +6502,53 @@
           "integration_start_time": "集成启动耗时"
         },
         "system_dashboard": {
-          "restart_homeassistant": "重启 Home Assistant"
+          "restart_homeassistant": "重启 CHENGVIN"
+        },
+        "mcp": {
+          "header": "模型上下文协议",
+          "description": "将以下任一 URL 添加到您的 AI 智能体。各智能体的具体说明请参阅{documentation_link}。",
+          "documentation": "文档",
+          "enable": "[%key:ui::common::enable%]",
+          "disable": "[%key:ui::common::disable%]",
+          "disable_confirm_title": "禁用模型上下文协议服务器？",
+          "disable_confirm_text": "已连接到该服务器的 AI 智能体将失去对 CHENGVIN 的访问权限。",
+          "your_api_header": "您的 MCP API",
+          "apis_header": "单独的 MCP API",
+          "copy_url": "复制 URL",
+          "configure": "配置",
+          "error_load": "无法加载模型上下文协议配置",
+          "error_delete_entry": "无法禁用模型上下文协议服务器"
+        },
+        "modbus": {
+          "title": "Modbus",
+          "status_summary": "{total} 个连接上的 {units} 个单元",
+          "connections": "连接",
+          "connections_description": "每个与 Modbus 设备通信的集成都共享一条连接。YAML 中配置的集线器会保留自己的连接。",
+          "configured_in_yaml": "在 YAML 中配置",
+          "state_connected": "已连接",
+          "state_not_connected": "未连接",
+          "state_open": "打开",
+          "state_closed": "关闭",
+          "no_connections": "没有 Modbus 连接",
+          "no_connections_description": "集成开始与 Modbus 设备通信后就会打开连接。",
+          "loading_error": "无法加载 Modbus 连接",
+          "units": "单元 {ids}",
+          "view_serial_port": "在“串口”中查看此端口",
+          "transport": {
+            "tcp": "TCP",
+            "udp": "UDP",
+            "serial": "串口"
+          }
+        },
+        "ai": {
+          "caption": "人工智能",
+          "description": "配置 AI 建议、任务偏好和模型上下文协议服务器"
         }
       },
       "custom": {
         "external_panel": {
           "question_trust": "您是否信任 {link} 处的外部面板 {name}？",
-          "complete_access": "它将有权访问 Home Assistant 中的所有数据。",
+          "complete_access": "它将有权访问 CHENGVIN 中的所有数据。",
           "hide_message": "查看“自定义面板”集成的文档可隐藏此信息"
         }
       },
@@ -6614,7 +6699,8 @@
               "weather": "天气",
               "maintenance": "维护",
               "energy": "今日能源",
-              "persons": "人体存在"
+              "persons": "人体存在",
+              "alerts": "警报"
             },
             "welcome_user": "欢迎 {user}",
             "summaries": "摘要",
@@ -6713,14 +6799,14 @@
             "more_info": "显示更多信息：{name}"
           },
           "iframe": {
-            "error_secure_context": "无法加载 iframe，因为其指向的网站使用 {target_protocol}，而 Home Assistant 正通过 {context_protocol} 提供服务。"
+            "error_secure_context": "无法加载 iframe，因为其指向的网站使用 {target_protocol}，而 CHENGVIN 正通过 {context_protocol} 提供服务。"
           },
           "recovery-mode": {
             "header": "恢复模式已激活",
-            "description": "Home Assistant 在加载您的配置时遇到了问题，现正在恢复模式下运行。请查看错误日志以查找问题。"
+            "description": "CHENGVIN 在加载您的配置时遇到了问题，现正在恢复模式下运行。请查看错误日志以查找问题。"
           },
           "starting": {
-            "description": "Home Assistant 正在启动，请稍候。"
+            "description": "CHENGVIN 正在启动，请稍候。"
           },
           "map": {
             "reset_focus": "重置焦点",
@@ -6883,11 +6969,11 @@
           "search_entities": "搜索实体",
           "assist": "语音助手",
           "assist_tooltip": "语音助手",
-          "search_home_assistant": "搜索 Home Assistant",
+          "search_home_assistant": "搜索 CHENGVIN",
           "reload_resources": "重载资源",
           "exit_edit_mode": "完成",
           "close": "关闭",
-          "add": "添加至 Home Assistant",
+          "add": "添加至 CHENGVIN",
           "add_device": "添加设备",
           "create_automation": "创建自动化",
           "create_area": "创建区域",
@@ -7216,7 +7302,7 @@
           },
           "save_config": {
             "header": "自行编辑仪表盘",
-            "para": "该仪表盘目前由 Home Assistant 维护，当新的实体或仪表盘组件可用时会自动更新。如果您选择自行编辑，将不再自动更新仪表盘。您始终可以在“设置”中新建一个仪表盘用于试验。",
+            "para": "该仪表盘目前由 CHENGVIN 维护，当新的实体或仪表盘组件可用时会自动更新。如果您选择自行编辑，将不再自动更新仪表盘。您始终可以在“设置”中新建一个仪表盘用于试验。",
             "para_sure": "您确定要自行编辑用户界面吗？",
             "yaml_mode": "此仪表盘正在使用 YAML 模式，因此无法在用户界面中更改其配置。若要从用户界面管理此仪表盘，请在 configuration.yaml 中您的仪表盘配置中去除 mode: yaml 条目。",
             "yaml_control": "要以 YAML 模式下自行编辑，请创建 YAML 文件并命名为在配置中为此仪表盘指定的名称，或使用默认的 'ui-lovelace.yaml'。",
@@ -7228,7 +7314,7 @@
           "migrate": {
             "header": "配置不兼容",
             "para_no_id": "此元素没有标识符。请在 ui-lovelace.yaml 中为此元素添加标识符。",
-            "para_migrate": "通过点击“迁移配置”按钮，Home Assistant 可以自动为您的所有卡片和视图添加标识符。",
+            "para_migrate": "通过点击“迁移配置”按钮，CHENGVIN 可以自动为您的所有卡片和视图添加标识符。",
             "migrate": "迁移配置"
           },
           "action-editor": {
@@ -7271,6 +7357,10 @@
               "invalid": {
                 "headline": "配置无效",
                 "supporting": "一个或多个条件配置无效"
+              },
+              "unknown": {
+                "headline": "当前可见性：未知",
+                "supporting": "正在等待一个或多个条件的结果"
               }
             },
             "invalid_config_title": "配置无效",
@@ -7328,6 +7418,18 @@
               },
               "and": {
                 "label": "并且"
+              },
+              "template": {
+                "label": "模板"
+              },
+              "sun": {
+                "label": "太阳"
+              },
+              "zone": {
+                "label": "区域"
+              },
+              "device": {
+                "label": "设备"
               }
             }
           },
@@ -7377,6 +7479,21 @@
                 "dayGridWeek": "周",
                 "dayGridDay": "日",
                 "listWeek": "列表（7 天）"
+              },
+              "show_add_event": "显示添加事件按钮",
+              "add_event_style": "添加事件按钮样式",
+              "add_event_size": "添加事件按钮大小",
+              "add_event": {
+                "style": {
+                  "header": "标题栏",
+                  "below": "下方",
+                  "on_top": "顶部"
+                },
+                "size": {
+                  "s": "小",
+                  "m": "中",
+                  "l": "大"
+                }
               }
             },
             "conditional": {
@@ -7584,7 +7701,8 @@
                 "auto": "自动",
                 "vertical": "垂直",
                 "horizontal": "水平"
-              }
+              },
+              "show_values": "显示数值"
             },
             "power-sankey": {
               "name": "电力桑基图",
@@ -7695,7 +7813,7 @@
             },
             "iframe": {
               "name": "网页",
-              "description": "此卡片可让您将喜欢的网页直接嵌入到 Home Assistant 中。",
+              "description": "此卡片可让您将喜欢的网页直接嵌入到 CHENGVIN 中。",
               "hide_background": "隐藏背景",
               "hide_background_helper": "适用于允许透明背景的页面。"
             },
@@ -8362,7 +8480,12 @@
               "select-options": {
                 "label": "选项",
                 "options": "选项",
-                "customize_options": "自定义选项"
+                "customize_options": "自定义选项",
+                "style": "[%key:ui::panel::lovelace::editor::features::types::climate-preset-modes::style%]",
+                "style_list": {
+                  "dropdown": "[%key:ui::panel::lovelace::editor::features::types::climate-preset-modes::style_list::dropdown%]",
+                  "buttons": "按钮"
+                }
               },
               "toggle": {
                 "label": "切换"
@@ -8379,7 +8502,12 @@
                 "label": "目标温度"
               },
               "target-humidity": {
-                "label": "目标湿度"
+                "label": "目标湿度",
+                "style": "[%key:ui::panel::lovelace::editor::features::types::numeric-input::style%]",
+                "style_list": {
+                  "buttons": "[%key:ui::panel::lovelace::editor::features::types::numeric-input::style_list::buttons%]",
+                  "slider": "[%key:ui::panel::lovelace::editor::features::types::numeric-input::style_list::slider%]"
+                }
               },
               "water-heater-operation-modes": {
                 "label": "热水器运行模式",
@@ -8397,7 +8525,8 @@
                 "commands": "命令",
                 "commands_list": {
                   "start_pause": "启动暂停",
-                  "dock": "返回基站"
+                  "dock": "返回基站",
+                  "stop": "[%key:ui::dialogs::more_info_control::lawn_mower::stop%]"
                 }
               },
               "update-actions": {
@@ -8474,6 +8603,26 @@
                 },
                 "color": "颜色",
                 "show_labels": "显示标签"
+              },
+              "timer-actions": {
+                "label": "计时器动作",
+                "customize": "[%key:ui::panel::lovelace::editor::features::types::counter-actions::customize%]",
+                "actions": "[%key:ui::panel::lovelace::editor::features::types::counter-actions::actions%]",
+                "actions_list": {
+                  "start": "[%key:ui::card::timer::actions::start%]",
+                  "pause": "[%key:ui::card::timer::actions::pause%]",
+                  "cancel": "[%key:ui::card::timer::actions::cancel%]",
+                  "finish": "[%key:ui::card::timer::actions::finish%]"
+                }
+              },
+              "timer-presets": {
+                "label": "计时器预设",
+                "description": "此功能使用计时器的预设。要管理它们，请打开计时器的详细信息对话框，并在溢出菜单中选择“编辑预设”。",
+                "style": "[%key:ui::panel::lovelace::editor::features::types::numeric-input::style%]",
+                "style_list": {
+                  "buttons": "[%key:ui::panel::lovelace::editor::features::types::numeric-input::style_list::buttons%]",
+                  "dropdown": "[%key:ui::panel::lovelace::editor::features::types::climate-preset-modes::style_list::dropdown%]"
+                }
               }
             }
           },
@@ -8598,7 +8747,7 @@
           "entity_not_found": "实体 {entity} 不可用",
           "entity_non_numeric": "实体 {entity} 非数值",
           "entity_unavailable": "实体当前不可用：{entity}",
-          "starting": "正在启动 Home Assistant 。部分功能暂不可用"
+          "starting": "正在启动 CHENGVIN 。部分功能暂不可用"
         },
         "externally_updated_toast": {
           "message": "仪表盘已在另一个会话中更新。刷新页面将丢弃您未保存的更改。"
@@ -8627,14 +8776,14 @@
         }
       },
       "my": {
-        "not_supported": "您的 Home Assistant 不支持此重定向。请查阅{link}以获取受支持的重定向及其引入的版本。",
-        "component_not_loaded": "您的 Home Assistant 不支持此重定向。需要使用 {integration} 集成才能使用它。",
-        "no_supervisor": "您安装的 Home Assistant 不支持此重定向。要求 Home Assistant OS 安装方式。有关更多信息，请参阅 {docs_link} 。",
-        "not_app": "此重定向仅适用于安装了 Home Assistant Companion 应用的移动设备。{link}。",
+        "not_supported": "您的 CHENGVIN 不支持此重定向。请查阅{link}以获取受支持的重定向及其引入的版本。",
+        "component_not_loaded": "您的 CHENGVIN 不支持此重定向。需要使用 {integration} 集成才能使用它。",
+        "no_supervisor": "您安装的 CHENGVIN 不支持此重定向。要求 CHENGVIN OS 安装方式。有关更多信息，请参阅 {docs_link} 。",
+        "not_app": "此重定向仅适用于安装了 CHENGVIN 应用的移动设备。{link}。",
         "url_error": "提供的网址无效。",
         "documentation": "文档",
         "download_app": "单击此处下载应用程序",
-        "faq_link": "我的 Home Assistant 常见问题",
+        "faq_link": "我的 CHENGVIN 常见问题",
         "error": "发生未知错误"
       },
       "notfound": {
@@ -8644,9 +8793,9 @@
       },
       "page-authorize": {
         "initializing": "正在初始化",
-        "authorizing": "登录到您的 Home Assistant 实例",
-        "authorizing_app": "您将向 Home Assistant Companion 应用授予“{app}”访问 Home Assistant 实例的权限。",
-        "authorizing_client": "您即将授权“{clientId}”访问您的 Home Assistant 实例。",
+        "authorizing": "登录到您的 CHENGVIN 实例",
+        "authorizing_app": "您即将允许 {app} 版 CHENGVIN Assistant 访问您的 CHENGVIN。",
+        "authorizing_client": "您即将授权“{clientId}”访问您的 CHENGVIN 实例。",
         "pick_auth_provider": "或者用以下方式登录",
         "abort_intro": "登录中断",
         "store_token": "保持登录状态",
@@ -8760,8 +8909,8 @@
             "demo_by": "来自 {name}",
             "interactive_demo": "交互式演示",
             "next_demo": "下一个演示",
-            "introduction": "欢迎回家！您已进入 Home Assistant 演示，这里展示了我们社区创作的最佳用户界面。",
-            "learn_more": "详细了解 Home Assistant"
+            "introduction": "欢迎回家！您已进入 CHENGVIN 演示，这里展示了我们社区创作的最佳用户界面。",
+            "learn_more": "详细了解 CHENGVIN"
           }
         },
         "config": {
@@ -8831,7 +8980,7 @@
           "vision": "阅读我们的愿景",
           "community": "加入我们的社区",
           "download_app": "下载我们的应用程序",
-          "forums": "Home Assistant 论坛",
+          "forums": "CHENGVIN 论坛",
           "open_home_newsletter": "《Building the Open Home》时事通讯",
           "discord": "Discord chat",
           "social_media": "社交媒体",
@@ -8859,13 +9008,13 @@
         },
         "core-config": {
           "location_header": "家的位置",
-          "intro_location": "此数据存储在您的 Home Assistant 系统中，某些基于云的集成可能会使用这些数据来运行。",
+          "intro_location": "此数据存储在您的 CHENGVIN 系统中，某些基于云的集成可能会使用这些数据来运行。",
           "location_address": "由 {openstreetmap} ({osm_privacy_policy}) 提供支持。",
           "osm_privacy_policy": "隐私政策",
           "title_location_detect": "想让我们检测您的位置吗？",
           "intro_location_detect": "我们可以通过向外部服务发出一次性请求来检测您的位置。",
           "country_intro": "我们想知道您位于哪个国家或地区，以便我们可以使用正确的单位。",
-          "location_name": "Home Assistant 安装的名称",
+          "location_name": "CHENGVIN 安装的名称",
           "location_name_default": "我的家",
           "address_label": "搜索地址",
           "button_detect": "自动检测",
@@ -8882,7 +9031,7 @@
         "analytics": {
           "header": "帮助我们帮助你",
           "finish": "下一步",
-          "waiting": "正在等待 Home Assistant 完成启动…",
+          "waiting": "正在等待 CHENGVIN 完成启动…",
           "preferences": {
             "base": {
               "title": "基础分析",
@@ -8890,7 +9039,7 @@
             },
             "usage": {
               "title": "使用情况",
-              "description": "您使用 Home Assistant 的详细信息"
+              "description": "您使用 CHENGVIN 的详细信息"
             },
             "statistics": {
               "title": "统计数据",
@@ -8903,7 +9052,7 @@
           },
           "need_base_enabled": "需要启用“基础分析数据”才能使用此选项",
           "learn_more": "了解我们如何处理您的数据",
-          "intro": "共享匿名的信息，让 Home Assistant 变得更好，并帮助我们与厂商沟通，增加本地控制和注重隐私的功能。"
+          "intro": "共享匿名的信息，让 CHENGVIN 变得更好，并帮助我们与厂商沟通，增加本地控制和注重隐私的功能。"
         },
         "restore": {
           "header": "还原备份",
@@ -8911,7 +9060,7 @@
           "upload_backup_subtitle": "从您的设备上传备份文件",
           "unsupported": {
             "title": "不支持的文件格式",
-            "text": "请选择 Home Assistant 备份文件 (.tar)"
+            "text": "请选择 CHENGVIN 备份文件 (.tar)"
           },
           "ok": "确定",
           "upload_input_label": "选择备份文件",
@@ -8920,8 +9069,8 @@
           "delete": "删除",
           "uploading": "正在上传...",
           "details": {
-            "home_assistant_missing": "此备份不包括您的 Home Assistant 配置，您不能使用它来还原您的实例。",
-            "apps_unsupported": "您的安装方式不支持应用。如果您想恢复这些应用，则需要安装 Home Assistant OS",
+            "home_assistant_missing": "此备份不包括您的 CHENGVIN 配置，您不能使用它来还原您的实例。",
+            "apps_unsupported": "您的安装方式不支持应用。如果您想恢复这些应用，则需要安装 CHENGVIN OS",
             "summary": {
               "created": "已创建",
               "content": "内容"
@@ -8932,7 +9081,7 @@
               "encryption": {
                 "label": "加密",
                 "description": "备份已加密。请提供加密密钥以解密备份。",
-                "description_cloud": "Home Assistant Cloud 是注重隐私的云。我们不会存储您的加密密钥。输入您保存的加密密钥或使用您下载的应急工具包。",
+                "description_cloud": "CHENGVIN 云 是注重隐私的云。我们不会存储您的加密密钥。输入您保存的加密密钥或使用您下载的应急工具包。",
                 "incorrect_key": "提供的加密密钥不正确，请重试。",
                 "input_label": "加密密钥"
               }
@@ -8947,9 +9096,9 @@
             "apps": "应用",
             "ssl": "SSL 证书"
           },
-          "restore_no_home_assistant": "备份不包含 Home Assistant 数据。若要还原 Home Assistant ，您需要有 Home Assistant Core 的备份。",
+          "restore_no_home_assistant": "备份不包含 CHENGVIN 数据。若要还原 CHENGVIN ，您需要有 CHENGVIN Core 的备份。",
           "in_progress": "正在还原",
-          "in_progress_description": "还原过程正在后台运行。还原完成后，Home Assistant 将自动重新启动。请耐心等待，这可能需要一段时间。请勿关闭或刷新此页面。",
+          "in_progress_description": "还原过程正在后台运行。还原完成后，CHENGVIN 将自动重新启动。请耐心等待，这可能需要一段时间。请勿关闭或刷新此页面。",
           "failed": "还原失败",
           "failed_status_description": "无法还原备份。请重试。",
           "failed_description": "上次还原尝试失败。请重试。",
@@ -8968,9 +9117,9 @@
           "password": "备份加密密钥",
           "confirm_password": "确认加密密钥",
           "confirm_restore_partial_backup_title": "还原部分备份",
-          "confirm_restore_partial_backup_text": "备份将被还原。根据备份的大小，这可能需要最多 45 分钟。Home Assistant 需要关闭，还原过程正在后台运行。如果还原成功，Home Assistant 将自动重新启动，您将看到登录屏幕。如果还原失败，它将带您返回到入门界面。",
+          "confirm_restore_partial_backup_text": "备份将被还原。根据备份的大小，这可能需要最多 45 分钟。CHENGVIN 需要关闭，还原过程正在后台运行。如果还原成功，CHENGVIN 将自动重新启动，您将看到登录屏幕。如果还原失败，它将带您返回到入门界面。",
           "confirm_restore_full_backup_title": "还原完整备份",
-          "confirm_restore_full_backup_text": "根据备份的大小，这可能需要长达 45 分钟。Home Assistant 将重新启动，还原后您将看到登录屏幕。",
+          "confirm_restore_full_backup_text": "根据备份的大小，这可能需要长达 45 分钟。CHENGVIN 将重新启动，还原后您将看到登录屏幕。",
           "restore": "还原",
           "close": "关闭",
           "cancel": "取消",
@@ -8986,15 +9135,15 @@
             "no": "否"
           },
           "ha-cloud": {
-            "description": "从您的 Home Assistant Cloud 备份还原。",
+            "description": "从您的 CHENGVIN 云 备份还原。",
             "no_cloud_backup": "没有可用的备份",
-            "no_cloud_backup_description": "此 Home Assistant Cloud 账户未存储备份。您可以在 Nabu Casa 网站上详细了解云备份的工作原理。",
+            "no_cloud_backup_description": "此 CHENGVIN 云 账户未存储备份。您可以在 Nabu Casa 网站上详细了解云备份的工作原理。",
             "sign_out": "退出",
-            "sign_out_progress": "正在从 Home Assistant 云注销退出...",
-            "sign_out_success": "Home Assistant 云已注销退出",
-            "sign_out_error": "无法从 Home Assistant 云注销退出",
+            "sign_out_progress": "正在从 CHENGVIN 云注销退出...",
+            "sign_out_success": "CHENGVIN 云已注销退出",
+            "sign_out_error": "无法从 CHENGVIN 云注销退出",
             "learn_more": "了解更多信息",
-            "sign_in_description": "登录您的 Nabu Casa 账户并还原您的 Home Assistant Cloud 备份。",
+            "sign_in_description": "登录您的 Nabu Casa 账户并还原您的 CHENGVIN 云 备份。",
             "login": {
               "title": "云登录",
               "sign_in": "登录",
@@ -9025,7 +9174,7 @@
           },
           "options": {
             "title": "如何恢复 ？",
-            "upload_description": "上传并还原 Home Assistant 备份至此系统"
+            "upload_description": "上传并还原 CHENGVIN 备份至此系统"
           }
         },
         "language": "语言"
@@ -9152,7 +9301,7 @@
           "link_promo": "了解主题",
           "dropdown_label": "主题",
           "migrate_header": "迁移主题设置",
-          "migrate_description": "将您选择的主题保存到您的 Home Assistant 用户配置中。",
+          "migrate_description": "将您选择的主题保存到您的 CHENGVIN 用户配置中。",
           "migrate_button": "迁移",
           "migrate_success": "主题设置已迁移。",
           "migrate_failed": "主题设置迁移失败。",
@@ -9165,7 +9314,8 @@
           "primary_color": "主色调",
           "accent_color": "强调色",
           "reset": "重置颜色",
-          "use_default": "使用默认主题"
+          "use_default": "使用默认主题",
+          "colors": "自定义颜色"
         },
         "dashboard": {
           "header": "仪表盘",
@@ -9233,7 +9383,7 @@
         },
         "long_lived_access_tokens": {
           "header": "长期访问令牌",
-          "description": "创建长期访问令牌可允许脚本与 Home Assistant 实例进行交互。每个令牌在创建后有效期为 10 年。以下是当前活动的长期访问令牌。",
+          "description": "创建长期访问令牌可允许脚本与 CHENGVIN 实例进行交互。每个令牌在创建后有效期为 10 年。以下是当前活动的长期访问令牌。",
           "learn_auth_requests": "了解如何创建经过身份验证的请求。",
           "created": "创建于 {date}",
           "confirm_delete_title": "删除长期访问令牌吗 ？",
@@ -9249,7 +9399,11 @@
           "empty_state": "您还没有长期访问令牌。",
           "qr_code_image": "令牌“{name}”的二维码",
           "generate_qr_code": "生成二维码"
-        }
+        },
+        "user_preferences_description": "默认仪表盘和侧边栏",
+        "localization_description": "语言、时区以及日期、时间和数字格式",
+        "browser_description": "通知、显示和快捷方式",
+        "security_description": "密码、多重身份验证和访问令牌"
       },
       "security": {
         "editor": {
@@ -9278,18 +9432,18 @@
         "information": "更多信息",
         "delete_confirm_title": "删除“{name}”？",
         "delete_confirm_text": "您确定要删除此清单及其包含的所有项目吗？",
-        "restart_confirm": "重启 Home Assistant 完成此待办事项清单的删除"
+        "restart_confirm": "重启 CHENGVIN 完成此待办事项清单的删除"
       }
     },
     "init": {
       "loading": "加载中…",
-      "migration": "数据库升级正在进行中，升级完成前 Home Assistant 将无法启动。\n\n升级可能需要较长时间才能完成，请耐心等待。",
-      "project_from": "项目来自",
+      "migration": "数据库升级正在进行中，升级完成前 CHENGVIN 将无法启动。\n\n升级可能需要较长时间才能完成，请耐心等待。",
+      "project_from": "",
       "error": {
-        "title": "无法连接到 Home Assistant。",
+        "title": "无法连接到 CHENGVIN。",
         "retrying": "{seconds, plural, one {#秒} other {#秒}}后重试...",
         "retry_now": "立即重试",
-        "nabu_casa": "您看到此屏幕可能是因为您的 Home Assistant 当前未连接。您可以通过 {account_link} 要求其重新上线。",
+        "nabu_casa": "您看到此屏幕可能是因为您的 CHENGVIN 当前未连接。您可以通过 {account_link} 要求其重新上线。",
         "nabu_casa_account": "Nabu Casa 账户页面"
       }
     },
@@ -9387,7 +9541,8 @@
         "speed": {
           "low": "低",
           "medium": "中",
-          "high": "高"
+          "high": "高",
+          "numbered": "速度 {speed}"
         }
       },
       "humidifier": {
@@ -9441,7 +9596,9 @@
         "count_maintenance_issues_unavailable_battery_entities": "{count} {count, plural,\n one {个设备不可用}\n other {个设备不可用}\n}",
         "all_maintenance_good": "全部良好",
         "count_persons_home": "{count} {count, plural,\n one {个人}\n other {个人}\n}在家",
-        "nobody_home": "家中无人"
+        "nobody_home": "家中无人",
+        "count_active_alerts": "{count} 条活动警报",
+        "count_warnings": "{count} 条警告"
       },
       "toggle-group": {
         "all_off": "全部关闭",
@@ -9532,8 +9689,10 @@
           "pause": "暂停",
           "cancel": "取消",
           "finish": "完成",
-          "set": "设置"
-        }
+          "set": "设置",
+          "restart": "重新开始"
+        },
+        "presets": "预设"
       },
       "vacuum": {
         "actions": {
@@ -9721,7 +9880,9 @@
       "append": "附加",
       "supports_markdown": "支持 {markdown_help_link}",
       "markdown": "Markdown",
-      "none": "无"
+      "none": "无",
+      "first": "第一个",
+      "last": "最后一个"
     },
     "components": {
       "input": {
@@ -9870,15 +10031,18 @@
             "options": {
               "each": {
                 "label": "每次",
-                "description": "当每次目标发生变化时都触发一次"
+                "description": "当每次目标发生变化时都触发一次",
+                "row_label": "每一个"
               },
               "first": {
                 "label": "首次",
-                "description": "当首次目标发生变化时触发"
+                "description": "当首次目标发生变化时触发",
+                "row_label": "第一个"
               },
               "all": {
                 "label": "全部",
-                "description": "当所有目标都改变后触发一次"
+                "description": "当所有目标都改变后触发一次",
+                "row_label": "全部"
               }
             }
           },
@@ -9886,11 +10050,13 @@
             "options": {
               "any": {
                 "label": "任一",
-                "description": "如果任一目标匹配望状态，则为真"
+                "description": "如果任一目标匹配望状态，则为真",
+                "row_label": "任意一个"
               },
               "all": {
                 "label": "全部",
-                "description": "如果所有目标都匹配期望状态，则为真"
+                "description": "如果所有目标都匹配期望状态，则为真",
+                "row_label": "全部"
               }
             }
           }
@@ -9907,7 +10073,7 @@
           "device": "设备",
           "event": "收到手动事件",
           "geo_location": "地理位置",
-          "homeassistant": "Home Assistant",
+          "homeassistant": "CHENGVIN",
           "mqtt": "MQTT",
           "numeric_state": "数值状态",
           "persistent_notification": "持久通知",
@@ -9925,8 +10091,8 @@
         "event": "事件",
         "time": "次",
         "time_pattern": "时间模式",
-        "homeassistant_stopping": "Home Assistant 停止中",
-        "homeassistant_starting": "Home Assistant 启动中",
+        "homeassistant_stopping": "CHENGVIN 停止中",
+        "homeassistant_starting": "CHENGVIN 启动中",
         "cause": {
           "by": "由 {name}",
           "by_automation": "由自动化： {name}",
@@ -9975,7 +10141,8 @@
             "entity": "实体",
             "area_missing": "未指定区域",
             "floor_missing": "未指定楼层",
-            "device_missing": "暂无相关设备"
+            "device_missing": "暂无相关设备",
+            "parent_device": "[%key:ui::components::device-picker::parent_device%]"
           },
           "mode_composed": "组成",
           "mode_custom": "自定义",
@@ -10143,7 +10310,8 @@
           "title": "替换设备",
           "description": "此设备被多个设备替换。请选择使用其中一个。",
           "recommended": "推荐"
-        }
+        },
+        "parent_device": "父设备"
       },
       "device-class-picker": {
         "device_class": "设备类别",
@@ -10354,7 +10522,11 @@
         "category": "类别"
       },
       "map": {
-        "error": "无法加载地图"
+        "error": "无法加载地图",
+        "editing_unavailable": "此地图不支持拖动标记和调整区域大小。",
+        "location": "位置",
+        "radius": "半径（米）",
+        "radius_of": "{name} 的半径（米）"
       },
       "statistics_charts": {
         "loading_statistics": "正在加载统计项…",
@@ -10470,7 +10642,7 @@
           "deleting": "正在删除 {count} 个文件",
           "deselect_all": "取消全部选择",
           "select_all": "全选",
-          "tip_media_storage": "可以在“{storage}”面板中向 Home Assistant 添加网络存储。",
+          "tip_media_storage": "可以在“{storage}”面板中向 CHENGVIN 添加网络存储。",
           "tip_storage_panel": "存储"
         },
         "class": {
@@ -10668,7 +10840,8 @@
         "install_status": "安装状态",
         "device_name": "设备名称",
         "area_name": "区域名称",
-        "floor_name": "楼层名称"
+        "floor_name": "楼层名称",
+        "parent_device_name": "父设备名称"
       },
       "multi-textfield": {
         "add_item": "添加{item}"
@@ -10712,6 +10885,12 @@
           "devices": "设备",
           "entities": "实体"
         }
+      },
+      "state-class-picker": {
+        "state_class": "状态类",
+        "add": "添加状态类",
+        "no_state_classes": "没有可用的状态类",
+        "no_match": "未找到与 {term} 匹配的状态类"
       }
     },
     "dialogs": {
@@ -10726,13 +10905,13 @@
       },
       "safe_mode": {
         "title": "安全模式",
-        "text": "Home Assistant 正在安全模式下运行，自定义集成和前端模块不可用。重新启动 Home Assistant 可退出安全模式。"
+        "text": "CHENGVIN 正在安全模式下运行，自定义集成和前端模块不可用。重新启动 CHENGVIN 可退出安全模式。"
       },
       "http_pending_config": {
         "title": "确认新的 HTTP 服务器配置",
-        "description": "Home Assistant 已使用新的 HTTP 服务器设置重启。确认以保留这些设置，或撤销更改。",
+        "description": "CHENGVIN 已使用新的 HTTP 服务器设置重启。确认以保留这些设置，或撤销更改。",
         "auto_revert": "在{time}后，设置将自动恢复。",
-        "reverted": "Home Assistant 已还原 HTTP 服务器设置。",
+        "reverted": "CHENGVIN 已还原 HTTP 服务器设置。",
         "changes_label": "已更改的设置：",
         "not_set": "未设置",
         "confirm": "确认",
@@ -10783,7 +10962,7 @@
             "themes": "主题"
           },
           "home_assistant_control": {
-            "perform_action": "{action} Home Assistant",
+            "perform_action": "{action} CHENGVIN",
             "restart": "重启",
             "stop": "停止"
           },
@@ -10841,18 +11020,19 @@
             "insteon": "Insteon",
             "voice-assistants": "语音助手",
             "connectivity": "连接性",
-            "ai-tasks": "人工智能"
+            "ai-tasks": "人工智能",
+            "ai": "[%key:ui::panel::config::ai::caption%]"
           }
         },
         "filter_placeholder": "搜索实体",
         "filter_placeholder_devices": "搜索设备",
-        "title": "搜索 Home Assistant",
+        "title": "搜索 CHENGVIN",
         "key_c_tip": "在任意页面上按下 {keyboard_shortcut} “c” 即可打开命令对话框",
         "nothing_found": "什么都没找到！"
       },
       "voice_command": {
         "title": "语音助手",
-        "did_not_hear": "Home Assistant 什么也没有听到",
+        "did_not_hear": "CHENGVIN 什么也没有听到",
         "did_not_understand": "我不太明白",
         "found": "为您找到以下结果：",
         "error": "糟糕，发生错误",
@@ -10862,8 +11042,8 @@
         "send_text": "发送文本",
         "start_listening": "开始聆听",
         "manage_assistants": "管理助手",
-        "not_supported_microphone_browser": "与 Home Assistant 的连接未使用 HTTPS 进行保护，将导致浏览器阻止 Home Assistant 访问麦克风。",
-        "not_supported_microphone_documentation": "使用 Home Assistant 应用或访问{documentation_link}了解如何使用安全网址",
+        "not_supported_microphone_browser": "与 CHENGVIN 的连接未使用 HTTPS 进行保护，将导致浏览器阻止 CHENGVIN 访问麦克风。",
+        "not_supported_microphone_documentation": "使用 CHENGVIN 应用或访问{documentation_link}了解如何使用安全网址",
         "not_supported_microphone_documentation_link": "文档",
         "unknown_error_load_assist": "加载语音助手管道失败",
         "not_found_error_load_assist": "找不到语音助手管道",
@@ -10949,13 +11129,13 @@
           "install": "安装",
           "update": "更新",
           "auto_update_enabled_title": "无法跳过版本",
-          "auto_update_enabled_text": "此项目的自动更新已启用，因此无法跳过。您可以立即安装此更新，或者等待 Home Assistant 自动更新。",
+          "auto_update_enabled_text": "此项目的自动更新已启用，因此无法跳过。您可以立即安装此更新，或者等待 CHENGVIN 自动更新。",
           "create_backup": {
             "automatic": "更新前自动备份",
             "automatic_description_last": "上次自动备份 {relative_time} 。",
             "automatic_description_none": "尚无自动备份。",
             "manual": "更新前创建手动备份",
-            "manual_description": "包含 Home Assistant 设置和历史记录。",
+            "manual_description": "包含 CHENGVIN 设置和历史记录。",
             "app": "保留上个版本的备份",
             "app_description": "轻松还原到版本 {version}",
             "generic": "创建备份"
@@ -11079,7 +11259,8 @@
           "commands": "割草机指令：",
           "start_mowing": "开始割草",
           "pause": "暂停",
-          "dock": "返回基站"
+          "dock": "返回基站",
+          "stop": "停止"
         },
         "valve": {
           "edit_mode": "编辑收藏",
@@ -11107,6 +11288,28 @@
         "camera": {
           "download_snapshot": "下载快照",
           "failed_to_download": "无法下载快照。请查看日志可获取更多信息。"
+        },
+        "parent_device": "[%key:ui::components::device-picker::parent_device%]",
+        "timer": {
+          "edit_mode": "编辑预设",
+          "reset_favorites": "移除全部预设",
+          "reset_favorites_text": "要移除此计时器的全部预设吗？",
+          "copy_favorites": "复制预设到…",
+          "copy_favorites_helper": "选择一个或多个计时器，以接收从此计时器复制的预设。",
+          "copy_favorites_entities": "[%key:ui::panel::lovelace::editor::card::generic::entities%]",
+          "preset": {
+            "set": "将计时器设为 {value}",
+            "edit": "编辑预设 {value}",
+            "delete": "删除预设 {number}",
+            "delete_confirm_title": "删除预设？",
+            "delete_confirm_text": "此预设将被永久删除。",
+            "delete_confirm_action": "[%key:ui::common::delete%]",
+            "add": "添加新预设",
+            "edit_title": "编辑预设",
+            "add_title": "添加预设",
+            "duration": "[%key:ui::dialogs::helper_settings::timer::duration%]",
+            "duration_error": "时长必须至少为一秒。"
+          }
         }
       },
       "entity_registry": {
@@ -11173,7 +11376,8 @@
               "sound": "声音",
               "tamper": "防拆检测",
               "update": "更新",
-              "vibration": "振动"
+              "vibration": "振动",
+              "glass_break": "玻璃破碎"
             },
             "cover": {
               "door": "门",
@@ -11207,9 +11411,9 @@
           "switch_as_x_confirm": "此开关将被隐藏，并添加为一个新的{domain}。您现有的使用此开关的配置仍将正常工作。",
           "switch_as_x_remove_confirm": "此 {domain} 将被移除，原始开关将再次可见。使用 {domain} 的现有配置将不再有效！",
           "switch_as_x_change_confirm": "此 {domain_1} 将被移除，并替换为新的 {domain_2}。使用 {domain_1} 的现有配置将不再有效！",
-          "enabled_description": "已禁用的实体不会被添加到 Home Assistant。",
-          "enabled_delay_confirm": "已启用的实体将在 {delay} 秒后被添加到 Home Assistant",
-          "enabled_restart_confirm": "重启 Home Assistant 完成实体的启用",
+          "enabled_description": "已禁用的实体不会被添加到 CHENGVIN。",
+          "enabled_delay_confirm": "已启用的实体将在 {delay} 秒后被添加到 CHENGVIN",
+          "enabled_restart_confirm": "重启 CHENGVIN 完成实体的启用",
           "hidden_explanation": "隐藏实体不会包含在自动填充的仪表板中，也不会在引用其区域、设备或标签时包含在内。其历史记录仍会被跟踪，您仍然可以通过动作与它们进行交互。",
           "delete": "删除",
           "confirm_delete_title": "删除实体",
@@ -11232,7 +11436,7 @@
             "preload_stream": "预加载视频流",
             "preload_stream_description": "使视频流在后台保持打开状态，以便加快显示速度。警告！这会显著消耗设备资源。",
             "stream_orientation": "视频流方向",
-            "stream_orientation_description": "用于相机数据流的方向转换。\n警告：数据流方向处理在 Home Assistant 设备上进行，可能会影响系统性能。如果可能，请直接在相机上配置此设置。",
+            "stream_orientation_description": "用于相机数据流的方向转换。\n警告：数据流方向处理在 CHENGVIN 设备上进行，可能会影响系统性能。如果可能，请直接在相机上配置此设置。",
             "stream_orientation_1": "不改变方向",
             "stream_orientation_2": "左右翻转",
             "stream_orientation_3": "旋转 180 度",
@@ -11303,7 +11507,7 @@
         "view_entity": "关于实体的更多信息"
       },
       "restart": {
-        "heading": "重新启动 Home Assistant",
+        "heading": "重新启动 CHENGVIN",
         "more_options": "更多选项",
         "backup_in_progress": "目前正在创建备份。备份过程完成后，该操作将自动继续。",
         "upload_in_progress": "目前正在上传备份。上传完成后，该操作将自动继续。",
@@ -11321,24 +11525,24 @@
           "failed": "重新加载配置失败"
         },
         "restart": {
-          "title": "重新启动 Home Assistant",
+          "title": "重新启动 CHENGVIN",
           "description": "中断所有运行中的自动化和脚本。",
-          "confirm_title": "确认重新启动 Home Assistant？",
+          "confirm_title": "确认重新启动 CHENGVIN？",
           "confirm_description": "将重新加载所有集成。",
-          "confirm_action": "重新启动 Home Assistant",
+          "confirm_action": "重新启动 CHENGVIN",
           "confirm_action_backup": "等待并重启",
-          "failed": "重新启动 Home Assistant 失败"
+          "failed": "重新启动 CHENGVIN 失败"
         },
         "stop": {
-          "confirm_title": "停止 Home Assistant？",
-          "confirm_description": "Home Assistant 将停止运行。",
+          "confirm_title": "停止 CHENGVIN？",
+          "confirm_description": "CHENGVIN 将停止运行。",
           "confirm_action": "停止"
         },
         "reboot": {
           "title": "重新启动系统",
-          "description": "重新启动系统，包括 Home Assistant 和所有应用。",
+          "description": "重新启动系统，包括 CHENGVIN 和所有应用。",
           "confirm_title": "确认重新启动系统？",
-          "confirm_description": "这将重新启动整个系统，包括 Home Assistant 和所有应用。",
+          "confirm_description": "这将重新启动整个系统，包括 CHENGVIN 和所有应用。",
           "confirm_action": "重新启动",
           "action_toast": "正在重新启动系统",
           "confirm_action_backup": "等待并重启",
@@ -11346,22 +11550,22 @@
         },
         "shutdown": {
           "title": "关闭系统",
-          "description": "关闭系统，包括 Home Assistant 和所有应用。",
+          "description": "关闭系统，包括 CHENGVIN 和所有应用。",
           "confirm_title": "确定要关闭系统吗？",
-          "confirm_description": "这将关闭整个系统，包括 Home Assistant 和所有应用。",
+          "confirm_description": "这将关闭整个系统，包括 CHENGVIN 和所有应用。",
           "confirm_action": "关机",
           "confirm_action_backup": "等待并关闭",
           "action_toast": "正在关闭系统",
           "failed": "关闭系统失败"
         },
         "restart-safe-mode": {
-          "title": "以安全模式重新启动 Home Assistant",
-          "description": "重新启动 Home Assistant ，但不加载任何自定义集成和前端模块。",
-          "confirm_title": "要以安全模式重新启动 Home Assistant 吗？",
-          "confirm_description": "这将重新启动 Home Assistant ，但不加载任何自定义集成和前端模块。",
+          "title": "以安全模式重新启动 CHENGVIN",
+          "description": "重新启动 CHENGVIN ，但不加载任何自定义集成和前端模块。",
+          "confirm_title": "要以安全模式重新启动 CHENGVIN 吗？",
+          "confirm_description": "这将重新启动 CHENGVIN ，但不加载任何自定义集成和前端模块。",
           "confirm_action": "重新启动",
           "confirm_action_backup": "等待并重启",
-          "failed": "重新启动 Home Assistant 失败"
+          "failed": "重新启动 CHENGVIN 失败"
         }
       },
       "aliases": {
@@ -11384,7 +11588,7 @@
           "more_options": "更多选项"
         },
         "input_boolean": {
-          "initial": "每次 Home Assistant 启动时",
+          "initial": "每次 CHENGVIN 启动时",
           "initial_helper": "更改此设置目前不会影响切换功能。",
           "restore": "恢复到先前状态",
           "turn_on": "开启",
@@ -11429,12 +11633,12 @@
           "minimum": "最小值",
           "maximum": "最大值",
           "initial": "初始值",
-          "restore": "当 Home Assistant 启动时，还原为最后已知的值",
+          "restore": "当 CHENGVIN 启动时，还原为最后已知的值",
           "step": "步长"
         },
         "timer": {
           "duration": "时长",
-          "restore": "还原 Home Assistant 启动时的状态和时间"
+          "restore": "还原 CHENGVIN 启动时的状态和时间"
         },
         "schedule": {
           "delete": "删除项目？",
@@ -11482,8 +11686,8 @@
         "enable_new_entities_label": "启用新增实体",
         "enable_new_entities_description": "是否自动添加由“{integration}”新发现的设备。",
         "enable_polling_label": "启用轮询更新",
-        "enable_polling_description": "是否让 Home Assistant 轮询“{integration}”的实体，以便更新其状态。",
-        "restart_home_assistant": "您需要重新启动 Home Assistant 才能使更改生效。",
+        "enable_polling_description": "是否让 CHENGVIN 轮询“{integration}”的实体，以便更新其状态。",
+        "restart_home_assistant": "您需要重新启动 CHENGVIN 才能使更改生效。",
         "update": "更新"
       },
       "zha_reconfigure_device": {
@@ -11573,7 +11777,7 @@
         "reasons": {
           "docker": "Docker 环境无法正常工作",
           "oserror_bad_message": "操作系统出错：错误消息",
-          "duplicate_os_installation": "重复安装 Home Assistant 操作系统",
+          "duplicate_os_installation": "重复安装 CHENGVIN 操作系统",
           "privileged": "Supervisor 权限不够",
           "supervisor": "Supervisor 未能更新",
           "setup": "Supervisor 设置失败",
@@ -11621,7 +11825,7 @@
         },
         "new": {
           "header": "添加 Matter 设备",
-          "note": "您需要在手机上使用 Home Assistant Companion 应用来添加 Matter 设备。",
+          "note": "您需要在手机上使用 CHENGVIN 应用来添加 Matter 设备。",
           "download_app": "从 Google Play 商店或 App Store 安装（如果您没有）。如果您在使用 iOS 应用，请确保 iPhone 或 iPad 运行的 iOS 版本是 iOS 16 或更新的版本。",
           "playstore": "从 Google Play 获取",
           "appstore": "从 App Store 下载"
@@ -11640,8 +11844,8 @@
           "step_3": "点击 {link_apps_services} 并从列表中选择 {home_assistant}。",
           "linked_matter_apps_services": "已链接 Matter 应用和服务",
           "link_apps_services": "链接应用和服务",
-          "no_home_assistant": "我在列表中找不到 Home Assistant",
-          "redirect": "您将被重定向至 Home Assistant 应用。请按照说明操作。"
+          "no_home_assistant": "我在列表中找不到 CHENGVIN",
+          "redirect": "您将被重定向至 CHENGVIN 应用。请按照说明操作。"
         },
         "google_home_fallback": {
           "header": "复制配对代码",
@@ -11722,7 +11926,7 @@
         },
         "other": {
           "title": "其他",
-          "my_link": "获取“我的 My Home Assistant” 链接",
+          "my_link": "获取“我的 My CHENGVIN” 链接",
           "show_shortcuts": "显示键盘快捷键"
         }
       }
@@ -11776,8 +11980,8 @@
     "notification_toast": {
       "action_failed": "无法执行动作“{service}” 。",
       "connection_lost": "连接中断。正在重新连接…",
-      "started": "Home Assistant 已启动！",
-      "starting": "正在启动 Home Assistant 。在启动完成前，部分功能暂不可用。",
+      "started": "CHENGVIN 已启动！",
+      "starting": "正在启动 CHENGVIN 。在启动完成前，部分功能暂不可用。",
       "wrapping_up_startup": "启动即将完成。完成后即可使用全部功能。",
       "integration_starting": "正在启动 {integration}。在启动完成前，部分功能暂不可用。",
       "triggered": "已触发 {name}",
@@ -11789,7 +11993,7 @@
       "theme_save_failed": "无法将主题设置保存到您的用户配置中。",
       "theme_preferences_unavailable": "无法加载用户个人资料主题设置。",
       "onboarding_survey": {
-        "message": "您好！👋 您使用 Home Assistant 已经有一段时间了。我们很想听听您的想法。只需一分钟！",
+        "message": "您好！👋 您使用 CHENGVIN 已经有一段时间了。我们很想听听您的想法。只需一分钟！",
         "action": "参与调查"
       }
     },
@@ -11807,7 +12011,7 @@
       "keyboard_shortcut": "键盘快捷键",
       "key_c_tip": "在任意页面上按下 {keyboard_shortcut} “c” 即可打开命令对话框",
       "key_e_tip": "在任意页面上按下 {keyboard_shortcut} “e” 即可打开实体搜索对话框",
-      "key_m_tip": "在任意页面上按下 {keyboard_shortcut} “m” 即可获取“我的 Home Assistant” 链接",
+      "key_m_tip": "在任意页面上按下 {keyboard_shortcut} “m” 即可获取“我的 CHENGVIN” 链接",
       "key_a_tip": "在任意页面上按下 {keyboard_shortcut} “a” 即可打开“语音助手”对话框",
       "key_shortcut_quick_search": "任何页面按下 {keyboard_shortcut} ''{modifier}+k'' 可打开快速搜索"
     }
@@ -11884,6 +12088,82 @@
       "user": "用户",
       "integration": "集成",
       "device": "设备"
+    }
+  },
+  "landing-page": {
+    "header": "正在准备 CHENGVIN",
+    "subheader": "正在下载最新版 CHENGVIN，可能需要 20 分钟或更长时间。",
+    "show_details": "显示详情",
+    "hide_details": "隐藏详情",
+    "network_issue": {
+      "title": "检测到网络问题",
+      "error_get_network_info": "无法获取网络信息",
+      "description": "CHENGVIN OS 在您的设置中检测到网络问题。作为初始设置的一部分，CHENGVIN OS 会下载最新版 CHENGVIN Core。该网络问题会阻止此次下载。问题可能与 DNS 有关。当前使用的 DNS 服务是：{dns}。",
+      "resolve_different": "要解决此问题，可以尝试其他 DNS 服务器。请从下面选择一项。也可以更改路由器配置以使用自定义 DNS 服务器。",
+      "use_cloudflare": "使用 Cloudflare DNS",
+      "use_google": "使用 Google DNS",
+      "no_primary_interface": "CHENGVIN OS 未能检测到主网络接口，因此无法定义 DNS 服务器！",
+      "failed": "失败",
+      "set_dns_failed": "设置 DNS 服务器时出错。请查看日志了解更多信息后重试。",
+      "error": "错误",
+      "close": "[%key:ui::common::close%]"
+    },
+    "logs": {
+      "scroll_down_button": "有新日志 — 点击滚动",
+      "fetch_error": "无法获取日志",
+      "retry": "重试",
+      "download_logs": "[%key:ui::panel::config::logs::download_logs%]"
+    },
+    "error_title": "安装 CHENGVIN 时出错",
+    "error_description": "安装 CHENGVIN 时发生错误。请查看日志了解更多信息。",
+    "ui": {
+      "panel": {
+        "page-onboarding": {
+          "welcome": {
+            "vision": "[%key:ui::panel::page-onboarding::welcome::vision%]",
+            "community": "[%key:ui::panel::page-onboarding::welcome::community%]",
+            "download_app": "[%key:ui::panel::page-onboarding::welcome::download_app%]",
+            "forums": "[%key:ui::panel::page-onboarding::welcome::forums%]",
+            "open_home_newsletter": "[%key:ui::panel::page-onboarding::welcome::open_home_newsletter%]",
+            "discord": "[%key:ui::panel::page-onboarding::welcome::discord%]",
+            "social_media": "[%key:ui::panel::page-onboarding::welcome::social_media%]",
+            "playstore": "[%key:ui::panel::page-onboarding::welcome::playstore%]",
+            "appstore": "[%key:ui::panel::page-onboarding::welcome::appstore%]"
+          },
+          "help": "[%key:ui::panel::page-onboarding::help%]"
+        }
+      }
+    }
+  },
+  "component": {
+    "media_player": {
+      "title": "媒体播放器",
+      "entity_component": {
+        "_": {
+          "name": "媒体播放器",
+          "state": {
+            "buffering": "缓冲中",
+            "idle": "空闲",
+            "off": "关闭",
+            "on": "开启",
+            "paused": "已暂停",
+            "playing": "正在播放",
+            "standby": "待机"
+          }
+        }
+      }
+    },
+    "notify": {
+      "title": "通知"
+    },
+    "persistent_notification": {
+      "title": "持久通知"
+    },
+    "media_source": {
+      "title": "媒体源"
+    },
+    "tts": {
+      "title": "文本转语音"
     }
   }
 }

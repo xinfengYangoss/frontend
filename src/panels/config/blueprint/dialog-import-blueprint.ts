@@ -1,4 +1,4 @@
-import { mdiClose, mdiOpenInNew } from "@mdi/js";
+import { mdiClose } from "@mdi/js";
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, property, query, state } from "lit/decorators";
 import { fireEvent } from "../../../common/dom/fire_event";
@@ -20,7 +20,6 @@ import { importBlueprint, saveBlueprint } from "../../../data/blueprint";
 import { DirtyStateProviderMixin } from "../../../mixins/dirty-state-provider-mixin";
 import { haStyleDialog } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 
 interface BlueprintImportState {
   value: string;
@@ -197,18 +196,7 @@ class DialogImportBlueprint extends DirtyStateProviderMixin<BlueprintImportState
                       "ui.panel.config.blueprint.add.import_introduction"
                     )}
                   </p>
-                  <ha-button
-                    size="s"
-                    appearance="plain"
-                    href=${documentationUrl(this.hass, "/get-blueprints")}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    ${this.hass.localize(
-                      "ui.panel.config.blueprint.add.community_forums"
-                    )}
-                    <ha-svg-icon slot="end" .path=${mdiOpenInNew}></ha-svg-icon>
-                  </ha-button>
+
                   <ha-input
                     id="input"
                     .label=${this.hass.localize(

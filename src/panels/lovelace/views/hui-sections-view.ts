@@ -249,7 +249,17 @@ export class SectionsView extends LitElement implements LovelaceViewElement {
               `
             : nothing
         }
-        <div class="container">
+        <div
+          class="container"
+          style=${styleMap({
+            gridTemplateColumns:
+              singleColumn && hasSidebar
+                ? "1fr"
+                : hasSidebar
+                  ? `[content-start] repeat(${contentColumnCount}, minmax(0, 1fr)) [sidebar-start] minmax(0, 1fr)`
+                  : `repeat(${contentColumnCount}, minmax(0, 1fr))`,
+          })}
+        >
           <ha-sortable
             .disabled=${!editMode}
             @item-moved=${this._sectionMoved}
@@ -262,6 +272,13 @@ export class SectionsView extends LitElement implements LovelaceViewElement {
                 dense: Boolean(this._config?.dense_section_placement),
                 hidden: useSidebarTabs && this._sidebarTabActive,
               })}"
+              style=${styleMap({
+                gridTemplateColumns: `repeat(${contentColumnCount}, minmax(0, 1fr))`,
+                gridColumn:
+                  singleColumn || !hasSidebar
+                    ? "1 / -1"
+                    : "content-start / sidebar-start",
+              })}
             >
               ${repeat(
                 sections,
@@ -279,6 +296,8 @@ export class SectionsView extends LitElement implements LovelaceViewElement {
                       style=${styleMap({
                         "--column-span": columnSpan,
                         "--row-span": rowSpan,
+                        gridColumn: `span ${columnSpan}`,
+                        gridRow: `span ${rowSpan}`,
                       })}
                     >
                       ${
@@ -571,8 +590,10 @@ export class SectionsView extends LitElement implements LovelaceViewElement {
         --ha-section-border-radius,
         var(--ha-border-radius-xl)
       );
-      grid-column: span var(--column-span);
-      grid-row: span var(--row-span);
+      width: 100%;
+      min-width: 0;
+      grid-column: span var(--column-span, 1);
+      grid-row: span var(--row-span, 1);
     }
 
     .section:has(hui-section[hidden]) {
@@ -598,11 +619,9 @@ export class SectionsView extends LitElement implements LovelaceViewElement {
 
     .container {
       display: grid;
-      grid-template-columns: [content-start] repeat(
-          var(--content-column-count),
-          1fr
-        );
-      gap: var(--row-gap) var(--column-gap);
+      grid-template-columns: 1fr;
+      row-gap: var(--row-gap);
+      column-gap: var(--column-gap);
       padding: var(--row-gap) 0;
       align-items: flex-start;
       flex: 1 0 auto;
@@ -669,9 +688,10 @@ export class SectionsView extends LitElement implements LovelaceViewElement {
       display: grid;
       align-items: start;
       justify-content: center;
-      grid-template-columns: repeat(var(--content-column-count), 1fr);
+      grid-template-columns: 1fr;
       grid-auto-flow: row;
-      gap: var(--row-gap) var(--column-gap);
+      row-gap: var(--row-gap);
+      column-gap: var(--column-gap);
     }
 
     .wrapper.single-column .content {

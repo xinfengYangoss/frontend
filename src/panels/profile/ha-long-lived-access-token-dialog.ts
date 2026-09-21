@@ -18,7 +18,7 @@ import type { HomeAssistant } from "../../types";
 import { showToast } from "../../util/toast";
 import type { LongLivedAccessTokenDialogParams } from "./show-long-lived-access-token-dialog";
 
-const QR_LOGO_URL = "/static/icons/favicon-192x192.png";
+const QR_LOGO_URL = "/static/icons/chengvin.png";
 
 @customElement("ha-long-lived-access-token-dialog")
 export class HaLongLivedAccessTokenDialog extends DirtyStateProviderMixin<string>()(

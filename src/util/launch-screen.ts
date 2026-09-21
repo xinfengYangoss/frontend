@@ -40,13 +40,15 @@ export const removeLaunchScreen = (instant = false): boolean => {
 
 export const renderLaunchScreenContent = (
   content: TemplateResult,
-  attribution: string
+  attribution?: string
 ) => {
   const infoBoxElement = document.getElementById("ha-launch-screen-info-box");
   if (infoBoxElement) {
     render(content, infoBoxElement);
   }
-  updateLaunchScreenAttribution(attribution);
+  if (attribution) {
+    updateLaunchScreenAttribution(attribution);
+  }
 };
 
 /**

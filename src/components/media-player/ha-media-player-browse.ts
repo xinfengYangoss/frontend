@@ -49,7 +49,6 @@ import { panelIsReady } from "../../layouts/panel-ready";
 import { haStyle, haStyleScrollbar } from "../../resources/styles";
 import { loadVirtualizer } from "../../resources/virtualizer";
 import type { HomeAssistant } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 import "../entity/ha-entity-picker";
 import "../ha-alert";
 import "../ha-button";
@@ -1202,17 +1201,9 @@ export class HaMediaPlayerBrowse extends LitElement {
           ${this.hass.localize("ui.components.media-browser.no_media_folder")}
           <br />
           ${this.hass.localize("ui.components.media-browser.setup_local_help", {
-            documentation: html`<a
-              href=${documentationUrl(
-                this.hass,
-                "/more-info/local-media/setup-media"
-              )}
-              target="_blank"
-              rel="noreferrer"
-              >${this.hass.localize(
-                "ui.components.media-browser.documentation"
-              )}</a
-            >`,
+            documentation: html`${this.hass.localize(
+              "ui.components.media-browser.documentation"
+            )}`,
           })}
           <br />
           ${this.hass.localize("ui.components.media-browser.local_media_files")}

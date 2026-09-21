@@ -28,7 +28,6 @@ import { subscribeSystemHealthInfo } from "../../../data/system_health";
 import { showAlertDialog } from "../../../dialogs/generic/show-dialog-box";
 import { haStyleDialog } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { showToast } from "../../../util/toast";
 
 const sortKeys = (a: string, b: string) => {
@@ -259,21 +258,7 @@ class DialogSystemInformation extends LitElement {
           ${this._resolutionInfo!.unsupported.map(
             (reason) => html`
               <li>
-                <a
-                  href=${documentationUrl(
-                    this.hass,
-                    UNSUPPORTED_REASON_URL[reason] ||
-                      `/more-info/unsupported/${reason}`
-                  )}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  ${
-                    this.hass.localize(
-                      `ui.dialogs.unsupported.reasons.${reason}`
-                    ) || reason
-                  }
-                </a>
+                ${this.hass.localize(`ui.dialogs.unsupported.reasons.${reason}`) || reason}
               </li>
             `
           )}
@@ -290,21 +275,7 @@ class DialogSystemInformation extends LitElement {
           ${this._resolutionInfo!.unhealthy.map(
             (reason) => html`
               <li>
-                <a
-                  href=${documentationUrl(
-                    this.hass,
-                    UNHEALTHY_REASON_URL[reason] ||
-                      `/more-info/unhealthy/${reason}`
-                  )}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  ${
-                    this.hass.localize(
-                      `ui.dialogs.unhealthy.reasons.${reason}`
-                    ) || reason
-                  }
-                </a>
+                ${this.hass.localize(`ui.dialogs.unhealthy.reasons.${reason}`) || reason}
               </li>
             `
           )}

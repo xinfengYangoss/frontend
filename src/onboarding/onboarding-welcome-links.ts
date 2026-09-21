@@ -1,4 +1,4 @@
-import { mdiAccountGroup, mdiFileDocument, mdiTabletCellphone } from "@mdi/js";
+import { mdiAccountGroup, mdiTabletCellphone } from "@mdi/js";
 import type { TemplateResult } from "lit";
 import { LitElement, css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -19,19 +19,7 @@ class OnboardingWelcomeLinks extends LitElement {
   public mobileApp = false;
 
   protected render(): TemplateResult {
-    return html`<a
-        target="_blank"
-        rel="noreferrer noopener"
-        href="https://www.home-assistant.io/blog/2016/01/19/perfect-home-automation/"
-      >
-        <onboarding-welcome-link
-          noninteractive
-          .iconPath=${mdiFileDocument}
-          .label=${this._localize("ui.panel.page-onboarding.welcome.vision")}
-        >
-        </onboarding-welcome-link>
-      </a>
-      <onboarding-welcome-link
+    return html` <onboarding-welcome-link
         class="community"
         @click=${this._openCommunity}
         .iconPath=${mdiAccountGroup}

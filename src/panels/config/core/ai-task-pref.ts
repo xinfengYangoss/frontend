@@ -1,4 +1,4 @@
-import { mdiHelpCircleOutline, mdiStarFourPoints } from "@mdi/js";
+import { mdiStarFourPoints } from "@mdi/js";
 import type { HassEntity } from "home-assistant-js-websocket";
 import type { PropertyValues } from "lit";
 import { css, html, LitElement } from "lit";
@@ -19,7 +19,6 @@ import {
 } from "../../../data/ai_task";
 import type { HomeAssistant, ValueChangedEvent } from "../../../types";
 import { brandsUrl } from "../../../util/brands-url";
-import { documentationUrl } from "../../../util/documentation-url";
 
 const filterGenData = (entity: HassEntity) =>
   computeDomain(entity.entity_id) === "ai_task" &&
@@ -68,18 +67,7 @@ export class AITaskPref extends LitElement {
             referrerpolicy="no-referrer"
           />${this.hass.localize("ui.panel.config.ai_task.header")}
         </h1>
-        <div class="header-actions">
-          <ha-icon-button
-            .label=${this.hass.localize(
-              "ui.panel.config.cloud.account.alexa.link_learn_how_it_works"
-            )}
-            .path=${mdiHelpCircleOutline}
-            href=${documentationUrl(this.hass, "/integrations/ai_task/")}
-            target="_blank"
-            rel="noreferrer"
-            class="icon-link"
-          ></ha-icon-button>
-        </div>
+        <div class="header-actions"></div>
         <div class="card-content">
           <p>
             ${this.hass!.localize("ui.panel.config.ai_task.description", {

@@ -25,7 +25,6 @@ import {
 import "../../../layouts/hass-loading-screen";
 import "../../../layouts/hass-tabs-subpage";
 import type { HomeAssistant, Route } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import "../ha-config-section";
 import { configSections } from "../config-sections";
 import {
@@ -81,14 +80,6 @@ export class HaConfigPerson extends LitElement {
                   `
                 : ""
             }
-
-            <a
-              href=${documentationUrl(this.hass, "/integrations/person/")}
-              target="_blank"
-              rel="noreferrer"
-            >
-              ${this.hass.localize("ui.panel.config.person.learn_more")}
-            </a>
           </span>
 
           <ha-card outlined class="storage">

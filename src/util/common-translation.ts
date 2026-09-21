@@ -2,7 +2,6 @@ import type { FrontendLocaleData } from "../data/translation";
 import { translationMetadata } from "../resources/translations-metadata";
 
 const BASE_URL = `${__STATIC_PATH__}translations`;
-const STORAGE = window.localStorage || {};
 
 // Store loaded translations in memory so translations are available immediately
 // when DOM is created. Even a cache lookup creates noticeable latency.
@@ -97,40 +96,10 @@ export async function getUserLocale(
 }
 
 /**
- * Get the saved language, or the default language for this installation
+ * Login and pre-auth screens always use Simplified Chinese.
  */
 export function getLocalLanguage() {
-  let language: string | undefined;
-  if (STORAGE.selectedLanguage) {
-    try {
-      const stored = JSON.parse(STORAGE.selectedLanguage);
-      if (stored) {
-        language = findAvailableLanguage(stored);
-        if (language) {
-          return language;
-        }
-      }
-    } catch (_err: any) {
-      // Ignore parsing error.
-    }
-  }
-  if (translationMetadata.translations["zh-Hans"]?.hash) {
-    return "zh-Hans";
-  }
-  if (navigator.languages) {
-    for (const locale of navigator.languages) {
-      language = findAvailableLanguage(locale);
-      if (language) {
-        return language;
-      }
-    }
-  }
-  language = findAvailableLanguage(navigator.language);
-  if (language) {
-    return language;
-  }
-  // Final fallback
-  return "en";
+  return "zh-Hans";
 }
 
 export async function getTranslation(

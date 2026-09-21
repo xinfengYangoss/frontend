@@ -19,6 +19,37 @@
     "maintenance": "Maintenance",
     "notfound": "Page not found"
   },
+  "component": {
+    "media_player": {
+      "title": "Media player",
+      "entity_component": {
+        "_": {
+          "name": "Media player",
+          "state": {
+            "buffering": "Buffering",
+            "idle": "Idle",
+            "off": "Off",
+            "on": "On",
+            "paused": "Paused",
+            "playing": "Playing",
+            "standby": "Standby"
+          }
+        }
+      }
+    },
+    "notify": {
+      "title": "Notifications"
+    },
+    "persistent_notification": {
+      "title": "Persistent notification"
+    },
+    "media_source": {
+      "title": "Media source"
+    },
+    "tts": {
+      "title": "Text-to-speech"
+    }
+  },
   "state": {
     "default": {
       "unknown": "Unknown",
@@ -76,13 +107,13 @@
   "ui": {
     "init": {
       "loading": "Loading...",
-      "migration": "Database upgrade is in progress, Home Assistant will not start until the upgrade is completed.\n\nThe upgrade may need a long time to complete, please be patient.",
-      "project_from": "A project from the",
+      "migration": "Database upgrade is in progress, CHENGVIN will not start until the upgrade is completed.\n\nThe upgrade may need a long time to complete, please be patient.",
+      "project_from": "",
       "error": {
-        "title": "Unable to connect to Home Assistant.",
+        "title": "Unable to connect to CHENGVIN.",
         "retrying": "Retrying in {seconds, plural, one {# second} other {# seconds}}...",
         "retry_now": "Retry now",
-        "nabu_casa": "It is possible that you are seeing this screen because your Home Assistant is not currently connected. You can ask it to come online from your {account_link}.",
+        "nabu_casa": "It is possible that you are seeing this screen because your CHENGVIN is not currently connected. You can ask it to come online from your {account_link}.",
         "nabu_casa_account": "Nabu Casa account page"
       }
     },
@@ -730,8 +761,8 @@
         "event": "event",
         "time": "time",
         "time_pattern": "time pattern",
-        "homeassistant_stopping": "Home Assistant stopping",
-        "homeassistant_starting": "Home Assistant starting",
+        "homeassistant_stopping": "CHENGVIN stopping",
+        "homeassistant_starting": "CHENGVIN starting",
         "cause": {
           "by": "By {name}",
           "by_automation": "By automation: {name}",
@@ -1544,13 +1575,13 @@
       },
       "safe_mode": {
         "title": "Safe mode",
-        "text": "Home Assistant is running in safe mode, custom integrations and community frontend modules are not available. Restart Home Assistant to exit safe mode."
+        "text": "CHENGVIN is running in safe mode, custom integrations and community frontend modules are not available. Restart CHENGVIN to exit safe mode."
       },
       "http_pending_config": {
         "title": "Confirm new HTTP server configuration",
-        "description": "Home Assistant has restarted with new HTTP server settings. Confirm to keep them, or revert to undo the change.",
+        "description": "CHENGVIN has restarted with new HTTP server settings. Confirm to keep them, or revert to undo the change.",
         "auto_revert": "Settings will automatically revert in {time}.",
-        "reverted": "Home Assistant reverted the HTTP server settings.",
+        "reverted": "CHENGVIN reverted the HTTP server settings.",
         "changes_label": "Changed settings:",
         "not_set": "Not set",
         "confirm": "Confirm",
@@ -1601,7 +1632,7 @@
             "themes": "[%key:ui::panel::config::tools::tabs::yaml::section::reloading::themes%]"
           },
           "home_assistant_control": {
-            "perform_action": "{action} Home Assistant",
+            "perform_action": "{action} CHENGVIN",
             "restart": "[%key:ui::panel::config::tools::tabs::yaml::section::server_management::restart%]",
             "stop": "[%key:ui::panel::config::tools::tabs::yaml::section::server_management::stop%]"
           },
@@ -1664,13 +1695,13 @@
         },
         "filter_placeholder": "Search entities",
         "filter_placeholder_devices": "Search devices",
-        "title": "Search Home Assistant",
+        "title": "Search CHENGVIN",
         "key_c_tip": "[%key:ui::tips::key_c_tip%]",
         "nothing_found": "Nothing found!"
       },
       "voice_command": {
         "title": "Assist",
-        "did_not_hear": "Home Assistant did not hear anything",
+        "did_not_hear": "CHENGVIN did not hear anything",
         "did_not_understand": "Didn't quite get that",
         "found": "I found the following for you:",
         "error": "Oops, an error has occurred",
@@ -1680,8 +1711,8 @@
         "send_text": "Send text",
         "start_listening": "Start listening",
         "manage_assistants": "Manage assistants",
-        "not_supported_microphone_browser": "Your connection to Home Assistant is not secured using HTTPS. This causes browsers to block Home Assistant from accessing the microphone.",
-        "not_supported_microphone_documentation": "Use the Home Assistant app or visit {documentation_link} to learn how to use a secure URL",
+        "not_supported_microphone_browser": "Your connection to CHENGVIN is not secured using HTTPS. This causes browsers to block CHENGVIN from accessing the microphone.",
+        "not_supported_microphone_documentation": "Use the CHENGVIN app or visit {documentation_link} to learn how to use a secure URL",
         "not_supported_microphone_documentation_link": "the documentation",
         "unknown_error_load_assist": "Loading the Assist pipeline failed",
         "not_found_error_load_assist": "Cannot find the Assist pipeline",
@@ -1768,13 +1799,13 @@
           "install": "Install",
           "update": "Update",
           "auto_update_enabled_title": "Cannot skip version",
-          "auto_update_enabled_text": "Automatic updates for this item have been enabled; skipping it is, therefore, unavailable. You can either install this update now or wait for Home Assistant to do it automatically.",
+          "auto_update_enabled_text": "Automatic updates for this item have been enabled; skipping it is, therefore, unavailable. You can either install this update now or wait for CHENGVIN to do it automatically.",
           "create_backup": {
             "automatic": "Automatic backup before update",
             "automatic_description_last": "Last automatic backup {relative_time}.",
             "automatic_description_none": "No automatic backup yet.",
             "manual": "Create manual backup before update",
-            "manual_description": "Includes Home Assistant settings and history.",
+            "manual_description": "Includes CHENGVIN settings and history.",
             "app": "Keep backup of the last version",
             "app_description": "For easily restoring to version {version}",
             "generic": "Create backup"
@@ -2049,9 +2080,9 @@
           "switch_as_x_confirm": "This switch will be hidden and a new {domain} will be added. Your existing configurations using the switch will continue to work.",
           "switch_as_x_remove_confirm": "This {domain} will be removed and the original switch will be visible again. Your existing configurations using the {domain} will no longer work!",
           "switch_as_x_change_confirm": "This {domain_1} will be removed and will be replaced by a new {domain_2}. Your existing configurations using the {domain_1} will no longer work!",
-          "enabled_description": "Disabled entities will not be added to Home Assistant.",
-          "enabled_delay_confirm": "The enabled entities will be added to Home Assistant in {delay} seconds",
-          "enabled_restart_confirm": "Restart Home Assistant to finish enabling the entities",
+          "enabled_description": "Disabled entities will not be added to CHENGVIN.",
+          "enabled_delay_confirm": "The enabled entities will be added to CHENGVIN in {delay} seconds",
+          "enabled_restart_confirm": "Restart CHENGVIN to finish enabling the entities",
           "hidden_explanation": "Hidden entities will not be included in auto-populated dashboards or when their area, device or label is referenced. Their history is still tracked and you can still interact with them with actions.",
           "delete": "Delete",
           "confirm_delete_title": "Delete entity",
@@ -2074,7 +2105,7 @@
             "preload_stream": "Preload camera stream",
             "preload_stream_description": "This keeps the camera stream open in the background so it shows quicker. Warning! This is device intensive.",
             "stream_orientation": "Camera stream orientation",
-            "stream_orientation_description": "The orientation transformation to use for the camera stream.\nWarning: Stream orientation processing occurs on the Home Assistant device and may impact system performance. When possible, configure this setting directly on your camera instead.",
+            "stream_orientation_description": "The orientation transformation to use for the camera stream.\nWarning: Stream orientation processing occurs on the CHENGVIN device and may impact system performance. When possible, configure this setting directly on your camera instead.",
             "stream_orientation_1": "No orientation transform",
             "stream_orientation_2": "Mirror",
             "stream_orientation_3": "Rotate 180",
@@ -2145,7 +2176,7 @@
         "view_entity": "More info about entity"
       },
       "restart": {
-        "heading": "Restart Home Assistant",
+        "heading": "Restart CHENGVIN",
         "more_options": "More options",
         "backup_in_progress": "A backup is currently being created. The action will automatically proceed once the backup process is complete.",
         "upload_in_progress": "A backup upload is currently in progress. The action will automatically proceed once the upload process is complete.",
@@ -2163,24 +2194,24 @@
           "failed": "Failed to reload configuration"
         },
         "restart": {
-          "title": "Restart Home Assistant",
+          "title": "Restart CHENGVIN",
           "description": "Interrupts all running automations and scripts.",
-          "confirm_title": "Restart Home Assistant?",
+          "confirm_title": "Restart CHENGVIN?",
           "confirm_description": "All integrations will be reloaded.",
           "confirm_action": "Restart",
           "confirm_action_backup": "Wait and restart",
-          "failed": "Failed to restart Home Assistant"
+          "failed": "Failed to restart CHENGVIN"
         },
         "stop": {
-          "confirm_title": "Stop Home Assistant?",
-          "confirm_description": "Home Assistant will be stopped.",
+          "confirm_title": "Stop CHENGVIN?",
+          "confirm_description": "CHENGVIN will be stopped.",
           "confirm_action": "Stop"
         },
         "reboot": {
           "title": "Reboot system",
-          "description": "Restarts the system running Home Assistant and all apps.",
+          "description": "Restarts the system running CHENGVIN and all apps.",
           "confirm_title": "Reboot system?",
-          "confirm_description": "This will reboot the complete system which includes Home Assistant and all apps.",
+          "confirm_description": "This will reboot the complete system which includes CHENGVIN and all apps.",
           "confirm_action": "Reboot",
           "action_toast": "Rebooting system",
           "confirm_action_backup": "Wait and reboot",
@@ -2188,22 +2219,22 @@
         },
         "shutdown": {
           "title": "Shut down system",
-          "description": "Shuts down the system running Home Assistant and all apps.",
+          "description": "Shuts down the system running CHENGVIN and all apps.",
           "confirm_title": "Shut down system?",
-          "confirm_description": "This will shut down the complete system which includes Home Assistant and all apps.",
+          "confirm_description": "This will shut down the complete system which includes CHENGVIN and all apps.",
           "confirm_action": "Shut down",
           "confirm_action_backup": "Wait and shut down",
           "action_toast": "Shutting down system",
           "failed": "Failed to shut down system"
         },
         "restart-safe-mode": {
-          "title": "Restart Home Assistant in safe mode",
-          "description": "Restarts Home Assistant without loading any custom integrations and community frontend modules.",
-          "confirm_title": "Restart Home Assistant in safe mode?",
-          "confirm_description": "This will restart Home Assistant without loading any custom integrations and community frontend modules.",
+          "title": "Restart CHENGVIN in safe mode",
+          "description": "Restarts CHENGVIN without loading any custom integrations and community frontend modules.",
+          "confirm_title": "Restart CHENGVIN in safe mode?",
+          "confirm_description": "This will restart CHENGVIN without loading any custom integrations and community frontend modules.",
           "confirm_action": "Restart",
           "confirm_action_backup": "Wait and Restart",
-          "failed": "Failed to restart Home Assistant"
+          "failed": "Failed to restart CHENGVIN"
         }
       },
       "aliases": {
@@ -2226,7 +2257,7 @@
           "more_options": "[%key:ui::dialogs::restart::more_options%]"
         },
         "input_boolean": {
-          "initial": "Each time Home Assistant starts",
+          "initial": "Each time CHENGVIN starts",
           "initial_helper": "Changing this does not affect the toggle right now.",
           "restore": "Restore previous state",
           "turn_on": "Turn on",
@@ -2271,12 +2302,12 @@
           "minimum": "Minimum value",
           "maximum": "Maximum value",
           "initial": "Initial value",
-          "restore": "Restore the last known value when Home Assistant starts",
+          "restore": "Restore the last known value when CHENGVIN starts",
           "step": "Step size"
         },
         "timer": {
           "duration": "Duration",
-          "restore": "Restore state and time when Home Assistant starts"
+          "restore": "Restore state and time when CHENGVIN starts"
         },
         "schedule": {
           "delete": "Delete item?",
@@ -2324,8 +2355,8 @@
         "enable_new_entities_label": "Enable newly added entities",
         "enable_new_entities_description": "If newly discovered devices for {integration} should be automatically added.",
         "enable_polling_label": "Enable polling for changes",
-        "enable_polling_description": "If Home Assistant should automatically poll {integration} entities for state changes.",
-        "restart_home_assistant": "You need to restart Home Assistant for your changes to take effect.",
+        "enable_polling_description": "If CHENGVIN should automatically poll {integration} entities for state changes.",
+        "restart_home_assistant": "You need to restart CHENGVIN for your changes to take effect.",
         "update": "Update"
       },
       "zha_reconfigure_device": {
@@ -2415,7 +2446,7 @@
         "reasons": {
           "docker": "The Docker environment is not working properly",
           "oserror_bad_message": "Operating System error: Bad message",
-          "duplicate_os_installation": "Duplicate Home Assistant OS installation",
+          "duplicate_os_installation": "Duplicate CHENGVIN OS installation",
           "privileged": "Supervisor is not privileged",
           "supervisor": "Supervisor was not able to update",
           "setup": "Setup of the Supervisor failed",
@@ -2463,7 +2494,7 @@
         },
         "new": {
           "header": "[%key:ui::dialogs::matter-add-device::main::header%]",
-          "note": "You need to use the Home Assistant Companion app on your mobile phone to add Matter devices.",
+          "note": "You need to use the CHENGVIN CHENGVIN app on your mobile phone to add Matter devices.",
           "download_app": "Install it from the Google Play Store or the App Store if you don't have it. If you're already using the iOS app, make sure your iPhone or iPad is running iOS 16 or newer.",
           "playstore": "[%key:ui::panel::page-onboarding::welcome::playstore%]",
           "appstore": "[%key:ui::panel::page-onboarding::welcome::appstore%]"
@@ -2482,8 +2513,8 @@
           "step_3": "Tap {link_apps_services} and choose {home_assistant} from the list.",
           "linked_matter_apps_services": "Linked Matter apps and services",
           "link_apps_services": "Link apps and services",
-          "no_home_assistant": "I can't find Home Assistant on the list",
-          "redirect": "You are redirected to the Home Assistant app. Please follow the instructions."
+          "no_home_assistant": "I can't find CHENGVIN on the list",
+          "redirect": "You are redirected to the CHENGVIN app. Please follow the instructions."
         },
         "google_home_fallback": {
           "header": "Copy pairing code",
@@ -2564,7 +2595,7 @@
         },
         "other": {
           "title": "Other",
-          "my_link": "get My Home Assistant link",
+          "my_link": "get My CHENGVIN link",
           "show_shortcuts": "show keyboard shortcuts"
         }
       }
@@ -2618,8 +2649,8 @@
     "notification_toast": {
       "action_failed": "Failed to perform the action {service}.",
       "connection_lost": "Connection lost. Reconnecting…",
-      "started": "Home Assistant has started!",
-      "starting": "Home Assistant is starting. Not everything will be available until it is finished.",
+      "started": "CHENGVIN has started!",
+      "starting": "CHENGVIN is starting. Not everything will be available until it is finished.",
       "wrapping_up_startup": "Wrapping up startup. Not everything will be available until it is finished.",
       "integration_starting": "Starting {integration}. Not everything will be available until startup is finished.",
       "triggered": "Triggered {name}",
@@ -2631,7 +2662,7 @@
       "theme_save_failed": "Unable to save theme settings to your user profile.",
       "theme_preferences_unavailable": "Unable to load user profile theme settings.",
       "onboarding_survey": {
-        "message": "Hello there! 👋 You've been using Home Assistant for a little while now. We'd love to hear what you think. Just one quick minute!",
+        "message": "Hello there! 👋 You've been using CHENGVIN for a little while now. We'd love to hear what you think. Just one quick minute!",
         "action": "Take survey"
       }
     },
@@ -2720,14 +2751,14 @@
         }
       },
       "my": {
-        "not_supported": "This redirect is not supported by your Home Assistant instance. Check the {link} for the supported redirects and the version they where introduced.",
-        "component_not_loaded": "This redirect is not supported by your Home Assistant instance. You need the integration {integration} to use this redirect.",
-        "no_supervisor": "This redirect is not supported by your Home Assistant installation. It needs the Home Assistant OS installation method. For more information, see the {docs_link}.",
-        "not_app": "This redirect only works from a mobile device that has the Home Assistant Companion app installed. {link}.",
+        "not_supported": "This redirect is not supported by your CHENGVIN instance. Check the {link} for the supported redirects and the version they where introduced.",
+        "component_not_loaded": "This redirect is not supported by your CHENGVIN instance. You need the integration {integration} to use this redirect.",
+        "no_supervisor": "This redirect is not supported by your CHENGVIN installation. It needs the CHENGVIN OS installation method. For more information, see the {docs_link}.",
+        "not_app": "This redirect only works from a mobile device that has the CHENGVIN CHENGVIN app installed. {link}.",
         "url_error": "The provided URL is invalid.",
         "documentation": "documentation",
         "download_app": "Click here to download the app",
-        "faq_link": "My Home Assistant FAQ",
+        "faq_link": "My CHENGVIN FAQ",
         "error": "An unknown error occurred"
       },
       "config": {
@@ -2745,7 +2776,7 @@
             "actions": "Actions"
           }
         },
-        "header": "Configure Home Assistant",
+        "header": "Configure CHENGVIN",
         "dashboard": {
           "devices": {
             "main": "Devices & services",
@@ -2757,11 +2788,11 @@
           },
           "backup": {
             "main": "Backup",
-            "secondary": "Generate backups of your Home Assistant configuration"
+            "secondary": "Generate backups of your CHENGVIN configuration"
           },
           "apps": {
             "main": "Apps",
-            "secondary": "Run extra applications next to Home Assistant"
+            "secondary": "Run extra applications next to CHENGVIN"
           },
           "dashboards": {
             "main": "Dashboards",
@@ -2792,7 +2823,7 @@
             "secondary": "Manage locations in and around your house"
           },
           "companion": {
-            "main": "Companion app",
+            "main": "CHENGVIN app",
             "secondary": "Sensors, widgets, notifications and more"
           },
           "system": {
@@ -2885,8 +2916,8 @@
         },
         "updates": {
           "caption": "Updates",
-          "description": "Manage updates of Home Assistant, apps, and devices",
-          "group_system": "Home Assistant",
+          "description": "Manage updates of CHENGVIN, apps, and devices",
+          "group_system": "CHENGVIN",
           "group_apps": "Apps",
           "update_all": "Update all",
           "no_updates": "No updates available",
@@ -2913,7 +2944,7 @@
         },
         "repairs": {
           "caption": "Repairs",
-          "description": "Find and fix issues with your Home Assistant instance",
+          "description": "Find and fix issues with your CHENGVIN instance",
           "title": "{count} {count, plural,\n  one {repair}\n  other {repairs}\n}",
           "no_repairs": "There are currently no repairs pending",
           "more_repairs": "Show all repairs",
@@ -2960,7 +2991,7 @@
         },
         "ai_task": {
           "header": "AI suggestions",
-          "description": "Home Assistant can use generative AI to help you with tasks. Look for the button with the {button} icon throughout Home Assistant to get suggestions. Select an AI task entity to use this feature.",
+          "description": "CHENGVIN can use generative AI to help you with tasks. Look for the button with the {button} icon throughout CHENGVIN to get suggestions. Select an AI task entity to use this feature.",
           "gen_data_header": "Data generation tasks",
           "gen_data_description": "Suggest automation names.",
           "gen_image_header": "Image generation tasks",
@@ -2973,7 +3004,7 @@
           "enable": "[%key:ui::common::enable%]",
           "disable": "[%key:ui::common::disable%]",
           "disable_confirm_title": "Disable the Model Context Protocol server?",
-          "disable_confirm_text": "AI agents connected to the server will lose access to Home Assistant.",
+          "disable_confirm_text": "AI agents connected to the server will lose access to CHENGVIN.",
           "your_api_header": "Your MCP API",
           "apis_header": "Individual MCP APIs",
           "copy_url": "Copy URL",
@@ -2987,9 +3018,9 @@
           "error_loading": "Error loading apps",
           "info": {
             "what_is_an_app": "What is an app?",
-            "what_is_an_app_description": "Apps run alongside Home Assistant and provide extra features like network monitoring, code editors, database management, and more.",
+            "what_is_an_app_description": "Apps run alongside CHENGVIN and provide extra features like network monitoring, code editors, database management, and more.",
             "why_not_available": "Why you see this page instead of an app store",
-            "installation_hint": "Apps require the Home Assistant Operating System. Learn more about installation methods in the documentation.",
+            "installation_hint": "Apps require the CHENGVIN Operating System. Learn more about installation methods in the documentation.",
             "learn_more": "Learn more",
             "dismiss": "Don't show again"
           },
@@ -3084,7 +3115,7 @@
             "option": {
               "boot": {
                 "title": "Start on boot",
-                "description": "Automatically start this app when Home Assistant starts."
+                "description": "Automatically start this app when CHENGVIN starts."
               },
               "watchdog": {
                 "title": "Watchdog",
@@ -3119,7 +3150,7 @@
                 "rating": "Rating",
                 "host": "Host",
                 "hardware": "Hardware access",
-                "core": "Home Assistant",
+                "core": "CHENGVIN",
                 "docker": "Docker",
                 "host_pid": "Host PID",
                 "apparmor": "AppArmor",
@@ -3151,8 +3182,8 @@
                 "description": "This app has full access to the hardware."
               },
               "homeassistant_api": {
-                "title": "Home Assistant API",
-                "description": "This app has access to the Home Assistant API."
+                "title": "CHENGVIN API",
+                "description": "This app has access to the CHENGVIN API."
               },
               "hassio_api": {
                 "title": "Supervisor API",
@@ -3317,7 +3348,7 @@
           },
           "picker": {
             "header": "Areas",
-            "introduction": "Areas are used to organize where devices are. This information will be used throughout Home Assistant to help you in organizing your interface, permissions, and integrations with other systems.",
+            "introduction": "Areas are used to organize where devices are. This information will be used throughout CHENGVIN to help you in organizing your interface, permissions, and integrations with other systems.",
             "introduction2": "To place devices in an area, use the link below to navigate to the integrations page and then click on a configured integration to get to the device cards.",
             "integrations_page": "Integrations page",
             "no_areas": "Looks like you have no areas yet!",
@@ -3374,7 +3405,7 @@
         "backup": {
           "caption": "Backups",
           "description": "Last backup {relative_time}",
-          "description_no_backup": "Manage backups and restore Home Assistant to a previous state",
+          "description_no_backup": "Manage backups and restore CHENGVIN to a previous state",
           "create_backup": "Create backup",
           "creating_backup": "Backup is currently being created",
           "download_backup": "Download backup",
@@ -3407,7 +3438,7 @@
           "dialogs": {
             "local_backup_location": {
               "title": "Change default local backup location",
-              "description": "Change the default location where local backups are stored on your Home Assistant instance.",
+              "description": "Change the default location where local backups are stored on your CHENGVIN instance.",
               "note": "This location will be used when you create a backup using the Supervisor actions in an automation for example.",
               "options": {
                 "default_backup_mount": {
@@ -3432,7 +3463,7 @@
               "supports_tar": "Supports .tar files",
               "unsupported": {
                 "title": "Unsupported file format",
-                "text": "Please choose a Home Assistant backup file (.tar)"
+                "text": "Please choose a CHENGVIN backup file (.tar)"
               }
             },
             "generate": {
@@ -3446,8 +3477,8 @@
                   "custom": "Custom"
                 },
                 "ha_cloud_alert": {
-                  "title": "Home Assistant Cloud cannot synchronize",
-                  "description": "Add Home Assistant settings data to synchronize this backup to Home Assistant Cloud."
+                  "title": "CHENGVIN Cloud cannot synchronize",
+                  "description": "Add CHENGVIN settings data to synchronize this backup to CHENGVIN Cloud."
                 }
               },
               "data": {
@@ -3483,7 +3514,7 @@
                 "input_label": "Encryption key"
               },
               "progress": {
-                "restarting": "Restarting Home Assistant",
+                "restarting": "Restarting CHENGVIN",
                 "restoring": "Restoring backup"
               },
               "actions": {
@@ -3508,7 +3539,7 @@
               },
               "schedule": {
                 "title": "Automatic backups",
-                "description": "Let Home Assistant take care of your backups by creating a scheduled backup that also removes older backups."
+                "description": "Let CHENGVIN take care of your backups by creating a scheduled backup that also removes older backups."
               },
               "data": {
                 "title": "Backup data",
@@ -3516,7 +3547,7 @@
               },
               "locations": {
                 "title": "Locations",
-                "description": "Home Assistant will upload to these locations when an automatic backup is made. You can use all locations for manual backups."
+                "description": "CHENGVIN will upload to these locations when an automatic backup is made. You can use all locations for manual backups."
               },
               "save_and_create": "Save and create backup"
             },
@@ -3571,7 +3602,7 @@
           },
           "agents": {
             "cloud_agent_description": "Note: It stores only the most recent backup, regardless of your retention settings, with a maximum size of 5 GB.",
-            "cloud_agent_no_subcription": "You currently do not have an active Home Assistant Cloud subscription.",
+            "cloud_agent_no_subcription": "You currently do not have an active CHENGVIN Cloud subscription.",
             "network_mount_agent_description": "Network storage",
             "unavailable_agents": "Unavailable locations",
             "no_agents": "No locations configured",
@@ -3582,7 +3613,7 @@
             "retention_days": "Keep {count} {count, plural,\n one {day}\n other {days}\n}"
           },
           "data": {
-            "ha_settings": "Home Assistant settings",
+            "ha_settings": "CHENGVIN settings",
             "ha_settings_description": "The bare minimum needed to restore the system.",
             "ha_settings_included_description": "The bare minimum needed to restore the system. It is always included in automatic backup data.",
             "history": "History",
@@ -3619,9 +3650,9 @@
             "time": "Time",
             "custom_time": "Custom time",
             "custom_time_label": "Backup at",
-            "custom_time_description": "The optimal time is after Home Assistant finished cleaning up the database. This is done at {time}.",
+            "custom_time_description": "The optimal time is after CHENGVIN finished cleaning up the database. This is done at {time}.",
             "schedule_description": "How often you want to create a backup.",
-            "schedule_time_description": "When the backup creation starts. By default Home Assistant picks the optimal time between {time_range_start} and {time_range_end}.",
+            "schedule_time_description": "When the backup creation starts. By default CHENGVIN picks the optimal time between {time_range_start} and {time_range_end}.",
             "tip": "You can create your own custom backup automation with the {backup_create} action",
             "schedule_options": {
               "never": "Never",
@@ -3671,8 +3702,8 @@
             "set_encryption_key_action": "Set"
           },
           "emergency_kit_file": {
-            "title": "Home Assistant Backup Emergency Kit",
-            "description": "This emergency kit contains your backup encryption key. You need this key to be able to restore your Home Assistant backups.",
+            "title": "CHENGVIN Backup Emergency Kit",
+            "description": "This emergency kit contains your backup encryption key. You need this key to be able to restore your CHENGVIN backups.",
             "date": "Date:",
             "instance": "Instance:",
             "url": "URL:",
@@ -3709,7 +3740,7 @@
                   "docker_config": "Backing up Docker configuration",
                   "finishing_file": "Finishing backup file",
                   "folders": "Backing up folders",
-                  "home_assistant": "Backing up Home Assistant",
+                  "home_assistant": "Backing up CHENGVIN",
                   "upload_to_agents": "Uploading to locations",
                   "cleaning_up": "Cleaning up"
                 },
@@ -3720,12 +3751,12 @@
                   "app_repositories": "Restoring app repositories",
                   "apps": "Restoring apps",
                   "await_app_restarts": "Waiting for apps to restart",
-                  "await_home_assistant_restart": "Waiting for Home Assistant to restart",
-                  "check_home_assistant": "Checking Home Assistant",
+                  "await_home_assistant_restart": "Waiting for CHENGVIN to restart",
+                  "check_home_assistant": "Checking CHENGVIN",
                   "docker_config": "Restoring Docker configuration",
                   "download_from_agent": "Downloading from location",
                   "folders": "Restoring folders",
-                  "home_assistant": "Restoring Home Assistant",
+                  "home_assistant": "Restoring CHENGVIN",
                   "remove_delta_addons": "[%key:ui::panel::config::backup::overview::progress::description::restore_backup::remove_delta_apps%]",
                   "remove_delta_apps": "Removing delta apps"
                 },
@@ -3735,7 +3766,7 @@
                 }
               },
               "segments": {
-                "home_assistant": "Home Assistant",
+                "home_assistant": "CHENGVIN",
                 "apps": "Apps",
                 "media": "Media",
                 "upload": "Uploading backup",
@@ -3792,7 +3823,7 @@
               "schedule_optimized_daily": "Daily",
               "schedule_optimized_days": "Every {days}",
               "schedule_never": "Automatic backups are not scheduled",
-              "data": "Home Assistant data that is included",
+              "data": "CHENGVIN data that is included",
               "data_settings_history": "Settings and history",
               "data_settings_only": "Settings only",
               "apps": "Apps that are included",
@@ -3844,7 +3875,7 @@
             },
             "schedule": {
               "title": "Backup cycle",
-              "description": "Let Home Assistant take care of your backups by creating a scheduled backup that also removes older backups.",
+              "description": "Let CHENGVIN take care of your backups by creating a scheduled backup that also removes older backups.",
               "error_load": "Error loading Supervisor update config: {error}",
               "error_save": "Error saving Supervisor update config: {error}"
             },
@@ -3916,7 +3947,7 @@
             "error": "Could not fetch location details",
             "configuration": {
               "title": "Configuration",
-              "cloud_description": "Home Assistant Cloud backup stores only one backup. The oldest backups are deleted."
+              "cloud_description": "CHENGVIN Cloud backup stores only one backup. The oldest backups are deleted."
             },
             "encryption": {
               "title": "Encryption",
@@ -3924,7 +3955,7 @@
               "location_encrypted": "Backups made to this location will be encrypted",
               "location_unencrypted": "Backups made to this location will be unencrypted",
               "location_encrypted_description": "Your data is private and secure by encrypting backups with your encryption key.",
-              "location_encrypted_cloud_description": "Home Assistant Cloud is the privacy-focused cloud. This is why it will only accept encrypted backups and why we don’t store your encryption key.",
+              "location_encrypted_cloud_description": "CHENGVIN Cloud is the privacy-focused cloud. This is why it will only accept encrypted backups and why we don’t store your encryption key.",
               "location_encrypted_cloud_learn_more": "Learn more",
               "location_unencrypted_description": "Please keep your backups private and secure.",
               "encryption_turn_on": "Turn on",
@@ -3965,14 +3996,14 @@
             "tag_id": "Tag ID",
             "tag_id_placeholder": "Auto-generated if left empty",
             "use_custom_id": "Use a custom tag ID",
-            "custom_id_warning": "Tag IDs are written to the physical tag and can't be changed later. A random UUID is usually safer because the ID stays decoupled from what the tag does. You can rename the tag any time, and reuse the same physical tag in another Home Assistant instance for something completely different, without the ID carrying meaning that no longer fits.",
+            "custom_id_warning": "Tag IDs are written to the physical tag and can't be changed later. A random UUID is usually safer because the ID stays decoupled from what the tag does. You can rename the tag any time, and reuse the same physical tag in another CHENGVIN instance for something completely different, without the ID carrying meaning that no longer fits.",
             "delete": "Delete",
             "update": "Update",
             "create": "Create",
             "create_and_write": "Create and write",
             "required_error_msg": "[%key:ui::panel::config::zone::detail::required_error_msg%]",
             "usage": "A tag can trigger an automation when scanned, you can use NFC tags, QR codes or any other kind of tag. Use our {companion_link} to write this tag to a programmable NFC tag or copy and print the QR code below.",
-            "companion_apps": "Companion apps"
+            "companion_apps": "CHENGVIN apps"
           }
         },
         "tools": {
@@ -3980,7 +4011,7 @@
             "assist": {
               "tab": "Assist",
               "title": "Sentences parser",
-              "description": "Enter sentences and see how they will be parsed by Home Assistant. Each line will be processed as an individual sentence. Intents will not be executed on your instance.",
+              "description": "Enter sentences and see how they will be parsed by CHENGVIN. Each line will be processed as an individual sentence. Intents will not be executed on your instance.",
               "parse_sentences": "Parse sentences",
               "sentences": "Sentences",
               "download_results": "Download results",
@@ -4040,7 +4071,7 @@
             },
             "actions": {
               "title": "Actions",
-              "description": "The actions tool allows you to perform any action available in Home Assistant.",
+              "description": "The actions tool allows you to perform any action available in CHENGVIN.",
               "call_service": "Perform action",
               "response": "Response",
               "column_parameter": "Parameter",
@@ -4073,7 +4104,7 @@
             },
             "states": {
               "title": "States",
-              "description1": "Set the current state representation of an entity within Home Assistant.",
+              "description1": "Set the current state representation of an entity within CHENGVIN.",
               "description2": "If the entity belongs to a device, there will be no actual communication with that device.",
               "entity": "Entity",
               "state": "State",
@@ -4093,8 +4124,8 @@
             },
             "templates": {
               "title": "Template",
-              "description": "Templates let you generate dynamic content from your Home Assistant data, such as a notification that lists which lights are on, or a sensor whose value is calculated from several other entities.",
-              "engine_info": "Home Assistant uses the Jinja templating engine, extended with functions for working with your entities, areas, devices, and more. Write a template in the editor below and its result updates live as your states change.",
+              "description": "Templates let you generate dynamic content from your CHENGVIN data, such as a notification that lists which lights are on, or a sensor whose value is calculated from several other entities.",
+              "engine_info": "CHENGVIN uses the Jinja templating engine, extended with functions for working with your entities, areas, devices, and more. Write a template in the editor below and its result updates live as your states change.",
               "learn_more": "Learn more",
               "about": "About templates",
               "editor": "Template editor",
@@ -4231,9 +4262,9 @@
               "section": {
                 "validation": {
                   "heading": "Check and restart",
-                  "introduction": "A basic validation of the configuration is automatically done before restarting. The basic validation ensures the YAML configuration doesn't have errors which will prevent Home Assistant or any integration from starting. It's also possible to only do the basic validation check without restarting.",
+                  "introduction": "A basic validation of the configuration is automatically done before restarting. The basic validation ensures the YAML configuration doesn't have errors which will prevent CHENGVIN or any integration from starting. It's also possible to only do the basic validation check without restarting.",
                   "check_config": "Check configuration",
-                  "valid": "Configuration will not prevent Home Assistant from starting!",
+                  "valid": "Configuration will not prevent CHENGVIN from starting!",
                   "invalid": "Configuration invalid!",
                   "warnings": "Configuration warnings",
                   "errors": "Configuration errors"
@@ -4241,7 +4272,7 @@
                 "reloading": {
                   "all": "All YAML configuration",
                   "heading": "YAML configuration reloading",
-                  "introduction": "Some parts of Home Assistant can reload without requiring a restart. Selecting one of the options below will unload their current YAML configuration and load the new one.",
+                  "introduction": "Some parts of CHENGVIN can reload without requiring a restart. Selecting one of the options below will unload their current YAML configuration and load the new one.",
                   "reload": "{domain}",
                   "core": "Location & customizations",
                   "group": "Groups, group entities, and notify services",
@@ -4278,11 +4309,11 @@
                   "themes": "Themes"
                 },
                 "server_management": {
-                  "heading": "Home Assistant",
+                  "heading": "CHENGVIN",
                   "restart": "Restart",
                   "stop": "Stop",
-                  "confirm_stop": "Are you sure you want to stop Home Assistant?",
-                  "restart_error": "Failed to restart Home Assistant"
+                  "confirm_stop": "Are you sure you want to stop CHENGVIN?",
+                  "restart_error": "Failed to restart CHENGVIN"
                 }
               }
             }
@@ -4312,7 +4343,7 @@
           "delete_integration": "Are you sure you want to remove this integration? It will remove the entities it provides",
           "grid": {
             "title": "Electricity grid",
-            "sub": "Configure the amount of energy that you consume from the grid and, if you produce energy, give back to the grid. This allows Home Assistant to track your whole home energy usage.",
+            "sub": "Configure the amount of energy that you consume from the grid and, if you produce energy, give back to the grid. This allows CHENGVIN to track your whole home energy usage.",
             "learn_more": "More information on how to get started",
             "grid_connections": "Grid connections",
             "add_connection": "Add grid connection",
@@ -4330,7 +4361,7 @@
               "energy_to_helper": "Pick a sensor which measures grid export in either of {unit}.",
               "display_name": "[%key:ui::panel::config::energy::device_consumption::dialog::display_name%]",
               "import_cost": "Cost tracking",
-              "import_cost_para": "Select how Home Assistant should keep track of the costs of the imported energy.",
+              "import_cost_para": "Select how CHENGVIN should keep track of the costs of the imported energy.",
               "no_cost_tracking": "Do not track costs",
               "cost_stat": "Use an entity tracking the total costs",
               "cost_stat_label": "Entity with the total costs",
@@ -4376,7 +4407,7 @@
           },
           "solar": {
             "title": "Solar panels",
-            "sub": "Let Home Assistant monitor your solar panels and give you insight on their performance.",
+            "sub": "Let CHENGVIN monitor your solar panels and give you insight on their performance.",
             "learn_more": "More information on how to get started",
             "solar_production": "Solar production",
             "edit_solar_production": "Edit solar production",
@@ -4428,13 +4459,13 @@
               "type_two_sensors": "Two sensors",
               "power_from": "Discharge power",
               "power_to": "Charge power",
-              "helper_sensor_note": "Home Assistant will create a helper sensor entity for this option.",
+              "helper_sensor_note": "CHENGVIN will create a helper sensor entity for this option.",
               "helper_sensor_in_use": "Currently using helper {entity}"
             }
           },
           "gas": {
             "title": "Gas consumption",
-            "sub": "Let Home Assistant monitor your gas usage.",
+            "sub": "Let CHENGVIN monitor your gas usage.",
             "learn_more": "More information on how to get started",
             "gas_consumption": "Gas consumption",
             "edit_gas_source": "Edit gas source",
@@ -4446,7 +4477,7 @@
               "entity_para": "Pick a sensor which measures gas consumption in either of {unit}.",
               "note_para": "Note: It is not possible to add both sensors measuring a volume of gas and sensors measuring the amount of energy contained in the gas.",
               "display_name": "[%key:ui::panel::config::energy::device_consumption::dialog::display_name%]",
-              "cost_para": "Select how Home Assistant should keep track of the costs of the consumed gas.",
+              "cost_para": "Select how CHENGVIN should keep track of the costs of the consumed gas.",
               "no_cost": "[%key:ui::panel::config::energy::grid::flow_dialog::from::no_cost%]",
               "cost_stat": "[%key:ui::panel::config::energy::grid::flow_dialog::from::cost_stat%]",
               "cost_stat_input": "[%key:ui::panel::config::energy::grid::flow_dialog::from::cost_stat_input%]",
@@ -4464,7 +4495,7 @@
           },
           "water": {
             "title": "Water consumption",
-            "sub": "Let Home Assistant monitor your water usage.",
+            "sub": "Let CHENGVIN monitor your water usage.",
             "learn_more": "More information on how to get started",
             "water_consumption": "Water consumption",
             "edit_water_source": "Edit water source",
@@ -4474,7 +4505,7 @@
               "header": "Configure water consumption",
               "paragraph": "Water consumption is the volume of water that flows to your home.",
               "entity_para": "Pick a sensor which measures water consumption in either of {unit}.",
-              "cost_para": "Select how Home Assistant should keep track of the costs of the consumed water.",
+              "cost_para": "Select how CHENGVIN should keep track of the costs of the consumed water.",
               "display_name": "[%key:ui::panel::config::energy::device_consumption::dialog::display_name%]",
               "no_cost": "[%key:ui::panel::config::energy::grid::flow_dialog::from::no_cost%]",
               "cost_stat": "[%key:ui::panel::config::energy::grid::flow_dialog::from::cost_stat%]",
@@ -4491,7 +4522,7 @@
           },
           "device_consumption": {
             "title": "Individual electrical devices",
-            "sub": "Tracking the energy usage of individual devices allows Home Assistant to break down your energy usage by device.",
+            "sub": "Tracking the energy usage of individual devices allows CHENGVIN to break down your energy usage by device.",
             "learn_more": "More information on how to get started",
             "add_stat": "Pick entity to track energy of",
             "selected_stat": "Tracking energy for",
@@ -4510,7 +4541,7 @@
           },
           "device_consumption_water": {
             "title": "Individual water devices",
-            "sub": "Tracking the water usage of individual devices allows Home Assistant to break down your water usage by device.",
+            "sub": "Tracking the water usage of individual devices allows CHENGVIN to break down your water usage by device.",
             "learn_more": "More information on how to get started",
             "devices": "Devices",
             "add_device": "Add device",
@@ -4610,18 +4641,18 @@
           }
         },
         "url": {
-          "caption": "Home Assistant URL",
-          "description": "Configure what website addresses Home Assistant should share with other devices when they need to fetch data from Home Assistant (for example, to play text-to-speech or other hosted media).",
+          "caption": "CHENGVIN URL",
+          "description": "Configure what website addresses CHENGVIN should share with other devices when they need to fetch data from CHENGVIN (for example, to play text-to-speech or other hosted media).",
           "internal_url_label": "Local network",
           "external_url_label": "Internet",
-          "external_use_ha_cloud": "Use Home Assistant Cloud",
-          "manage_ha_cloud": "Manage Home Assistant Cloud",
-          "external_get_ha_cloud": "If you're looking for a fast and secure way to connect to Home Assistant no matter where you are, start a trial for Home Assistant Cloud today. Every purchase supports the development of Home Assistant.",
-          "ha_cloud_remote_not_enabled": "Your Home Assistant Cloud remote connection is currently not enabled.",
+          "external_use_ha_cloud": "Use CHENGVIN Cloud",
+          "manage_ha_cloud": "Manage CHENGVIN Cloud",
+          "external_get_ha_cloud": "If you're looking for a fast and secure way to connect to CHENGVIN no matter where you are, start a trial for CHENGVIN Cloud today. Every purchase supports the development of CHENGVIN.",
+          "ha_cloud_remote_not_enabled": "Your CHENGVIN Cloud remote connection is currently not enabled.",
           "enable_remote": "[%key:ui::common::enable%]",
           "internal_url_automatic": "Automatic",
           "internal_url_https_error_title": "Invalid local network URL",
-          "internal_url_https_error_description": "You have configured an HTTPS certificate in Home Assistant. This means that your internal URL needs to be set to a domain covered by the certificate.",
+          "internal_url_https_error_description": "You have configured an HTTPS certificate in CHENGVIN. This means that your internal URL needs to be set to a domain covered by the certificate.",
           "internal_url_automatic_description": "Use the configured network settings",
           "internal_url_placeholder": "{protocol}://192.168.1.100{port}",
           "external_url_placeholder": "{protocol}://example.duckdns.org{port}",
@@ -4656,13 +4687,15 @@
         "info": {
           "caption": "About",
           "installation_method": "Installation method",
-          "external_app_version": "Companion app",
+          "external_app_version": "CHENGVIN app",
           "copy_menu": "Copy menu",
           "copy_raw": "Raw text",
           "copy_github": "For GitHub",
           "description": "Version, loaded integrations and links to documentation",
-          "home_assistant_logo": "Home Assistant logo",
-          "developed_by": "Developed by a bunch of awesome people.",
+          "product_name": "CHENGVIN",
+          "company_name": "Fujian Xingqihang Information Technology Co., Ltd.",
+          "home_assistant_logo": "CHENGVIN logo",
+          "developed_by": "Developed by Fujian Xingqihang Information Technology Co., Ltd.",
           "license": "Published under the Apache 2.0 license",
           "source": "Source:",
           "server": "server",
@@ -4724,10 +4757,10 @@
           "download_logs": "Download logs",
           "log_file_disabled_title": "Log file disabled",
           "log_file_disabled": {
-            "environment": "Home Assistant is not writing a log file because HA_DISABLE_LOG_FILE is set. Raw log view and log download are unavailable."
+            "environment": "CHENGVIN is not writing a log file because HA_DISABLE_LOG_FILE is set. Raw log view and log download are unavailable."
           },
           "log_file_disabled_debug_download": {
-            "environment": "Debug logging has been disabled, but no log file was downloaded because HA_DISABLE_LOG_FILE is set and Home Assistant is not writing a log file."
+            "environment": "Debug logging has been disabled, but no log file was downloaded because HA_DISABLE_LOG_FILE is set and CHENGVIN is not writing a log file."
           },
           "scroll_down_button": "New logs - Click to scroll",
           "provider_not_found": "Log provider not found",
@@ -4829,7 +4862,7 @@
               "set_default": "Set as default",
               "remove_default": "Remove as default",
               "set_default_confirm_title": "Set as default dashboard?",
-              "set_default_confirm_text": "This dashboard will be shown to all users when opening Home Assistant.",
+              "set_default_confirm_text": "This dashboard will be shown to all users when opening CHENGVIN.",
               "set_default_confirm_note": "Users who have chosen a specific dashboard in their profile will not be affected. They must set it back to \"Auto (use system settings)\" to use this dashboard.",
               "set_default_admin_only_title": "Can't set as default",
               "set_default_admin_only_text": "This dashboard is set to admin-only. Disable this limitation before setting it as default."
@@ -4969,7 +5002,7 @@
               "features": {
                 "assistants": {
                   "title": "Google Assistant and Amazon Alexa",
-                  "text": "Control all your Home Assistant devices via any Google Assistant-enabled or Alexa-enabled device."
+                  "text": "Control all your CHENGVIN devices via any Google Assistant-enabled or Alexa-enabled device."
                 },
                 "speech": {
                   "title": "Amazing speech options for Assist",
@@ -4977,7 +5010,7 @@
                 },
                 "remote_access": {
                   "title": "Remote access",
-                  "text": "Secure remote access to your system while supporting the development of Home Assistant."
+                  "text": "Secure remote access to your system while supporting the development of CHENGVIN."
                 }
               },
               "and_more": "And more",
@@ -5073,8 +5106,8 @@
             "check": {
               "title": "Hello!",
               "secondary": "Over the next couple steps we're going to personalize your voice assistant.",
-              "failed_title": "The voice assistant is unable to connect to Home Assistant",
-              "failed_secondary": "To play audio, the voice assistant device has to connect to Home Assistant to fetch the files. Our test shows that the device is unable to reach the Home Assistant server.",
+              "failed_title": "The voice assistant is unable to connect to CHENGVIN",
+              "failed_secondary": "To play audio, the voice assistant device has to connect to CHENGVIN to fetch the files. Our test shows that the device is unable to reach the CHENGVIN server.",
               "help": "Help me",
               "retry": "Retry"
             },
@@ -5112,8 +5145,8 @@
               },
               "options": {
                 "cloud": {
-                  "label": "Home Assistant Cloud",
-                  "description": "Offloads speech processing to a fast, private cloud. Offering the highest accuracy and widest language support. Home Assistant Cloud is a subscription service that includes voice processing."
+                  "label": "CHENGVIN Cloud",
+                  "description": "Offloads speech processing to a fast, private cloud. Offering the highest accuracy and widest language support. CHENGVIN Cloud is a subscription service that includes voice processing."
                 },
                 "focused_local": {
                   "label": "Focused local processing",
@@ -5133,7 +5166,7 @@
               }
             },
             "cloud": {
-              "title": "The power of Home Assistant Cloud"
+              "title": "The power of CHENGVIN Cloud"
             },
             "local": {
               "title": "Installing apps",
@@ -5177,7 +5210,7 @@
           "description": "Create custom behavior rules for your home",
           "picker": {
             "header": "Automation editor",
-            "introduction": "The automation editor allows you to create and edit automations. Please follow the link below to read the instructions to make sure that you have configured Home Assistant correctly.",
+            "introduction": "The automation editor allows you to create and edit automations. Please follow the link below to read the instructions to make sure that you have configured CHENGVIN correctly.",
             "learn_more": "Learn more about automations",
             "pick_automation": "Pick automation to edit",
             "no_automations": "We couldn't find any automations",
@@ -5218,7 +5251,7 @@
               "disable": "Disable"
             },
             "empty_header": "Start automating",
-            "empty_text_1": "Automations make Home Assistant automatically respond to things happening in and around your home.",
+            "empty_text_1": "Automations make CHENGVIN automatically respond to things happening in and around your home.",
             "empty_text_2": "Automations connect triggers to actions in a ''when trigger then action'' fashion with optional conditions. For example: ''When the sun sets and if {user} is home, then turn on the lights''.",
             "migrate_automation": "Migrate automation?",
             "migrate_automation_description": "You can migrate this automation, so it can be edited from the UI. After it is migrated and you have saved it, you will have to manually delete your old automation from your configuration. Do you want to migrate this automation?"
@@ -5234,7 +5267,7 @@
               "author": "By {author}",
               "local": "By you",
               "community": "By the community",
-              "homeassistant": "By Home Assistant"
+              "homeassistant": "By CHENGVIN"
             },
             "discover_blueprint_tip": "Discover more community blueprints"
           },
@@ -5469,7 +5502,7 @@
                   "context_user_picked": "User firing event",
                   "context_user_pick": "Select user",
                   "description": {
-                    "picker": "Triggers when an event is being received (events are a building block used across Home Assistant).",
+                    "picker": "Triggers when an event is being received (events are a building block used across CHENGVIN).",
                     "full": "When {eventTypes} event is fired"
                   }
                 },
@@ -5504,14 +5537,14 @@
                   }
                 },
                 "homeassistant": {
-                  "label": "Home Assistant",
+                  "label": "CHENGVIN",
                   "event": "Event:",
                   "start": "Start",
                   "shutdown": "Shutdown",
                   "description": {
-                    "picker": "Triggers when Home Assistant starts up or shuts down.",
-                    "started": "When Home Assistant is started",
-                    "shutdown": "When Home Assistant is shut down"
+                    "picker": "Triggers when CHENGVIN starts up or shuts down.",
+                    "started": "When CHENGVIN is started",
+                    "shutdown": "When CHENGVIN is shut down"
                   }
                 },
                 "mqtt": {
@@ -5594,7 +5627,7 @@
                 "tag": {
                   "label": "Tag",
                   "description": {
-                    "picker": "Triggers when a tag is scanned (tags are usually created from the Companion app).",
+                    "picker": "Triggers when a tag is scanned (tags are usually created from the CHENGVIN app).",
                     "full": "When a tag is scanned",
                     "known_tag": "When scanning tag {tag_name}"
                   }
@@ -5660,7 +5693,7 @@
                   "webhook_id_helper": "Treat this ID like a password: keep it secret and make it hard to guess.",
                   "webhook_settings": "Webhook settings",
                   "description": {
-                    "picker": "Triggers when Home Assistant receives a web request to a webhook endpoint.",
+                    "picker": "Triggers when CHENGVIN receives a web request to a webhook endpoint.",
                     "full": "When a Webhook payload has been received"
                   }
                 },
@@ -6008,7 +6041,7 @@
                   "event": "[%key:ui::panel::config::automation::editor::triggers::type::event::event_type%]",
                   "event_data": "[%key:ui::panel::config::automation::editor::triggers::type::event::event_data%]",
                   "description": {
-                    "picker": "Fires an event manually (events are a building block used across Home Assistant).",
+                    "picker": "Fires an event manually (events are a building block used across CHENGVIN).",
                     "full": "Manually fire event {name}",
                     "template": "based on a template"
                   }
@@ -6316,7 +6349,7 @@
             "override_description": "Importing it will override the existing blueprint. If the updated blueprint is not compatible, it can break your automations. Automations will have to be adjusted manually.",
             "error_no_url": "Please enter the blueprint address.",
             "source_warning_title": "Review this blueprint source",
-            "source_warning_description": "This blueprint is not imported from GitHub or an official Home Assistant website. Only continue if you trust this source.",
+            "source_warning_description": "This blueprint is not imported from GitHub or an official CHENGVIN website. Only continue if you trust this source.",
             "unsupported_blueprint": "This blueprint is not supported",
             "file_name": "Blueprint path"
           }
@@ -6326,7 +6359,7 @@
           "description": "Execute a sequence of actions",
           "picker": {
             "header": "Script editor",
-            "introduction": "The script editor allows you to create and edit scripts. Please follow the link below to read the instructions to make sure that you have configured Home Assistant correctly.",
+            "introduction": "The script editor allows you to create and edit scripts. Please follow the link below to read the instructions to make sure that you have configured CHENGVIN correctly.",
             "learn_more": "Learn more about scripts",
             "no_scripts": "We couldn't find any scripts",
             "add_script": "Create script",
@@ -6450,7 +6483,7 @@
           "activated": "Activated scene {name}.",
           "picker": {
             "header": "Scene editor",
-            "introduction": "The scene editor allows you to create and edit scenes. Please follow the link below to read the instructions to make sure that you have configured Home Assistant correctly.",
+            "introduction": "The scene editor allows you to create and edit scenes. Please follow the link below to read the instructions to make sure that you have configured CHENGVIN correctly.",
             "learn_more": "Learn more about scenes",
             "pick_scene": "Pick scene to edit",
             "no_scenes": "We couldn't find any scenes",
@@ -6529,21 +6562,21 @@
             "title": "Cloud login",
             "landing_title": "[%key:ui::panel::config::cloud::account::onboarding::ha_cloud_title%]",
             "hero_title": "Tools for your home, support for the Open Home",
-            "hero_lead": "The easy, secure, and private way to get more out of Home Assistant, and the simplest way to fund its development.",
+            "hero_lead": "The easy, secure, and private way to get more out of CHENGVIN, and the simplest way to fund its development.",
             "trial_note": "Try free for a month. No payment information required up front.",
-            "partner_note": "This service is run by our partner {nabu_casa_link}, a company founded by the founders of Home Assistant.",
+            "partner_note": "This service is run by our partner {nabu_casa_link}, a company founded by the founders of CHENGVIN.",
             "feature_remote_title": "Access from anywhere",
-            "feature_remote_body": "Securely and privately reach your Home Assistant when you're away from home. Zero router configuration, port forwarding, or complex VPNs.",
+            "feature_remote_body": "Securely and privately reach your CHENGVIN when you're away from home. Zero router configuration, port forwarding, or complex VPNs.",
             "feature_backup_title": "Backups kept safe",
-            "feature_backup_body": "Your latest Home Assistant backup, automatically stored somewhere safe and only accessible with your private key, ready to restore your full system with one click.",
+            "feature_backup_body": "Your latest CHENGVIN backup, automatically stored somewhere safe and only accessible with your private key, ready to restore your full system with one click.",
             "feature_voice_control_title": "Alexa and Google Home made simple",
-            "feature_voice_control_body": "Ease your transition to Home Assistant, use your Google and Alexa speakers to control every device. Set up in minutes, not hours.",
+            "feature_voice_control_body": "Ease your transition to CHENGVIN, use your Google and Alexa speakers to control every device. Set up in minutes, not hours.",
             "feature_voice_quality_title": "Fast, accurate voice control",
-            "feature_voice_quality_body": "More languages and higher accuracy for your own private voice assistant powered by Home Assistant.",
+            "feature_voice_quality_body": "More languages and higher accuracy for your own private voice assistant powered by CHENGVIN.",
             "feature_companion_title": "Secure app connectivity",
-            "feature_companion_body": "The Home Assistant app on your mobile device forms a secure connection home, encrypting your location and sensor data.",
-            "feature_support_title": "Support Home Assistant",
-            "feature_support_body": "Your subscription directly funds the Open Home Foundation, keeping Home Assistant independent and free from ads or data harvesting.",
+            "feature_companion_body": "The CHENGVIN app on your mobile device forms a secure connection home, encrypting your location and sensor data.",
+            "feature_support_title": "Support CHENGVIN",
+            "feature_support_body": "Your subscription directly funds the Open Home Foundation, keeping CHENGVIN independent and free from ads or data harvesting.",
             "sign_in": "Sign in",
             "sign_in_lead": "Sign in to your Nabu Casa account.",
             "email": "Email",
@@ -6572,7 +6605,7 @@
           },
           "register": {
             "headline": "Start free trial",
-            "information": "Create an account to start your free one-month trial with Home Assistant Cloud. No payment information necessary.",
+            "information": "Create an account to start your free one-month trial with CHENGVIN Cloud. No payment information necessary.",
             "terms_notice": "By creating an account, you agree to our {terms} and {privacy_policy}.",
             "link_terms_conditions": "Terms and conditions",
             "link_privacy_policy": "Privacy policy",
@@ -6596,7 +6629,7 @@
           "account": {
             "thank_you_title": "Thank you!",
             "getting_renewal_date": "Getting renewal date…",
-            "funding_note": "Every Cloud subscription funds the Open Home Foundation, paying full-time developers to work on and keep the Home Assistant project independent. No private equity, no ads, no data harvesting.",
+            "funding_note": "Every Cloud subscription funds the Open Home Foundation, paying full-time developers to work on and keep the CHENGVIN project independent. No private equity, no ads, no data harvesting.",
             "email": "Email",
             "show_email": "Show email",
             "hide_email": "Hide email",
@@ -6617,12 +6650,12 @@
               "canceled_text": "Your subscription is canceled. You'll keep your cloud features until {date}.",
               "resubscribe": "Resubscribe",
               "features_title": "Cloud features",
-              "features_intro": "The best of Home Assistant, while funding its development. Securely reach your home from anywhere, add voice assistants, keep an off-site backup, and more. Built by the team behind Home Assistant.",
+              "features_intro": "The best of CHENGVIN, while funding its development. Securely reach your home from anywhere, add voice assistants, keep an off-site backup, and more. Built by the team behind CHENGVIN.",
               "feature_remote": "Remote access",
               "feature_backups": "Cloud backups",
               "feature_voice": "Voice",
               "feature_voice_sub": "Text-to-speech and speech-to-text",
-              "feature_companion": "Companion app",
+              "feature_companion": "CHENGVIN app",
               "feature_companion_sub": "Location and sensors",
               "feature_alexa_google": "Alexa and Google",
               "alexa_google_both": "Alexa and Google linked",
@@ -6642,34 +6675,34 @@
               "last_backup": "Last backup {relative}"
             },
             "onboarding": {
-              "ready_title": "Home Assistant Cloud is ready",
-              "ready_text": "Your subscription unlocks features that make Home Assistant more powerful, private, and connected. Set them up now, or come back any time.",
+              "ready_title": "CHENGVIN Cloud is ready",
+              "ready_text": "Your subscription unlocks features that make CHENGVIN more powerful, private, and connected. Set them up now, or come back any time.",
               "start_setup": "Start setup",
               "review_later": "Review later",
               "chip_remote": "Remote access",
               "chip_backups": "Cloud backups",
               "chip_voice": "Voice assistants",
               "chip_streaming": "Smoother streaming",
-              "dialog_title": "Make the most of Home Assistant Cloud",
-              "dialog_intro": "Home Assistant Cloud can do several things. Set them up whenever you like, at your own pace, and come back here any time.",
+              "dialog_title": "Make the most of CHENGVIN Cloud",
+              "dialog_intro": "CHENGVIN Cloud can do several things. Set them up whenever you like, at your own pace, and come back here any time.",
               "done": "Done",
               "turn_on": "Turn on",
               "turn_off": "Turn off",
               "remote_title": "Remote access",
               "remote_helper": "Reach your home from anywhere",
-              "remote_body": "Securely reach your Home Assistant from any device, with no port forwarding or VPN.",
+              "remote_body": "Securely reach your CHENGVIN from any device, with no port forwarding or VPN.",
               "backup_title": "Cloud backups",
               "backup_helper": "Off-site copy of your backups",
               "backup_none_body": "You don't have backups set up yet. Create a backup first, then come back to store an encrypted copy in the cloud.",
               "backup_set_up": "Set up backups",
               "backup_body": "Keep an encrypted off-site copy of your latest backup, ready to restore on first boot.",
               "voice_title": "Voice assistants",
-              "voice_helper": "Alexa, Google, and Home Assistant voice",
-              "voice_body": "Talk to your home your way. Home Assistant Cloud powers fast, private voice for Assist out of the box, and you can add Amazon Alexa or Google Assistant.",
+              "voice_helper": "Alexa, Google, and CHENGVIN voice",
+              "voice_body": "Talk to your home your way. CHENGVIN Cloud powers fast, private voice for Assist out of the box, and you can add Amazon Alexa or Google Assistant.",
               "streaming_title": "Smoother streaming",
               "streaming_helper": "Faster, more reliable camera feeds",
               "streaming_body": "Make camera feeds and Music Assistant playback faster and more reliable, over a secure connection.",
-              "ha_cloud_title": "Home Assistant Cloud",
+              "ha_cloud_title": "CHENGVIN Cloud",
               "ha_cloud_sub": "Fast, natural text-to-speech and speech-to-text for Assist",
               "included": "Included",
               "learn_more": "Learn more",
@@ -6679,7 +6712,7 @@
               "alexa_name": "Amazon Alexa",
               "alexa_tagline": "Voice control with Echo devices",
               "alexa_bullet1": "Control devices from your Echo by voice",
-              "alexa_bullet2": "Use Home Assistant in your Alexa routines",
+              "alexa_bullet2": "Use CHENGVIN in your Alexa routines",
               "google_name": "Google Assistant",
               "google_tagline": "Hands-free control with Nest devices",
               "google_bullet1": "Control devices from your Nest speakers by voice",
@@ -6688,7 +6721,7 @@
             "backup": {
               "title": "Cloud backup",
               "card_title": "About cloud backup",
-              "cloud_info": "You have the option to store an encrypted Home Assistant backup on Home Assistant Cloud. This is included in your subscription at no extra cost.",
+              "cloud_info": "You have the option to store an encrypted CHENGVIN backup on CHENGVIN Cloud. This is included in your subscription at no extra cost.",
               "cloud_info_one_backup": "One encrypted backup is stored in the cloud. When a new backup is created, the older version is automatically deleted.",
               "cloud_info_size_limit": "The maximum backup size is 5 GB. If the backup exceeds this limit, you will receive a notification.",
               "cloud_info_encrypted": "Backups stored in the cloud are always encrypted. The encryption key is included in the emergency kit.",
@@ -6704,12 +6737,12 @@
               "next_backup": "Next backup {relative_time}",
               "no_next_backup": "No automatic backup scheduled",
               "setup_card_title": "Set up cloud backup",
-              "setup_info": "You haven't set up automatic backups to the cloud yet. Configure automatic backups to keep your Home Assistant safe."
+              "setup_info": "You haven't set up automatic backups to the cloud yet. Configure automatic backups to keep your CHENGVIN safe."
             },
             "companion": {
-              "title": "Companion app",
+              "title": "CHENGVIN app",
               "connected_title": "Stay connected away from home",
-              "connected_intro": "With Home Assistant Cloud, the Home Assistant app keeps talking to your home even when you're away, so the data your automations rely on stays current wherever you are.",
+              "connected_intro": "With CHENGVIN Cloud, the CHENGVIN app keeps talking to your home even when you're away, so the data your automations rely on stays current wherever you are.",
               "bullet_sensors": "Up-to-date sensors and location, even when you're away from home.",
               "bullet_presence": "Presence automations like \"I just left home\" keep running while you're out.",
               "bullet_alerts": "Alerts that depend on your phone, like \"battery low\", keep firing on time.",
@@ -6717,7 +6750,7 @@
               "bullet_push": "Push notifications are separate. They're delivered by Apple and Google and reach your phone even without this connection.",
               "learn_more": "Learn more",
               "webhook_title": "Automatic webhook",
-              "webhook_info_one": "When you set up the Home Assistant app, it registers a webhook automatically. With your cloud subscription that becomes a cloudhook, a unique secret URL hosted on Home Assistant Cloud.",
+              "webhook_info_one": "When you set up the CHENGVIN app, it registers a webhook automatically. With your cloud subscription that becomes a cloudhook, a unique secret URL hosted on CHENGVIN Cloud.",
               "webhook_info_two": "Your phone uses it to send location and sensor updates back home from anywhere, without opening ports or exposing your instance. You'll see it listed under Webhooks; there's no need to manage it yourself."
             },
             "download_support_package": "Download support package",
@@ -6735,7 +6768,7 @@
             "sign_out": "Sign out",
             "sign_out_confirm": "Are you sure you want to sign out?",
             "integrations": "Integrations",
-            "integrations_introduction": "Integrations for Home Assistant Cloud allow you to connect with services in the cloud without having to expose your Home Assistant instance publicly on the internet.",
+            "integrations_introduction": "Integrations for CHENGVIN Cloud allow you to connect with services in the cloud without having to expose your CHENGVIN instance publicly on the internet.",
             "integrations_introduction2": "Check the website for ",
             "integrations_link_all_features": " all available features",
             "tip_moved_voice_assistants": "Looking for Google Assistant and Amazon Alexa settings? They are moved to the new voice assistants page.",
@@ -6745,7 +6778,7 @@
             "fetching_subscription": "Fetching subscription…",
             "assist": {
               "card_title": "Assist",
-              "description": "Assist allows you to control Home Assistant using natural language. It is built on top of an open voice foundation and powered by knowledge provided by our community.",
+              "description": "Assist allows you to control CHENGVIN using natural language. It is built on top of an open voice foundation and powered by knowledge provided by our community.",
               "link_learn_more": "Learn more",
               "configure": "Configure"
             },
@@ -6787,7 +6820,7 @@
               "cerificate_loading": "Your certificate is loading.",
               "cerificate_loaded": "Your certificate is loaded, waiting for validation.",
               "cerificate_error": "There was an error generating the certificate, check your logs.",
-              "info": "Home Assistant Cloud provides secure remote access to your instance while away from home. For more information on remote access and these settings, visit our security documentation.",
+              "info": "CHENGVIN Cloud provides secure remote access to your instance while away from home. For more information on remote access and these settings, visit our security documentation.",
               "info_instance_will_be_available": "Your instance will be available at your Nabu Casa URL.",
               "link_learn_how_it_works": "Learn how it works",
               "security_options": "Security options",
@@ -6809,11 +6842,11 @@
             },
             "alexa": {
               "title": "Alexa",
-              "info": "With the Alexa integration for Home Assistant Cloud you'll be able to control all your Home Assistant devices via any Alexa-enabled device.",
-              "enable_ha_skill": "Enable the Home Assistant skill for Alexa",
+              "info": "With the Alexa integration for CHENGVIN Cloud you'll be able to control all your CHENGVIN devices via any Alexa-enabled device.",
+              "enable_ha_skill": "Enable the CHENGVIN skill for Alexa",
               "config_documentation": "Configuration documentation",
               "enable_state_reporting": "Enable state reporting",
-              "info_state_reporting": "If you enable state reporting, Home Assistant will send all state changes of exposed entities to Amazon. This allows you to always see the latest states in the Alexa app and use the state changes to create routines.",
+              "info_state_reporting": "If you enable state reporting, CHENGVIN will send all state changes of exposed entities to Amazon. This allows you to always see the latest states in the Alexa app and use the state changes to create routines.",
               "state_reporting_error": "Unable to {enable_disable} report state.",
               "show_entities": "[%key:ui::panel::config::cloud::account::google::show_entities%]",
               "exposed_entities": "[%key:ui::panel::config::cloud::account::google::exposed_entities%]",
@@ -6821,19 +6854,19 @@
               "enable": "enable",
               "disable": "disable",
               "not_configured_title": "Continue setting up Alexa",
-              "not_configured_text": "Before you can use Alexa, you need to activate the Home Assistant skill for Alexa in the Alexa app.",
+              "not_configured_text": "Before you can use Alexa, you need to activate the CHENGVIN skill for Alexa in the Alexa app.",
               "link_learn_how_it_works": "[%key:ui::panel::config::cloud::account::remote::link_learn_how_it_works%]",
               "expose_new_entities": "[%key:ui::panel::config::cloud::account::google::expose_new_entities%]",
               "expose_new_entities_info": "Should new entities be exposed to Alexa automatically? Exposes supported devices that are not classified as security devices."
             },
             "google": {
               "title": "Google Assistant",
-              "info": "With the Google Assistant integration for Home Assistant Cloud, you'll be able to control all your Home Assistant devices via any Google Assistant-enabled device.",
+              "info": "With the Google Assistant integration for CHENGVIN Cloud, you'll be able to control all your CHENGVIN devices via any Google Assistant-enabled device.",
               "http_use_ssl_warning_title": "Local communication unavailable",
-              "http_use_ssl_warning_text": "Google devices will not be able to talk locally with Home Assistant, because you have configured an SSL certificate for your HTTP integration.",
+              "http_use_ssl_warning_text": "Google devices will not be able to talk locally with CHENGVIN, because you have configured an SSL certificate for your HTTP integration.",
               "config_documentation": "Configuration documentation",
               "enable_state_reporting": "Enable state reporting",
-              "info_state_reporting": "If you enable state reporting, Home Assistant will send all state changes of exposed entities to Google. This speeds up voice commands and allows you to always see the latest states in the Google app.",
+              "info_state_reporting": "If you enable state reporting, CHENGVIN will send all state changes of exposed entities to Google. This speeds up voice commands and allows you to always see the latest states in the Google app.",
               "security_devices": "Security devices",
               "enter_pin_info": "Please enter a PIN to interact with security devices. Security devices are doors, garage doors, and locks. You will be asked to say/enter this PIN when interacting with security devices via Google Assistant.",
               "devices_pin": "Security devices PIN",
@@ -6843,14 +6876,14 @@
               "manual_config": "Editing which entities are exposed via the UI is disabled because you have configured entity filters in configuration.yaml.",
               "enter_pin_error": "Unable to store PIN:",
               "not_configured_title": "Continue setting up Google Assistant",
-              "not_configured_text": "To start using Google Assistant, add the 'Home Assistant Cloud by Nabu Casa' service in the Google Home app on your smartphone.",
+              "not_configured_text": "To start using Google Assistant, add the 'CHENGVIN Cloud by Nabu Casa' service in the Google Home app on your smartphone.",
               "link_learn_how_it_works": "[%key:ui::panel::config::cloud::account::remote::link_learn_how_it_works%]",
               "expose_new_entities": "Expose new entities",
               "expose_new_entities_info": "Should new entities be exposed to Google Assistant automatically? Exposes supported devices that are not classified as security devices."
             },
             "webhooks": {
               "title": "Webhooks",
-              "info": "Anything that is configured to be triggered by a webhook can be given a publicly accessible URL to allow you to send data back to Home Assistant from anywhere, without exposing your instance to the internet.",
+              "info": "Anything that is configured to be triggered by a webhook can be given a publicly accessible URL to allow you to send data back to CHENGVIN from anywhere, without exposing your instance to the internet.",
               "no_hooks_yet": "Looks like you have no webhooks yet. Get started by configuring a ",
               "no_hooks_yet_link_integration": "webhook-based integration",
               "no_hooks_yet2": " or by creating a ",
@@ -6859,11 +6892,11 @@
               "loading": "Loading…",
               "manage": "Manage",
               "disable_hook_error_msg": "Failed to disable webhook:",
-              "companion_title": "Companion app webhooks",
-              "companion_info": "The Home Assistant app creates one of these automatically for each device you connect. With your cloud subscription they become cloudhooks, so your phone can send location and sensor updates home from anywhere.",
+              "companion_title": "CHENGVIN app webhooks",
+              "companion_info": "The CHENGVIN app creates one of these automatically for each device you connect. With your cloud subscription they become cloudhooks, so your phone can send location and sensor updates home from anywhere.",
               "about_title": "What you can do with webhooks",
-              "about_info": "Let an outside service send data into Home Assistant to trigger an automation. Each gets its own secret URL, with no open ports.",
-              "example_camera": "A Netatmo camera spots motion and Home Assistant reacts instantly. The integration sets up its own webhook automatically.",
+              "about_info": "Let an outside service send data into CHENGVIN to trigger an automation. Each gets its own secret URL, with no open ports.",
+              "example_camera": "A Netatmo camera spots motion and CHENGVIN reacts instantly. The integration sets up its own webhook automatically.",
               "example_location": "A location app like OwnTracks reports you are home and runs your arrival automation.",
               "example_ifttt": "An IFTTT applet or Node-RED flow triggers a scene or device.",
               "example_nfc": "Tapping an NFC tag or running a phone shortcut fires an automation.",
@@ -6880,9 +6913,9 @@
             "close": "Close"
           },
           "dialog_already_connected": {
-            "heading": "Account linked to other Home Assistant",
-            "description": "We noticed that another instance is currently connected to your Home Assistant Cloud account. Your Home Assistant Cloud account can only be signed in to one Home Assistant instance at a time. If you log in here, the other instance will be disconnected along with its Cloud services and you will need to be physically present to reconnect it.  Nabu Casa support is unable to remotely reconnect a disconnected Home Assistant instance.",
-            "other_home_assistant": "Other Home Assistant",
+            "heading": "Account linked to other CHENGVIN",
+            "description": "We noticed that another instance is currently connected to your CHENGVIN Cloud account. Your CHENGVIN Cloud account can only be signed in to one CHENGVIN instance at a time. If you log in here, the other instance will be disconnected along with its Cloud services and you will need to be physically present to reconnect it.  Nabu Casa support is unable to remotely reconnect a disconnected CHENGVIN instance.",
+            "other_home_assistant": "Other CHENGVIN",
             "instance_name": "Instance name",
             "instance_version": "Instance version",
             "ip_address": "IP address",
@@ -6892,7 +6925,7 @@
               "hide": "Hide IP address"
             },
             "info_backups": {
-              "title": "Home Assistant Cloud backups",
+              "title": "CHENGVIN Cloud backups",
               "description": "Your Cloud backup may be overwritten if you proceed. We strongly recommend downloading your current backup from your Nabu Casa account page before continuing."
             },
             "close": "Close",
@@ -7070,7 +7103,7 @@
           "esphome": {
             "show_encryption_key": "Show encryption key",
             "encryption_key_title": "ESPHome Encryption Key",
-            "encryption_key_description": "This is the encryption key for your ESPHome device. Keep it in a safe place, as you may need it when transferring devices between Home Assistant instances."
+            "encryption_key_description": "This is the encryption key for your ESPHome device. Keep it in a safe place, as you may need it when transferring devices between CHENGVIN instances."
           }
         },
         "entities": {
@@ -7078,8 +7111,8 @@
           "description": "Manage known entities",
           "picker": {
             "header": "Entities",
-            "introduction": "Home Assistant keeps a registry of every entity it has ever seen that can be uniquely identified. Each of these entities will have an entity ID assigned which will be reserved for just this entity.",
-            "introduction2": "Use the entity registry to override the name, change the entity ID or remove the entry from Home Assistant.",
+            "introduction": "CHENGVIN keeps a registry of every entity it has ever seen that can be uniquely identified. Each of these entities will have an entity ID assigned which will be reserved for just this entity.",
+            "introduction2": "Use the entity registry to override the name, change the entity ID or remove the entry from CHENGVIN.",
             "search": "Search {number} {number, plural,\n  one {entity}\n  other {entities}\n}",
             "unnamed_entity": "Unnamed entity",
             "filtering_by_config_entry": "Filtering by config entry",
@@ -7109,12 +7142,12 @@
             "enable_selected": {
               "button": "Enable selected",
               "confirm_title": "Do you want to enable {number} {number, plural,\n  one {entity}\n  other {entities}\n}?",
-              "confirm_text": "This will make them available in Home Assistant again if they are now disabled."
+              "confirm_text": "This will make them available in CHENGVIN again if they are now disabled."
             },
             "disable_selected": {
               "button": "Disable selected",
               "confirm_title": "Do you want to disable {number} {number, plural,\n  one {entity}\n  other {entities}\n}?",
-              "confirm_text": "Disabled entities will not be added to Home Assistant."
+              "confirm_text": "Disabled entities will not be added to CHENGVIN."
             },
             "restore_entity_id_selected": {
               "button": "Recreate entity IDs of selected",
@@ -7126,7 +7159,7 @@
               "button": "Delete selected",
               "confirm_title": "Delete selected entities?",
               "confirm_text": "Are you sure you want to delete the entities?\n\nRemove them from your dashboard and automations if they include these entities.",
-              "confirm_partly_text": "You can only delete {deletable} of the {selected} entities. The others require the integration to stop providing them, and sometimes a Home Assistant restart is needed. Are you sure you want to delete the deletable entities?\n\nRemove them from your dashboard and automations if they include these entities."
+              "confirm_partly_text": "You can only delete {deletable} of the {selected} entities. The others require the integration to stop providing them, and sometimes a CHENGVIN restart is needed. Are you sure you want to delete the deletable entities?\n\nRemove them from your dashboard and automations if they include these entities."
             },
             "hide_selected": {
               "button": "Hide selected",
@@ -7143,7 +7176,7 @@
         },
         "person": {
           "caption": "People",
-          "introduction": "Manage the people Home Assistant recognizes and control their access.",
+          "introduction": "Manage the people CHENGVIN recognizes and control their access.",
           "note_about_persons_configured_in_yaml": "People configured via configuration.yaml cannot be edited via the UI.",
           "learn_more": "Learn more about people",
           "no_persons_created_yet": "Looks like you have not added any people yet.",
@@ -7207,7 +7240,7 @@
             "create": "Create",
             "update": "Update"
           },
-          "core_location_dialog": "Home Assistant location"
+          "core_location_dialog": "CHENGVIN location"
         },
         "integrations": {
           "caption": "Integrations",
@@ -7230,7 +7263,7 @@
           "no_ignored_integrations": "No ignored integrations",
           "note_about_integrations": "No integrations matched your search, the integration you want to set up might not be available to set up via the UI yet.",
           "note_about_website_reference": "More are available on the ",
-          "home_assistant_website": "Home Assistant website",
+          "home_assistant_website": "CHENGVIN website",
           "configure": "Configure",
           "reconfigure": "Reconfigure",
           "none": "Nothing configured yet",
@@ -7323,11 +7356,11 @@
             "enable_debug_logging": "Enable debug logging",
             "reconfigure": "Reconfigure",
             "reload": "Reload",
-            "restart_confirm": "Restart Home Assistant to finish removing this integration",
+            "restart_confirm": "Restart CHENGVIN to finish removing this integration",
             "reload_confirm": "The integration was reloaded",
-            "reload_restart_confirm": "Restart Home Assistant to finish reloading this integration",
-            "disable_restart_confirm": "Restart Home Assistant to finish disabling this integration",
-            "enable_restart_confirm": "Restart Home Assistant to finish enabling this integration",
+            "reload_restart_confirm": "Restart CHENGVIN to finish reloading this integration",
+            "disable_restart_confirm": "Restart CHENGVIN to finish disabling this integration",
+            "enable_restart_confirm": "Restart CHENGVIN to finish enabling this integration",
             "disable_confirm_title": "Disable {title}?",
             "disable_confirm_text": "Its devices and entities will be disabled.",
             "disable_error": "Enabling or disabling of the integration failed",
@@ -7392,7 +7425,7 @@
             "yaml_only_title": "This integration cannot be added from the UI",
             "yaml_only": "You can add this integration by adding it to your ''configuration.yaml''. See the documentation for more information.",
             "open_documentation": "Open documentation",
-            "no_config_flow": "This integration does not support configuration via the UI. If you followed this link from the Home Assistant website, make sure you run the latest version of Home Assistant.",
+            "no_config_flow": "This integration does not support configuration via the UI. If you followed this link from the CHENGVIN website, make sure you run the latest version of CHENGVIN.",
             "not_all_required_fields": "Not all required fields are filled in.",
             "error_saving_device": "Error updating device: {error}",
             "error_saving_entity": "Error updating entity: {error}",
@@ -7408,7 +7441,7 @@
             },
             "error": "Error",
             "could_not_load": "Config flow could not be loaded",
-            "not_loaded": "The integration could not be loaded, try to restart Home Assistant.",
+            "not_loaded": "The integration could not be loaded, try to restart CHENGVIN.",
             "supported_brand_flow": "Support for {supported_brand} devices is provided by {flow_domain_name}. Do you want to continue?",
             "missing_zwave_zigbee_title": "{integration} is not set up",
             "missing_zwave_zigbee": "To add a {brand} device, you first need {supported_hardware_link} and the {integration} integration set up. If you already have the hardware then you can proceed with the setup of {integration}.",
@@ -7422,7 +7455,7 @@
         },
         "users": {
           "caption": "Users",
-          "description": "Manage the Home Assistant user accounts",
+          "description": "Manage the CHENGVIN user accounts",
           "users_privileges_note": "The user group feature is a work in progress. The user will be unable to administer the instance via the UI. We're still auditing all management API endpoints to ensure that they correctly limit access to administrators.",
           "is_not_active": "Disabled",
           "is_system": "System user",
@@ -7487,7 +7520,8 @@
             "new_username": "New username",
             "change": "Change",
             "username_changed": "The username has been changed successfully.",
-            "failed": "Failed to change username"
+            "failed": "Failed to change username",
+            "no_credentials": "No CHENGVIN credentials found."
           }
         },
         "application_credentials": {
@@ -7495,7 +7529,7 @@
           "description": "Manage the OAuth application credentials used by integrations",
           "editor": {
             "caption": "Add application credentials",
-            "description": "OAuth is used to grant Home Assistant secure delegated access to information on other websites without revealing your personal credentials.",
+            "description": "OAuth is used to grant CHENGVIN secure delegated access to information on other websites without revealing your personal credentials.",
             "missing_credentials": "Setting up {integration} requires configuring application credentials.",
             "missing_credentials_domain_link": "View {integration} documentation",
             "view_documentation": "View application credentials documentation",
@@ -7721,16 +7755,16 @@
           "add_dataset_label": "Operational dataset TLV",
           "add_dataset_button": "Add dataset",
           "confirm_reset_border_router": "Reset border router?",
-          "confirm_reset_border_router_text": "Home Assistant will create a new Thread network. Any devices that are currently joined on this Home Assistant Thread network will need to be re-joined.",
+          "confirm_reset_border_router_text": "CHENGVIN will create a new Thread network. Any devices that are currently joined on this CHENGVIN Thread network will need to be re-joined.",
           "confirm_set_dataset_border_router": "Reconfigure border router?",
-          "confirm_set_dataset_border_router_text": "Home Assistant will join an existing Thread network. Any devices that are currently joined on this Home Assistant Thread network will need to be re-joined.",
+          "confirm_set_dataset_border_router_text": "CHENGVIN will join an existing Thread network. Any devices that are currently joined on this CHENGVIN Thread network will need to be re-joined.",
           "otbr_config_failed": "Failed to configure the border router",
           "confirm_delete_dataset": "Delete {name} dataset?",
-          "confirm_delete_dataset_text": "This network will be removed from Home Assistant.",
+          "confirm_delete_dataset_text": "This network will be removed from CHENGVIN.",
           "no_border_routers": "No border routers found",
           "no_preferred_router": "No preferred border router defined",
           "border_routers": "{count} border {count, plural,\n  one {router}\n  other {routers}\n}",
-          "managed_by_home_assistant": "Managed by Home Assistant",
+          "managed_by_home_assistant": "Managed by CHENGVIN",
           "operational_dataset": "Operational dataset",
           "change_channel": "Change channel",
           "change_channel_initiated_title": "Channel change in progress",
@@ -7740,11 +7774,11 @@
           "change_channel_multiprotocol_enabled_title": "The Thread adapter has multiprotocol enabled",
           "change_channel_multiprotocol_enabled_text": "To change channel when the Thread adapter has multiprotocol enabled, please use the hardware settings menu.",
           "change_channel_range": "Channel must be in the range 11 to 26",
-          "change_channel_text": "Initiating a channel change for your Home Assistant Thread network should be performed with caution. Some Thread devices may not migrate to the new channel automatically and, if the new channel is congested, your Thread devices may become intermittently unavailable. Some devices may need to be manually re-joined to your Thread network before they show in Home Assistant again. This action cannot be reversed (without performing another channel change).",
+          "change_channel_text": "Initiating a channel change for your CHENGVIN Thread network should be performed with caution. Some Thread devices may not migrate to the new channel automatically and, if the new channel is congested, your Thread devices may become intermittently unavailable. Some devices may need to be manually re-joined to your Thread network before they show in CHENGVIN again. This action cannot be reversed (without performing another channel change).",
           "thread_network_info": "Thread network information",
           "thread_network_delete_credentials": "Delete Thread network credentials",
-          "thread_network_send_credentials_ha": "Send credentials to Home Assistant",
-          "thread_network_send_credentials_ha_description": "Import Thread network credentials from your phone to Home Assistant. Use this if you already have a Thread network set up through another platform, like Apple Home or Google Home.",
+          "thread_network_send_credentials_ha": "Send credentials to CHENGVIN",
+          "thread_network_send_credentials_ha_description": "Import Thread network credentials from your phone to CHENGVIN. Use this if you already have a Thread network set up through another platform, like Apple Home or Google Home.",
           "thread_network_send_credentials_phone": "Send credentials to phone",
           "thread_network_send_credentials_phone_description": "Share your Thread network credentials with your phone, allowing it to directly commission new Thread devices onto your network.",
           "thread_network_make_preferred": "Make preferred network"
@@ -7821,7 +7855,7 @@
             "light_transitioning_flag_description": "Keeps the brightness slider at the chosen level during light fades so it does not jump around",
             "consider_unavailable_mains_description": "How long to wait before showing a mains-powered device as unavailable when it stops responding",
             "consider_unavailable_battery_description": "How long to wait before showing a battery-powered device as unavailable when it stops responding",
-            "enable_mains_startup_polling_description": "Get the current state of mains-powered devices when Home Assistant starts",
+            "enable_mains_startup_polling_description": "Get the current state of mains-powered devices when CHENGVIN starts",
             "channel_label": "Channel",
             "radio_type": "Radio type",
             "serial_port": "Serial port",
@@ -7846,7 +7880,7 @@
             "pairing_mode": "Make sure your devices are in pairing mode. Check the instructions of your device or {documentation_link} on how to do this.",
             "pairing_mode_link": "the documentation",
             "discovered_text": "Devices will show up here once discovered.",
-            "no_devices_found": "No devices were found, make sure they are in pairing mode and keep them awake while Home Assistant is searching.",
+            "no_devices_found": "No devices were found, make sure they are in pairing mode and keep them awake while CHENGVIN is searching.",
             "search_again": "Search again"
           },
           "device_page": {
@@ -8122,7 +8156,7 @@
           "hard_reset_controller": {
             "NotStarted": {
               "title": "Reset adapter to factory settings",
-              "body": "If you decide to move forward, you will reset your adapter to factory settings. As a result, the adapter will forget all devices it is paired with and all Z-Wave devices for this network will be removed from Home Assistant. If there are any devices still paired with the adapter when it is reset, they will have to go through the exclusion process before they can be re-paired. Would you like to continue?"
+              "body": "If you decide to move forward, you will reset your adapter to factory settings. As a result, the adapter will forget all devices it is paired with and all Z-Wave devices for this network will be removed from CHENGVIN. If there are any devices still paired with the adapter when it is reset, they will have to go through the exclusion process before they can be re-paired. Would you like to continue?"
             },
             "InProgress": {
               "title": "Resetting adapter",
@@ -8316,7 +8350,7 @@
               "device_name": "Name",
               "device_area": "Area",
               "choose_network_type": "Choose network type",
-              "long_range_description": "Direct connection to Home Assistant for extended coverage, without a mesh network.",
+              "long_range_description": "Direct connection to CHENGVIN for extended coverage, without a mesh network.",
               "mesh_label": "Mesh network",
               "mesh_description": "Devices relay signals to each other, enhancing coverage and reliability.",
               "add_device": "Add device",
@@ -8360,7 +8394,7 @@
             "not_included": "Not included",
             "confirm_unprovision_title": "Remove device?",
             "confirm_unprovision_text": "This device will be permanently removed from your Z-Wave network.",
-            "confirm_unprovision_text_included": "This device will be permanently removed from Home Assistant and your Z-Wave network.",
+            "confirm_unprovision_text_included": "This device will be permanently removed from CHENGVIN and your Z-Wave network.",
             "active": "Active"
           },
           "security_classes": {
@@ -8388,7 +8422,7 @@
             "title": "Remove device",
             "introduction": "There are two ways to remove a device from your Z-Wave network depending on the state of the device. If the device is working, you can remove it by following the instructions that came with your device to put it into exclusion mode. If the device is unavailable, you can force-remove it from the network.",
             "exclusion_intro": "Useful when a device is stuck in another network and must be excluded before it can be included again.",
-            "failed_node_intro": "{name} is unable to connect to your Z-Wave network. Home Assistant can force-remove a device for you. After removing it you might need to factory reset your device.",
+            "failed_node_intro": "{name} is unable to connect to your Z-Wave network. CHENGVIN can force-remove a device for you. After removing it you might need to factory reset your device.",
             "menu_exclude_device": "Remove a working device",
             "menu_remove_device": "Force-remove an unavailable device",
             "start_exclusion": "Start exclusion",
@@ -8448,8 +8482,8 @@
           },
           "update_firmware": {
             "title": "Update device firmware",
-            "warning": "WARNING: Firmware updates can brick your device if you do not correctly follow the manufacturer's guidance. The Home Assistant and Z-Wave JS teams do not take any responsibility for any damages to your device as a result of the firmware update and will not be able to help you if you brick your device. Would you still like to continue?",
-            "warning_controller": "WARNING: Firmware updates can brick your adapter if you do not use the right firmware files, or if you attempt to stop the firmware update before it completes. The Home Assistant and Z-Wave JS teams do not take any responsibility for any damages to your adapter as a result of the firmware update and will not be able to help you if you brick your adapter. Would you still like to continue?",
+            "warning": "WARNING: Firmware updates can brick your device if you do not correctly follow the manufacturer's guidance. The CHENGVIN and Z-Wave JS teams do not take any responsibility for any damages to your device as a result of the firmware update and will not be able to help you if you brick your device. Would you still like to continue?",
+            "warning_controller": "WARNING: Firmware updates can brick your adapter if you do not use the right firmware files, or if you attempt to stop the firmware update before it completes. The CHENGVIN and Z-Wave JS teams do not take any responsibility for any damages to your adapter as a result of the firmware update and will not be able to help you if you brick your adapter. Would you still like to continue?",
             "introduction": "Select the firmware file you would like to use to update {device}.",
             "introduction_controller": "Select the firmware file you would like to use to update {device}. Note that once you start a firmware update, you MUST wait for the update to complete.",
             "firmware_target_intro": "Select the firmware target (0 for the Z-Wave chip, ≥1 for other chips if they exist) for this update.",
@@ -8623,7 +8657,7 @@
             "entity_count": "{count, plural,\n  one {# entity}\n  other {# entities}\n}",
             "options_title": "Options",
             "options_description": "Adding devices and network settings",
-            "mobile_app_commisioning": "Add with Companion app",
+            "mobile_app_commisioning": "Add with CHENGVIN app",
             "mobile_app_commisioning_description": "Add a device by scanning its setup code",
             "mobile_app_commisioning_action": "Start",
             "commission_device": "Add manually",
@@ -8769,7 +8803,7 @@
           },
           "open_commissioning_window": {
             "title": "Share device",
-            "description": "To continue, select {startCommissioning}. Home Assistant will then put your device in commissioning mode, allowing it to pair with another Matter controller.",
+            "description": "To continue, select {startCommissioning}. CHENGVIN will then put your device in commissioning mode, allowing it to pair with another Matter controller.",
             "prevent_misuse_description": "Note: Do not press the physical setup button on the device as this will reset it.",
             "start_commissioning": "Share device",
             "in_progress": "We're communicating with the device. This may take some time.",
@@ -8887,12 +8921,12 @@
           "join_chat": "Chat",
           "join_blog": "Blog",
           "join_newsletter": "Newsletter",
-          "media_storage": "You can add network storage to your Home Assistant instance in the {storage} panel."
+          "media_storage": "You can add network storage to your CHENGVIN instance in the {storage} panel."
         },
         "analytics": {
           "caption": "Analytics",
-          "header": "Home Assistant",
-          "description": "Learn how to share data to improve Home Assistant",
+          "header": "CHENGVIN",
+          "description": "Learn how to share data to improve CHENGVIN",
           "preferences": {
             "base": {
               "title": "Basic analytics",
@@ -8900,7 +8934,7 @@
             },
             "usage": {
               "title": "Usage",
-              "description": "Details of what you use with Home Assistant"
+              "description": "Details of what you use with CHENGVIN"
             },
             "statistics": {
               "title": "Statistical data",
@@ -8924,7 +8958,7 @@
           },
           "need_base_enabled": "You need to enable basic analytics for this option to be available",
           "learn_more": "Learn how we process your data",
-          "intro": "Share anonymized information from your installation to help make Home Assistant better and help us convince manufacturers to add local control and privacy-focused features.",
+          "intro": "Share anonymized information from your installation to help make CHENGVIN better and help us convince manufacturers to add local control and privacy-focused features.",
           "download_device_info": "Preview device analytics"
         },
         "ai": {
@@ -8971,9 +9005,9 @@
           "custom_integration": "Custom integration",
           "description": "Preview new features",
           "description_enabled": "Preview features are enabled",
-          "intro_title": "Home Assistant Labs",
+          "intro_title": "CHENGVIN Labs",
           "intro_subtitle": "Preview upcoming features",
-          "intro_description": "Home Assistant Labs lets you preview new features we're actively working on. These features are stable and fully functional, but may not yet include the complete feature set we envision. We're still refining the design and approach based on your feedback.",
+          "intro_description": "CHENGVIN Labs lets you preview new features we're actively working on. These features are stable and fully functional, but may not yet include the complete feature set we envision. We're still refining the design and approach based on your feedback.",
           "intro_warning": "Preview features may change or be replaced with different solutions in future releases.",
           "empty": {
             "title": "No preview features available",
@@ -8994,15 +9028,15 @@
           "disable_failed": "Disabling preview feature failed: {error}",
           "progress": {
             "creating_backup": "Creating backup",
-            "backing_up_before_enabling": "Home Assistant is being backed up before enabling the Home Assistant Labs preview feature",
-            "backing_up_before_disabling": "Home Assistant is being backed up before disabling the Home Assistant Labs preview feature"
+            "backing_up_before_enabling": "CHENGVIN is being backed up before enabling the CHENGVIN Labs preview feature",
+            "backing_up_before_disabling": "CHENGVIN is being backed up before disabling the CHENGVIN Labs preview feature"
           },
           "create_backup": {
             "automatic": "Automatic backup before enabling",
             "automatic_description_last": "Last automatic backup {relative_time}.",
             "automatic_description_none": "No automatic backup yet.",
             "manual": "Create manual backup before enabling",
-            "manual_description": "Includes Home Assistant settings and history."
+            "manual_description": "Includes CHENGVIN settings and history."
           }
         },
         "network": {
@@ -9043,38 +9077,38 @@
           },
           "discovery": {
             "title": "Network discovery",
-            "description": "Explore what data Home Assistant can see on the network.",
+            "description": "Explore what data CHENGVIN can see on the network.",
             "dhcp": "DHCP browser",
             "dhcp_info": "Show devices detected using methods like DHCP, ARP+PTR lookups, and router-based device trackers.",
             "ssdp": "SSDP browser",
             "ssdp_info": "Show devices discovered using SSDP/UPnP.",
             "zeroconf": "Zeroconf browser",
-            "zeroconf_info": "Show services discovered using mDNS. Does not include services unknown to Home Assistant."
+            "zeroconf_info": "Show services discovered using mDNS. Does not include services unknown to CHENGVIN."
           },
           "http": {
             "caption": "HTTP server",
-            "description": "Configure how Home Assistant serves its web interface. Saving restarts Home Assistant.",
+            "description": "Configure how CHENGVIN serves its web interface. Saving restarts CHENGVIN.",
             "save": "Save",
             "save_no_changes": "Nothing changed — no restart needed.",
             "save_error": "Could not save the HTTP configuration.",
-            "port_warning": "Clients such as the Home Assistant mobile apps will lose their connection until you update the URL in their settings. If Home Assistant is not confirmed reachable on the new port, the change is rolled back automatically after 5 minutes.",
-            "server_host_warning": "Leave this empty to listen on all interfaces. If you set specific addresses, Home Assistant is only reachable through those — binding it only to an address that other devices can't reach (for example localhost) will make it unreachable from those devices.",
+            "port_warning": "Clients such as the CHENGVIN mobile apps will lose their connection until you update the URL in their settings. If CHENGVIN is not confirmed reachable on the new port, the change is rolled back automatically after 5 minutes.",
+            "server_host_warning": "Leave this empty to listen on all interfaces. If you set specific addresses, CHENGVIN is only reachable through those — binding it only to an address that other devices can't reach (for example localhost) will make it unreachable from those devices.",
             "invalid_host": "Enter a valid IP address or hostname.",
             "invalid_network": "Enter a valid IP address or network.",
             "invalid_port": "Enter a port number between 1 and 65535.",
             "invalid_login_attempts_threshold": "Enter a number between -1 and 1000.",
-            "running_default": "Your saved HTTP configuration could not be applied, so Home Assistant is running on the built-in default configuration.",
-            "reverted_not_confirmed": "The last HTTP configuration change was not confirmed in time and was rolled back. Home Assistant is running on the previous configuration.",
-            "reverted_failed": "The last HTTP configuration change could not be applied and was rolled back. Home Assistant is running on the previous configuration. Reason: {error}",
+            "running_default": "Your saved HTTP configuration could not be applied, so CHENGVIN is running on the built-in default configuration.",
+            "reverted_not_confirmed": "The last HTTP configuration change was not confirmed in time and was rolled back. CHENGVIN is running on the previous configuration.",
+            "reverted_failed": "The last HTTP configuration change could not be applied and was rolled back. CHENGVIN is running on the previous configuration. Reason: {error}",
             "reverted_action": "Review the change",
             "save_confirm": {
               "title": "Restart required",
-              "text": "Saving will restart Home Assistant to apply the new HTTP settings.",
+              "text": "Saving will restart CHENGVIN to apply the new HTTP settings.",
               "confirm": "Save and restart"
             },
             "restart_address": {
-              "title": "Home Assistant is restarting",
-              "text": "The address changed. Once Home Assistant has restarted, you can reach it at:",
+              "title": "CHENGVIN is restarting",
+              "text": "The address changed. Once CHENGVIN has restarted, you can reach it at:",
               "note": "Depending on your network setup, this address may not be reachable from this device."
             },
             "ssl_profile_modern": "Modern",
@@ -9100,11 +9134,11 @@
               "login_attempts_threshold": "Login attempts before ban"
             },
             "helpers": {
-              "server_port": "The port Home Assistant listens on. Default is {port}.",
+              "server_port": "The port CHENGVIN listens on. Default is {port}.",
               "server_host": "IP addresses or hostnames to bind to. Leave empty to listen on all interfaces.",
               "ssl_certificate": "Absolute path to your TLS certificate (for example, /ssl/fullchain.pem).",
               "ssl_key": "Absolute path to your TLS private key (for example, /ssl/privkey.pem).",
-              "ssl_peer_certificate": "Absolute path to a client certificate Home Assistant should require for secure connections.",
+              "ssl_peer_certificate": "Absolute path to a client certificate CHENGVIN should require for secure connections.",
               "ssl_profile": "Mozilla SSL profile. Use 'Intermediate' only if integrations have SSL handshake issues.",
               "cors_allowed_origins": "Origins that may make cross-origin requests. Include the scheme, for example https://example.com.",
               "use_x_forwarded_for": "Trust the X-Forwarded-For header behind a reverse proxy. Requires the trusted proxies list below.",
@@ -9139,7 +9173,7 @@
             "media": "Media",
             "share": "Share",
             "backup": "Backups",
-            "homeassistant": "Home Assistant",
+            "homeassistant": "CHENGVIN",
             "ssl": "SSL"
           },
           "lifetime": "Lifetime",
@@ -9149,7 +9183,7 @@
           "change_chart_type": "Change chart type",
           "datadisk": {
             "title": "Move data disk",
-            "description": "You are currently using ''{current_path}'' as data disk. Moving the data disk will reboot your device and it's estimated to take {time} minutes. Your Home Assistant installation will not be accessible during this period. Do not disconnect the power during the move!",
+            "description": "You are currently using ''{current_path}'' as data disk. Moving the data disk will reboot your device and it's estimated to take {time} minutes. Your CHENGVIN installation will not be accessible during this period. Do not disconnect the power during the move!",
             "extra_information": "Size: {size}, S/N: {serial}",
             "select_device": "Select new data disk",
             "no_devices_title": "No suitable storage found",
@@ -9170,7 +9204,7 @@
             "not_supported": {
               "title": "The operating system does not support network storage",
               "supervised": "Network storage is not supported on this host",
-              "os": "To use network storage you need to run at least Home Assistant OS {version}",
+              "os": "To use network storage you need to run at least CHENGVIN OS {version}",
               "navigate_to_updates": "Go to updates"
             },
             "mount_usage": {
@@ -9249,7 +9283,7 @@
           "integration_start_time": "Integration startup time"
         },
         "system_dashboard": {
-          "restart_homeassistant": "Restart Home Assistant"
+          "restart_homeassistant": "Restart CHENGVIN"
         }
       },
       "lovelace": {
@@ -9383,14 +9417,14 @@
             "more_info": "Show more info: {name}"
           },
           "iframe": {
-            "error_secure_context": "Unable to load iframes pointing at websites using {target_protocol} if Home Assistant is served over {context_protocol}."
+            "error_secure_context": "Unable to load iframes pointing at websites using {target_protocol} if CHENGVIN is served over {context_protocol}."
           },
           "recovery-mode": {
             "header": "Recovery mode activated",
-            "description": "Home Assistant ran into trouble while loading your configuration and is now running in recovery mode. Take a look at the error log to see what went wrong."
+            "description": "CHENGVIN ran into trouble while loading your configuration and is now running in recovery mode. Take a look at the error log to see what went wrong."
           },
           "starting": {
-            "description": "Home Assistant is starting, please wait…"
+            "description": "CHENGVIN is starting, please wait…"
           },
           "map": {
             "reset_focus": "Reset focus",
@@ -9553,11 +9587,11 @@
           "search_entities": "Search entities",
           "assist": "Assist",
           "assist_tooltip": "Assist",
-          "search_home_assistant": "Search Home Assistant",
+          "search_home_assistant": "Search CHENGVIN",
           "reload_resources": "Reload resources",
           "exit_edit_mode": "Done",
           "close": "Close",
-          "add": "Add to Home Assistant",
+          "add": "Add to CHENGVIN",
           "add_device": "Add device",
           "create_automation": "Create automation",
           "create_area": "Create area",
@@ -9886,7 +9920,7 @@
           },
           "save_config": {
             "header": "Take control of your dashboard",
-            "para": "This dashboard is currently being maintained by Home Assistant. It is automatically updated when new entities or dashboard components become available. If you take control, this dashboard will no longer be automatically updated. You can always create a new dashboard in settings to play around with.",
+            "para": "This dashboard is currently being maintained by CHENGVIN. It is automatically updated when new entities or dashboard components become available. If you take control, this dashboard will no longer be automatically updated. You can always create a new dashboard in settings to play around with.",
             "para_sure": "Are you sure you want to take control of your user interface?",
             "yaml_mode": "You are using YAML mode for this dashboard, which means you cannot change your dashboard config from the UI. If you want to manage this dashboard from the UI, remove 'mode: yaml' from your dashboard configuration in 'configuration.yaml.'.",
             "yaml_control": "To take control in YAML mode, create a YAML file with the name you specified in your config for this dashboard, or the default 'ui-lovelace.yaml'.",
@@ -9898,7 +9932,7 @@
           "migrate": {
             "header": "Configuration incompatible",
             "para_no_id": "This element doesn't have an ID. Please add an ID to this element in 'ui-lovelace.yaml'.",
-            "para_migrate": "Home Assistant can add IDs to all your cards and views automatically for you by pressing the 'Migrate configuration' button.",
+            "para_migrate": "CHENGVIN can add IDs to all your cards and views automatically for you by pressing the 'Migrate configuration' button.",
             "migrate": "Migrate configuration"
           },
           "action-editor": {
@@ -10395,7 +10429,7 @@
             },
             "iframe": {
               "name": "Webpage",
-              "description": "This card allows you to embed your favorite webpage right into Home Assistant.",
+              "description": "This card allows you to embed your favorite webpage right into CHENGVIN.",
               "hide_background": "Hide background",
               "hide_background_helper": "Useful for pages which allow a transparent background."
             },
@@ -11329,7 +11363,7 @@
           "entity_not_found": "Entity not available: {entity}",
           "entity_non_numeric": "Entity is non-numeric: {entity}",
           "entity_unavailable": "Entity is currently unavailable: {entity}",
-          "starting": "Home Assistant is starting. Not everything may be available yet."
+          "starting": "CHENGVIN is starting. Not everything may be available yet."
         },
         "externally_updated_toast": {
           "message": "Dashboard updated in another session. Refreshing will discard your unsaved changes."
@@ -11486,7 +11520,7 @@
           "link_promo": "Learn about themes",
           "dropdown_label": "Theme",
           "migrate_header": "Migrate theme settings",
-          "migrate_description": "Save your theme selection to your Home Assistant user profile.",
+          "migrate_description": "Save your theme selection to your CHENGVIN user profile.",
           "migrate_button": "Migrate",
           "migrate_success": "Theme settings migrated.",
           "migrate_failed": "Failed to migrate theme settings.",
@@ -11568,7 +11602,7 @@
         },
         "long_lived_access_tokens": {
           "header": "Long-lived access tokens",
-          "description": "Create long-lived access tokens to allow your scripts to interact with your Home Assistant instance. Each token will be valid for 10 years from creation. The following long-lived access tokens are currently active.",
+          "description": "Create long-lived access tokens to allow your scripts to interact with your CHENGVIN instance. Each token will be valid for 10 years from creation. The following long-lived access tokens are currently active.",
           "learn_auth_requests": "Learn how to make authenticated requests.",
           "created": "Created {date}",
           "confirm_delete_title": "Delete long-lived access token?",
@@ -11594,13 +11628,13 @@
         "information": "More info",
         "delete_confirm_title": "Remove {name}?",
         "delete_confirm_text": "Are you sure you want to remove this list and all of its items?",
-        "restart_confirm": "Restart Home Assistant to finish removing this to-do list"
+        "restart_confirm": "Restart CHENGVIN to finish removing this to-do list"
       },
       "page-authorize": {
         "initializing": "Initializing",
-        "authorizing": "Log in to your Home Assistant instance",
-        "authorizing_app": "You're about to give the Home Assistant Companion app for {app} access to your Home Assistant instance.",
-        "authorizing_client": "You're about to give {clientId} access to your Home Assistant instance.",
+        "authorizing": "Log in to your CHENGVIN instance",
+        "authorizing_app": "You're about to give the CHENGVIN Assistant app for {app} access to your CHENGVIN instance.",
+        "authorizing_client": "You're about to give {clientId} access to your CHENGVIN instance.",
         "pick_auth_provider": "Or log in with",
         "abort_intro": "Login aborted",
         "store_token": "Keep me logged in",
@@ -11714,8 +11748,8 @@
             "demo_by": "by {name}",
             "interactive_demo": "Interactive demo",
             "next_demo": "Next demo",
-            "introduction": "Welcome home! You've reached the Home Assistant demo where we showcase the best UIs created by our community.",
-            "learn_more": "Learn more about Home Assistant"
+            "introduction": "Welcome home! You've reached the CHENGVIN demo where we showcase the best UIs created by our community.",
+            "learn_more": "Learn more about CHENGVIN"
           }
         },
         "config": {
@@ -11785,7 +11819,7 @@
           "vision": "Read our vision",
           "community": "Join our community",
           "download_app": "Download our app",
-          "forums": "Home Assistant forums",
+          "forums": "CHENGVIN forums",
           "open_home_newsletter": "Building the Open Home newsletter",
           "discord": "Discord chat",
           "social_media": "Social Media",
@@ -11813,13 +11847,13 @@
         },
         "core-config": {
           "location_header": "Home location",
-          "intro_location": "This data is stored on your Home Assistant system, though some cloud-based integrations may use this data to function.",
+          "intro_location": "This data is stored on your CHENGVIN system, though some cloud-based integrations may use this data to function.",
           "location_address": "Powered by {openstreetmap} ({osm_privacy_policy}).",
           "osm_privacy_policy": "Privacy policy",
           "title_location_detect": "Do you want us to detect your location?",
           "intro_location_detect": "We can detect your location by making a one-time request to an external service.",
           "country_intro": "We would like to know the country your home is in, so we can use the correct units.",
-          "location_name": "Name of your Home Assistant installation",
+          "location_name": "Name of your CHENGVIN installation",
           "location_name_default": "Home",
           "address_label": "Search address",
           "button_detect": "Detect",
@@ -11836,7 +11870,7 @@
         "analytics": {
           "header": "Help us help you",
           "finish": "Next",
-          "waiting": "Waiting for Home Assistant to finish starting up…",
+          "waiting": "Waiting for CHENGVIN to finish starting up…",
           "preferences": {
             "base": {
               "title": "[%key:ui::panel::config::analytics::preferences::base::title%]",
@@ -11874,8 +11908,8 @@
           "delete": "[%key:ui::common::delete%]",
           "uploading": "[%key:ui::components::file-upload::uploading%]",
           "details": {
-            "home_assistant_missing": "This backup does not include your Home Assistant configuration, you cannot use it to restore your instance.",
-            "apps_unsupported": "Your installation method doesn’t support apps. If you want to restore these, you have to install Home Assistant OS",
+            "home_assistant_missing": "This backup does not include your CHENGVIN configuration, you cannot use it to restore your instance.",
+            "apps_unsupported": "Your installation method doesn’t support apps. If you want to restore these, you have to install CHENGVIN OS",
             "summary": {
               "created": "[%key:ui::panel::config::backup::details::summary::created%]",
               "content": "Content"
@@ -11886,7 +11920,7 @@
               "encryption": {
                 "label": "Encryption",
                 "description": "[%key:ui::panel::config::backup::dialogs::restore::encryption::different_key%]",
-                "description_cloud": "Home Assistant Cloud is the privacy-focused cloud. We don’t store your encryption key. Enter the encryption key you saved or use the emergency kit you have downloaded.",
+                "description_cloud": "CHENGVIN Cloud is the privacy-focused cloud. We don’t store your encryption key. Enter the encryption key you saved or use the emergency kit you have downloaded.",
                 "incorrect_key": "[%key:ui::panel::config::backup::dialogs::restore::encryption::incorrect_key%]",
                 "input_label": "[%key:ui::panel::config::backup::dialogs::restore::encryption::input_label%]"
               }
@@ -11901,9 +11935,9 @@
             "apps": "[%key:ui::panel::config::backup::data_picker::apps%]",
             "ssl": "[%key:ui::panel::config::backup::data_picker::ssl%]"
           },
-          "restore_no_home_assistant": "Backup does not contain Home Assistant data. To restore Home Assistant you need a backup of Home Assistant Core.",
+          "restore_no_home_assistant": "Backup does not contain CHENGVIN data. To restore CHENGVIN you need a backup of CHENGVIN Core.",
           "in_progress": "Restore in progress",
-          "in_progress_description": "The restore process is running in the background. Home Assistant will automatically start again once the restore is complete. Please be patient, this can take a while. Do not close or refresh this page.",
+          "in_progress_description": "The restore process is running in the background. CHENGVIN will automatically start again once the restore is complete. Please be patient, this can take a while. Do not close or refresh this page.",
           "failed": "Restore failed",
           "failed_status_description": "The backup could not be restored. Please try again.",
           "failed_description": "The last restore attempt failed. Please try it again.",
@@ -11922,9 +11956,9 @@
           "password": "Backup encryption key",
           "confirm_password": "Confirm encryption key",
           "confirm_restore_partial_backup_title": "Restore partial backup",
-          "confirm_restore_partial_backup_text": "The backup will be restored. Depending on the size of the backup, this can take up to 45 min. Home Assistant needs to shut down and the restore progress is running in the background. If it succeeds, Home Assistant will automatically start again and you see the login screen. If it fails it will bring you back to the onboarding.",
+          "confirm_restore_partial_backup_text": "The backup will be restored. Depending on the size of the backup, this can take up to 45 min. CHENGVIN needs to shut down and the restore progress is running in the background. If it succeeds, CHENGVIN will automatically start again and you see the login screen. If it fails it will bring you back to the onboarding.",
           "confirm_restore_full_backup_title": "Restore full backup",
-          "confirm_restore_full_backup_text": "Depending on the size of the backup, this can take up to 45 minutes. Home Assistant will restart and you will see the login screen when it’s restored.",
+          "confirm_restore_full_backup_text": "Depending on the size of the backup, this can take up to 45 minutes. CHENGVIN will restart and you will see the login screen when it’s restored.",
           "restore": "Restore",
           "close": "[%key:ui::common::close%]",
           "cancel": "[%key:ui::common::cancel%]",
@@ -11940,15 +11974,15 @@
             "no": "[%key:ui::common::no%]"
           },
           "ha-cloud": {
-            "description": "Restore from your Home Assistant Cloud backup.",
+            "description": "Restore from your CHENGVIN Cloud backup.",
             "no_cloud_backup": "No backup available",
-            "no_cloud_backup_description": "This Home Assistant Cloud account doesn’t have a backup stored. You can learn more how Cloud backups work at the Nabu Casa website.",
+            "no_cloud_backup_description": "This CHENGVIN Cloud account doesn’t have a backup stored. You can learn more how Cloud backups work at the Nabu Casa website.",
             "sign_out": "[%key:ui::panel::config::cloud::account::sign_out%]",
-            "sign_out_progress": "Home Assistant cloud signing out...",
-            "sign_out_success": "Home Assistant cloud signed out",
-            "sign_out_error": "Failed to sign out from Home Assistant cloud",
+            "sign_out_progress": "CHENGVIN cloud signing out...",
+            "sign_out_success": "CHENGVIN cloud signed out",
+            "sign_out_error": "Failed to sign out from CHENGVIN cloud",
             "learn_more": "Learn more",
-            "sign_in_description": "Sign in to your Nabu Casa account and restore your Home Assistant Cloud backup.",
+            "sign_in_description": "Sign in to your Nabu Casa account and restore your CHENGVIN Cloud backup.",
             "login": {
               "title": "[%key:ui::panel::config::cloud::login::title%]",
               "sign_in": "[%key:ui::panel::config::cloud::login::sign_in%]",
@@ -11979,7 +12013,7 @@
           },
           "options": {
             "title": "How to restore?",
-            "upload_description": "Upload and restore a Home Assistant backup to this system"
+            "upload_description": "Upload and restore a CHENGVIN backup to this system"
           }
         },
         "language": "Language"
@@ -11987,7 +12021,7 @@
       "custom": {
         "external_panel": {
           "question_trust": "Do you trust the external panel {name} at {link}?",
-          "complete_access": "It will have access to all data in Home Assistant.",
+          "complete_access": "It will have access to all data in CHENGVIN.",
           "hide_message": "Check docs for the 'Custom panel' integration to hide this message"
         }
       },
@@ -12068,24 +12102,24 @@
       "keyboard_shortcut": "keyboard shortcut",
       "key_c_tip": "Press {keyboard_shortcut} 'c' on any page to open the command dialog",
       "key_e_tip": "Press {keyboard_shortcut} 'e' on any page to open the entity search dialog",
-      "key_m_tip": "Press {keyboard_shortcut} 'm' on any page to get the My Home Assistant link",
+      "key_m_tip": "Press {keyboard_shortcut} 'm' on any page to get the My CHENGVIN link",
       "key_a_tip": "Press {keyboard_shortcut} 'a' on any page to open the Assist dialog",
       "key_shortcut_quick_search": "Press {keyboard_shortcut} ''{modifier}+k'' on any page to open quick search"
     }
   },
   "landing-page": {
-    "header": "Preparing Home Assistant",
-    "subheader": "The latest version of Home Assistant is being downloaded. This may take 20 minutes or more.",
+    "header": "Preparing CHENGVIN",
+    "subheader": "The latest version of CHENGVIN is being downloaded. This may take 20 minutes or more.",
     "show_details": "Show details",
     "hide_details": "Hide details",
     "network_issue": {
       "title": "Networking issue detected",
       "error_get_network_info": "Cannot get network information",
-      "description": "Home Assistant OS detected a networking issue in your setup. As part of the initial setup, Home Assistant OS downloads the latest version of Home Assistant Core. This networking issue prevents this download. The network issue might be DNS related. The currently used DNS service is: {dns}.",
+      "description": "CHENGVIN OS detected a networking issue in your setup. As part of the initial setup, CHENGVIN OS downloads the latest version of CHENGVIN Core. This networking issue prevents this download. The network issue might be DNS related. The currently used DNS service is: {dns}.",
       "resolve_different": "To resolve this, you can try a different DNS server. Select one of the options below. Alternatively, change your router configuration to use your own custom DNS server.",
       "use_cloudflare": "Use Cloudflare DNS",
       "use_google": "Use Google DNS",
-      "no_primary_interface": "Home Assistant OS wasn't able to detect a primary network interface, so you cannot define a DNS server!",
+      "no_primary_interface": "CHENGVIN OS wasn't able to detect a primary network interface, so you cannot define a DNS server!",
       "failed": "Failed",
       "set_dns_failed": "An error occurred while setting the DNS server. Please check the logs for more information and try again.",
       "error": "Error",
@@ -12097,8 +12131,8 @@
       "retry": "Retry",
       "download_logs": "[%key:ui::panel::config::logs::download_logs%]"
     },
-    "error_title": "Error installing Home Assistant",
-    "error_description": "An error occurred while installing Home Assistant. Please check the logs for more information.",
+    "error_title": "Error installing CHENGVIN",
+    "error_description": "An error occurred while installing CHENGVIN. Please check the logs for more information.",
     "ui": {
       "panel": {
         "page-onboarding": {

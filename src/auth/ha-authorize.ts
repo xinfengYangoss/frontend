@@ -1,5 +1,4 @@
 /* eslint-disable lit/prefer-static-styles */
-import { mdiOpenInNew } from "@mdi/js";
 import type { PropertyValues } from "lit";
 import { html, LitElement, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -7,13 +6,10 @@ import punycode from "punycode";
 import { applyThemesOnElement } from "../common/dom/apply_themes_on_element";
 import { extractSearchParamsObject } from "../common/url/search-params";
 import "../components/ha-alert";
-import "../components/ha-button";
-import "../components/ha-svg-icon";
 import type { AuthProvider, AuthUrlSearchParams } from "../data/auth";
 import { fetchAuthProviders } from "../data/auth";
 import { litLocalizeLiteMixin } from "../mixins/lit-localize-lite-mixin";
 import { provideLiteI18nMixin } from "../mixins/provide-lite-i18n-mixin";
-import type { ValueChangedEvent } from "../types";
 import { registerServiceWorker } from "../util/register-service-worker";
 import "./ha-auth-flow";
 
@@ -134,20 +130,6 @@ export class HaAuthorize extends provideLiteI18nMixin(
         .space-between {
           justify-content: space-between;
         }
-        .language-switcher {
-          display: flex;
-          justify-content: flex-end;
-          margin-block-end: var(--ha-space-2);
-        }
-        .footer {
-          padding-top: 8px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        .footer ha-svg-icon {
-          --mdc-icon-size: var(--ha-space-5);
-        }
         h1 {
           font-size: var(--ha-font-size-3xl);
           font-weight: var(--ha-font-weight-normal);
@@ -181,16 +163,6 @@ export class HaAuthorize extends provideLiteI18nMixin(
           : nothing
       }
 
-      <div class="language-switcher">
-        <ha-language-picker
-          .value=${this.language}
-          .label=${this.localize("ui.panel.page-authorize.language")}
-          .languages=${["zh-Hans", "en"]}
-          button-style
-          native-name
-          @value-changed=${this._languageChanged}
-        ></ha-language-picker>
-      </div>
       <div class="card-content">
         ${
           !this._authProvider
@@ -216,18 +188,6 @@ export class HaAuthorize extends provideLiteI18nMixin(
                     : ""
                 }`
         }
-      </div>
-      <div class="footer">
-        <ha-button
-          appearance="plain"
-          variant="neutral"
-          href="https://www.home-assistant.io/docs/authentication/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          ${this.localize("ui.panel.page-authorize.help")}
-          <ha-svg-icon slot="end" .path=${mdiOpenInNew}></ha-svg-icon>
-        </ha-button>
       </div>
     `;
   }
@@ -294,8 +254,6 @@ export class HaAuthorize extends provideLiteI18nMixin(
       this._ownInstance = true;
       registerServiceWorker(this, false);
     }
-
-    import("../components/ha-language-picker");
   }
 
   protected updated(changedProps: PropertyValues<this>) {
@@ -339,17 +297,6 @@ export class HaAuthorize extends provideLiteI18nMixin(
 
   private async _handleAuthProviderPick(ev) {
     this._authProvider = ev.detail;
-  }
-
-  private _languageChanged(ev: ValueChangedEvent<string>) {
-    const language = ev.detail.value;
-    this.language = language;
-
-    try {
-      window.localStorage.setItem("selectedLanguage", JSON.stringify(language));
-    } catch (_err: any) {
-      // Ignore
-    }
   }
 }
 

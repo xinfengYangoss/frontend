@@ -1,11 +1,9 @@
-import { mdiHelpCircleOutline } from "@mdi/js";
 import type { CSSResultGroup } from "lit";
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
 import memoizeOne from "memoize-one";
 import { fireEvent } from "../../../common/dom/fire_event";
 import type { LocalizeFunc } from "../../../common/translations/localize";
-import { computeRTLDirection } from "../../../common/util/compute_rtl";
 import "../../../components/buttons/ha-progress-button";
 import type { HaProgressButton } from "../../../components/buttons/ha-progress-button";
 import "../../../components/ha-dialog-footer";
@@ -25,7 +23,6 @@ import {
 import { DirtyStateProviderMixin } from "../../../mixins/dirty-state-provider-mixin";
 import { haStyle, haStyleDialog } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import type { MountViewDialogParams } from "./show-dialog-view-mount";
 
 const mountSchema = memoizeOne(
@@ -228,22 +225,6 @@ class ViewMountDialog extends DirtyStateProviderMixin<
         .preventScrimClose=${this.isDirtyState}
         @closed=${this._dialogClosed}
       >
-        <a
-          slot="headerActionItems"
-          class="header_button"
-          href=${documentationUrl(
-            this.hass,
-            "/common-tasks/os#network-storage"
-          )}
-          title=${this.hass.localize(
-            "ui.panel.config.storage.network_mounts.documentation"
-          )}
-          target="_blank"
-          rel="noreferrer"
-          dir=${computeRTLDirection(this.hass)}
-        >
-          <ha-icon-button .path=${mdiHelpCircleOutline}></ha-icon-button>
-        </a>
         ${
           this._error
             ? html`<ha-alert alert-type="error">${this._error}</ha-alert>`

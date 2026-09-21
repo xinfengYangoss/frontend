@@ -16,7 +16,7 @@ import "../../../components/ha-alert";
 import "../../../components/ha-button";
 import "../../../components/ha-card";
 import "../../../components/ha-svg-icon";
-import { apiContext, configContext } from "../../../data/context";
+import { apiContext } from "../../../data/context";
 import {
   fetchEntityRegistrySettings,
   updateEntityRegistrySettings,
@@ -29,7 +29,6 @@ import {
 } from "../../../data/entity_id_format";
 import { fetchSlug } from "../../../data/ws-slugify";
 import { haStyle } from "../../../resources/styles";
-import { documentationUrl } from "../../../util/documentation-url";
 import "./ha-entity-id-format-editor";
 
 const EXAMPLE_DOMAIN = "sensor";
@@ -49,10 +48,6 @@ export class HaConfigEntityIdFormat extends LitElement {
   @state()
   @consume({ context: apiContext, subscribe: true })
   private _api!: ContextType<typeof apiContext>;
-
-  @state()
-  @consume({ context: configContext, subscribe: true })
-  private _config!: ContextType<typeof configContext>;
 
   @state() private _format?: EntityIdFormat;
 
@@ -175,17 +170,6 @@ export class HaConfigEntityIdFormat extends LitElement {
             ${this._localize(
               "ui.panel.config.entity_id_format.card.description"
             )}
-            <a
-              href=${documentationUrl(
-                this._config,
-                "/docs/configuration/customizing-devices/"
-              )}
-              target="_blank"
-              rel="noreferrer"
-              >${this._localize(
-                "ui.panel.config.entity_id_format.card.learn_more"
-              )}</a
-            >
           </p>
           ${
             this._format

@@ -34,7 +34,6 @@ import {
   type TargetSelector,
 } from "../data/selector";
 import type { HomeAssistant, ValueChangedEvent } from "../types";
-import { documentationUrl } from "../util/documentation-url";
 import { getSelectorFallbackValue } from "./ha-form/get-selector-fallback-value";
 import "./ha-checkbox";
 import type { HaCheckbox } from "./ha-checkbox";
@@ -491,7 +490,7 @@ export class HaServiceControl extends LitElement {
 
     const documentationLink =
       this._manifest?.is_built_in && this._value?.action
-        ? documentationUrl(this.hass, `/actions/${this._value.action}`)
+        ? undefined
         : this._manifest?.documentation;
 
     const targetSelector =

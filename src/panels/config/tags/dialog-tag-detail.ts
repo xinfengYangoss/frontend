@@ -164,14 +164,9 @@ class DialogTagDetail
                       ${this.hass!.localize(
                         "ui.panel.config.tag.detail.usage",
                         {
-                          companion_link: html`<a
-                            href="https://companion.home-assistant.io/"
-                            target="_blank"
-                            rel="noreferrer"
-                            >${this.hass!.localize(
-                              "ui.panel.config.tag.detail.companion_apps"
-                            )}</a
-                          >`,
+                          companion_link: html`${this.hass!.localize(
+                            "ui.panel.config.tag.detail.companion_apps"
+                          )}`,
                         }
                       )}
                     </p>
@@ -182,7 +177,7 @@ class DialogTagDetail
                         ? html`
                             <ha-qr-code
                               .data=${`${documentationUrl(this.hass, "/tag/")}${this._params!.entry!.id}`}
-                              center-image="/static/icons/favicon-192x192.png"
+                              center-image="/static/icons/chengvin.png"
                               error-correction-level="quartile"
                               scale="5"
                             >

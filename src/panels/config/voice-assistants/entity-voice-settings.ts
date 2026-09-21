@@ -38,7 +38,6 @@ import { fetchCloudGoogleEntity } from "../../../data/google_assistant";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import type { EntityRegistrySettings } from "../entities/entity-registry-settings";
 
 @customElement("entity-voice-settings")
@@ -311,12 +310,7 @@ export class EntityVoiceSettings extends SubscribeMixin(LitElement) {
               ${this.hass.localize(
                 "ui.dialogs.voice-settings.aliases_no_unique_id",
                 {
-                  faq_link: html`<a
-                    href=${documentationUrl(this.hass, "/faq/unique_id")}
-                    target="_blank"
-                    rel="noreferrer"
-                    >${this.hass.localize("ui.dialogs.entity_registry.faq")}</a
-                  >`,
+                  faq_link: html`${this.hass.localize("ui.dialogs.entity_registry.faq")}`,
                 }
               )}
             </ha-alert>`

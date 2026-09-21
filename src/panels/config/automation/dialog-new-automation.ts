@@ -1,10 +1,4 @@
-import {
-  mdiAccount,
-  mdiFile,
-  mdiOpenInNew,
-  mdiPencilOutline,
-  mdiWeb,
-} from "@mdi/js";
+import { mdiAccount, mdiFile, mdiPencilOutline } from "@mdi/js";
 import Fuse from "fuse.js";
 import type { CSSResultGroup } from "lit";
 import { LitElement, css, html, nothing } from "lit";
@@ -41,7 +35,6 @@ import {
 import { mdiHomeAssistant } from "../../../resources/home-assistant-logo-svg";
 import { haStyle, haStyleDialog } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import type { NewAutomationDialogParams } from "./show-dialog-new-automation";
 
 const SOURCE_TYPE_ICONS: Record<BlueprintSourceType, string> = {
@@ -236,36 +229,7 @@ class DialogNewAutomation extends LitElement {
                       </ha-list>
                       ${
                         processedBlueprints.length === 0
-                          ? html`
-                              <a
-                                href=${documentationUrl(
-                                  this.hass,
-                                  "/get-blueprints"
-                                )}
-                                target="_blank"
-                                rel="noreferrer noopener"
-                                class="item"
-                              >
-                                <ha-list-item hasmeta twoline graphic="icon">
-                                  <ha-svg-icon
-                                    slot="graphic"
-                                    .path=${mdiWeb}
-                                  ></ha-svg-icon>
-                                  ${this.hass.localize(
-                                    `ui.panel.config.${this._mode}.dialog_new.create_blueprint`
-                                  )}
-                                  <span slot="secondary">
-                                    ${this.hass.localize(
-                                      `ui.panel.config.${this._mode}.dialog_new.create_blueprint_description`
-                                    )}
-                                  </span>
-                                  <ha-svg-icon
-                                    slot="meta"
-                                    path=${mdiOpenInNew}
-                                  ></ha-svg-icon>
-                                </ha-list-item>
-                              </a>
-                            `
+                          ? nothing
                           : filteredBlueprints.length === 0
                             ? html`
                                 <div class="empty-search">
@@ -275,26 +239,6 @@ class DialogNewAutomation extends LitElement {
                                 </div>
                               `
                             : nothing
-                      }
-                      ${
-                        processedBlueprints.length > 0
-                          ? html`
-                              <ha-tip>
-                                <a
-                                  href=${documentationUrl(
-                                    this.hass,
-                                    "/get-blueprints"
-                                  )}
-                                  target="_blank"
-                                  rel="noreferrer noopener"
-                                >
-                                  ${this.hass.localize(
-                                    `ui.panel.config.${this._mode}.dialog_new.discover_blueprint_tip`
-                                  )}
-                                </a>
-                              </ha-tip>
-                            `
-                          : nothing
                       }
                     `
               }

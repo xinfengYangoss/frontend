@@ -4,7 +4,6 @@ import {
   mdiCommentProcessingOutline,
   mdiContentDuplicate,
   mdiDotsVertical,
-  mdiHelpCircleOutline,
   mdiPlus,
   mdiStar,
   mdiTrashCan,
@@ -51,7 +50,6 @@ import {
 } from "../../../dialogs/generic/show-dialog-box";
 import { showVoiceCommandDialog } from "../../../dialogs/voice-command-dialog/show-ha-voice-command-dialog";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { showVoiceAssistantPipelineDetailDialog } from "./show-dialog-voice-assistant-pipeline-detail";
 
 @customElement("assist-pref")
@@ -109,20 +107,9 @@ export class AssistPref extends LitElement {
         <h1 class="card-header">
           <voice-assistant-brand-icon .voiceAssistantId=${"conversation"}>
           </voice-assistant-brand-icon
-          >Assist
+          >CHENGVIN Assistant
         </h1>
-        <div class="header-actions">
-          <ha-icon-button
-            .label=${this.hass.localize(
-              "ui.panel.config.voice_assistants.assistants.pipeline.link_learn_how_it_works"
-            )}
-            .path=${mdiHelpCircleOutline}
-            href=${documentationUrl(this.hass, "/docs/assist/")}
-            target="_blank"
-            rel="noreferrer noopener"
-            class="icon-link"
-          ></ha-icon-button>
-        </div>
+        <div class="header-actions"></div>
         <ha-list-base>
           ${this._pipelines.map(
             (pipeline) => html`

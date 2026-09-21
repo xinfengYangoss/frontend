@@ -356,7 +356,7 @@ export class MatterNetworkVisualization extends LitElement {
     }
     const { id } = data as { id: string };
     if (id === HOME_ASSISTANT_NODE_ID) {
-      return html`<b>Home Assistant</b>`;
+      return html`<b>CHENGVIN</b>`;
     }
     const node = this._getTopologyNode(id);
     if (!node) {

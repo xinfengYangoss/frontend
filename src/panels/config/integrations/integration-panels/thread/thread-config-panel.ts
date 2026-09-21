@@ -48,7 +48,6 @@ import { SubscribeMixin } from "../../../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../../../resources/styles";
 import type { HomeAssistant } from "../../../../../types";
 import { brandsUrl } from "../../../../../util/brands-url";
-import { documentationUrl } from "../../../../../util/documentation-url";
 import { fileDownload } from "../../../../../util/file_download";
 import { showThreadDatasetDialog } from "./show-dialog-thread-dataset";
 
@@ -126,16 +125,6 @@ export class ThreadConfigPanel extends SubscribeMixin(LitElement) {
                       )}
                     </h3>
                     <ha-svg-icon .path=${mdiDevices}></ha-svg-icon>
-                    <ha-button
-                      appearance="plain"
-                      size="s"
-                      href=${documentationUrl(this.hass, `/integrations/thread`)}
-                      target="_blank"
-                    >
-                      ${this.hass.localize(
-                        "ui.panel.config.thread.more_info"
-                      )}</ha-button
-                    >
                   </div>
                 </ha-card>`
           }

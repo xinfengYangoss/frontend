@@ -376,18 +376,7 @@ export class DialogCloudOnboarding extends LitElement {
             )}</span
           >
         </div>
-        <div class="option-actions">
-          <ha-button
-            appearance="plain"
-            href="https://www.home-assistant.io/voice_control/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            ${this.hass.localize(
-              "ui.panel.config.cloud.account.onboarding.learn_more"
-            )}
-          </ha-button>
-        </div>
+        <div class="option-actions"></div>
       </div>
     `;
   }

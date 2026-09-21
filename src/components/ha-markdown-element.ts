@@ -4,6 +4,7 @@ import { customElement, property } from "lit/decorators";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import hash from "object-hash";
 import { fireEvent } from "../common/dom/fire_event";
+import { isUpstreamWebsite } from "../common/url/is-upstream-website";
 import { renderMarkdown } from "../resources/render-markdown";
 import { CacheManager } from "../util/cache-manager";
 
@@ -110,6 +111,13 @@ class HaMarkdownElement extends ReactiveElement {
 
     while (walker.nextNode()) {
       const node = walker.currentNode;
+
+      if (node instanceof HTMLAnchorElement && isUpstreamWebsite(node.href)) {
+        node.removeAttribute("href");
+        node.removeAttribute("target");
+        node.removeAttribute("tabindex");
+        continue;
+      }
 
       // Open external links in a new window
       if (

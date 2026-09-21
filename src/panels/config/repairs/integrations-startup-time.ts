@@ -16,7 +16,6 @@ import {
 } from "../../../data/integration";
 import type { HomeAssistant } from "../../../types";
 import { brandsUrl } from "../../../util/brands-url";
-import { documentationUrl } from "../../../util/documentation-url";
 
 @customElement("integrations-startup-time")
 class IntegrationsStartupTime extends LitElement {
@@ -46,10 +45,7 @@ class IntegrationsStartupTime extends LitElement {
           const docLink =
             (manifest
               ? manifest.is_built_in
-                ? documentationUrl(
-                    this.hass,
-                    `/integrations/${manifest.domain}`
-                  )
+                ? undefined
                 : manifest.documentation
               : "") || "";
 

@@ -1,4 +1,3 @@
-import { mdiHelpCircleOutline } from "@mdi/js";
 import type { HassService } from "home-assistant-js-websocket";
 import { ERR_CONNECTION_LOST } from "home-assistant-js-websocket";
 import { dump, JSON_SCHEMA, load } from "js-yaml";
@@ -46,7 +45,6 @@ import {
 } from "../../../../data/service";
 import { haStyle } from "../../../../resources/styles";
 import type { HomeAssistant, ToggleButton } from "../../../../types";
-import { documentationUrl } from "../../../../util/documentation-url";
 import { resolveMediaSource } from "../../../../data/media_source";
 import { MatchMinHeightMixin } from "../../../../mixins/match-min-height-mixin";
 import { withViewTransition } from "../../../../common/util/view-transition";
@@ -294,28 +292,6 @@ class HaPanelDevAction extends MatchMinHeightMixin(LitElement) {
                               : ""
                           }
                         </h3>
-                        ${
-                          this._serviceData?.action
-                            ? html` <a
-                                href=${documentationUrl(
-                                  this.hass,
-                                  "/integrations/" +
-                                    computeDomain(this._serviceData?.action)
-                                )}
-                                title=${this.hass.localize(
-                                  "ui.components.service-control.integration_doc"
-                                )}
-                                target="_blank"
-                                rel="noreferrer"
-                              >
-                                <ha-icon-button
-                                  class="help-icon"
-                                  .path=${mdiHelpCircleOutline}
-                                  .label=${this.hass!.localize("ui.common.help")}
-                                ></ha-icon-button>
-                              </a>`
-                            : ""
-                        }
                       </div>`
                     : ""
                 }

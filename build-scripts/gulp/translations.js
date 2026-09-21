@@ -258,13 +258,12 @@ const createTranslations = async () => {
       if (lang === TEST_LOCALE) {
         mergeFiles.push(`${workDir}/${TEST_LOCALE}.json`);
       } else if (lang !== "en") {
-        mergeFiles.push(
-          `${localFrontendDir}/${lang}.json`,
-          `${inFrontendDir}/${lang}.json`
-        );
+        mergeFiles.push(`${inFrontendDir}/${lang}.json`);
         if (mergeBackend) {
           mergeFiles.push(`${inBackendDir}/${lang}.json`);
         }
+        // Local overlay last so CHENGVIN branding and extra keys win.
+        mergeFiles.push(`${localFrontendDir}/${lang}.json`);
       }
     }
     const mergeStream = gulp

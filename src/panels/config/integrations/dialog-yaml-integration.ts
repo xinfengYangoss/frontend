@@ -3,7 +3,6 @@ import { css, html, LitElement, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
 import { fireEvent } from "../../../common/dom/fire_event";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import type { YamlIntegrationDialogParams } from "./show-add-integration-dialog";
 import "../../../components/ha-button";
 import "../../../components/ha-dialog-footer";
@@ -37,9 +36,7 @@ export class DialogYamlIntegration extends LitElement {
       return nothing;
     }
     const manifest = this._params.manifest;
-    const docLink = manifest.is_built_in
-      ? documentationUrl(this.hass, `/integrations/${manifest.domain}`)
-      : manifest.documentation;
+    const docLink = manifest.is_built_in ? undefined : manifest.documentation;
     return html`
       <ha-dialog
         .open=${this._open}

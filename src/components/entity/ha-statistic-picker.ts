@@ -1,10 +1,5 @@
 import type { RenderItemFunction } from "@lit-labs/virtualizer/virtualize";
-import {
-  mdiChartLine,
-  mdiHelpCircleOutline,
-  mdiPencil,
-  mdiShape,
-} from "@mdi/js";
+import { mdiChartLine, mdiPencil, mdiShape } from "@mdi/js";
 import type { HassEntity } from "home-assistant-js-websocket";
 import { html, LitElement, nothing, type PropertyValues } from "lit";
 import { customElement, property, query } from "lit/decorators";
@@ -22,7 +17,6 @@ import {
 } from "../../data/recorder";
 import { getStatisticIds } from "../../data/recorder_statistic_ids";
 import type { HomeAssistant, ValueChangedEvent } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 import "../ha-combo-box-item";
 import "../ha-generic-picker";
 import type { HaGenericPicker } from "../ha-generic-picker";
@@ -36,8 +30,6 @@ import "../ha-svg-icon";
 import "./state-badge";
 
 const TYPE_ORDER = ["entity", "external", "no_state"] as StatisticItemType[];
-
-const MISSING_ID = "___missing-entity___";
 
 type StatisticItemType = "entity" | "external" | "no_state";
 
@@ -179,16 +171,6 @@ export class HaStatisticPicker extends LitElement {
       this.excludeStatistics,
       this.value
     );
-
-  private _getAdditionalItems = (): StatisticComboBoxItem[] => [
-    {
-      id: MISSING_ID,
-      primary: this.hass.localize(
-        "ui.components.statistic-picker.missing_entity"
-      ),
-      icon_path: mdiHelpCircleOutline,
-    },
-  ];
 
   private _getStatisticsItems = memoizeOne(
     (
@@ -525,7 +507,6 @@ export class HaStatisticPicker extends LitElement {
         )}
         .rowRenderer=${this._rowRenderer}
         .getItems=${this._getItems}
-        .getAdditionalItems=${this._getAdditionalItems}
         .hideClearIcon=${this.hideClearIcon}
         .searchFn=${this._searchFn}
         .valueRenderer=${this._valueRenderer}
@@ -561,14 +542,6 @@ export class HaStatisticPicker extends LitElement {
   private _valueChanged(ev: ValueChangedEvent<string>) {
     ev.stopPropagation();
     const value = ev.detail.value;
-
-    if (value === MISSING_ID) {
-      window.open(
-        documentationUrl(this.hass, this.helpMissingEntityUrl),
-        "_blank"
-      );
-      return;
-    }
 
     this.value = value;
     fireEvent(this, "value-changed", { value });

@@ -36,7 +36,6 @@ import {
 } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../../../resources/styles";
 import type { HomeAssistant } from "../../../../types";
-import { documentationUrl } from "../../../../util/documentation-url";
 import { showEnergySettingsDeviceDialog } from "../dialogs/show-dialogs-energy";
 import "./ha-energy-validation-result";
 import { energyCardStyles } from "./styles";
@@ -69,17 +68,6 @@ export class EnergyDeviceSettings extends LitElement {
             ${this.hass.localize(
               "ui.panel.config.energy.device_consumption.sub"
             )}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href=${documentationUrl(
-                this.hass,
-                "/docs/energy/individual-devices/"
-              )}
-              >${this.hass.localize(
-                "ui.panel.config.energy.device_consumption.learn_more"
-              )}</a
-            >
           </p>
           ${this.validationResult?.device_consumption.map(
             (result) => html`

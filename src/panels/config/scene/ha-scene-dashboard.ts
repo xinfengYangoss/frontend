@@ -9,7 +9,6 @@ import {
   mdiHelpCircleOutline,
   mdiInformationOutline,
   mdiMenuDown,
-  mdiOpenInNew,
   mdiPalette,
   mdiPencil,
   mdiPlay,
@@ -95,7 +94,6 @@ import "../../../layouts/hass-tabs-subpage-data-table";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../resources/styles";
 import type { HomeAssistant, Route } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { showToast } from "../../../util/toast";
 import { showAreaRegistryDetailDialog } from "../areas/show-dialog-area-registry-detail";
 import { showAssignCategoryDialog } from "../category/show-dialog-assign-category";
@@ -699,16 +697,6 @@ class HaSceneDashboard extends SubscribeMixin(LitElement) {
                 <p>
                   ${this.hass.localize("ui.panel.config.scene.picker.empty_text")}
                 </p>
-                <ha-button
-                  appearance="plain"
-                  href=${documentationUrl(this.hass, "/docs/scene/editor/")}
-                  target="_blank"
-                  rel="noreferrer"
-                  size="s"
-                >
-                  ${this.hass.localize("ui.panel.config.common.learn_more")}
-                  <ha-svg-icon slot="end" .path=${mdiOpenInNew}></ha-svg-icon>
-                </ha-button>
               </div>`
             : nothing
         }
@@ -1112,15 +1100,6 @@ ${rejected
       title: this.hass.localize("ui.panel.config.scene.picker.header"),
       text: html`
         ${this.hass.localize("ui.panel.config.scene.picker.introduction")}
-        <p>
-          <a
-            href=${documentationUrl(this.hass, "/docs/scene/editor/")}
-            target="_blank"
-            rel="noreferrer"
-          >
-            ${this.hass.localize("ui.panel.config.scene.picker.learn_more")}
-          </a>
-        </p>
       `,
     });
   }

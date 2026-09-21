@@ -26,7 +26,6 @@ import {
 } from "../../../../../data/backup";
 import type { SupervisorUpdateConfig } from "../../../../../data/supervisor/update";
 import type { HomeAssistant, ValueChangedEvent } from "../../../../../types";
-import { documentationUrl } from "../../../../../util/documentation-url";
 import "./ha-backup-config-retention";
 
 export type BackupConfigSchedule = Pick<BackupConfig, "schedule" | "retention">;
@@ -308,15 +307,7 @@ class HaBackupConfigSchedule extends LitElement {
         ></ha-backup-config-retention>
         <ha-tip
           >${this.hass.localize("ui.panel.config.backup.schedule.tip", {
-            backup_create: html`<a
-              href=${documentationUrl(
-                this.hass,
-                "/integrations/backup/#action-backupcreate_automatic"
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-              >backup.create_automatic</a
-            >`,
+            backup_create: html`backup.create_automatic`,
           })}</ha-tip
         >
       </ha-list-base>

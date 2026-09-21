@@ -26,7 +26,6 @@ import {
 } from "../../../dialogs/generic/show-dialog-box";
 import type { HomeAssistant } from "../../../types";
 import { brandsUrl } from "../../../util/brands-url";
-import { documentationUrl } from "../../../util/documentation-url";
 import { showToast } from "../../../util/toast";
 
 const MCP_SERVER_DOMAIN = "mcp_server";
@@ -93,12 +92,7 @@ export class MCPPref extends LitElement {
         <div class="card-content">
           <p>
             ${this.hass.localize("ui.panel.config.mcp.description", {
-              documentation_link: html`<a
-                href=${documentationUrl(this.hass, "/integrations/mcp_server/")}
-                target="_blank"
-                rel="noreferrer"
-                >${this.hass.localize("ui.panel.config.mcp.documentation")}</a
-              >`,
+              documentation_link: html`${this.hass.localize("ui.panel.config.mcp.documentation")}`,
             })}
           </p>
           ${

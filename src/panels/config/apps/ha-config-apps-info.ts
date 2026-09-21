@@ -1,4 +1,4 @@
-import { mdiOpenInNew, mdiPuzzle } from "@mdi/js";
+import { mdiPuzzle } from "@mdi/js";
 import type { CSSResultGroup, TemplateResult } from "lit";
 import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators";
@@ -10,7 +10,6 @@ import { showAlertDialog } from "../../../dialogs/generic/show-dialog-box";
 import "../../../layouts/hass-subpage";
 import { haStyle } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { navigate } from "../../../common/navigate";
 
 @customElement("ha-config-apps-info")
@@ -62,15 +61,6 @@ class HaConfigAppsInfo extends LitElement {
               </p>
             </div>
             <div class="card-actions">
-              <ha-button
-                appearance="plain"
-                href=${documentationUrl(this.hass, "/apps/")}
-                target="_blank"
-                rel="noreferrer"
-              >
-                ${this.hass.localize("ui.panel.config.apps.info.learn_more")}
-                <ha-svg-icon slot="icon" .path=${mdiOpenInNew}></ha-svg-icon>
-              </ha-button>
               <ha-button @click=${this._dismiss} variant="danger">
                 ${this.hass.localize("ui.panel.config.apps.info.dismiss")}
               </ha-button>

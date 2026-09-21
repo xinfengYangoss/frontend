@@ -1,5 +1,4 @@
 import "@home-assistant/webawesome/dist/components/divider/divider";
-import { mdiHelpCircleOutline } from "@mdi/js";
 import type { CSSResultGroup } from "lit";
 import { LitElement, css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -21,7 +20,6 @@ import type { HassDialog } from "../../../../dialogs/make-dialog-manager";
 import { DirtyStateProviderMixin } from "../../../../mixins/dirty-state-provider-mixin";
 import { haStyle, haStyleDialog } from "../../../../resources/styles";
 import type { HomeAssistant } from "../../../../types";
-import { documentationUrl } from "../../../../util/documentation-url";
 import type { AutomationModeDialog } from "./show-dialog-automation-mode";
 
 interface AutomationModeState {
@@ -86,16 +84,6 @@ class DialogAutomationMode
         .preventScrimClose=${this.isDirtyState}
         @closed=${this._dialogClosed}
       >
-        <ha-icon-button
-          .label=${this.hass.localize(
-            "ui.panel.config.automation.editor.modes.learn_more"
-          )}
-          .path=${mdiHelpCircleOutline}
-          href=${documentationUrl(this.hass, "/docs/automation/modes/")}
-          slot="headerActionItems"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></ha-icon-button>
         <ha-select-box
           .options=${MODES.map((mode) => ({
             label: this.hass.localize(

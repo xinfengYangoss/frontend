@@ -121,7 +121,10 @@ const createRspackConfig = ({
       ? false
       : isProdBuild
         ? "nosources-source-map"
-        : "eval-cheap-module-source-map",
+        : // Android WebView loses CommonJS wrapper arguments inside eval() when
+          // loading ES module output. Use external source maps in development so
+          // CommonJS dependencies execute in their generated wrapper.
+          "cheap-module-source-map",
     entry,
     node: false,
     module: {

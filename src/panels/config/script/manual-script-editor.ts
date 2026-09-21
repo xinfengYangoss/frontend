@@ -1,4 +1,3 @@
-import { mdiHelpCircleOutline } from "@mdi/js";
 import { load, YAML11_SCHEMA } from "js-yaml";
 import type { CSSResultGroup, PropertyValues } from "lit";
 import { css, html, LitElement, nothing } from "lit";
@@ -29,7 +28,6 @@ import {
   MODES,
   normalizeScriptConfig,
 } from "../../../data/script";
-import { documentationUrl } from "../../../util/documentation-url";
 import { showEditorToast } from "../automation/editor-toast";
 import "../automation/action/ha-automation-action";
 import type HaAutomationAction from "../automation/action/ha-automation-action";
@@ -113,18 +111,6 @@ export class HaManualScriptEditor extends ManualEditorMixin<ScriptConfig>(
                   "ui.panel.config.script.editor.field.fields"
                 )}
               </h2>
-              <ha-icon-button
-                .path=${mdiHelpCircleOutline}
-                .label=${this.hass.localize(
-                  "ui.panel.config.script.editor.field.link_help_fields"
-                )}
-                href=${documentationUrl(
-                  this.hass,
-                  "/integrations/script/#fields"
-                )}
-                target="_blank"
-                rel="noreferrer"
-              ></ha-icon-button>
             </div>
 
             <ha-script-fields

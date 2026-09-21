@@ -35,7 +35,6 @@ import {
   showConfirmationDialog,
 } from "../../../dialogs/generic/show-dialog-box";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import type { DataEntryFlowProgressExtended } from "./ha-config-integrations";
 import "./ha-integration-action-card";
 import type { HaDropdownSelectEvent } from "../../../components/ha-dropdown";
@@ -57,7 +56,7 @@ export class HaConfigFlowCard extends LitElement {
       this.flow.context.configuration_url
     );
     const documentationLink = this.manifest?.is_built_in
-      ? documentationUrl(this.hass, `/integrations/${this.manifest.domain}`)
+      ? undefined
       : this.manifest?.documentation;
     return html`
       <ha-integration-action-card
@@ -248,16 +247,7 @@ export class HaConfigFlowCard extends LitElement {
           "ui.panel.config.integrations.config_entry.application_credentials.delete_detail"
         )}
         <br />
-        <br />
-        <a
-          href="https://www.home-assistant.io/integrations/application_credentials"
-          target="_blank"
-          rel="noreferrer"
-        >
-          ${this.hass.localize(
-            "ui.panel.config.integrations.config_entry.application_credentials.learn_more"
-          )}
-        </a>`,
+        <br /> `,
       confirmText: this.hass.localize("ui.common.delete"),
       dismissText: this.hass.localize("ui.common.cancel"),
       destructive: true,

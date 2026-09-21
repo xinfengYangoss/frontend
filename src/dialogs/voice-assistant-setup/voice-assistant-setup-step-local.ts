@@ -1,4 +1,3 @@
-import { mdiOpenInNew } from "@mdi/js";
 import type { PropertyValues } from "lit";
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -30,7 +29,6 @@ import { listSTTEngines } from "../../data/stt";
 import { listTTSEngines, listTTSVoices } from "../../data/tts";
 import { fetchWyomingInfo } from "../../data/wyoming";
 import type { HomeAssistant } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 import { AssistantSetupStyles } from "./styles";
 import { STEP } from "./voice-assistant-setup-dialog";
 
@@ -97,22 +95,7 @@ export class HaVoiceAssistantSetupStepLocal extends LitElement {
                 </p>
                 <ha-button appearance="plain" size="s" @click=${this._prevStep}
                   >${this.hass.localize("ui.common.back")}</ha-button
-                >
-                <ha-button
-                  href=${documentationUrl(
-                    this.hass,
-                    "/voice_control/voice_remote_local_assistant/"
-                  )}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  size="s"
-                  appearance="plain"
-                >
-                  <ha-svg-icon .path=${mdiOpenInNew} slot="start"></ha-svg-icon>
-                  ${this.hass.localize(
-                    "ui.panel.config.common.learn_more"
-                  )}</ha-button
-                >`
+                > `
             : this._state === "NOT_SUPPORTED"
               ? html`<img
                     src="/static/images/voice-assistant/error.png"
@@ -133,25 +116,7 @@ export class HaVoiceAssistantSetupStepLocal extends LitElement {
                     size="s"
                     @click=${this._prevStep}
                     >${this.hass.localize("ui.common.back")}</ha-button
-                  >
-                  <ha-button
-                    href=${documentationUrl(
-                      this.hass,
-                      "/voice_control/voice_remote_local_assistant/"
-                    )}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    appearance="plain"
-                    size="s"
-                  >
-                    <ha-svg-icon
-                      .path=${mdiOpenInNew}
-                      slot="start"
-                    ></ha-svg-icon>
-                    ${this.hass.localize(
-                      "ui.panel.config.common.learn_more"
-                    )}</ha-button
-                  >`
+                  > `
               : nothing
       }
     </div>`;

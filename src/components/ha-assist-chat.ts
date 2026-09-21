@@ -23,7 +23,6 @@ import {
   type PipelineRunEvent,
 } from "../data/assist_pipeline";
 import {
-  configContext,
   connectionContext,
   internationalizationContext,
   statesContext,
@@ -33,7 +32,6 @@ import { showAlertDialog } from "../dialogs/generic/show-dialog-box";
 import { haStyleScrollbar } from "../resources/styles";
 import type {
   HomeAssistant,
-  HomeAssistantConfig,
   HomeAssistantConnection,
   HomeAssistantInternationalization,
 } from "../types";
@@ -42,7 +40,6 @@ import {
   findAvailableLanguage,
   getTranslation,
 } from "../util/common-translation";
-import { documentationUrl } from "../util/documentation-url";
 import "./ha-alert";
 import "./ha-markdown";
 import "./input/ha-input";
@@ -129,10 +126,6 @@ export class HaAssistChat extends LitElement {
   @state()
   @consume({ context: statesContext, subscribe: true })
   private _states!: HomeAssistant["states"];
-
-  @state()
-  @consume({ context: configContext, subscribe: true })
-  private _config!: HomeAssistantConfig;
 
   @state()
   @consume({ context: connectionContext, subscribe: true })
@@ -543,16 +536,9 @@ ${JSON.stringify(toolCall.result, null, 2)}</pre>
         ${this._localize(
           "ui.dialogs.voice_command.not_supported_microphone_documentation",
           {
-            documentation_link: html`<a
-                target="_blank"
-                rel="noopener noreferrer"
-                href=${documentationUrl(
-                  this._config,
-                  "/docs/configuration/securing/#remote-access"
-                )}
-              >${this._localize(
+            documentation_link: html`${this._localize(
                   "ui.dialogs.voice_command.not_supported_microphone_documentation_link"
-                )}</a>`,
+                )}`,
           }
           )}`,
       thinking: "",

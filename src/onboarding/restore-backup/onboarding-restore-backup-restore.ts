@@ -145,17 +145,6 @@ class OnboardingRestoreBackupRestore extends LitElement {
               ${this._localize(
                 "ui.panel.page-onboarding.restore.details.apps_unsupported"
               )}
-              <ha-button
-                slot="action"
-                href="https://www.home-assistant.io/installation/#advanced-installation-methods"
-                target="_blank"
-                rel="noreferrer noopener"
-                size="s"
-              >
-                ${this._localize(
-                  "ui.panel.page-onboarding.restore.ha-cloud.learn_more"
-                )}</ha-button
-              >
             </ha-alert>`
           : nothing
       }

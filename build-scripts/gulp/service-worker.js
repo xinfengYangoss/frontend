@@ -59,9 +59,8 @@ const genServiceWorker = (builds) =>
           // Using pattern to match hash instead of * to avoid caching en-GB
           // 'v' added as valid hash letter because in dev we hash with 'dev'
           "static/translations/**/en-+([a-fv0-9]).json",
-          // Icon shown on splash screen
-          "static/icons/favicon-192x192.png",
-          "static/icons/favicon.ico",
+          // CHENGVIN icons shown on splash and home screen
+          "static/icons/chengvin.png",
           // Common fonts
           "static/fonts/roboto/Roboto-Light.woff2",
           "static/fonts/roboto/Roboto-Medium.woff2",

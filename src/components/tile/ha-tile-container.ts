@@ -125,7 +125,6 @@ export class HaTileContainer extends LitElement {
     }
 
     .content {
-      position: relative;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -135,7 +134,6 @@ export class HaTileContainer extends LitElement {
       min-width: 0;
       box-sizing: border-box;
       pointer-events: none;
-      gap: 10px;
     }
 
     .vertical {
@@ -143,6 +141,9 @@ export class HaTileContainer extends LitElement {
       text-align: center;
       justify-content: center;
       padding: 10px var(--ha-space-2);
+    }
+    .vertical ::slotted([slot="icon"]) {
+      margin: -6px 0 10px;
     }
     .vertical.fixed-info-height {
       /* pin sizing so every tile in a grid reserves the same height, wrapping or not, secondary or not */
@@ -160,7 +161,7 @@ export class HaTileContainer extends LitElement {
     ::slotted([slot="icon"]) {
       position: relative;
       padding: 6px;
-      margin: -6px;
+      margin: -6px 10px -6px -6px;
     }
     ::slotted([slot="icon"]:focus) {
       outline: none;

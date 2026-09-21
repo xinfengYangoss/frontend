@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hans">
   <head>
     <title>CHENGVIN</title>
     <%= renderTemplate("_header.html.template") %>
@@ -29,17 +29,32 @@
 
       .header {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         justify-content: flex-start;
+        gap: 10px;
         margin-bottom: 32px;
         margin-left: 32px;
         padding-top: var(--safe-area-inset-top);
       }
 
-      .header img {
+      .header .brand-mark {
         display: block;
-        width: min(280px, 72vw);
+        width: min(220px, 64vw);
         height: auto;
+      }
+
+      .header .company-name {
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.06em;
+        color: var(--secondary-text-color, #5f6368);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .header .company-name {
+          color: var(--secondary-text-color, #9aa0a6);
+        }
       }
     </style>
   </head>
@@ -47,9 +62,11 @@
     <div class="content">
       <div class="header">
         <img
-          src="/static/images/chengvin/chengvin-wordmark.png"
+          class="brand-mark"
+          src="/static/images/chengvin/chengvin-mark.png"
           alt="CHENGVIN"
         />
+        <div class="company-name">福建星启航信息科技有限公司</div>
       </div>
       <ha-onboarding></ha-onboarding>
     </div>

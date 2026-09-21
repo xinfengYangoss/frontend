@@ -361,7 +361,9 @@ class DialogUserDetail extends DirtyStateProviderMixin<UserDetailFormState>()(
     );
     if (!credential) {
       showAlertDialog(this, {
-        title: "No Home Assistant credentials found.",
+        title: this.hass.localize(
+          "ui.panel.config.users.change_username.no_credentials"
+        ),
       });
       return;
     }
@@ -411,7 +413,9 @@ class DialogUserDetail extends DirtyStateProviderMixin<UserDetailFormState>()(
     );
     if (!credential) {
       showAlertDialog(this, {
-        title: "No Home Assistant credentials found.",
+        title: this.hass.localize(
+          "ui.panel.config.users.change_username.no_credentials"
+        ),
       });
       return;
     }

@@ -5,7 +5,6 @@ import { isComponentLoaded } from "../../common/config/is_component_loaded";
 import { pushSupported } from "../../components/ha-push-notifications-toggle";
 import "../../components/item/ha-row-item";
 import type { HomeAssistant } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 
 @customElement("ha-push-notifications-row")
 class HaPushNotificationsRow extends LitElement {
@@ -36,15 +35,7 @@ class HaPushNotificationsRow extends LitElement {
           >${this.hass.localize(
             `ui.panel.profile.push_notifications.${descriptionKey}`
           )}
-          <a
-            href=${documentationUrl(this.hass, "/integrations/html5")}
-            target="_blank"
-            rel="noreferrer"
-            >${this.hass.localize(
-              "ui.panel.profile.push_notifications.link_promo"
-            )}</a
-          ></span
-        >
+        </span>
         <ha-push-notifications-toggle
           slot="end"
           .hass=${this.hass}

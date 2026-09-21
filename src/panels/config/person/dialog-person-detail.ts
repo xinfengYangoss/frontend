@@ -33,7 +33,6 @@ import type { CropOptions } from "../../../dialogs/image-cropper-dialog/show-ima
 import type { HassDialog } from "../../../dialogs/make-dialog-manager";
 import { haStyleDialog } from "../../../resources/styles";
 import type { HomeAssistant, ValueChangedEvent } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { showAddUserDialog } from "../users/show-dialog-add-user";
 import { showAdminChangePasswordDialog } from "../users/show-dialog-admin-change-password";
 import type { PersonDetailDialogParams } from "./show-dialog-person-detail";
@@ -248,19 +247,7 @@ class DialogPersonDetail
                       )}
                     </p>
                     <ul>
-                      <li>
-                        <a
-                          href=${documentationUrl(
-                            this.hass,
-                            "/integrations/#presence-detection"
-                          )}
-                          target="_blank"
-                          rel="noreferrer"
-                          >${this.hass!.localize(
-                            "ui.panel.config.person.detail.link_presence_detection_integrations"
-                          )}</a
-                        >
-                      </li>
+                      <li></li>
                       <li>
                         <a
                           @click=${this.closeDialog}
@@ -546,7 +533,7 @@ class DialogPersonDetail
     );
     if (!credential) {
       showAlertDialog(this, {
-        title: "No Home Assistant credentials found.",
+        title: "No CHENGVIN credentials found.",
       });
       return;
     }
@@ -562,7 +549,7 @@ class DialogPersonDetail
     );
     if (!credential) {
       showAlertDialog(this, {
-        title: "No Home Assistant credentials found.",
+        title: "No CHENGVIN credentials found.",
       });
       return;
     }

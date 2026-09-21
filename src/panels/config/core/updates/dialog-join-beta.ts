@@ -1,4 +1,3 @@
-import { mdiOpenInNew } from "@mdi/js";
 import type { CSSResultGroup } from "lit";
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -10,7 +9,6 @@ import "../../../../components/ha-dialog";
 import type { HassDialog } from "../../../../dialogs/make-dialog-manager";
 import { haStyleDialog } from "../../../../resources/styles";
 import type { HomeAssistant } from "../../../../types";
-import { documentationUrl } from "../../../../util/documentation-url";
 import type { JoinBetaDialogParams } from "./show-dialog-join-beta";
 
 @customElement("dialog-join-beta")
@@ -58,20 +56,11 @@ export class DialogJoinBeta
           ${this.hass.localize("ui.dialogs.join_beta_channel.release_items")}
         </p>
         <ul>
-          <li>Home Assistant Core</li>
-          <li>Home Assistant Supervisor</li>
-          <li>Home Assistant Operating System</li>
+          <li>CHENGVIN Core</li>
+          <li>CHENGVIN Supervisor</li>
+          <li>CHENGVIN Operating System</li>
         </ul>
-        <a
-          href=${documentationUrl(this.hass!, "/faq/release/")}
-          target="_blank"
-          rel="noreferrer"
-        >
-          ${this.hass!.localize(
-            "ui.dialogs.join_beta_channel.view_documentation"
-          )}
-          <ha-svg-icon .path=${mdiOpenInNew}></ha-svg-icon>
-        </a>
+
         <ha-dialog-footer slot="footer">
           <ha-button
             slot="secondaryAction"

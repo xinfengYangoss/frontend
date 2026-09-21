@@ -20,7 +20,6 @@ import {
 } from "../../../data/system_log";
 import { haStyleDialog } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { showToast } from "../../../util/toast";
 import type { SystemLogDetailDialogParams } from "./show-dialog-system-log-detail";
 import { formatSystemLogTime } from "./util";
@@ -89,7 +88,7 @@ class DialogSystemLogDetail extends LitElement {
           !isOfficialDocumentationUrl(this._manifest.documentation)));
 
     const documentationLink = this._manifest?.is_built_in
-      ? documentationUrl(this.hass, `/integrations/${this._manifest.domain}`)
+      ? undefined
       : this._manifest?.documentation;
 
     const title = this.hass.localize("ui.panel.config.logs.details", {

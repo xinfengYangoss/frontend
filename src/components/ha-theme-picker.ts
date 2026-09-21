@@ -48,7 +48,7 @@ export class HaThemePicker extends LitElement {
       const items: PickerComboBoxItem[] = [];
 
       if (includeDefault) {
-        items.push({ id: DEFAULT_THEME, primary: "Home Assistant" });
+        items.push({ id: DEFAULT_THEME, primary: "CHENGVIN" });
       }
 
       const themeNames = Object.keys(themes).sort((a, b) =>

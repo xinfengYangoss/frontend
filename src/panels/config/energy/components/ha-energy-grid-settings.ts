@@ -29,7 +29,6 @@ import {
 import { haStyle } from "../../../../resources/styles";
 import type { HomeAssistant } from "../../../../types";
 import { brandsUrl } from "../../../../util/brands-url";
-import { documentationUrl } from "../../../../util/documentation-url";
 import { showEnergySettingsGridDialog } from "../dialogs/show-dialogs-energy";
 import "./ha-energy-validation-result";
 import { energyCardStyles } from "./styles";
@@ -76,20 +75,7 @@ export class EnergyGridSettings extends LitElement {
         </h1>
 
         <div class="card-content">
-          <p>
-            ${this.hass.localize("ui.panel.config.energy.grid.sub")}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href=${documentationUrl(
-                this.hass,
-                "/docs/energy/electricity-grid/"
-              )}
-              >${this.hass.localize(
-                "ui.panel.config.energy.grid.learn_more"
-              )}</a
-            >
-          </p>
+          <p>${this.hass.localize("ui.panel.config.energy.grid.sub")}</p>
           ${gridValidation.map(
             (result) => html`
               <ha-energy-validation-result

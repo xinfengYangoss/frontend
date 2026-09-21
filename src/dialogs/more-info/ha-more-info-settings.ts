@@ -10,7 +10,6 @@ import type {
 import { PLATFORMS_WITH_SETTINGS_TAB } from "../../panels/config/entities/const";
 import "../../panels/config/entities/entity-registry-settings";
 import type { HomeAssistant } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 
 @customElement("ha-more-info-settings")
 export class HaMoreInfoSettings extends LitElement {
@@ -35,12 +34,7 @@ export class HaMoreInfoSettings extends LitElement {
           <ha-alert alert-type="warning">
             ${this.hass.localize("ui.dialogs.entity_registry.no_unique_id", {
               entity_id: this.entityId,
-              faq_link: html`<a
-                href=${documentationUrl(this.hass, "/faq/unique_id")}
-                target="_blank"
-                rel="noreferrer"
-                >${this.hass.localize("ui.dialogs.entity_registry.faq")}</a
-              >`,
+              faq_link: html`${this.hass.localize("ui.dialogs.entity_registry.faq")}`,
             })}
           </ha-alert>
         </div>

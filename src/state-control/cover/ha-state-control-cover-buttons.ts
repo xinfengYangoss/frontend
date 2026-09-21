@@ -265,6 +265,8 @@ export class HaStateControlCoverButtons extends LitElement {
       min-height: 200px;
       display: grid;
       gap: 10px;
+      grid-template-columns: repeat(3, 80px);
+      grid-template-rows: repeat(3, 80px);
       grid-template-columns: repeat(3, min(100px, 25vw, 15vh));
       grid-template-rows: repeat(3, min(100px, 25vw, 15vh));
       grid-template-areas: ". open ." "close-tilt stop open-tilt" ". close .";

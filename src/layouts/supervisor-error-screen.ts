@@ -5,7 +5,6 @@ import { atLeastVersion } from "../common/config/version";
 import { applyThemesOnElement } from "../common/dom/apply_themes_on_element";
 import "../components/ha-card";
 import { haStyle } from "../resources/styles";
-import { documentationUrl } from "../util/documentation-url";
 import type { HomeAssistant } from "../types";
 import "./hass-subpage";
 
@@ -56,15 +55,7 @@ class SupervisorErrorScreen extends LitElement {
                   ${this.hass.localize("ui.errors.supervisor.system_health")}
                 </a>
               </li>
-              <li>
-                <a
-                  href=${documentationUrl(this.hass, "/help/")}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  ${this.hass.localize("ui.errors.supervisor.ask")}
-                </a>
-              </li>
+              <li></li>
             </ol>
           </div>
         </ha-card>

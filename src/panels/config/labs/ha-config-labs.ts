@@ -1,4 +1,4 @@
-import { mdiFlask, mdiHelpCircleOutline, mdiOpenInNew } from "@mdi/js";
+import { mdiFlask } from "@mdi/js";
 import type { PropertyValues, TemplateResult } from "lit";
 import { LitElement, css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -25,7 +25,6 @@ import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
 import { brandsUrl } from "../../../util/brands-url";
-import { documentationUrl } from "../../../util/documentation-url";
 import { showToast } from "../../../util/toast";
 import { showLabsPreviewFeatureEnableDialog } from "./show-dialog-labs-preview-feature-enable";
 import {
@@ -115,21 +114,6 @@ class HaConfigLabs extends SubscribeMixin(LitElement) {
         back-path="/config/system"
         .header=${this.hass.localize("ui.panel.config.labs.caption")}
       >
-        ${
-          sortedFeatures.length
-            ? html`
-                <ha-icon-button
-                  slot="toolbar-icon"
-                  .href=${documentationUrl(this.hass, "/integrations/labs/")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  .title=${this.hass.localize("ui.common.help")}
-                  .label=${this.hass.localize("ui.common.help")}
-                  .path=${mdiHelpCircleOutline}
-                ></ha-icon-button>
-              `
-            : nothing
-        }
         <div class="content">
           ${
             !sortedFeatures.length
@@ -142,14 +126,6 @@ class HaConfigLabs extends SubscribeMixin(LitElement) {
                     ${this.hass.localize(
                       "ui.panel.config.labs.empty.description"
                     )}
-                    <a
-                      href=${documentationUrl(this.hass, "/integrations/labs/")}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      ${this.hass.localize("ui.panel.config.labs.learn_more")}
-                      <ha-svg-icon .path=${mdiOpenInNew}></ha-svg-icon>
-                    </a>
                   </div>
                 `
               : html`

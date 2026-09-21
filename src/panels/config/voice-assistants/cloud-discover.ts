@@ -1,4 +1,4 @@
-import { mdiMicrophoneMessage, mdiOpenInNew } from "@mdi/js";
+import { mdiMicrophoneMessage } from "@mdi/js";
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, property } from "lit/decorators";
 import { isComponentLoaded } from "../../../common/config/is_component_loaded";
@@ -6,7 +6,6 @@ import "../../../components/ha-button";
 import "../../../components/ha-card";
 import "../../../components/ha-svg-icon";
 import type { HomeAssistant } from "../../../types";
-import "../../../components/voice-assistant-brand-icon";
 
 @customElement("cloud-discover")
 export class CloudDiscover extends LitElement {
@@ -21,7 +20,7 @@ export class CloudDiscover extends LitElement {
               "ui.panel.config.voice_assistants.assistants.cloud.title",
               {
                 home_assistant_cloud: html`
-                  <span class="no-wrap">Home Assistant Cloud</span>
+                  <span class="no-wrap">CHENGVIN Cloud</span>
                 `,
               }
             )}
@@ -45,40 +44,6 @@ export class CloudDiscover extends LitElement {
                 )}
               </p>
             </div>
-            <div class="feature">
-              <div class="logos">
-                <voice-assistant-brand-icon
-                  .voiceAssistantId=${"cloud.google_assistant"}
-                >
-                </voice-assistant-brand-icon>
-                <voice-assistant-brand-icon .voiceAssistantId=${"cloud.alexa"}>
-                </voice-assistant-brand-icon>
-              </div>
-              <h2>
-                ${this.hass.localize(
-                  "ui.panel.config.voice_assistants.assistants.cloud.features.assistants.title"
-                )}
-              </h2>
-              <p>
-                ${this.hass.localize(
-                  "ui.panel.config.voice_assistants.assistants.cloud.features.assistants.text"
-                )}
-              </p>
-            </div>
-          </div>
-          <div class="more">
-            <ha-button
-              appearance="plain"
-              size="s"
-              href="https://www.nabucasa.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              ${this.hass.localize(
-                "ui.panel.config.voice_assistants.assistants.cloud.and_more"
-              )}
-              <ha-svg-icon slot="end" .path=${mdiOpenInNew}></ha-svg-icon>
-            </ha-button>
           </div>
         </div>
         ${
@@ -135,11 +100,8 @@ export class CloudDiscover extends LitElement {
       grid-template-columns: auto;
       grid-gap: var(--ha-space-4);
       padding: 16px;
-    }
-    @media (min-width: 600px) {
-      .features {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      max-width: 420px;
+      margin: 0 auto;
     }
     .feature {
       display: flex;
@@ -178,20 +140,6 @@ export class CloudDiscover extends LitElement {
       font-weight: var(--ha-font-weight-normal);
       line-height: var(--ha-line-height-condensed);
       margin: 0;
-    }
-    .more {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .more a {
-      text-decoration: none;
-      color: var(--primary-color);
-      font-size: var(--ha-font-size-m);
-      font-weight: var(--ha-font-weight-medium);
-    }
-    .more a ha-svg-icon {
-      --mdc-icon-size: 16px;
     }
     .no-wrap {
       white-space: nowrap;

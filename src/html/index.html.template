@@ -4,12 +4,11 @@
     <title>CHENGVIN</title>
     <% if (useCacheRecovery) { %><%= renderTemplate("_bootstrap_recovery.html.template") %><% } %>
     <%= renderTemplate("_header.html.template") %>
-    <link rel="mask-icon" href="/static/icons/mask-icon.svg" color="#18bcf2" />
+    <link rel="mask-icon" href="/static/icons/mask-icon.svg" color="#006fbf" />
     <link
       rel="apple-touch-icon"
-      href="/static/icons/favicon-apple-180x180.png"
+      href="/static/icons/chengvin.png"
     />
-    <meta name="apple-itunes-app" content="app-id=1099568401" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="CHENGVIN">
@@ -59,6 +58,7 @@
       #ha-launch-screen .ha-lockup {
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-shrink: 0;
         animation: launch-lockup-in var(--ha-animation-duration-normal, 250ms) ease-out both;
       }
@@ -66,8 +66,8 @@
       #ha-launch-screen .ohf-logo {
         animation: launch-lockup-in var(--ha-animation-duration-normal, 250ms) ease-out both;
       }
-      #ha-launch-screen .ha-logo {
-        width: min(360px, 78vw);
+      #ha-launch-screen .ha-mark {
+        width: min(280px, 72vw);
         height: auto;
       }
       #ha-launch-screen .ha-launch-screen-spacer-top {
@@ -78,18 +78,6 @@
       #ha-launch-screen .ha-launch-screen-spacer-bottom {
         flex: 1;
         padding-top: 16px;
-      }
-      .company-name {
-        margin: max(var(--safe-area-inset-bottom, 0px), 48px) 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-        opacity: .66;
-      }
-      .company-name span {
-        font-size: 12px;
-        line-height: 18px;
       }
       @media (prefers-color-scheme: dark) {
         html {
@@ -110,9 +98,6 @@
         body #ha-launch-screen .ha-launch-screen-spacer-bottom {
           padding-top: 16px;
         }
-        .company-name {
-          margin-block: 24px;
-        }
       }
     </style>
   </head>
@@ -120,23 +105,28 @@
     <div id="ha-launch-screen">
       <div class="ha-launch-screen-spacer-top"></div>
       <div class="ha-lockup">
-        <img class="ha-logo" src="/static/images/chengvin/chengvin-wordmark.png" alt="CHENGVIN">
+        <img class="ha-mark" src="/static/images/chengvin/chengvin-mark.png" alt="CHENGVIN">
       </div>
       <div id="ha-launch-screen-info-box" class="ha-launch-screen-spacer-bottom"></div>
-      <div class="company-name">
-        <span id="ha-launch-screen-attribution">福建星启航信息科技有限公司</span>
-      </div>
     </div>
     <home-assistant></home-assistant>
     <%= renderTemplate("_js_base.html.template") %>
     <%= renderTemplate("_preload_roboto.html.template") %>
     <script crossorigin="use-credentials">
       if (isModern) {
-        <% for (const entry of latestEntryJS) { %>
-          import("<%= entry %>");
-        <% } %>
         window.customPanelJS = "<%= latestCustomPanelJS %>";
         window.latestJS = true;
+        Promise.all([
+          <% for (const entry of latestEntryJS) { %>
+            import("<%= entry %>"),
+          <% } %>
+        ]).catch(function () {
+          window.latestJS = false;
+          window.customPanelJS = "<%= es5CustomPanelJS %>";
+          <% for (const entry of es5EntryJS) { %>
+            _ls("<%= entry %>", true);
+          <% } %>
+        });
       }
     </script>
     <% if (obj.hassUrl === "") { %>

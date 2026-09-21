@@ -127,16 +127,6 @@ export class CloudTTSPref extends LitElement {
             </div>
             <div class="card-actions">
               <ha-button
-                appearance="plain"
-                href="https://www.home-assistant.io/voice_control/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                ${this.hass.localize(
-                  "ui.panel.config.cloud.account.assist.link_learn_more"
-                )}
-              </ha-button>
-              <ha-button
                 appearance="filled"
                 href="/config/voice-assistants/assistants"
               >

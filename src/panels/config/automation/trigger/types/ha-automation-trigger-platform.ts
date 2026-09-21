@@ -21,7 +21,6 @@ import {
   type TriggerDescription,
 } from "../../../../../data/trigger";
 import type { HomeAssistant } from "../../../../../types";
-import { documentationUrl } from "../../../../../util/documentation-url";
 
 const showOptionalToggle = (field: TriggerDescription["fields"][string]) =>
   field.selector &&
@@ -181,7 +180,7 @@ export class HaPlatformTrigger extends LitElement {
     );
 
     const documentationLink = this._manifest?.is_built_in
-      ? documentationUrl(this.hass, `/triggers/${this.trigger.trigger}`)
+      ? undefined
       : this._manifest?.documentation;
 
     return html`

@@ -11,7 +11,6 @@ import {
   mdiHelpCircleOutline,
   mdiInformationOutline,
   mdiMenuDown,
-  mdiOpenInNew,
   mdiPlay,
   mdiPlus,
   mdiRobotHappy,
@@ -109,7 +108,6 @@ import "../../../layouts/hass-tabs-subpage-data-table";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../resources/styles";
 import type { HomeAssistant, Route, ServiceCallResponse } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { turnOnOffEntity } from "../../lovelace/common/entity/turn-on-off-entity";
 import { showAreaRegistryDetailDialog } from "../areas/show-dialog-area-registry-detail";
 import { showAssignCategoryDialog } from "../category/show-dialog-assign-category";
@@ -762,16 +760,6 @@ class HaAutomationPicker extends SubscribeMixin(LitElement) {
                     { user: this.hass.user?.name || "Alice" }
                   )}
                 </p>
-                <ha-button
-                  href=${documentationUrl(this.hass, "/docs/automation/editor/")}
-                  target="_blank"
-                  appearance="plain"
-                  rel="noreferrer"
-                  size="s"
-                >
-                  ${this.hass.localize("ui.panel.config.common.learn_more")}
-                  <ha-svg-icon slot="end" .path=${mdiOpenInNew}> </ha-svg-icon>
-                </ha-button>
               </div>`
             : nothing
         }
@@ -1202,17 +1190,6 @@ class HaAutomationPicker extends SubscribeMixin(LitElement) {
       title: this.hass.localize("ui.panel.config.automation.caption"),
       text: html`
         ${this.hass.localize("ui.panel.config.automation.picker.introduction")}
-        <p>
-          <a
-            href=${documentationUrl(this.hass, "/docs/automation/editor/")}
-            target="_blank"
-            rel="noreferrer"
-          >
-            ${this.hass.localize(
-              "ui.panel.config.automation.picker.learn_more"
-            )}
-          </a>
-        </p>
       `,
     });
   }

@@ -6,7 +6,6 @@ import {
   mdiDotsVertical,
   mdiFileMultiple,
   mdiFormatListBulletedTriangle,
-  mdiHelpCircleOutline,
   mdiMagnify,
   mdiPencil,
   mdiPlus,
@@ -76,7 +75,6 @@ import { haStyle } from "../../resources/styles";
 import { handleBackClick } from "../../layouts/back-navigation";
 import { ChildPanelReady } from "../../layouts/panel-ready";
 import type { HomeAssistant, PanelInfo } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 import { isMac } from "../../util/is_mac";
 import { isMobileClient } from "../../util/is_mobile";
 import { showToast } from "../../util/toast";
@@ -211,14 +209,7 @@ class HUIRoot extends LitElement {
             @click=${this._editModeDisable}
           >
             ${this.hass!.localize("ui.panel.lovelace.menu.exit_edit_mode")}
-          </ha-button>
-          <ha-icon-button
-            .label=${this.hass!.localize("ui.panel.lovelace.menu.help")}
-            .path=${mdiHelpCircleOutline}
-            href=${documentationUrl(this.hass, "/dashboards/")}
-            rel="noreferrer"
-            target="_blank"
-          ></ha-icon-button>`
+          </ha-button> `
       );
     }
 

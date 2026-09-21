@@ -40,7 +40,6 @@ import { ChildPanelReady } from "../../../layouts/panel-ready";
 import { SubscribeMixin } from "../../../mixins/subscribe-mixin";
 import { haStyle } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { isMac } from "../../../util/is_mac";
 import { isMobileClient } from "../../../util/is_mobile";
 import "../ha-config-section";
@@ -55,46 +54,7 @@ type DashboardSummary<Key extends string, Item> = Record<Key, Item[]> & {
 
 const randomTip = (openFn: any, hass: HomeAssistant, narrow: boolean) => {
   const weighted: string[] = [];
-  let tips = [
-    {
-      content: hass.localize("ui.panel.config.tips.join", {
-        forums: html`<a
-          href="https://community.home-assistant.io"
-          target="_blank"
-          rel="noreferrer"
-          >${hass.localize("ui.panel.config.tips.join_forums")}</a
-        >`,
-        social_media: html`<a
-          href=${documentationUrl(hass, `/socials`)}
-          target="_blank"
-          rel="noreferrer"
-          >${hass.localize("ui.panel.config.tips.social_media")}</a
-        >`,
-        discord: html`<a
-          href=${documentationUrl(hass, `/join-chat`)}
-          target="_blank"
-          rel="noreferrer"
-          >${hass.localize("ui.panel.config.tips.join_chat")}</a
-        >`,
-        blog: html`<a
-          href=${documentationUrl(hass, `/blog`)}
-          target="_blank"
-          rel="noreferrer"
-          >${hass.localize("ui.panel.config.tips.join_blog")}</a
-        >`,
-        newsletter: html`<span class="keep-together"
-          ><a
-            href="https://newsletter.openhomefoundation.org/"
-            target="_blank"
-            rel="noreferrer"
-            >${hass.localize("ui.panel.config.tips.join_newsletter")}</a
-          >
-        </span>`,
-      }),
-      weight: 2,
-      narrow: true,
-    },
-  ];
+  let tips: { content: string; weight: number; narrow: boolean }[] = [];
 
   if (hass?.enableShortcuts && !isMobileClient) {
     const localizeParam = {
@@ -185,7 +145,7 @@ class HaConfigDashboard extends SubscribeMixin(LitElement) {
               {
                 component: "cloud",
                 path: "/config/cloud",
-                name: "Home Assistant Cloud",
+                name: "CHENGVIN Cloud",
                 info: cloudStatus,
                 iconPath: mdiCloudLock,
                 iconColor: "#3B808E",
@@ -363,7 +323,7 @@ class HaConfigDashboard extends SubscribeMixin(LitElement) {
                   </ha-card>
                 `
           )}
-          <ha-tip>${this._tip}</ha-tip>
+          ${this._tip ? html`<ha-tip>${this._tip}</ha-tip>` : nothing}
         </ha-config-section>
       </ha-top-app-bar-fixed>
     `;

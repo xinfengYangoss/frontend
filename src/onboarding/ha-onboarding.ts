@@ -39,14 +39,13 @@ import { subscribeUser } from "../data/ws-user";
 import { makeDialogManager } from "../dialogs/make-dialog-manager";
 import { litLocalizeLiteMixin } from "../mixins/lit-localize-lite-mixin";
 import { HassElement } from "../state/hass-element";
-import type { HomeAssistant, ValueChangedEvent } from "../types";
+import type { HomeAssistant } from "../types";
 import { storeState } from "../util/ha-pref-storage";
 import { registerServiceWorker } from "../util/register-service-worker";
 import "./onboarding-analytics";
 import "./onboarding-create-user";
 import "./onboarding-loading";
 import "./onboarding-welcome";
-import "./onboarding-welcome-links";
 
 type OnboardingEvent =
   | {
@@ -107,9 +106,6 @@ class HaOnboarding extends litLocalizeLiteMixin(HassElement) {
 
   @state() private _page = extractSearchParam("page");
 
-  private _mobileApp =
-    extractSearchParam("redirect_uri") === "homeassistant://auth-callback";
-
   connectedCallback() {
     super.connectedCallback();
     mainWindow.addEventListener("location-changed", this._updatePage);
@@ -130,30 +126,7 @@ class HaOnboarding extends litLocalizeLiteMixin(HassElement) {
     return html`<ha-progress-bar .value=${this._progress}></ha-progress-bar>
       <ha-card>
         <div class="card-content">${this._renderStep()}</div>
-      </ha-card>
-      ${
-        this._init && !this._restoring
-          ? html`<onboarding-welcome-links
-              .mobileApp=${this._mobileApp}
-            ></onboarding-welcome-links>`
-          : nothing
-      }
-      <div class="footer">
-        <ha-language-picker
-          .value=${this.language}
-          .label=${this.localize("ui.panel.page-onboarding.language")}
-          .languages=${["zh-Hans", "en"]}
-          button-style
-          native-name
-          @value-changed=${this._languageChanged}
-        ></ha-language-picker>
-        <a
-          href="https://www.home-assistant.io/getting-started/onboarding/"
-          target="_blank"
-          rel="noreferrer noopener"
-          >${this.localize("ui.panel.page-onboarding.help")}</a
-        >
-      </div>`;
+      </ha-card>`;
   }
 
   private _renderStep() {
@@ -213,7 +186,6 @@ class HaOnboarding extends litLocalizeLiteMixin(HassElement) {
       import("../resources/particles");
     }
     makeDialogManager(this);
-    import("../components/ha-language-picker");
   }
 
   protected willUpdate(changedProps: PropertyValues<this>) {
@@ -485,28 +457,6 @@ class HaOnboarding extends litLocalizeLiteMixin(HassElement) {
     });
   }
 
-  private _languageChanged(ev: ValueChangedEvent<string>) {
-    const language = ev.detail.value;
-    this.language = language;
-    if (this.hass) {
-      this._updateHass({
-        locale: { ...this.hass!.locale, language },
-        language,
-        selectedLanguage: language,
-      });
-      storeState(this.hass!);
-    } else {
-      try {
-        window.localStorage.setItem(
-          "selectedLanguage",
-          JSON.stringify(language)
-        );
-      } catch (_err: any) {
-        // Ignore
-      }
-    }
-  }
-
   static styles = css`
     .card-content {
       padding: 32px;
@@ -519,33 +469,6 @@ class HaOnboarding extends litLocalizeLiteMixin(HassElement) {
       left: 0;
       width: 100%;
       z-index: 10;
-    }
-    .footer {
-      padding-top: 8px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    ha-language-picker {
-      display: block;
-      width: 200px;
-      border-radius: var(--ha-border-radius-sm);
-      overflow: hidden;
-      --ha-select-height: 40px;
-      --mdc-select-fill-color: none;
-      --mdc-select-label-ink-color: var(--primary-text-color, #212121);
-      --mdc-select-ink-color: var(--primary-text-color, #212121);
-      --mdc-select-idle-line-color: transparent;
-      --mdc-select-hover-line-color: transparent;
-      --mdc-select-dropdown-icon-color: var(--primary-text-color, #212121);
-      --mdc-shape-small: 0;
-    }
-    a {
-      text-decoration: none;
-      color: var(--primary-text-color);
-      margin-right: 16px;
-      margin-inline-end: 16px;
-      margin-inline-start: initial;
     }
   `;
 }

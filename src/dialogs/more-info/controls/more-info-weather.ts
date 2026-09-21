@@ -187,8 +187,16 @@ class MoreInfoWeather extends LitElement {
   });
 
   protected render() {
-    if (!this._i18n || !this._formatters || !this._config || !this.stateObj) {
+    if (!this.stateObj) {
       return nothing;
+    }
+
+    if (!this._i18n || !this._formatters || !this._config) {
+      return html`
+        <div class="loading">
+          <ha-spinner size="medium"></ha-spinner>
+        </div>
+      `;
     }
 
     const supportedForecasts = this._supportedForecasts(this.stateObj);
@@ -586,10 +594,11 @@ class MoreInfoWeather extends LitElement {
 
         .content {
           display: flex;
-          flex-wrap: nowrap;
+          flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
           margin-bottom: var(--ha-space-4);
+          min-width: 0;
         }
 
         .icon-image {
@@ -613,7 +622,9 @@ class MoreInfoWeather extends LitElement {
         .info {
           display: flex;
           justify-content: space-between;
-          flex-grow: 1;
+          align-items: flex-start;
+          flex: 1 1 160px;
+          min-width: 0;
           overflow: hidden;
         }
 
@@ -649,7 +660,8 @@ class MoreInfoWeather extends LitElement {
           padding-right: var(--ha-space-3);
           padding-inline-end: var(--ha-space-3);
           padding-inline-start: initial;
-          width: 100%;
+          flex: 1 1 0;
+          min-width: 0;
         }
 
         .state {
@@ -660,19 +672,13 @@ class MoreInfoWeather extends LitElement {
 
         .forecast {
           display: flex;
-          justify-content: space-around;
+          justify-content: flex-start;
           padding: var(--ha-space-4);
           padding-bottom: 0px;
           overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
           scrollbar-color: var(--scrollbar-thumb-color) transparent;
           scrollbar-width: thin;
-          mask-image: linear-gradient(
-            90deg,
-            transparent 0%,
-            black 5%,
-            black 94%,
-            transparent 100%
-          );
           user-select: none;
           cursor: grab;
         }
@@ -688,6 +694,7 @@ class MoreInfoWeather extends LitElement {
         .forecast-day {
           display: flex;
           flex-direction: column;
+          flex: 0 0 auto;
         }
 
         .forecast-day-header {
@@ -706,11 +713,15 @@ class MoreInfoWeather extends LitElement {
         .forecast-day-content {
           display: flex;
           flex-direction: row;
+          flex-wrap: nowrap;
         }
 
         .forecast-item {
           text-align: center;
           padding: 0 var(--ha-space-3);
+          flex: 0 0 auto;
+          min-width: 52px;
+          box-sizing: border-box;
         }
 
         .forecast-item-label {
@@ -748,10 +759,14 @@ class MoreInfoWeather extends LitElement {
           --mdc-icon-size: 40px;
         }
 
-        .forecast .loading {
+        .loading {
           display: flex;
           justify-content: center;
           align-items: center;
+          min-height: 120px;
+        }
+
+        .forecast .loading {
           height: 120px;
         }
       `,

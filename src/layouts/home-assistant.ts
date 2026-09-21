@@ -8,6 +8,7 @@ import { handleHistoryPop, navigate } from "../common/navigate";
 import type { LocalizeFunc } from "../common/translations/localize";
 import { decodeMoreInfoUrl } from "../common/url/more-info-query-params";
 import { extractSearchParamsObject } from "../common/url/search-params";
+import { isUpstreamWebsite } from "../common/url/is-upstream-website";
 import { afterNextRender } from "../common/util/render-status";
 import { fetchHttpConfig } from "../data/http";
 import type { HttpConfigState } from "../data/http";
@@ -87,6 +88,16 @@ export class HomeAssistantAppEl extends QuickBarMixin(HassElement) {
     this._panelUrl = panelUrl(path);
   }
 
+  public connectedCallback(): void {
+    super.connectedCallback();
+    window.addEventListener("click", this._blockUpstreamLink, true);
+  }
+
+  public disconnectedCallback(): void {
+    window.removeEventListener("click", this._blockUpstreamLink, true);
+    super.disconnectedCallback();
+  }
+
   protected renderHass() {
     return html`
       <home-assistant-main
@@ -95,6 +106,19 @@ export class HomeAssistantAppEl extends QuickBarMixin(HassElement) {
       ></home-assistant-main>
     `;
   }
+
+  private _blockUpstreamLink = (event: MouseEvent): void => {
+    const link = event
+      .composedPath()
+      .find(
+        (target): target is HTMLAnchorElement =>
+          target instanceof HTMLAnchorElement
+      );
+    if (link && isUpstreamWebsite(link.href)) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+  };
 
   protected willUpdate(changedProps: PropertyValues<this>) {
     super.willUpdate(changedProps);
@@ -445,20 +469,12 @@ export class HomeAssistantAppEl extends QuickBarMixin(HassElement) {
         .error=${error}
         .migration=${this._databaseMigration}
         .localize=${this._launchScreenLocalize}
-      ></ha-init-page>`,
-      this._launchScreenAttribution
+      ></ha-init-page>`
     );
   }
 
   private get _launchScreenLocalize(): LocalizeFunc | undefined {
     return (this.hass ?? this._pendingHass).localize;
-  }
-
-  private get _launchScreenAttribution() {
-    return (
-      this._launchScreenLocalize?.("ui.init.project_from") ||
-      "A project from the"
-    );
   }
 }
 

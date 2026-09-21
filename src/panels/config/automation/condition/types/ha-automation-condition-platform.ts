@@ -32,7 +32,6 @@ import {
   getTargetEntityCount,
 } from "../../../../../data/target";
 import type { HomeAssistant } from "../../../../../types";
-import { documentationUrl } from "../../../../../util/documentation-url";
 
 // Mirrors `MAX_HISTORY_PRIMING_LOOKBACK` in homeassistant/helpers/condition.py:
 // when a condition has a `for:` duration, the recorder is only queried this far
@@ -189,7 +188,7 @@ export class HaPlatformCondition extends LitElement {
     );
 
     const documentationLink = this._manifest?.is_built_in
-      ? documentationUrl(this.hass, `/conditions/${this.condition.condition}`)
+      ? undefined
       : this._manifest?.documentation;
 
     return html`

@@ -37,7 +37,7 @@ class HaPanelIframe extends LitElement {
         <hass-error-screen
           .hass=${this.hass}
           .narrow=${this.narrow}
-          error="Unable to load iframes that load websites over http:// if Home Assistant is served over https://."
+          error="Unable to load iframes that load websites over http:// if CHENGVIN is served over https://."
           rootnav
         ></hass-error-screen>
       `;

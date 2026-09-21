@@ -11,7 +11,6 @@ import {
 } from "../../data/theme";
 import { SubscribeMixin } from "../../mixins/subscribe-mixin";
 import type { HomeAssistant, ThemeSettings } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 import { clearSelectedThemeState } from "../../util/ha-pref-storage";
 
 @customElement("ha-pick-theme-row")
@@ -57,16 +56,6 @@ export class HaPickThemeRow extends SubscribeMixin(LitElement) {
               ? this.hass.localize("ui.panel.profile.themes.error_no_theme")
               : nothing
           }
-          <a
-            href=${documentationUrl(
-              this.hass,
-              "/integrations/frontend/#defining-themes"
-            )}
-            target="_blank"
-            rel="noreferrer"
-          >
-            ${this.hass.localize("ui.panel.profile.themes.link_promo")}
-          </a>
         `}
         .labels=${{
           theme: this.hass.localize("ui.panel.profile.themes.dropdown_label"),

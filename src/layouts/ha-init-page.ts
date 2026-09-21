@@ -22,7 +22,7 @@ export class HaInitPage extends LitElement {
           <p>
             ${
               this.localize?.("ui.init.error.title") ||
-              "Unable to connect to Home Assistant."
+              "Unable to connect to CHENGVIN."
             }
           </p>
           <p class="retry-text">
@@ -50,8 +50,8 @@ export class HaInitPage extends LitElement {
                       >`,
                     }) ||
                     html`It is possible that you are seeing this screen because
-                      your Home Assistant is not currently connected. You can
-                      ask it to come online from your
+                      your CHENGVIN is not currently connected. You can ask it
+                      to come online from your
                       <a href="https://account.nabucasa.com/"
                         >Nabu Casa account page</a
                       >.`
@@ -68,7 +68,7 @@ export class HaInitPage extends LitElement {
               ? html`<span class="migration-text"
                   >${
                     this.localize?.("ui.init.migration") ||
-                    "Database upgrade is in progress, Home Assistant will not start until the upgrade is completed.\n\nThe upgrade may need a long time to complete, please be patient."
+                    "Database upgrade is in progress, CHENGVIN will not start until the upgrade is completed.\n\nThe upgrade may need a long time to complete, please be patient."
                   }</span
                 >`
               : this.localize?.("ui.init.loading") || "Loading..."

@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home Assistant Demo</title>
+    <title>CHENGVIN Demo</title>
     <%= renderTemplate("../../../src/html/_header.html.template") %>
-    <link rel="mask-icon" href="/static/icons/mask-icon.svg" color="#03a9f4" />
+    <link rel="mask-icon" href="/static/icons/mask-icon.svg" color="#006fbf" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/static/icons/favicon-apple-180x180.png"
+      href="/static/icons/chengvin.png"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
       name="msapplication-square70x70logo"
-      content="/static/icons/tile-win-70x70.png"
+      content="/static/icons/chengvin.png"
     />
     <meta
       name="msapplication-square150x150logo"
-      content="/static/icons/tile-win-150x150.png"
+      content="/static/icons/chengvin.png"
     />
     <meta
       name="msapplication-wide310x150logo"
-      content="/static/icons/tile-win-310x150.png"
+      content="/static/icons/chengvin.png"
     />
     <meta
       name="msapplication-square310x310logo"
-      content="/static/icons/tile-win-310x310.png"
+      content="/static/icons/chengvin.png"
     />
-    <meta name="msapplication-TileColor" content="#03a9f4ff" />
+    <meta name="msapplication-TileColor" content="#006fbfff" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="referrer" content="same-origin" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="theme-color" content="#03a9f4" />
+    <meta name="theme-color" content="#006fbf" />
     <%= renderTemplate("_social_meta.html.template") %>
     <style>
       html {

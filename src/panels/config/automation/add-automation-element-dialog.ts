@@ -1,6 +1,6 @@
 import "@home-assistant/webawesome/dist/components/divider/divider";
 import { consume } from "@lit/context";
-import { mdiClose, mdiHelpCircleOutline } from "@mdi/js";
+import { mdiClose } from "@mdi/js";
 import type { HassServiceTarget } from "home-assistant-js-websocket";
 import type { CSSResultGroup, PropertyValues, TemplateResult } from "lit";
 import { LitElement, css, html, nothing } from "lit";
@@ -117,7 +117,6 @@ import type { HassDialog } from "../../../dialogs/make-dialog-manager";
 import { KeyboardShortcutMixin } from "../../../mixins/keyboard-shortcut-mixin";
 import { haStyleScrollbar } from "../../../resources/styles";
 import type { HomeAssistant, ValueChangedEvent } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { showToast } from "../../../util/toast";
 import "./add-automation-element/ha-automation-add-element-paste";
 import "./add-automation-element/ha-automation-add-from-target";
@@ -844,29 +843,11 @@ class DialogAddAutomationElement
   }
 
   private _renderHeader() {
-    const docUrl = this._getDocumentationUrl(this._params!.type);
-
     return html`
       <ha-dialog-header subtitle-position="above">
         <span slot="title">${this._getDialogTitle()}</span>
 
         ${this._renderDialogSubtitle()}
-        ${
-          !this._narrow || (!this._selectedGroup && !this._selectedTarget)
-            ? html`
-                <ha-icon-button
-                  .path=${mdiHelpCircleOutline}
-                  .label=${this.hass.localize(
-                    `ui.panel.config.automation.editor.${this._params!.type}s.learn_more`
-                  )}
-                  slot="actionItems"
-                  href=${docUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                ></ha-icon-button>
-              `
-            : nothing
-        }
         ${
           this._narrow &&
           (this._selectedGroup || this._selectedTarget) &&
@@ -1875,18 +1856,6 @@ class DialogAddAutomationElement
   private _back() {
     mainWindow.history.back();
   }
-
-  private _getDocumentationUrl = memoizeOne(
-    (type: "trigger" | "condition" | "action") =>
-      documentationUrl(
-        this.hass,
-        type === "trigger"
-          ? "/docs/automation/trigger/"
-          : type === "condition"
-            ? "/docs/automation/condition/"
-            : "/docs/automation/action/"
-      )
-  );
 
   private _groupSelected(ev) {
     const group = ev.currentTarget;

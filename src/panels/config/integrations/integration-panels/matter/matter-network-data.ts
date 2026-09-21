@@ -23,7 +23,7 @@ const ROUTER_ROLES = new Set(["leader", "router", "reed"]);
 
 // HA is not a Matter node; the frontend synthesizes it as the graph root.
 export const HOME_ASSISTANT_NODE_ID = "ha";
-const HOME_ASSISTANT_LABEL = "Home Assistant";
+const HOME_ASSISTANT_LABEL = "CHENGVIN";
 
 // 0 is never returned: a falsy link value re-enables the direction arrow
 // in ha-network-graph
@@ -318,7 +318,7 @@ export function createMatterNetworkChartData(
     lineStyle: {
       width: 3,
       // the same hue as the radio links behind this hub, so one transport
-      // reads as one colour all the way back to Home Assistant
+      // reads as one colour all the way back to CHENGVIN
       color: style.getPropertyValue(networkToColorVar(network)),
       type: "solid",
     },

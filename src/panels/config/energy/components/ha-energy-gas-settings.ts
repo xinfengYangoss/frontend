@@ -24,7 +24,6 @@ import {
 } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../../../resources/styles";
 import type { HomeAssistant } from "../../../../types";
-import { documentationUrl } from "../../../../util/documentation-url";
 import { showEnergySettingsGasDialog } from "../dialogs/show-dialogs-energy";
 import "./ha-energy-validation-result";
 import { energyCardStyles } from "./styles";
@@ -65,15 +64,7 @@ export class EnergyGasSettings extends LitElement {
         </h1>
 
         <div class="card-content">
-          <p>
-            ${this.hass.localize("ui.panel.config.energy.gas.sub")}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href=${documentationUrl(this.hass, "/docs/energy/gas/")}
-              >${this.hass.localize("ui.panel.config.energy.gas.learn_more")}</a
-            >
-          </p>
+          <p>${this.hass.localize("ui.panel.config.energy.gas.sub")}</p>
           ${gasValidation.map(
             (result) => html`
               <ha-energy-validation-result

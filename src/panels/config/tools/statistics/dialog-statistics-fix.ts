@@ -9,7 +9,6 @@ import "../../../../components/ha-spinner";
 import { clearStatistics, getStatisticLabel } from "../../../../data/recorder";
 import { haStyle, haStyleDialog } from "../../../../resources/styles";
 import type { HomeAssistant } from "../../../../types";
-import { documentationUrl } from "../../../../util/documentation-url";
 import { showAlertDialog } from "../../../lovelace/custom-card-helpers";
 import type { DialogStatisticsFixParams } from "./show-dialog-statistics-fix";
 
@@ -88,32 +87,9 @@ export class DialogStatisticsFix extends LitElement {
                     { statistic_id: issue.data.statistic_id }
                   )}`
               : issue.type === "entity_not_recorded"
-                ? html`<br /><br />
-                    <a
-                      href=${documentationUrl(
-                        this.hass,
-                        "/integrations/recorder/#configure-filter"
-                      )}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      ${this.hass.localize(
-                        "ui.panel.config.tools.tabs.statistics.fix_issue.entity_not_recorded.info_text_3_link"
-                      )}</a
-                    >`
+                ? html`<br /><br /> `
                 : issue.type === "entity_no_longer_recorded"
-                  ? html`<a
-                        href=${documentationUrl(
-                          this.hass,
-                          "/integrations/recorder/#configure-filter"
-                        )}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                      >
-                        ${this.hass.localize(
-                          "ui.panel.config.tools.tabs.statistics.fix_issue.entity_no_longer_recorded.info_text_3_link"
-                        )}</a
-                      ><br /><br />
+                  ? html`<br /><br />
                       ${this.hass.localize(
                         "ui.panel.config.tools.tabs.statistics.fix_issue.entity_no_longer_recorded.info_text_4"
                       )}`
@@ -128,15 +104,6 @@ export class DialogStatisticsFix extends LitElement {
                             ${this.hass.localize(
                               "ui.panel.config.tools.tabs.statistics.fix_issue.state_class_removed.info_text_4"
                             )}
-                            <a
-                              href="https://developers.home-assistant.io/docs/core/entity/sensor/#long-term-statistics"
-                              target="_blank"
-                              rel="noreferrer noopener"
-                            >
-                              ${this.hass.localize(
-                                "ui.panel.config.tools.tabs.statistics.fix_issue.state_class_removed.info_text_4_link"
-                              )}</a
-                            >
                           </li>
                           <li>
                             ${this.hass.localize(

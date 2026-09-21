@@ -10,7 +10,6 @@ import type { HaInput } from "../../../../components/input/ha-input";
 import { showAlertDialog } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../../../resources/styles";
 import type { HomeAssistant } from "../../../../types";
-import { documentationUrl } from "../../../../util/documentation-url";
 import "./event-subscribe-card";
 import "./events-list";
 
@@ -42,18 +41,6 @@ class HaPanelDevEvent extends LitElement {
                 ${this.hass.localize(
                   "ui.panel.config.tools.tabs.events.description"
                 )}
-                <a
-                  href=${documentationUrl(
-                    this.hass,
-                    "/docs/configuration/events/"
-                  )}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  ${this.hass.localize(
-                    "ui.panel.config.tools.tabs.events.documentation"
-                  )}
-                </a>
               </p>
               <div class="inputs">
                 <ha-input

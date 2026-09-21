@@ -1,4 +1,4 @@
-import { mdiDotsVertical, mdiHarddisk, mdiOpenInNew } from "@mdi/js";
+import { mdiDotsVertical, mdiHarddisk } from "@mdi/js";
 import type { PropertyValues } from "lit";
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -27,7 +27,6 @@ import {
 import "../../../layouts/hass-subpage";
 import type { HomeAssistant } from "../../../types";
 import { brandsUrl } from "../../../util/brands-url";
-import { documentationUrl } from "../../../util/documentation-url";
 import "./components/config/ha-backup-config-agents";
 import "./components/config/ha-backup-config-data";
 import type { BackupConfigData } from "./components/config/ha-backup-config-data";
@@ -268,7 +267,7 @@ class HaConfigBackupSettings extends LitElement {
                         >${this.hass.localize(
                           "ui.panel.config.backup.settings.locations.ha_cloud_backup",
                           {
-                            home_assistant_cloud: "Home Assistant Cloud",
+                            home_assistant_cloud: "CHENGVIN Cloud",
                           }
                         )}</span
                       >
@@ -297,18 +296,6 @@ class HaConfigBackupSettings extends LitElement {
                 : nothing
             }
             <div class="card-actions">
-              <ha-button
-                size="s"
-                href=${documentationUrl(this.hass, "/integrations/#backup")}
-                target="_blank"
-                rel="noreferrer"
-                appearance="plain"
-              >
-                <ha-svg-icon slot="start" .path=${mdiOpenInNew}></ha-svg-icon>
-                ${this.hass.localize(
-                  "ui.panel.config.backup.settings.locations.more_locations"
-                )}
-              </ha-button>
               ${
                 supervisor
                   ? html`<ha-button

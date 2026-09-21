@@ -26,7 +26,6 @@ import { domainToName } from "../../../data/integration";
 import { DirtyStateProviderMixin } from "../../../mixins/dirty-state-provider-mixin";
 import { haStyleDialog } from "../../../resources/styles";
 import type { HomeAssistant } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import type { AddApplicationCredentialDialogParams } from "./show-dialog-add-application-credential";
 
 interface CredentialFormState {
@@ -108,7 +107,7 @@ export class DialogAddApplicationCredential extends DirtyStateProviderMixin<Cred
       ? domainToName(this.hass.localize, this._domain!)
       : "";
     const documentationLink = this._manifest?.is_built_in
-      ? documentationUrl(this.hass, `/integrations/${this._domain}`)
+      ? undefined
       : this._manifest?.documentation;
     return html`
       <ha-dialog
@@ -169,19 +168,6 @@ export class DialogAddApplicationCredential extends DirtyStateProviderMixin<Cred
                           ${this.hass.localize(
                             "ui.panel.config.application_credentials.editor.description"
                           )}
-                          <a
-                            href=${documentationUrl(
-                              this.hass!,
-                              "/integrations/application_credentials"
-                            )}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            ${this.hass!.localize(
-                              "ui.panel.config.application_credentials.editor.view_documentation"
-                            )}
-                            <ha-svg-icon .path=${mdiOpenInNew}></ha-svg-icon>
-                          </a>
                         </p>`
                       : nothing
                   }

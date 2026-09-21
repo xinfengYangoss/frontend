@@ -14,18 +14,18 @@ export const coreColorStyles = css`
     --ha-color-black: #000000;
     --ha-color-white: #ffffff;
 
-    /* primary */
-    --ha-color-primary-05: #001721;
-    --ha-color-primary-10: #002e3e;
-    --ha-color-primary-20: #004156;
-    --ha-color-primary-30: #006787;
-    --ha-color-primary-40: #009ac7;
-    --ha-color-primary-50: #18bcf2;
-    --ha-color-primary-60: #37c8fd;
-    --ha-color-primary-70: #7bd4fb;
-    --ha-color-primary-80: #b9e6fc;
-    --ha-color-primary-90: #dff3fc;
-    --ha-color-primary-95: #eff9fe;
+    /* primary — CHENGVIN blue */
+    --ha-color-primary-05: #001428;
+    --ha-color-primary-10: #00264a;
+    --ha-color-primary-20: #003a6e;
+    --ha-color-primary-30: #005196;
+    --ha-color-primary-40: #006fbf;
+    --ha-color-primary-50: #1e88d0;
+    --ha-color-primary-60: #4ba3e0;
+    --ha-color-primary-70: #7cbeea;
+    --ha-color-primary-80: #b3d9f4;
+    --ha-color-primary-90: #d9ecf9;
+    --ha-color-primary-95: #edf6fc;
 
     /* neutral */
     --ha-color-neutral-05: #141414;

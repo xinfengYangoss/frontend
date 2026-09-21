@@ -85,6 +85,11 @@ export interface FormatsType {
  * }
  */
 
+const brandTranslation = (value: string | undefined): string | undefined =>
+  value
+    ?.replaceAll("Home Assistant Companion", "CHENGVIN Assistant")
+    .replaceAll("Home Assistant", "CHENGVIN");
+
 export const computeLocalize = async <Keys extends string = LocalizeKeys>(
   cache: HTMLElement & {
     _localizationCache?: Record<string, IntlMessageFormat>;
@@ -107,7 +112,8 @@ export const computeLocalize = async <Keys extends string = LocalizeKeys>(
 
     // Cache the key/value pairs for the same language, so that we don't
     // do extra work if we're just reusing strings across an application.
-    const translatedValue = resources[language][key];
+    // Brand the translation template before interpolating user-provided names.
+    const translatedValue = brandTranslation(resources[language][key]);
 
     if (!translatedValue) {
       return "";

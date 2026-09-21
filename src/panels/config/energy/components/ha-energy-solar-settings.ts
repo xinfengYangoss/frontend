@@ -22,7 +22,6 @@ import {
 } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyle } from "../../../../resources/styles";
 import type { HomeAssistant } from "../../../../types";
-import { documentationUrl } from "../../../../util/documentation-url";
 import { showEnergySettingsSolarDialog } from "../dialogs/show-dialogs-energy";
 import "./ha-energy-validation-result";
 import { energyCardStyles } from "./styles";
@@ -66,17 +65,7 @@ export class EnergySolarSettings extends LitElement {
         </h1>
 
         <div class="card-content">
-          <p>
-            ${this.hass.localize("ui.panel.config.energy.solar.sub")}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href=${documentationUrl(this.hass, "/docs/energy/solar-panels/")}
-              >${this.hass.localize(
-                "ui.panel.config.energy.solar.learn_more"
-              )}</a
-            >
-          </p>
+          <p>${this.hass.localize("ui.panel.config.energy.solar.sub")}</p>
           ${solarValidation.map(
             (result) => html`
               <ha-energy-validation-result

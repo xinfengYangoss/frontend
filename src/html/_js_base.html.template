@@ -1,15 +1,24 @@
 <script>
-  function _ls(src, notCustom) {
+  function _ls(src, _notCustom) {
     var script = document.createElement("script");
-    if (notCustom) {
-      script.crossOrigin = "use-credentials";
-    }
+    // Do not set crossOrigin on classic ES5 scripts. Older OEM WebViews
+    // (vivo Z3 / Chrome 62–70) fail that CORS check and then render only
+    // the static logo.
+    script.onerror = function () {
+      window.__haScriptLoadError = src;
+    };
     script.src = src;
     return document.head.appendChild(script);
   }
   // Modern browsers are detected primarily using the user agent string.
   // A feature detection which roughly lines up with the modern targets is used
   // as a fallback to guard against spoofs. It should be updated periodically.
-  var isModern = <%= modernRegex %>.test(navigator.userAgent) &&
-    "findLast" in Array.prototype;
+  // Companion apps append "Home Assistant/..." to the WebView UA. OEM WebViews
+  // (vivo, Huawei, Xiaomi) often fail the browserslist regex even when the
+  // engine can run the modern build, so treat that UA as modern when the
+  // feature check passes. Engines without findLast still get the ES5 fallback.
+  var isModern =
+    "findLast" in Array.prototype &&
+    (<%= modernRegex %>.test(navigator.userAgent) ||
+      /Home Assistant\//.test(navigator.userAgent));
 </script>

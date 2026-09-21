@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hans">
   <head>
     <title>CHENGVIN</title>
     <%= renderTemplate("_header.html.template") %>
@@ -17,7 +17,7 @@
       }
       body {
         box-sizing: border-box;
-        padding: 32px 0;
+        padding: 24px 0 32px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -27,21 +27,42 @@
         max-width: 400px;
         margin: 0 auto;
         padding: 0 16px;
-        box-sizing: content-box;
+        box-sizing: border-box;
       }
 
       .header {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-bottom: 32px;
+        gap: 12px;
+        margin-bottom: 28px;
         padding-top: var(--safe-area-inset-top);
+        text-align: center;
+        max-width: 100%;
       }
 
-      .header img {
+      .header .brand-mark {
         display: block;
-        width: min(280px, 72vw);
+        width: 168px;
+        max-width: 100%;
         height: auto;
+        object-fit: contain;
+      }
+
+      .header .company-name {
+        margin: 4px 0 0;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.04em;
+        color: var(--secondary-text-color, #5f6368);
+        max-width: 100%;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .header .company-name {
+          color: var(--secondary-text-color, #9aa0a6);
+        }
       }
     </style>
   </head>
@@ -49,9 +70,11 @@
     <div class="content">
       <div class="header">
         <img
-          src="/static/images/chengvin/chengvin-wordmark.png"
+          class="brand-mark"
+          src="/static/images/chengvin/chengvin-mark.png"
           alt="CHENGVIN"
         />
+        <div class="company-name">福建星启航信息科技有限公司</div>
       </div>
       <ha-authorize></ha-authorize>
     </div>

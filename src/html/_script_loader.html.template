@@ -1,9 +1,16 @@
 <script crossorigin="use-credentials">
   if (isModern) {
-    <% for (const entry of latestEntryJS) { %>
-      import("<%= entry %>");
-    <% } %>
     window.latestJS = true;
+    Promise.all([
+      <% for (const entry of latestEntryJS) { %>
+        import("<%= entry %>"),
+      <% } %>
+    ]).catch(function () {
+      window.latestJS = false;
+      <% for (const entry of es5EntryJS) { %>
+        _ls("<%= entry %>", true);
+      <% } %>
+    });
   }
 </script>
 <script>
@@ -13,5 +20,58 @@
         _ls("<%= entry %>", true);
       <% } %>
     }
+
+    function frontendDefined() {
+      return (
+        window.customElements &&
+        (customElements.get("ha-authorize") ||
+          customElements.get("ha-onboarding") ||
+          customElements.get("home-assistant") ||
+          customElements.get("ha-landing-page"))
+      );
+    }
+
+    if (window.latestJS) {
+      return;
+    }
+
+    var attempts = 0;
+    var timer = setInterval(function () {
+      attempts += 1;
+      if (frontendDefined()) {
+        clearInterval(timer);
+        return;
+      }
+      var loadFailed = window.__haScriptLoadError;
+      // Old phones parse a large ES5 bundle slowly; wait up to 30s unless the
+      // script 404'd.
+      if (!loadFailed && attempts < 60) {
+        return;
+      }
+      if (loadFailed && attempts < 4) {
+        return;
+      }
+      clearInterval(timer);
+      if (document.querySelector("[data-ha-legacy-load-error]")) {
+        return;
+      }
+      var box = document.createElement("div");
+      box.setAttribute("role", "alert");
+      box.setAttribute("data-ha-legacy-load-error", "");
+      box.style.cssText =
+        "margin:24px 0;padding:16px;border-radius:8px;background:#fff3cd;color:#212121;text-align:center;line-height:1.6;";
+      if (!window.customElements) {
+        box.textContent =
+          "当前系统浏览器过旧，无法运行 CHENGVIN。请更新 Android System WebView，或换用 Chrome 59 及以上的设备。";
+      } else if (loadFailed) {
+        box.textContent =
+          "兼容版前端未能加载。请使用完整生产包（含 frontend_es5）重新构建并重启服务后再试。";
+      } else {
+        box.textContent =
+          "界面加载超时。请检查网络后重试；若仍失败，请更新系统 WebView 或换用较新手机。";
+      }
+      var content = document.querySelector(".content") || document.body;
+      content.appendChild(box);
+    }, 500);
   })();
 </script>

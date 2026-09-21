@@ -59,6 +59,28 @@ export class GridSection extends LitElement implements LovelaceSectionElement {
 
   @state() _dragging = false;
 
+  public connectedCallback() {
+    super.connectedCallback();
+    this.addEventListener(
+      "card-visibility-changed",
+      this._onCardVisibilityChanged
+    );
+  }
+
+  public disconnectedCallback() {
+    this.removeEventListener(
+      "card-visibility-changed",
+      this._onCardVisibilityChanged
+    );
+    super.disconnectedCallback();
+  }
+
+  private _onCardVisibilityChanged = () => {
+    // Chrome < 105 cannot use :has() to collapse wrappers of hidden
+    // cards, so re-render and hide those cells with a class instead.
+    this.requestUpdate();
+  };
+
   public setConfig(config: LovelaceSectionConfig): void {
     this._config = config;
   }
@@ -109,6 +131,11 @@ export class GridSection extends LitElement implements LovelaceSectionElement {
               const gridOptions = card.getGridOptions();
 
               const { rows, columns } = computeCardGridSize(gridOptions);
+              // Clamp in JS: CSS min() is dropped on Chrome < 79.
+              const columnSize =
+                typeof columns === "number" ? Math.min(columns, 12) : undefined;
+              const rowSize = typeof rows === "number" ? rows : undefined;
+              const isFullWidth = columns === "full";
 
               const cardPath: LovelaceCardPath = [
                 this.viewIndex!,
@@ -118,13 +145,19 @@ export class GridSection extends LitElement implements LovelaceSectionElement {
               return html`
                 <div
                   style=${styleMap({
-                    "--column-size":
-                      typeof columns === "number" ? columns : undefined,
-                    "--row-size": typeof rows === "number" ? rows : undefined,
+                    "--column-size": columnSize,
+                    "--row-size": rowSize,
+                    gridColumn: isFullWidth
+                      ? "1 / -1"
+                      : columnSize
+                        ? `span ${columnSize}`
+                        : "span 1",
+                    gridRow: rowSize ? `span ${rowSize}` : undefined,
                   })}
                   class="card ${classMap({
                     "fit-rows": typeof rows === "number",
-                    "full-width": columns === "full",
+                    "full-width": isFullWidth,
+                    hidden: Boolean(card.hidden),
                   })}"
                   .sortableData=${cardPath}
                 >
@@ -221,19 +254,17 @@ export class GridSection extends LitElement implements LovelaceSectionElement {
           gap: var(--row-gap);
         }
         .container {
-          --grid-column-count: calc(
-            var(--base-column-count) * var(--column-span, 1)
-          );
           display: grid;
-          grid-template-columns: repeat(
-            var(--grid-column-count),
-            minmax(0, 1fr)
-          );
+          /* Integer literal required: Chrome < 73 cannot use
+             repeat(var(--n), ...) and then shrinks cards to min-content
+             (icon-only overview on vivo Z3). */
+          grid-template-columns: repeat(12, minmax(0, 1fr));
           grid-auto-rows: auto;
           row-gap: var(--row-gap);
           column-gap: var(--column-gap);
           padding: 0;
           margin: 0 auto;
+          width: 100%;
         }
 
         .card {
@@ -242,8 +273,13 @@ export class GridSection extends LitElement implements LovelaceSectionElement {
             var(--ha-border-radius-lg)
           );
           position: relative;
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+          min-width: 0;
+          max-width: 100%;
           grid-row: span var(--row-size, 1);
-          grid-column: span min(var(--column-size, 1), var(--grid-column-count));
+          grid-column: span var(--column-size, 1);
         }
 
         .container.edit-mode .card {
@@ -266,8 +302,9 @@ export class GridSection extends LitElement implements LovelaceSectionElement {
           display: block;
         }
 
+        .card.hidden,
         .card:has(> *[hidden]) {
-          display: none;
+          display: none !important;
         }
 
         .add {

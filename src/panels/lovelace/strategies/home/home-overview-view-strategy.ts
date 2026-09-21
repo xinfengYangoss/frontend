@@ -106,7 +106,7 @@ const computeAreaCard = (
     vertical: true,
     grid_options: {
       rows: 2,
-      columns: 4,
+      columns: 6,
     },
   };
 };
@@ -232,7 +232,7 @@ export class HomeOverviewViewStrategy extends ReactiveElement {
           },
           grid_options: {
             rows: 2,
-            columns: 4,
+            columns: 6,
           },
         } as TileCardConfig);
       }

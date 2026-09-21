@@ -40,7 +40,7 @@ export default <T extends Constructor<HassBaseEl>>(superClass: T) =>
             id: SERVER_STARTUP_TOAST_ID,
             message:
               this.hass!.localize("ui.notification_toast.starting") ||
-              "Home Assistant is starting. Not everything will be available until it is finished.",
+              "CHENGVIN is starting. Not everything will be available until it is finished.",
             duration: -1,
             dismissable: false,
             action: {
@@ -79,7 +79,7 @@ export default <T extends Constructor<HassBaseEl>>(superClass: T) =>
                 "Safe mode",
               text:
                 this.hass!.localize("ui.dialogs.safe_mode.text") ||
-                "Home Assistant is running in safe mode, custom integrations and community frontend modules are not available. Restart Home Assistant to exit safe mode.",
+                "CHENGVIN is running in safe mode, custom integrations and community frontend modules are not available. Restart CHENGVIN to exit safe mode.",
             });
           }
         );

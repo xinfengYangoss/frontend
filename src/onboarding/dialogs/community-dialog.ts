@@ -26,53 +26,6 @@ class DialogCommunity extends DialogMixin(LitElement) {
         <ha-list-item-button
           target="_blank"
           rel="noreferrer noopener"
-          href="https://community.home-assistant.io/"
-        >
-          <img
-            src="/static/icons/favicon-192x192.png"
-            slot="start"
-            alt="Home Assistant Logo"
-          />
-          <span slot="headline">
-            ${this._localize("ui.panel.page-onboarding.welcome.forums")}
-          </span>
-          <ha-svg-icon slot="end" .path=${mdiOpenInNew}></ha-svg-icon>
-        </ha-list-item-button>
-        <ha-list-item-button
-          target="_blank"
-          rel="noreferrer noopener"
-          href="https://newsletter.openhomefoundation.org/"
-        >
-          <img
-            src="/static/icons/logo_ohf.svg"
-            slot="start"
-            alt="Open Home Foundation Logo"
-          />
-          <span slot="headline">
-            ${this._localize(
-              "ui.panel.page-onboarding.welcome.open_home_newsletter"
-            )}
-          </span>
-          <ha-svg-icon slot="end" .path=${mdiOpenInNew}></ha-svg-icon>
-        </ha-list-item-button>
-        <ha-list-item-button
-          target="_blank"
-          rel="noreferrer noopener"
-          href="https://www.home-assistant.io/join-chat"
-        >
-          <img
-            src="/static/images/logo_discord.png"
-            slot="start"
-            alt="Discord Logo"
-          />
-          <span slot="headline">
-            ${this._localize("ui.panel.page-onboarding.welcome.discord")}
-          </span>
-          <ha-svg-icon slot="end" .path=${mdiOpenInNew}></ha-svg-icon>
-        </ha-list-item-button>
-        <ha-list-item-button
-          target="_blank"
-          rel="noreferrer noopener"
           href="https://fosstodon.org/@homeassistant"
         >
           <ha-svg-icon .path=${mdiAccountGroup} slot="start"></ha-svg-icon>

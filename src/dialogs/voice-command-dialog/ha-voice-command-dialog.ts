@@ -1,10 +1,5 @@
 import "@home-assistant/webawesome/dist/components/divider/divider";
-import {
-  mdiChevronDown,
-  mdiClose,
-  mdiHelpCircleOutline,
-  mdiStar,
-} from "@mdi/js";
+import { mdiChevronDown, mdiClose, mdiStar } from "@mdi/js";
 import type { CSSResultGroup, PropertyValues } from "lit";
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -29,7 +24,6 @@ import {
 } from "../../data/assist_pipeline";
 import { haStyleDialog } from "../../resources/styles";
 import type { HomeAssistant } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 import type { VoiceCommandDialogParams } from "./show-ha-voice-command-dialog";
 
 @customElement("ha-voice-command-dialog")
@@ -170,14 +164,6 @@ export class HaVoiceCommandDialog extends LitElement {
               }
             </ha-dropdown>
           </div>
-          <ha-icon-button
-            .label=${this.hass.localize("ui.common.help")}
-            .path=${mdiHelpCircleOutline}
-            href=${documentationUrl(this.hass, "/docs/assist/")}
-            slot="actionItems"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></ha-icon-button>
         </ha-dialog-header>
 
         ${

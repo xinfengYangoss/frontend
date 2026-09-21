@@ -2,11 +2,11 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square70x70logo src="/static/icons/tile-win-70x70.png"/>
-            <square150x150logo src="/static/icons/tile-win-150x150.png"/>
-			<wide310x150logo src="/static/icons/tile-win-310x150.png"/>
-			<square310x310logo src="/static/icons/tile-win-310x310.png"/>
-            <TileColor>#18bcf2</TileColor>
+            <square70x70logo src="/static/icons/chengvin.png"/>
+            <square150x150logo src="/static/icons/chengvin.png"/>
+			<wide310x150logo src="/static/icons/chengvin.png"/>
+			<square310x310logo src="/static/icons/chengvin.png"/>
+            <TileColor>#006fbf</TileColor>
         </tile>
     </msapplication>
 </browserconfig>

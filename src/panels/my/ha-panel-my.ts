@@ -1,3 +1,4 @@
+import { domainToName } from "../../data/integration";
 import { sanitizeUrl } from "@braintree/sanitize-url";
 import { html, LitElement, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
@@ -11,10 +12,8 @@ import {
   createSearchParam,
   extractSearchParamsObject,
 } from "../../common/url/search-params";
-import { domainToName } from "../../data/integration";
 import "../../layouts/hass-error-screen";
 import type { HomeAssistant, Route } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 
 // When a user presses "m", the user is redirected to the first redirect
 // for which holds true currentPath.startsWith(redirect.redirect)
@@ -537,49 +536,26 @@ class HaPanelMy extends LitElement {
         case "not_supported":
           error =
             this.hass.localize("ui.panel.my.not_supported", {
-              link: html`<a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://my.home-assistant.io/faq.html#supported-pages"
-                >${this.hass.localize("ui.panel.my.faq_link")}</a
-              >`,
+              link: html`${this.hass.localize("ui.panel.my.faq_link")}`,
             }) || "This redirect is not supported.";
           break;
         case "no_component":
           error =
             this.hass.localize("ui.panel.my.component_not_loaded", {
-              integration: html`<a
-                target="_blank"
-                rel="noreferrer noopener"
-                href=${documentationUrl(
-                  this.hass,
-                  `/integrations/${this._redirect!.component!}`
-                )}
-                >${domainToName(
-                  this.hass.localize,
-                  this._redirect!.component!
-                )}</a
-              >`,
+              integration: html`${domainToName(
+                this.hass.localize,
+                this._redirect!.component!
+              )}`,
             }) || "This redirect is not supported.";
           break;
         case "no_supervisor":
           error = this.hass.localize("ui.panel.my.no_supervisor", {
-            docs_link: html`<a
-              target="_blank"
-              rel="noreferrer noopener"
-              href=${documentationUrl(this.hass, "/installation")}
-              >${this.hass.localize("ui.panel.my.documentation")}</a
-            >`,
+            docs_link: html`${this.hass.localize("ui.panel.my.documentation")}`,
           });
           break;
         case "not_app":
           error = this.hass.localize("ui.panel.my.not_app", {
-            link: html`<a
-              target="_blank"
-              rel="noreferrer noopener"
-              href="https://companion.home-assistant.io/download"
-              >${this.hass.localize("ui.panel.my.download_app")}</a
-            >`,
+            link: html`${this.hass.localize("ui.panel.my.download_app")}`,
           });
           break;
         case "url_error":

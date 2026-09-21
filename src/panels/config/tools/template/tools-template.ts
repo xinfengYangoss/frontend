@@ -29,7 +29,6 @@ import { subscribeRenderTemplate } from "../../../../data/ws-templates";
 import { showConfirmationDialog } from "../../../../dialogs/generic/show-dialog-box";
 import { haStyle, haStyleScrollbar } from "../../../../resources/styles";
 import type { HomeAssistant } from "../../../../types";
-import { documentationUrl } from "../../../../util/documentation-url";
 
 const DEMO_TEMPLATE = `{## Imitate available variables: ##}
 {% set my_test_json = {
@@ -172,14 +171,6 @@ class HaPanelDevTemplate extends LitElement {
               ${TEMPLATE_DOCS_LINKS.map(
                 (link) => html`
                   <li>
-                    <a
-                      href=${documentationUrl(this.hass, link.path)}
-                      target="_blank"
-                      rel="noreferrer"
-                      >${this.hass.localize(
-                        `ui.panel.config.tools.tabs.templates.${link.key}` as LocalizeKeys
-                      )}</a
-                    >
                     <span class="link-description"
                       >${this.hass.localize(
                         `ui.panel.config.tools.tabs.templates.${link.key}_description` as LocalizeKeys

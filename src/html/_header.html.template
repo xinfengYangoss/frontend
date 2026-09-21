@@ -1,6 +1,6 @@
 <meta charset="utf-8" />
 <link rel="manifest" href="<%= hassUrl %>/manifest.json" crossorigin="use-credentials" />
-<link rel="icon" href="/static/icons/favicon.ico" />
+<link rel="icon" href="/static/icons/chengvin.png" />
 <% for (const entry of latestEntryJS) { %>
   <link rel="modulepreload" href="<%= entry %>" crossorigin="use-credentials" />
 <% } %>

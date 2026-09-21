@@ -1,5 +1,5 @@
 import type { CSSResultGroup, PropertyValues, TemplateResult } from "lit";
-import { css, html, LitElement } from "lit";
+import { css, html, LitElement, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
 import "../../../../../components/ha-button";
 import "../../../../../components/ha-spinner";
@@ -9,7 +9,6 @@ import { DEVICE_MESSAGE_TYPES, LOG_OUTPUT } from "../../../../../data/zha";
 import "../../../../../layouts/hass-subpage";
 import { haStyle } from "../../../../../resources/styles";
 import type { HomeAssistant, Route } from "../../../../../types";
-import { documentationUrl } from "../../../../../util/documentation-url";
 import "./zha-device-pairing-status-card";
 
 @customElement("zha-add-devices-page")
@@ -112,7 +111,7 @@ class ZHAAddDevicesPage extends LitElement {
                 `
           }
         </div>
-        ${this._error ? html` <div class="error">${this._error}</div> ` : ""}
+        ${this._error ? html` <div class="error">${this._error}</div> ` : nothing}
         <div class="content">
           ${
             Object.keys(this._discoveredDevices).length < 1
@@ -122,19 +121,7 @@ class ZHAAddDevicesPage extends LitElement {
                       ${this.hass.localize(
                         "ui.panel.config.zha.add_device_page.pairing_mode",
                         {
-                          documentation_link: html`
-                            <a
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href=${documentationUrl(
-                                this.hass,
-                                "/integrations/zha#adding-devices"
-                              )}
-                              >${this.hass.localize(
-                                "ui.panel.config.zha.add_device_page.pairing_mode_link"
-                              )}</a
-                            >
-                          `,
+                          documentation_link: nothing,
                         }
                       )}
                     </h4>

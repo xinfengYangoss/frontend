@@ -23,7 +23,6 @@ import type { RepairsIssue } from "../../data/repairs";
 import { DirtyStateProviderMixin } from "../../mixins/dirty-state-provider-mixin";
 import { haStyleDialog } from "../../resources/styles";
 import type { HomeAssistant } from "../../types";
-import { documentationUrl } from "../../util/documentation-url";
 import { showAlertDialog } from "../generic/show-dialog-box";
 import { showConfigFlowDialog } from "./show-dialog-config-flow";
 import type {
@@ -334,22 +333,8 @@ class DataEntryFlowDialog extends DirtyStateProviderMixin<
       return nothing;
     }
 
-    const showDocumentationLink =
-      ([
-        "form",
-        "menu",
-        "external",
-        "progress",
-        "data_entry_flow_progressed",
-      ].includes(this._step?.type as any) &&
-        this._params.manifest?.is_built_in) ||
-      !!this._params.manifest?.documentation;
-
     const documentationLink = this._params.manifest?.is_built_in
-      ? documentationUrl(
-          this.hass,
-          `/integrations/${this._params.manifest.domain}`
-        )
+      ? undefined
       : this._params.manifest?.documentation;
 
     const dialogTitle = this._getDialogTitle();
@@ -383,10 +368,7 @@ class DataEntryFlowDialog extends DirtyStateProviderMixin<
             : nothing
         }
         ${
-          showDocumentationLink &&
-          documentationLink &&
-          !this._loading &&
-          this._step
+          documentationLink && documentationLink && !this._loading && this._step
             ? html`
                 <a
                   slot="headerActionItems"

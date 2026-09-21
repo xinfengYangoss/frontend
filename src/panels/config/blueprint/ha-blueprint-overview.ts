@@ -4,7 +4,6 @@ import {
   mdiDownload,
   mdiEye,
   mdiHelpCircleOutline,
-  mdiOpenInNew,
   mdiPlus,
   mdiShareVariant,
 } from "@mdi/js";
@@ -52,7 +51,6 @@ import {
 import "../../../layouts/hass-tabs-subpage-data-table";
 import { haStyle } from "../../../resources/styles";
 import type { HomeAssistant, Route } from "../../../types";
-import { documentationUrl } from "../../../util/documentation-url";
 import { showToast } from "../../../util/toast";
 import { configSections } from "../config-sections";
 import { showAddBlueprintDialog } from "./show-dialog-import-blueprint";
@@ -347,20 +345,7 @@ class HaBlueprintOverview extends LitElement {
           class="mdc-data-table__cell"
           style="width: 100%; text-align: center;"
           role="cell"
-        >
-          <ha-button
-            appearance="plain"
-            href=${documentationUrl(this.hass, "/get-blueprints")}
-            target="_blank"
-            rel="noreferrer noopener"
-            size="s"
-          >
-            ${this.hass.localize(
-              "ui.panel.config.blueprint.overview.discover_more"
-            )}
-            <ha-svg-icon slot="end" .path=${mdiOpenInNew}></ha-svg-icon>
-          </ha-button>
-        </div>`}
+        ></div>`}
         .initialGroupColumn=${this._activeGrouping}
         .initialCollapsedGroups=${this._activeCollapsed}
         .initialSorting=${this._activeSorting}
@@ -394,20 +379,6 @@ class HaBlueprintOverview extends LitElement {
       title: this.hass.localize("ui.panel.config.blueprint.caption"),
       text: html`
         ${this.hass.localize("ui.panel.config.blueprint.overview.introduction")}
-        <p>
-          <a
-            href=${documentationUrl(
-              this.hass,
-              "/docs/automation/using_blueprints/"
-            )}
-            target="_blank"
-            rel="noreferrer"
-          >
-            ${this.hass.localize(
-              "ui.panel.config.blueprint.overview.learn_more"
-            )}
-          </a>
-        </p>
       `,
     });
   }
