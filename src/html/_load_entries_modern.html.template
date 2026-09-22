@@ -1,0 +1,54 @@
+<script crossorigin="use-credentials">
+  (function () {
+    var MODERN_LOAD_TIMEOUT_MS = 30000;
+    var es5Started = false;
+
+    function loadEs5Entries() {
+      if (es5Started) {
+        return;
+      }
+      es5Started = true;
+      window.latestJS = false;
+      <% if (withCustomPanel) { %>
+      window.customPanelJS = "<%= es5CustomPanelJS %>";
+      <% } %>
+      <% for (const entry of es5EntryJS) { %>
+      _ls("<%= entry %>", true);
+      <% } %>
+    }
+
+    if (!isModern) {
+      loadEs5Entries();
+      return;
+    }
+
+    window.latestJS = true;
+    <% if (withCustomPanel) { %>
+    window.customPanelJS = "<%= latestCustomPanelJS %>";
+    <% } %>
+
+    var modernSettled = false;
+    function fallbackFromModern() {
+      if (modernSettled) {
+        return;
+      }
+      modernSettled = true;
+      loadEs5Entries();
+    }
+
+    var modernTimeout = setTimeout(fallbackFromModern, MODERN_LOAD_TIMEOUT_MS);
+    Promise.all([
+      <% for (const entry of latestEntryJS) { %>
+      import("<%= entry %>"),
+      <% } %>
+    ])
+      .then(function () {
+        clearTimeout(modernTimeout);
+        modernSettled = true;
+      })
+      .catch(function () {
+        clearTimeout(modernTimeout);
+        fallbackFromModern();
+      });
+  })();
+</script>

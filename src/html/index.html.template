@@ -112,23 +112,7 @@
     <home-assistant></home-assistant>
     <%= renderTemplate("_js_base.html.template") %>
     <%= renderTemplate("_preload_roboto.html.template") %>
-    <script crossorigin="use-credentials">
-      if (isModern) {
-        window.customPanelJS = "<%= latestCustomPanelJS %>";
-        window.latestJS = true;
-        Promise.all([
-          <% for (const entry of latestEntryJS) { %>
-            import("<%= entry %>"),
-          <% } %>
-        ]).catch(function () {
-          window.latestJS = false;
-          window.customPanelJS = "<%= es5CustomPanelJS %>";
-          <% for (const entry of es5EntryJS) { %>
-            _ls("<%= entry %>", true);
-          <% } %>
-        });
-      }
-    </script>
+    <%= renderTemplate("_load_entries_modern.html.template", { withCustomPanel: true }) %>
     <% if (obj.hassUrl === "") { %>
       <script>
         {%- for extra_module in extra_modules -%}
@@ -139,14 +123,7 @@
         {%- endfor -%}
       </script>
     <% } %>
-    <script>
-        if (!window.latestJS) {
-          window.customPanelJS = "<%= es5CustomPanelJS %>";
-          <% for (const entry of es5EntryJS) { %>
-            _ls("<%= entry %>", true);
-          <% } %>
-        }
-    </script>
+    <%= renderTemplate("_boot_watchdog.html.template") %>
 
     <% if (obj.hassUrl === "") { %>
       <script>

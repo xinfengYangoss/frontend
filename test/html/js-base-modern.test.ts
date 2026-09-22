@@ -47,13 +47,13 @@ describe("authorize/onboarding modern browser detection", () => {
     ).toBe(true);
   });
 
-  it("serves modern JS to companion OEM WebViews that still have findLast", () => {
+  it("falls back to ES5 on companion HarmonyOS WebViews below the modern floor", () => {
     expect(
       evaluateIsModern(
         "Mozilla/5.0 (Linux; Android 12; HarmonyOS) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/99.0.4844.88 Mobile Safari/537.36 Home Assistant/2026.1.0 (Android 12; HMA-AL00)",
         true
       )
-    ).toBe(true);
+    ).toBe(false);
   });
 
   it("falls back to ES5 on vivo Z3-class WebViews without findLast", () => {

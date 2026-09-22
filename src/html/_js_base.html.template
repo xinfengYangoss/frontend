@@ -13,12 +13,11 @@
   // Modern browsers are detected primarily using the user agent string.
   // A feature detection which roughly lines up with the modern targets is used
   // as a fallback to guard against spoofs. It should be updated periodically.
-  // Companion apps append "Home Assistant/..." to the WebView UA. OEM WebViews
-  // (vivo, Huawei, Xiaomi) often fail the browserslist regex even when the
-  // engine can run the modern build, so treat that UA as modern when the
-  // feature check passes. Engines without findLast still get the ES5 fallback.
+  // Modern bundles target the same browserslist [modern] set as production builds
+  // (recent Chrome/Safari). Companion WebViews must pass that check too: OEM
+  // shells on HarmonyOS/MIUI often ship Chrome 90–110, which have findLast but
+  // cannot run the current modern bundle and need frontend_es5 instead.
   var isModern =
     "findLast" in Array.prototype &&
-    (<%= modernRegex %>.test(navigator.userAgent) ||
-      /Home Assistant\//.test(navigator.userAgent));
+    <%= modernRegex %>.test(navigator.userAgent);
 </script>

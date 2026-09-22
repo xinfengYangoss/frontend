@@ -74,8 +74,11 @@ const renderTemplate = (templateFile, data = {}) => {
   return compiled({
     ...data,
     // Resolve any child/nested templates relative to the parent and pass the same data
-    renderTemplate: (childTemplate) =>
-      renderTemplate(resolve(dirname(templateFile), childTemplate), data),
+    renderTemplate: (childTemplate, childData = {}) =>
+      renderTemplate(resolve(dirname(templateFile), childTemplate), {
+        ...data,
+        ...childData,
+      }),
   });
 };
 
